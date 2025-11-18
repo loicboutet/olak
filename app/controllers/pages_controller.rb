@@ -1,7 +1,11 @@
 class PagesController < ApplicationController
-  # skip_before_action :authenticate_user!, only: [:typography, :typography2]
+  # skip_before_action :authenticate_user!, only: [:home, :typography, :typography2]
 
   def home
+    # Public landing page - OLAK announcement
+  end
+
+  def links
   end
 
   def typography

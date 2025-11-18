@@ -21,6 +21,8 @@ Rails.application.routes.draw do
   # Root path - Public landing page
   root 'pages#home'
   
+  get '/links', to: 'pages#links'
+  
   # Public pages
   resources :pages, only: [] do
     collection do
