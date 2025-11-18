@@ -1,15 +1,27 @@
 Rails.application.routes.draw do
   get "home/index"
+  get "typography", to: "pages#typography"
+  get "typography2", to: "pages#typography2"
   devise_for :users
   
   # Mockups routes
   get 'mockups/index'
-  get 'mockups/user_dashboard'
-  get 'mockups/user_profile'
-  get 'mockups/user_settings'
+  
+  # Admin mockups
   get 'mockups/admin_dashboard'
   get 'mockups/admin_users'
   get 'mockups/admin_analytics'
+  
+  # Owner mockups
+  get 'mockups/owner_dashboard'
+  
+  # Tenant mockups
+  get 'mockups/tenant_dashboard'
+  
+  # Legacy user mockups
+  get 'mockups/user_dashboard'
+  get 'mockups/user_profile'
+  get 'mockups/user_settings'
   
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

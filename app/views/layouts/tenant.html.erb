@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>OLAK Locataire - <%= content_for(:title) || "Tableau de bord" %></title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body class="bg-olak-gray min-h-screen">
+    <!-- Mockup Badge -->
+    <%= render "shared/mockup_badge" %>
+    
+    <!-- Tenant Navigation Bar (Green Theme) -->
+    <%= render "shared/navbar_tenant" %>
+    
+    <!-- Main Content -->
+    <main class="min-h-screen pb-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Flash Messages (if any) -->
+        <% if notice %>
+          <div class="bg-green-50 border-l-4 border-green-500 p-4 mb-6 rounded-r-lg">
+            <div class="flex items-center">
+              <svg class="w-6 h-6 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <p class="text-green-800 font-semibold"><%= notice %></p>
+            </div>
+          </div>
+        <% end %>
+
+        <% if alert %>
+          <div class="bg-red-50 border-l-4 border-red-500 p-4 mb-6 rounded-r-lg">
+            <div class="flex items-center">
+              <svg class="w-6 h-6 text-red-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+              </svg>
+              <p class="text-red-800 font-semibold"><%= alert %></p>
+            </div>
+          </div>
+        <% end %>
+
+        <%= yield %>
+      </div>
+    </main>
+    
+    <!-- Shared Footer -->
+    <%= render "shared/footer" %>
+  </body>
+</html>
