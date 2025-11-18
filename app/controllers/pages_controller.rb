@@ -1,6 +1,9 @@
 class PagesController < ApplicationController
   # skip_before_action :authenticate_user!, only: [:typography, :typography2]
 
+  def home
+  end
+
   def typography
     # Typography showcase page - publicly accessible (compact version)
   end
