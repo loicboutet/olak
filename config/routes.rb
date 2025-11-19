@@ -51,7 +51,7 @@ Rails.application.routes.draw do
       root 'dashboard#index'
       
       # Dashboard & Statistics
-      resource :dashboard, only: [:index]
+      resources :dashboard, only: [:index]
       
       # Owner Management
       resources :owners, only: [:index, :show, :new, :create, :edit, :update] do
@@ -119,7 +119,7 @@ Rails.application.routes.draw do
       root 'dashboard#index'
       
       # Dashboard
-      resource :dashboard, only: [:index]
+      resources :dashboard, only: [:index]
       
       # Profile Management
       resource :profile, only: [:show, :edit, :update]
@@ -199,7 +199,7 @@ Rails.application.routes.draw do
       root 'dashboard#index'
       
       # Dashboard
-      resource :dashboard, only: [:index]
+      resources :dashboard, only: [:index]
       
       # Profile Management
       resource :profile, only: [:show, :edit, :update] do
