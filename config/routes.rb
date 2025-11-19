@@ -276,7 +276,6 @@ Rails.application.routes.draw do
   get 'mockups/admin_analytics'
   
   # Owner mockups
-  get 'mockups/owner_dashboard'
   
   # Tenant mockups
   get 'mockups/tenant_dashboard'
