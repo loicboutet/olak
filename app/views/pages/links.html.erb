@@ -27,7 +27,9 @@
       </li>
       <li class="flex items-center">
         <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-        <span class="text-gray-600">/candidats/inscription/:token (Tenant Registration)</span>
+        <%= link_to tenant_registration_path(token: 'example-token-123'), class: "text-blue-600 hover:underline" do %>
+          /candidats/inscription/:token (Tenant Registration)
+        <% end %>
       </li>
       <li class="flex items-center">
         <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
