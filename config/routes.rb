@@ -24,14 +24,11 @@ Rails.application.routes.draw do
   get '/links', to: 'pages#links'
   
   # Public pages
-  resources :pages, only: [] do
-    collection do
-      get :home
-      get :about
-      get :contact
-      post :contact_submit
-    end
-  end
+
+  get :about, to: 'pages#about'
+  get :contact, to: 'pages#contact'
+  post :contact, to: 'pages#contact_submit'
+
   
   # Tenant registration via unique link
   get '/candidats/inscription/:token', to: 'tenant_registrations#new', as: :tenant_registration
