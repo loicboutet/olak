@@ -7,10 +7,6 @@ class MockupsController < ApplicationController
   end
   
   # Admin journey pages
-  def admin_dashboard
-    # Admin dashboard mockup
-  end
-  
   def admin_users
     # Admin users management mockup
   end

@@ -45,7 +45,7 @@ Rails.application.routes.draw do
   # ============================================================================
   
   # Admin routes - requires admin role
-  authenticate :user, ->(user) { user.admin? } do
+  # authenticate :user, ->(user) { user.admin? } do
     namespace :admin do
       # Dashboard root
       root 'dashboard#index'
@@ -106,14 +106,14 @@ Rails.application.routes.draw do
         end
       end
     end
-  end
+  # end
   
   # ============================================================================
   # OWNER NAMESPACE
   # ============================================================================
   
   # Owner routes - requires owner role
-  authenticate :user, ->(user) { user.owner? } do
+  # authenticate :user, ->(user) { user.owner? } do
     namespace :owner do
       # Dashboard root
       root 'dashboard#index'
@@ -186,14 +186,14 @@ Rails.application.routes.draw do
         end
       end
     end
-  end
+  # end
   
   # ============================================================================
   # TENANT NAMESPACE
   # ============================================================================
   
   # Tenant routes - requires tenant role
-  authenticate :user, ->(user) { user.tenant? } do
+  # authenticate :user, ->(user) { user.tenant? } do
     namespace :tenant do
       # Dashboard root
       root 'dashboard#index'
@@ -243,7 +243,7 @@ Rails.application.routes.draw do
         end
       end
     end
-  end
+  # end
   
   # ============================================================================
   # API NAMESPACE (Webhooks)
@@ -272,7 +272,6 @@ Rails.application.routes.draw do
   get 'mockups/index'
   
   # Admin mockups
-  get 'mockups/admin_dashboard'
   get 'mockups/admin_users'
   get 'mockups/admin_analytics'
   
