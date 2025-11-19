@@ -47,9 +47,6 @@ Rails.application.routes.draw do
       # Dashboard root
       root 'dashboard#index'
       
-      # Dashboard & Statistics
-      resources :dashboard, only: [:index]
-      
       # Owner Management
       resources :owners, only: [:index, :show, :new, :create, :edit, :update] do
         member do
