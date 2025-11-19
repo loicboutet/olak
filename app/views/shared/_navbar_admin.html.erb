@@ -13,15 +13,15 @@
 
       <!-- Desktop Navigation -->
       <div class="hidden md:flex items-center space-x-1">
-        <a href="#" class="nav-link-admin px-4 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-purple-50 hover:text-purple-700 transition-colors">
+        <%= link_to admin_root_path, class: "nav-link-admin px-4 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-purple-50 hover:text-purple-700 transition-colors" do %>
           <svg class="w-4 h-4 inline-block mr-1" fill="currentColor" viewBox="0 0 20 20">
             <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
           </svg>
           Tableau de bord
-        </a>
-        <a href="#" class="nav-link-admin px-4 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-purple-50 hover:text-purple-700 transition-colors">
+        <% end %>
+        <%= link_to admin_owners_path, class: "nav-link-admin px-4 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-purple-50 hover:text-purple-700 transition-colors" do %>
           Propriétaires
-        </a>
+        <% end %>
         <a href="#" class="nav-link-admin px-4 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-purple-50 hover:text-purple-700 transition-colors">
           Locataires
         </a>
@@ -69,8 +69,8 @@
 
   <!-- Mobile menu button (would be implemented with JavaScript) -->
   <div class="md:hidden px-4 pb-3 space-y-1">
-    <a href="#" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-purple-50 hover:text-purple-700">Tableau de bord</a>
-    <a href="#" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-purple-50 hover:text-purple-700">Propriétaires</a>
+    <%= link_to admin_root_path, class: "block px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-purple-50 hover:text-purple-700" do %>Tableau de bord<% end %>
+    <%= link_to admin_owners_path, class: "block px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-purple-50 hover:text-purple-700" do %>Propriétaires<% end %>
     <a href="#" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-purple-50 hover:text-purple-700">Locataires</a>
     <a href="#" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-purple-50 hover:text-purple-700">Biens</a>
     <a href="#" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-purple-50 hover:text-purple-700">Candidatures</a>
