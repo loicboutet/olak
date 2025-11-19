@@ -278,7 +278,6 @@ Rails.application.routes.draw do
   # Owner mockups
   
   # Tenant mockups
-  get 'mockups/tenant_dashboard'
   
   # Legacy user mockups
   get 'mockups/user_dashboard'

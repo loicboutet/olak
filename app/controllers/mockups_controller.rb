@@ -18,9 +18,6 @@ class MockupsController < ApplicationController
   # Owner journey pages
   
   # Tenant journey pages
-  def tenant_dashboard
-    # Tenant dashboard mockup
-  end
   
   # Legacy user journey pages (for backward compatibility)
   def user_dashboard
