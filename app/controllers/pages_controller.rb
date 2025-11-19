@@ -15,4 +15,8 @@ class PagesController < ApplicationController
   def typography2
     # Typography showcase page - publicly accessible (full version)
   end
+
+  def about
+    # Public about page - Company information
+  end
 end
