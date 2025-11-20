@@ -277,11 +277,15 @@
         <ul class="space-y-1 text-sm">
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/admin/accounting_exports</span>
+            <%= link_to admin_accounting_exports_path, class: "text-blue-600 hover:underline" do %>
+              /admin/accounting_exports
+            <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/admin/accounting_exports/:id/download</span>
+            <%= link_to download_admin_accounting_export_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /admin/accounting_exports/:id/download
+            <% end %>
           </li>
         </ul>
       </div>
