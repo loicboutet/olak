@@ -221,19 +221,27 @@
         <ul class="space-y-1 text-sm">
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/admin/payments</span>
+            <%= link_to admin_payments_path, class: "text-blue-600 hover:underline" do %>
+              /admin/payments
+            <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/admin/payments/dashboard</span>
+            <%= link_to dashboard_admin_payments_path, class: "text-blue-600 hover:underline" do %>
+              /admin/payments/dashboard
+            <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/admin/payments/:id</span>
+            <%= link_to admin_payment_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /admin/payments/:id
+            <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/admin/payments/export</span>
+            <%= link_to export_admin_payments_path, class: "text-blue-600 hover:underline" do %>
+              /admin/payments/export
+            <% end %>
           </li>
         </ul>
         
