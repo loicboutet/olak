@@ -1,0 +1,155 @@
+<% content_for :title, "Notification - OLAK" %>
+
+<div class="min-h-screen bg-olak-gray py-8">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Header -->
+    <div class="mb-8">
+      <div class="flex items-center justify-between">
+        <div>
+          <h1 class="text-4xl font-bold text-olak-primary-dark">Notification</h1>
+          <p class="text-gray-600 mt-2">Détails de la notification</p>
+        </div>
+        <div class="flex gap-3">
+          <%= link_to owner_notifications_path, class: "btn-secondary" do %>
+            <svg class="w-5 h-5 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+            </svg>
+            Retour aux notifications
+          <% end %>
+          <button class="btn-primary">
+            <svg class="w-5 h-5 inline mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            Marquer comme lue
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Notification Card -->
+    <div class="card-olak mb-6">
+      <!-- Notification Header -->
+      <div class="border-b border-gray-200 pb-6 mb-6">
+        <div class="flex items-start gap-4">
+          <div class="flex-shrink-0">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+              <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
+              </svg>
+            </div>
+          </div>
+          <div class="flex-1">
+            <div class="flex items-center justify-between mb-2">
+              <h2 class="text-2xl font-bold text-olak-primary-dark">Nouvelle candidature</h2>
+              <span class="badge badge-pending">Non lue</span>
+            </div>
+            <div class="flex items-center gap-4 text-sm text-gray-600">
+              <span class="flex items-center gap-1">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                </svg>
+                20 novembre 2024 à 14:15
+              </span>
+              <span class="flex items-center gap-1">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+                  <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"/>
+                </svg>
+                Candidature
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Notification Content -->
+      <div class="mb-6">
+        <h3 class="text-lg font-semibold text-olak-dark mb-4">Message</h3>
+        <div class="bg-olak-gray p-6 rounded-lg">
+          <p class="text-olak-dark leading-relaxed">
+            Une nouvelle candidature a été reçue pour votre bien <strong>Appartement T3 - Paris 15ème</strong>.
+          </p>
+          <p class="text-olak-dark leading-relaxed mt-4">
+            Le candidat <strong>Pierre Bernard</strong> a soumis son dossier complet et attend votre validation. 
+            Vous pouvez consulter les détails de sa candidature et prendre une décision.
+          </p>
+          <p class="text-olak-dark leading-relaxed mt-4">
+            L'équipe OLAK a vérifié les documents fournis et attribué une note de <strong>4.2/5</strong> à ce candidat.
+          </p>
+        </div>
+      </div>
+
+      <!-- Related Information -->
+      <div class="mb-6">
+        <h3 class="text-lg font-semibold text-olak-dark mb-4">Informations liées</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <!-- Property Info -->
+          <div class="bg-olak-gray p-4 rounded-lg">
+            <div class="flex items-center gap-2 mb-2">
+              <svg class="w-5 h-5 text-olak-primary" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+              </svg>
+              <p class="font-semibold text-olak-dark">Bien concerné</p>
+            </div>
+            <p class="text-sm text-gray-700">Appartement T3</p>
+            <p class="text-sm text-gray-600">75 m² • 2 chambres</p>
+            <p class="text-sm text-gray-600">Paris 15ème</p>
+          </div>
+
+          <!-- Candidate Info -->
+          <div class="bg-olak-gray p-4 rounded-lg">
+            <div class="flex items-center gap-2 mb-2">
+              <svg class="w-5 h-5 text-olak-primary" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
+              </svg>
+              <p class="font-semibold text-olak-dark">Candidat</p>
+            </div>
+            <p class="text-sm text-gray-700">Pierre Bernard</p>
+            <p class="text-sm text-gray-600">CDI • 2 500 € net/mois</p>
+            <p class="text-sm text-gray-600">Note: 4.2/5</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Actions -->
+      <div class="border-t border-gray-200 pt-6">
+        <h3 class="text-lg font-semibold text-olak-dark mb-4">Actions disponibles</h3>
+        <div class="flex flex-wrap gap-3">
+          <%= link_to owner_application_path(id: 1), class: "btn-primary" do %>
+            <svg class="w-5 h-5 inline mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+              <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+            </svg>
+            Voir la candidature complète
+          <% end %>
+          
+          <button class="btn-secondary">
+            <svg class="w-5 h-5 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+            </svg>
+            Archiver
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="flex justify-between">
+      <button class="btn-secondary">
+        <svg class="w-5 h-5 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Notification précédente
+      </button>
+      
+      <button class="btn-secondary">
+        Notification suivante
+        <svg class="w-5 h-5 inline ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+      </button>
+    </div>
+
+  </div>
+</div>
