@@ -387,19 +387,27 @@
         <ul class="space-y-1 text-sm">
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/owner/leases</span>
+            <%= link_to owner_leases_path, class: "text-blue-600 hover:underline" do %>
+              /owner/leases
+            <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/owner/leases/:id</span>
+            <%= link_to owner_lease_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /owner/leases/:id
+            <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/owner/leases/:id/preview</span>
+            <%= link_to preview_owner_lease_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /owner/leases/:id/preview
+            <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/owner/leases/:id/download</span>
+            <%= link_to download_owner_lease_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /owner/leases/:id/download
+            <% end %>
           </li>
         </ul>
         
