@@ -329,27 +329,39 @@
         <ul class="space-y-1 text-sm">
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/owner/properties</span>
+            <%= link_to owner_properties_path, class: "text-blue-600 hover:underline" do %>
+              /owner/properties
+            <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/owner/properties/new</span>
+            <%= link_to new_owner_property_path, class: "text-blue-600 hover:underline" do %>
+              /owner/properties/new
+            <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/owner/properties/:id</span>
+            <%= link_to owner_property_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /owner/properties/:id
+            <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/owner/properties/:id/edit</span>
+            <%= link_to edit_owner_property_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /owner/properties/:id/edit
+            <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/owner/properties/:id/wizard_step_two</span>
+            <%= link_to wizard_step_two_owner_property_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /owner/properties/:id/wizard_step_two
+            <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/owner/properties/:id/wizard_step_three</span>
+            <%= link_to wizard_step_three_owner_property_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /owner/properties/:id/wizard_step_three
+            <% end %>
           </li>
         </ul>
       </div>

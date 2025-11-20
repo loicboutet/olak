@@ -1,0 +1,326 @@
+<% content_for :title, "Appartement T3 - Paris 15ème" %>
+
+<div class="min-h-screen bg-olak-gray py-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Header with Actions -->
+    <div class="mb-6 flex items-center justify-between">
+      <%= link_to owner_properties_path, class: "text-olak-primary hover:text-olak-primary-dark font-semibold flex items-center gap-2" do %>
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Retour à mes biens
+      <% end %>
+      
+      <div class="flex gap-3">
+        <%= link_to edit_owner_property_path(id: 1), class: "btn-secondary flex items-center gap-2" do %>
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"/>
+          </svg>
+          Modifier
+        <% end %>
+        
+        <button class="btn-secondary">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      
+      <!-- Main Content -->
+      <div class="lg:col-span-2 space-y-6">
+        
+        <!-- Property Header Card -->
+        <div class="bg-white rounded-xl shadow-md p-8">
+          <div class="flex items-start justify-between mb-6">
+            <div>
+              <h1 class="text-4xl font-bold text-olak-primary-dark mb-2">Appartement T3</h1>
+              <p class="text-lg text-gray-600">45 Avenue des Champs-Élysées, 75008 Paris</p>
+            </div>
+            <span class="badge badge-success text-lg px-4 py-2">Actif</span>
+          </div>
+          
+          <!-- Key Metrics -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+            <div class="text-center p-4 bg-olak-gray rounded-lg">
+              <p class="text-3xl font-bold text-olak-primary">65</p>
+              <p class="text-sm text-gray-600 mt-1">m²</p>
+            </div>
+            <div class="text-center p-4 bg-olak-gray rounded-lg">
+              <p class="text-3xl font-bold text-olak-primary">3</p>
+              <p class="text-sm text-gray-600 mt-1">pièces</p>
+            </div>
+            <div class="text-center p-4 bg-olak-gray rounded-lg">
+              <p class="text-3xl font-bold text-olak-primary">2</p>
+              <p class="text-sm text-gray-600 mt-1">chambres</p>
+            </div>
+            <div class="text-center p-4 bg-olak-gray rounded-lg">
+              <p class="text-3xl font-bold text-olak-primary">3</p>
+              <p class="text-sm text-gray-600 mt-1">étage</p>
+            </div>
+          </div>
+
+          <!-- Price -->
+          <div class="border-t border-gray-200 pt-6">
+            <div class="flex items-baseline gap-2 mb-4">
+              <span class="text-4xl font-bold text-olak-primary">1 500 €</span>
+              <span class="text-lg text-gray-600">/mois charges comprises</span>
+            </div>
+            <div class="grid grid-cols-3 gap-4 text-sm">
+              <div>
+                <p class="text-gray-600">Loyer</p>
+                <p class="font-semibold text-olak-dark">1 350 €</p>
+              </div>
+              <div>
+                <p class="text-gray-600">Charges</p>
+                <p class="font-semibold text-olak-dark">150 €</p>
+              </div>
+              <div>
+                <p class="text-gray-600">Dépôt de garantie</p>
+                <p class="font-semibold text-olak-dark">2 700 €</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Description -->
+        <div class="bg-white rounded-xl shadow-md p-8">
+          <h2 class="text-2xl font-semibold text-olak-dark mb-4">Description</h2>
+          <p class="text-gray-700 leading-relaxed">
+            Magnifique appartement T3 de 65m² situé au cœur du 15ème arrondissement de Paris. 
+            Cet appartement lumineux et rénové offre tout le confort moderne avec une cuisine équipée, 
+            deux belles chambres et une salle de bain moderne. Proche des commerces et transports.
+          </p>
+        </div>
+
+        <!-- Characteristics -->
+        <div class="bg-white rounded-xl shadow-md p-8">
+          <h2 class="text-2xl font-semibold text-olak-dark mb-6">Caractéristiques</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <h3 class="font-semibold text-olak-dark mb-3">Logement</h3>
+              <dl class="space-y-2 text-sm">
+                <div class="flex justify-between">
+                  <dt class="text-gray-600">Type</dt>
+                  <dd class="font-medium text-olak-dark">Appartement</dd>
+                </div>
+                <div class="flex justify-between">
+                  <dt class="text-gray-600">Location</dt>
+                  <dd class="font-medium text-olak-dark">Meublé</dd>
+                </div>
+                <div class="flex justify-between">
+                  <dt class="text-gray-600">Surface</dt>
+                  <dd class="font-medium text-olak-dark">65 m²</dd>
+                </div>
+                <div class="flex justify-between">
+                  <dt class="text-gray-600">Pièces</dt>
+                  <dd class="font-medium text-olak-dark">3 pièces</dd>
+                </div>
+                <div class="flex justify-between">
+                  <dt class="text-gray-600">Chambres</dt>
+                  <dd class="font-medium text-olak-dark">2 chambres</dd>
+                </div>
+                <div class="flex justify-between">
+                  <dt class="text-gray-600">Salle de bain</dt>
+                  <dd class="font-medium text-olak-dark">1</dd>
+                </div>
+              </dl>
+            </div>
+            
+            <div>
+              <h3 class="font-semibold text-olak-dark mb-3">Bâtiment</h3>
+              <dl class="space-y-2 text-sm">
+                <div class="flex justify-between">
+                  <dt class="text-gray-600">Type</dt>
+                  <dd class="font-medium text-olak-dark">Immeuble collectif</dd>
+                </div>
+                <div class="flex justify-between">
+                  <dt class="text-gray-600">Année</dt>
+                  <dd class="font-medium text-olak-dark">1995</dd>
+                </div>
+                <div class="flex justify-between">
+                  <dt class="text-gray-600">Étage</dt>
+                  <dd class="font-medium text-olak-dark">3ème</dd>
+                </div>
+                <div class="flex justify-between">
+                  <dt class="text-gray-600">Ascenseur</dt>
+                  <dd class="font-medium text-olak-dark">Oui</dd>
+                </div>
+                <div class="flex justify-between">
+                  <dt class="text-gray-600">Chauffage</dt>
+                  <dd class="font-medium text-olak-dark">Individuel - Gaz</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+
+        <!-- Equipments & Amenities -->
+        <div class="bg-white rounded-xl shadow-md p-8">
+          <h2 class="text-2xl font-semibold text-olak-dark mb-6">Équipements</h2>
+          
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-olak-success" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <span class="text-sm text-olak-dark">Cuisine équipée</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-olak-success" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <span class="text-sm text-olak-dark">Réfrigérateur</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-olak-success" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <span class="text-sm text-olak-dark">Plaques de cuisson</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-olak-success" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <span class="text-sm text-olak-dark">Balcon</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-olak-success" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <span class="text-sm text-olak-dark">Parking</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-olak-success" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <span class="text-sm text-olak-dark">Ascenseur</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Documents -->
+        <div class="bg-white rounded-xl shadow-md p-8">
+          <h2 class="text-2xl font-semibold text-olak-dark mb-6">Documents</h2>
+          
+          <div class="space-y-3">
+            <div class="flex items-center justify-between p-4 bg-olak-gray rounded-lg">
+              <div class="flex items-center gap-3">
+                <svg class="w-8 h-8 text-olak-primary" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" clip-rule="evenodd"/>
+                </svg>
+                <div>
+                  <p class="font-semibold text-olak-dark">DPE (Diagnostic de Performance Énergétique)</p>
+                  <p class="text-sm text-gray-600">PDF • 2.4 MB</p>
+                </div>
+              </div>
+              <button class="btn-secondary px-4 py-2 text-sm">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                </svg>
+              </button>
+            </div>
+            
+            <div class="flex items-center justify-between p-4 bg-olak-gray rounded-lg">
+              <div class="flex items-center gap-3">
+                <svg class="w-8 h-8 text-olak-primary" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"/>
+                </svg>
+                <div>
+                  <p class="font-semibold text-olak-dark">Photos du bien</p>
+                  <p class="text-sm text-gray-600">8 photos</p>
+                </div>
+              </div>
+              <button class="btn-secondary px-4 py-2 text-sm">
+                Voir
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Sidebar -->
+      <div class="space-y-6">
+        
+        <!-- Quick Actions -->
+        <div class="bg-white rounded-xl shadow-md p-6">
+          <h3 class="text-xl font-semibold text-olak-dark mb-4">Actions rapides</h3>
+          
+          <div class="space-y-3">
+            <button class="w-full btn-primary flex items-center justify-center gap-2">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
+              </svg>
+              Voir les candidatures (3)
+            </button>
+            
+            <%= link_to edit_owner_property_path(id: 1), class: "w-full btn-secondary flex items-center justify-center gap-2" do %>
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"/>
+              </svg>
+              Modifier le bien
+            <% end %>
+            
+            <button class="w-full btn-secondary flex items-center justify-center gap-2 text-olak-warning border-olak-warning">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/>
+              </svg>
+              Archiver
+            </button>
+          </div>
+        </div>
+
+        <!-- Statistics -->
+        <div class="bg-white rounded-xl shadow-md p-6">
+          <h3 class="text-xl font-semibold text-olak-dark mb-4">Statistiques</h3>
+          
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-gray-600">Vues</span>
+              <span class="font-bold text-2xl text-olak-primary">127</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-gray-600">Candidatures</span>
+              <span class="font-bold text-2xl text-olak-primary">3</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-gray-600">Visites planifiées</span>
+              <span class="font-bold text-2xl text-olak-primary">2</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Publication Info -->
+        <div class="bg-white rounded-xl shadow-md p-6">
+          <h3 class="text-xl font-semibold text-olak-dark mb-4">Informations</h3>
+          
+          <dl class="space-y-3 text-sm">
+            <div>
+              <dt class="text-gray-600 mb-1">Statut</dt>
+              <dd><span class="badge badge-success">Actif</span></dd>
+            </div>
+            <div>
+              <dt class="text-gray-600 mb-1">Publié le</dt>
+              <dd class="font-medium text-olak-dark">15 novembre 2024</dd>
+            </div>
+            <div>
+              <dt class="text-gray-600 mb-1">Dernière modification</dt>
+              <dd class="font-medium text-olak-dark">Il y a 2 jours</dd>
+            </div>
+            <div>
+              <dt class="text-gray-600 mb-1">Zone</dt>
+              <dd><span class="badge badge-zone-tendue">Zone tendue</span></dd>
+            </div>
+          </dl>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
