@@ -249,19 +249,27 @@
         <ul class="space-y-1 text-sm">
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/admin/invoices</span>
+            <%= link_to admin_invoices_path, class: "text-blue-600 hover:underline" do %>
+              /admin/invoices
+            <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/admin/invoices/new</span>
+            <%= link_to new_admin_invoice_path, class: "text-blue-600 hover:underline" do %>
+              /admin/invoices/new
+            <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/admin/invoices/:id</span>
+            <%= link_to admin_invoice_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /admin/invoices/:id
+            <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/admin/invoices/:id/download</span>
+            <%= link_to download_admin_invoice_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /admin/invoices/:id/download
+            <% end %>
           </li>
         </ul>
         
