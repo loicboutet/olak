@@ -415,23 +415,33 @@
         <ul class="space-y-1 text-sm">
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/owner/payments</span>
+            <%= link_to owner_payments_path, class: "text-blue-600 hover:underline" do %>
+              /owner/payments
+            <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/owner/payments/new</span>
+            <%= link_to new_owner_payment_path, class: "text-blue-600 hover:underline" do %>
+              /owner/payments/new
+            <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/owner/payments/:id</span>
+            <%= link_to owner_payment_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /owner/payments/:id
+            <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/owner/payments/:id/success</span>
+            <%= link_to success_owner_payment_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /owner/payments/:id/success
+            <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/owner/payments/:id/cancel</span>
+            <%= link_to cancel_owner_payment_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /owner/payments/:id/cancel
+            <% end %>
           </li>
         </ul>
       </div>
