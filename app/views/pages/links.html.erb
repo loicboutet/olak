@@ -371,11 +371,15 @@
         <ul class="space-y-1 text-sm">
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/owner/applications</span>
+            <%= link_to owner_applications_path, class: "text-blue-600 hover:underline" do %>
+              /owner/applications
+            <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/owner/applications/:id</span>
+            <%= link_to owner_application_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /owner/applications/:id
+            <% end %>
           </li>
         </ul>
         
