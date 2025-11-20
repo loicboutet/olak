@@ -1,0 +1,49 @@
+<!-- Generic Navigation Bar for Application Layout -->
+<nav class="bg-white shadow-md border-b-4 border-olak-primary">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <a href="/" class="flex items-center">
+          <%= image_tag "logo_olak.png", alt: "OLAK", class: "h-10" %>
+        </a>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center space-x-1">
+        <a href="/" class="px-4 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-olak-primary-light hover:text-olak-primary-dark transition-colors">
+          Accueil
+        </a>
+        <a href="/admin" class="px-4 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-olak-primary-light hover:text-olak-primary-dark transition-colors">
+          Admin
+        </a>
+        <a href="/owner" class="px-4 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-olak-primary-light hover:text-olak-primary-dark transition-colors">
+          Owner
+        </a>
+        <a href="/tenant" class="px-4 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-olak-primary-light hover:text-olak-primary-dark transition-colors">
+          Tenant
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden">
+        <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-olak-primary hover:bg-olak-primary-light">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Mobile menu (hidden by default) -->
+  <div class="md:hidden px-4 pb-3 space-y-1">
+    <a href="/" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-olak-primary-light hover:text-olak-primary-dark">Accueil</a>
+    <a href="/typography" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-olak-primary-light hover:text-olak-primary-dark">Design System</a>
+    <a href="/admin" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-olak-primary-light hover:text-olak-primary-dark">Admin</a>
+    <a href="/owner" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-olak-primary-light hover:text-olak-primary-dark">Owner</a>
+    <a href="/tenant" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-olak-primary-light hover:text-olak-primary-dark">Tenant</a>
+  </div>
+</nav>

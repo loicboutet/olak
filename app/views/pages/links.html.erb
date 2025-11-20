@@ -1,0 +1,518 @@
+<div class="container mx-auto px-4 py-8">
+  <div class="mb-8">
+    <h1 class="text-4xl font-bold text-gray-900 mb-2">OLAK Platform - Routes Overview</h1>
+    <p class="text-gray-600">Complete list of GET routes organized by role</p>
+  </div>
+
+  <!-- Public Routes -->
+  <div class="mb-8 bg-white shadow-md rounded-lg p-6">
+    <h2 class="text-2xl font-bold text-blue-600 mb-4 flex items-center">
+      <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+      </svg>
+      Public Routes
+    </h2>
+    <ul class="space-y-2">
+      <li class="flex items-center">
+        <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+        <%= link_to root_path, class: "text-blue-600 hover:underline" do %>/ (Home)<% end %>
+      </li>
+      <li class="flex items-center">
+        <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+        <%= link_to about_path, class: "text-blue-600 hover:underline" do %>/about (About)<% end %>
+      </li>
+      <li class="flex items-center">
+        <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+        <%= link_to contact_path, class: "text-blue-600 hover:underline" do %>/contact (Contact)<% end %>
+      </li>
+      <li class="flex items-center">
+        <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+        <%= link_to tenant_registration_path(token: 'example-token-123'), class: "text-blue-600 hover:underline" do %>
+          /candidats/inscription/:token (Tenant Registration)
+        <% end %>
+      </li>
+      <li class="flex items-center">
+        <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+        <%= link_to rental_cv_path(token: 'example-token-123'), class: "text-blue-600 hover:underline" do %>
+          /cv-locatif/:token (Shareable Rental CV)
+        <% end %>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Authentication Routes -->
+  <div class="mb-8 bg-white shadow-md rounded-lg p-6">
+    <h2 class="text-2xl font-bold text-purple-600 mb-4 flex items-center">
+      <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+      </svg>
+      Authentication Routes
+    </h2>
+    <ul class="space-y-2">
+      <li class="flex items-center">
+        <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+        <%= link_to new_user_session_path, class: "text-blue-600 hover:underline" do %>/users/sign_in (Login)<% end %>
+      </li>
+      <li class="flex items-center">
+        <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+        <%= link_to new_user_registration_path, class: "text-blue-600 hover:underline" do %>/users/sign_up (Register)<% end %>
+      </li>
+      <li class="flex items-center">
+        <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+        <%= link_to new_user_password_path, class: "text-blue-600 hover:underline" do %>/users/password/new (Forgot Password)<% end %>
+      </li>
+      <li class="flex items-center">
+        <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+        <%= link_to edit_user_password_path, class: "text-blue-600 hover:underline" do %>/users/password/edit (Reset Password)<% end %>
+      </li>
+      <li class="flex items-center">
+        <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+        <span class="text-gray-600">/users/confirmation/new (Resend Confirmation)</span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Admin Routes -->
+  <div class="mb-8 bg-white shadow-md rounded-lg p-6">
+    <h2 class="text-2xl font-bold text-red-600 mb-4 flex items-center">
+      <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+      </svg>
+      Admin Routes (requires admin? role)
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div>
+        <h3 class="font-semibold text-gray-700 mb-2">Dashboard</h3>
+        <ul class="space-y-1 text-sm">
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/admin</span>
+          </li>
+        </ul>
+        
+        <h3 class="font-semibold text-gray-700 mb-2 mt-3">Owners</h3>
+        <ul class="space-y-1 text-sm">
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/admin/owners</span>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/admin/owners/new</span>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/admin/owners/:id</span>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/admin/owners/:id/edit</span>
+          </li>
+        </ul>
+        
+        <h3 class="font-semibold text-gray-700 mb-2 mt-3">Tenants</h3>
+        <ul class="space-y-1 text-sm">
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600"></span>
+            <%= link_to admin_tenants_path, class: "text-blue-600 hover:underline" do %>
+              /admin/tenants
+            <% end %>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to admin_tenant_path(id: 5), class: "text-blue-600 hover:underline" do %>
+              /admin/tenants/:id
+            <% end %>
+          </li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3 class="font-semibold text-gray-700 mb-2">Properties</h3>
+        <ul class="space-y-1 text-sm">
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/admin/properties</span>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/admin/properties/:id</span>
+          </li>
+        </ul>
+        
+        <h3 class="font-semibold text-gray-700 mb-2 mt-3">Applications</h3>
+        <ul class="space-y-1 text-sm">
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/admin/applications</span>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/admin/applications/:id</span>
+          </li>
+        </ul>
+        
+        <h3 class="font-semibold text-gray-700 mb-2 mt-3">Ratings</h3>
+        <ul class="space-y-1 text-sm">
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/admin/ratings/new</span>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/admin/ratings/:id</span>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/admin/ratings/:id/edit</span>
+          </li>
+        </ul>
+        
+        <h3 class="font-semibold text-gray-700 mb-2 mt-3">Visits</h3>
+        <ul class="space-y-1 text-sm">
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/admin/visits</span>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/admin/visits/new</span>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/admin/visits/:id/edit</span>
+          </li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3 class="font-semibold text-gray-700 mb-2">Payments</h3>
+        <ul class="space-y-1 text-sm">
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/admin/payments</span>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/admin/payments/dashboard</span>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/admin/payments/:id</span>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/admin/payments/export</span>
+          </li>
+        </ul>
+        
+        <h3 class="font-semibold text-gray-700 mb-2 mt-3">Invoices</h3>
+        <ul class="space-y-1 text-sm">
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/admin/invoices</span>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/admin/invoices/new</span>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/admin/invoices/:id</span>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/admin/invoices/:id/download</span>
+          </li>
+        </ul>
+        
+        <h3 class="font-semibold text-gray-700 mb-2 mt-3">Accounting</h3>
+        <ul class="space-y-1 text-sm">
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/admin/accounting_exports</span>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/admin/accounting_exports/:id/download</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Owner Routes -->
+  <div class="mb-8 bg-white shadow-md rounded-lg p-6">
+    <h2 class="text-2xl font-bold text-amber-600 mb-4 flex items-center">
+      <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+      </svg>
+      Owner Routes (requires owner? role)
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div>
+        <h3 class="font-semibold text-gray-700 mb-2">Dashboard & Profile</h3>
+        <ul class="space-y-1 text-sm">
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/owner</span>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/owner/profile</span>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/owner/profile/edit</span>
+          </li>
+        </ul>
+        
+        <h3 class="font-semibold text-gray-700 mb-2 mt-3">Properties</h3>
+        <ul class="space-y-1 text-sm">
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/owner/properties</span>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/owner/properties/new</span>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/owner/properties/:id</span>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/owner/properties/:id/edit</span>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/owner/properties/:id/wizard_step_two</span>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/owner/properties/:id/wizard_step_three</span>
+          </li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3 class="font-semibold text-gray-700 mb-2">Applications</h3>
+        <ul class="space-y-1 text-sm">
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/owner/applications</span>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/owner/applications/:id</span>
+          </li>
+        </ul>
+        
+        <h3 class="font-semibold text-gray-700 mb-2 mt-3">Leases</h3>
+        <ul class="space-y-1 text-sm">
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/owner/leases</span>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/owner/leases/:id</span>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/owner/leases/:id/preview</span>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/owner/leases/:id/download</span>
+          </li>
+        </ul>
+        
+        <h3 class="font-semibold text-gray-700 mb-2 mt-3">Payments</h3>
+        <ul class="space-y-1 text-sm">
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/owner/payments</span>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/owner/payments/new</span>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/owner/payments/:id</span>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/owner/payments/:id/success</span>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/owner/payments/:id/cancel</span>
+          </li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3 class="font-semibold text-gray-700 mb-2">Invoices</h3>
+        <ul class="space-y-1 text-sm">
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/owner/invoices</span>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/owner/invoices/:id</span>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/owner/invoices/:id/download</span>
+          </li>
+        </ul>
+        
+        <h3 class="font-semibold text-gray-700 mb-2 mt-3">Notifications</h3>
+        <ul class="space-y-1 text-sm">
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/owner/notifications</span>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/owner/notifications/:id</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Tenant Routes -->
+  <div class="mb-8 bg-white shadow-md rounded-lg p-6">
+    <h2 class="text-2xl font-bold text-teal-600 mb-4 flex items-center">
+      <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+      </svg>
+      Tenant Routes (requires tenant? role)
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div>
+        <h3 class="font-semibold text-gray-700 mb-2">Dashboard & Profile</h3>
+        <ul class="space-y-1 text-sm">
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/tenant</span>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/tenant/profile</span>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/tenant/profile/edit</span>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/tenant/profile/documents</span>
+          </li>
+        </ul>
+        
+        <h3 class="font-semibold text-gray-700 mb-2 mt-3">Guarantor</h3>
+        <ul class="space-y-1 text-sm">
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/tenant/guarantor</span>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/tenant/guarantor/new</span>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/tenant/guarantor/edit</span>
+          </li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3 class="font-semibold text-gray-700 mb-2">Applications</h3>
+        <ul class="space-y-1 text-sm">
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/tenant/applications</span>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/tenant/applications/:id</span>
+          </li>
+        </ul>
+        
+        <h3 class="font-semibold text-gray-700 mb-2 mt-3">Leases</h3>
+        <ul class="space-y-1 text-sm">
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/tenant/leases</span>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/tenant/leases/:id</span>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/tenant/leases/:id/preview</span>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/tenant/leases/:id/download</span>
+          </li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3 class="font-semibold text-gray-700 mb-2">Rental CV</h3>
+        <ul class="space-y-1 text-sm">
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/tenant/rental_cv</span>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/tenant/rental_cv/download</span>
+          </li>
+        </ul>
+        
+        <h3 class="font-semibold text-gray-700 mb-2 mt-3">Notifications</h3>
+        <ul class="space-y-1 text-sm">
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/tenant/notifications</span>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600">/tenant/notifications/:id</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Note -->
+  <div class="mt-8 bg-blue-50 border border-blue-200 rounded-lg p-4">
+    <h3 class="text-lg font-semibold text-blue-900 mb-2">📋 Route Documentation</h3>
+    <p class="text-sm text-blue-800">
+      This page lists all GET routes in the OLAK platform. Routes are organized by role and require appropriate authentication. 
+      For complete route information including POST, PATCH, and DELETE methods, please refer to 
+      <code class="bg-blue-100 px-2 py-1 rounded">doc/routes.md</code>.
+    </p>
+    <div class="mt-3 text-xs text-blue-700">
+      <p><strong>Role-based Access:</strong></p>
+      <ul class="list-disc ml-5 mt-1">
+        <li><strong>Admin routes:</strong> Require <code>user.admin?</code> to return true</li>
+        <li><strong>Owner routes:</strong> Require <code>user.owner?</code> to return true</li>
+        <li><strong>Tenant routes:</strong> Require <code>user.tenant?</code> to return true</li>
+      </ul>
+    </div>
+  </div>
+</div>

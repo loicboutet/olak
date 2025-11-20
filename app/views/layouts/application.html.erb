@@ -23,9 +23,21 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <main class="container mx-auto mt-28 px-5 flex">
-      <%= yield %>
+  <body class="bg-olak-gray min-h-screen">
+    <!-- Generic Navigation Bar -->
+    <%= render "shared/navbar" %>
+    
+    <!-- Main Content -->
+    <main class="min-h-screen pb-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <%= yield %>
+      </div>
     </main>
+    
+    <!-- Shared Footer Navigation -->
+    <%= render "shared/footer_navigation" %>
+
+    <!-- Shared Footer -->
+    <%= render "shared/footer" %>
   </body>
 </html>

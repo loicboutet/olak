@@ -1,0 +1,1287 @@
+<% content_for :title, "OLAK Design System - Complete Component Library" %>
+
+<div class="min-h-screen bg-olak-gray py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <h1 class="text-6xl font-bold text-olak-primary-dark mb-4">ôlak</h1>
+      <p class="text-2xl text-olak-dark mb-2">Complete Design System & Component Library</p>
+      <p class="text-gray-600">Comprehensive showcase of all typography, colors, components, and UI patterns</p>
+      <div class="mt-6 flex justify-center gap-4">
+        <a href="#typography" class="btn-primary">Explore Components</a>
+        <a href="/" class="btn-secondary">Back to Home</a>
+      </div>
+    </div>
+
+    <!-- Table of Contents -->
+    <nav class="bg-white rounded-xl shadow-md p-6 mb-12">
+      <h2 class="text-2xl font-bold text-olak-primary-dark mb-4">Table of Contents</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
+        <a href="#typography" class="text-olak-primary hover:text-olak-primary-dark font-medium transition-colors">Typography</a>
+        <a href="#colors" class="text-olak-primary hover:text-olak-primary-dark font-medium transition-colors">Colors</a>
+        <a href="#buttons" class="text-olak-primary hover:text-olak-primary-dark font-medium transition-colors">Buttons</a>
+        <a href="#forms" class="text-olak-primary hover:text-olak-primary-dark font-medium transition-colors">Forms</a>
+        <a href="#cards" class="text-olak-primary hover:text-olak-primary-dark font-medium transition-colors">Cards</a>
+        <a href="#badges" class="text-olak-primary hover:text-olak-primary-dark font-medium transition-colors">Badges</a>
+        <a href="#alerts" class="text-olak-primary hover:text-olak-primary-dark font-medium transition-colors">Alerts</a>
+        <a href="#tables" class="text-olak-primary hover:text-olak-primary-dark font-medium transition-colors">Tables</a>
+        <a href="#icons" class="text-olak-primary hover:text-olak-primary-dark font-medium transition-colors">Icons</a>
+        <a href="#navigation" class="text-olak-primary hover:text-olak-primary-dark font-medium transition-colors">Navigation</a>
+        <a href="#rating" class="text-olak-primary hover:text-olak-primary-dark font-medium transition-colors">Rating</a>
+        <a href="#modals" class="text-olak-primary hover:text-olak-primary-dark font-medium transition-colors">Modals</a>
+        <a href="#states" class="text-olak-primary hover:text-olak-primary-dark font-medium transition-colors">States</a>
+        <a href="#spacing" class="text-olak-primary hover:text-olak-primary-dark font-medium transition-colors">Spacing</a>
+        <a href="#grid" class="text-olak-primary hover:text-olak-primary-dark font-medium transition-colors">Grid System</a>
+      </div>
+    </nav>
+
+    <!-- Typography Section -->
+    <section id="typography" class="mb-16">
+      <div class="bg-white rounded-xl shadow-md p-8">
+        <h2 class="text-4xl font-bold text-olak-primary-dark mb-8 pb-4 border-b-2 border-olak-primary-light">Typography</h2>
+        
+        <div class="space-y-8">
+          <!-- Headings -->
+          <div>
+            <h3 class="text-2xl font-semibold text-olak-dark mb-4">Headings</h3>
+            <div class="space-y-4">
+              <div class="border-l-4 border-olak-primary pl-4">
+                <h1 class="text-5xl font-bold text-olak-primary-dark leading-tight mb-2">H1 - Page Title (48px)</h1>
+                <code class="text-sm text-gray-500 block">class="text-5xl font-bold text-olak-primary-dark leading-tight"</code>
+              </div>
+              
+              <div class="border-l-4 border-olak-primary pl-4">
+                <h2 class="text-4xl font-bold text-olak-primary-dark leading-snug mb-2">H2 - Section Title (36px)</h2>
+                <code class="text-sm text-gray-500 block">class="text-4xl font-bold text-olak-primary-dark leading-snug"</code>
+              </div>
+              
+              <div class="border-l-4 border-olak-primary pl-4">
+                <h3 class="text-3xl font-semibold text-olak-primary-dark leading-normal mb-2">H3 - Subsection Title (28px)</h3>
+                <code class="text-sm text-gray-500 block">class="text-3xl font-semibold text-olak-primary-dark leading-normal"</code>
+              </div>
+              
+              <div class="border-l-4 border-olak-primary pl-4">
+                <h4 class="text-2xl font-semibold text-olak-dark mb-2">H4 - Card Title (24px)</h4>
+                <code class="text-sm text-gray-500 block">class="text-2xl font-semibold text-olak-dark"</code>
+              </div>
+              
+              <div class="border-l-4 border-olak-primary pl-4">
+                <h5 class="text-xl font-semibold text-olak-dark mb-2">H5 - Widget Title (20px)</h5>
+                <code class="text-sm text-gray-500 block">class="text-xl font-semibold text-olak-dark"</code>
+              </div>
+              
+              <div class="border-l-4 border-olak-primary pl-4">
+                <h6 class="text-lg font-semibold text-olak-dark mb-2">H6 - Small Title (18px)</h6>
+                <code class="text-sm text-gray-500 block">class="text-lg font-semibold text-olak-dark"</code>
+              </div>
+            </div>
+          </div>
+
+          <!-- Body Text -->
+          <div>
+            <h3 class="text-2xl font-semibold text-olak-dark mb-4">Body Text</h3>
+            <div class="space-y-4">
+              <div class="border-l-4 border-olak-accent pl-4">
+                <p class="text-base text-olak-dark leading-relaxed mb-2">
+                  Body Text (16px) - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <code class="text-sm text-gray-500 block">class="text-base text-olak-dark leading-relaxed"</code>
+              </div>
+              
+              <div class="border-l-4 border-olak-accent pl-4">
+                <p class="text-sm text-gray-600 leading-normal mb-2">
+                  Small Text (14px) - Secondary text, captions, and helper text. Used for additional information that supports the main content. This is perfect for metadata, timestamps, or supplementary details.
+                </p>
+                <code class="text-sm text-gray-500 block">class="text-sm text-gray-600 leading-normal"</code>
+              </div>
+              
+              <div class="border-l-4 border-olak-accent pl-4">
+                <p class="text-xs text-gray-500 mb-2">
+                  Extra Small (12px) - Minimal text for footnotes, legal notices, and fine print.
+                </p>
+                <code class="text-sm text-gray-500 block">class="text-xs text-gray-500"</code>
+              </div>
+            </div>
+          </div>
+
+          <!-- Font Weights -->
+          <div>
+            <h3 class="text-2xl font-semibold text-olak-dark mb-4">Font Weights</h3>
+            <div class="space-y-2">
+              <div><p class="font-normal text-olak-dark text-lg">Regular (400) - font-normal - Used for body text</p></div>
+              <div><p class="font-medium text-olak-dark text-lg">Medium (500) - font-medium - Used for emphasis</p></div>
+              <div><p class="font-semibold text-olak-dark text-lg">Semi-Bold (600) - font-semibold - Used for subheadings</p></div>
+              <div><p class="font-bold text-olak-dark text-lg">Bold (700) - font-bold - Used for headings</p></div>
+            </div>
+          </div>
+
+          <!-- Text Colors -->
+          <div>
+            <h3 class="text-2xl font-semibold text-olak-dark mb-4">Text Colors</h3>
+            <div class="space-y-2">
+              <p class="text-olak-primary text-lg">Primary Color Text - text-olak-primary</p>
+              <p class="text-olak-primary-dark text-lg">Primary Dark Text - text-olak-primary-dark</p>
+              <p class="text-olak-accent text-lg">Accent Color Text - text-olak-accent</p>
+              <p class="text-olak-dark text-lg">Dark Text (Main Content) - text-olak-dark</p>
+              <p class="text-gray-600 text-lg">Gray Text (Secondary) - text-gray-600</p>
+              <p class="text-olak-success text-lg">Success Text - text-olak-success</p>
+              <p class="text-olak-warning text-lg">Warning Text - text-olak-warning</p>
+              <p class="text-olak-error text-lg">Error Text - text-olak-error</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Color Palette Section -->
+    <section id="colors" class="mb-16">
+      <div class="bg-white rounded-xl shadow-md p-8">
+        <h2 class="text-4xl font-bold text-olak-primary-dark mb-8 pb-4 border-b-2 border-olak-primary-light">Color Palette</h2>
+        
+        <div class="space-y-8">
+          <!-- Primary Colors -->
+          <div>
+            <h3 class="text-2xl font-semibold text-olak-dark mb-4">Primary Colors</h3>
+            <p class="text-gray-600 mb-4">Main brand colors used for buttons, links, and primary UI elements</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div class="space-y-2">
+                <div class="h-32 bg-olak-primary rounded-lg shadow-md flex items-center justify-center">
+                  <span class="text-white font-semibold text-lg">Primary</span>
+                </div>
+                <p class="font-mono text-sm font-bold">#9C8671</p>
+                <code class="text-xs text-gray-600 block">bg-olak-primary</code>
+                <p class="text-sm text-gray-600">Buttons, links, action elements</p>
+              </div>
+              
+              <div class="space-y-2">
+                <div class="h-32 bg-olak-primary-dark rounded-lg shadow-md flex items-center justify-center">
+                  <span class="text-white font-semibold text-lg">Primary Dark</span>
+                </div>
+                <p class="font-mono text-sm font-bold">#7A6656</p>
+                <code class="text-xs text-gray-600 block">bg-olak-primary-dark</code>
+                <p class="text-sm text-gray-600">Titles, hover states</p>
+              </div>
+              
+              <div class="space-y-2">
+                <div class="h-32 bg-olak-primary-light rounded-lg shadow-md flex items-center justify-center">
+                  <span class="text-olak-dark font-semibold text-lg">Primary Light</span>
+                </div>
+                <p class="font-mono text-sm font-bold">#B89F8E</p>
+                <code class="text-xs text-gray-600 block">bg-olak-primary-light</code>
+                <p class="text-sm text-gray-600">Light backgrounds, sections</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Secondary Colors -->
+          <div>
+            <h3 class="text-2xl font-semibold text-olak-dark mb-4">Secondary Colors</h3>
+            <p class="text-gray-600 mb-4">Supporting colors for backgrounds and text</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div class="space-y-2">
+                <div class="h-32 bg-olak-accent rounded-lg shadow-md flex items-center justify-center">
+                  <span class="text-white font-semibold text-lg">Accent</span>
+                </div>
+                <p class="font-mono text-sm font-bold">#D4A574</p>
+                <code class="text-xs text-gray-600 block">bg-olak-accent</code>
+                <p class="text-sm text-gray-600">Highlights, badges, call-outs</p>
+              </div>
+              
+              <div class="space-y-2">
+                <div class="h-32 bg-olak-dark rounded-lg shadow-md flex items-center justify-center">
+                  <span class="text-white font-semibold text-lg">Dark</span>
+                </div>
+                <p class="font-mono text-sm font-bold">#2C2C2C</p>
+                <code class="text-xs text-gray-600 block">bg-olak-dark</code>
+                <p class="text-sm text-gray-600">Main text, content</p>
+              </div>
+              
+              <div class="space-y-2">
+                <div class="h-32 bg-olak-gray rounded-lg shadow-md border-2 border-gray-300 flex items-center justify-center">
+                  <span class="text-olak-dark font-semibold text-lg">Background Gray</span>
+                </div>
+                <p class="font-mono text-sm font-bold">#F5F5F5</p>
+                <code class="text-xs text-gray-600 block">bg-olak-gray</code>
+                <p class="text-sm text-gray-600">Page background, sections</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Functional Colors -->
+          <div>
+            <h3 class="text-2xl font-semibold text-olak-dark mb-4">Functional Colors</h3>
+            <p class="text-gray-600 mb-4">Status and feedback colors for UI states</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div class="space-y-2">
+                <div class="h-32 bg-olak-success rounded-lg shadow-md flex items-center justify-center">
+                  <span class="text-white font-semibold text-lg">Success</span>
+                </div>
+                <p class="font-mono text-sm font-bold">#4CAF50</p>
+                <code class="text-xs text-gray-600 block">bg-olak-success</code>
+                <p class="text-sm text-gray-600">Validations, confirmations</p>
+              </div>
+              
+              <div class="space-y-2">
+                <div class="h-32 bg-olak-warning rounded-lg shadow-md flex items-center justify-center">
+                  <span class="text-white font-semibold text-lg">Warning</span>
+                </div>
+                <p class="font-mono text-sm font-bold">#FF9800</p>
+                <code class="text-xs text-gray-600 block">bg-olak-warning</code>
+                <p class="text-sm text-gray-600">Warnings, zone tendue</p>
+              </div>
+              
+              <div class="space-y-2">
+                <div class="h-32 bg-olak-error rounded-lg shadow-md flex items-center justify-center">
+                  <span class="text-white font-semibold text-lg">Error</span>
+                </div>
+                <p class="font-mono text-sm font-bold">#F44336</p>
+                <code class="text-xs text-gray-600 block">bg-olak-error</code>
+                <p class="text-sm text-gray-600">Errors, refusals</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Color Usage Guide -->
+          <div>
+            <h3 class="text-2xl font-semibold text-olak-dark mb-4">Color Usage Guidelines</h3>
+            <div class="bg-olak-gray p-6 rounded-lg">
+              <ul class="space-y-2 text-olak-dark">
+                <li class="flex items-start gap-2">
+                  <span class="text-olak-primary font-bold">•</span>
+                  <span><strong>Primary:</strong> Use for main CTAs, active navigation, important links</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-olak-primary font-bold">•</span>
+                  <span><strong>Primary Dark:</strong> Use for headings, hover states on primary elements</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-olak-primary font-bold">•</span>
+                  <span><strong>Accent:</strong> Use sparingly for highlights and special badges</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-olak-primary font-bold">•</span>
+                  <span><strong>Success/Warning/Error:</strong> Use only for status messages and feedback</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Buttons Section -->
+    <section id="buttons" class="mb-16">
+      <div class="bg-white rounded-xl shadow-md p-8">
+        <h2 class="text-4xl font-bold text-olak-primary-dark mb-8 pb-4 border-b-2 border-olak-primary-light">Buttons</h2>
+        
+        <div class="space-y-8">
+          <!-- Primary Buttons -->
+          <div>
+            <h3 class="text-2xl font-semibold text-olak-dark mb-4">Primary Buttons</h3>
+            <p class="text-gray-600 mb-4">Used for main actions, CTAs, and form submissions</p>
+            <div class="flex flex-wrap gap-4 items-center mb-4">
+              <button class="btn-primary px-4 py-2 text-xs">Small Button</button>
+              <button class="btn-primary px-5 py-2.5 text-sm">Medium Button</button>
+              <button class="btn-primary">Large Button (Default)</button>
+              <button class="btn-primary px-8 py-4 text-lg">Extra Large</button>
+            </div>
+            <code class="text-sm text-gray-500 block bg-gray-50 p-3 rounded">class="btn-primary"</code>
+          </div>
+
+          <!-- Secondary Buttons -->
+          <div>
+            <h3 class="text-2xl font-semibold text-olak-dark mb-4">Secondary Buttons</h3>
+            <p class="text-gray-600 mb-4">Used for cancel actions and secondary options</p>
+            <div class="flex flex-wrap gap-4 items-center mb-4">
+              <button class="btn-secondary px-4 py-2 text-xs">Small Button</button>
+              <button class="btn-secondary px-5 py-2.5 text-sm">Medium Button</button>
+              <button class="btn-secondary">Large Button (Default)</button>
+              <button class="btn-secondary px-8 py-4 text-lg">Extra Large</button>
+            </div>
+            <code class="text-sm text-gray-500 block bg-gray-50 p-3 rounded">class="btn-secondary"</code>
+          </div>
+
+          <!-- Button States -->
+          <div>
+            <h3 class="text-2xl font-semibold text-olak-dark mb-4">Button States</h3>
+            <div class="space-y-4">
+              <div class="flex gap-4 items-center">
+                <button class="btn-primary">Normal State</button>
+                <span class="text-gray-600">→ Default appearance</span>
+              </div>
+              <div class="flex gap-4 items-center">
+                <button class="btn-primary hover:bg-olak-primary-dark">Hover State</button>
+                <span class="text-gray-600">→ Darker background, slight lift animation</span>
+              </div>
+              <div class="flex gap-4 items-center">
+                <button class="btn-primary ring-4 ring-olak-primary/20 outline-none">Focus State</button>
+                <span class="text-gray-600">→ Ring outline for keyboard navigation</span>
+              </div>
+              <div class="flex gap-4 items-center">
+                <button class="btn-primary opacity-50 cursor-not-allowed" disabled>Disabled State</button>
+                <span class="text-gray-600">→ 50% opacity, not clickable</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Icon Buttons -->
+          <div>
+            <h3 class="text-2xl font-semibold text-olak-dark mb-4">Icon Buttons</h3>
+            <p class="text-gray-600 mb-4">Buttons with icons for enhanced visual communication</p>
+            <div class="flex flex-wrap gap-4">
+              <button class="btn-primary flex items-center gap-2">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/>
+                </svg>
+                Ajouter un bien
+              </button>
+              
+              <button class="btn-secondary flex items-center gap-2">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                </svg>
+                Supprimer
+              </button>
+
+              <button class="btn-primary flex items-center gap-2">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"/>
+                </svg>
+                Modifier
+              </button>
+
+              <button class="btn-secondary flex items-center gap-2">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                  <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+                </svg>
+                Voir
+              </button>
+
+              <button class="btn-primary flex items-center gap-2">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                </svg>
+                Télécharger
+              </button>
+            </div>
+          </div>
+
+          <!-- Button Groups -->
+          <div>
+            <h3 class="text-2xl font-semibold text-olak-dark mb-4">Button Groups</h3>
+            <div class="flex gap-2">
+              <button class="btn-primary flex-1">Accepter</button>
+              <button class="btn-secondary flex-1">Refuser</button>
+            </div>
+            <div class="mt-4 flex gap-2">
+              <button class="btn-secondary">Annuler</button>
+              <button class="btn-primary">Enregistrer</button>
+            </div>
+          </div>
+
+          <!-- Full Width Button -->
+          <div>
+            <h3 class="text-2xl font-semibold text-olak-dark mb-4">Full Width Button</h3>
+            <button class="btn-primary w-full">Continuer</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Form Elements Section -->
+    <section id="forms" class="mb-16">
+      <div class="bg-white rounded-xl shadow-md p-8">
+        <h2 class="text-4xl font-bold text-olak-primary-dark mb-8 pb-4 border-b-2 border-olak-primary-light">Form Elements</h2>
+        
+        <div class="space-y-8 max-w-3xl">
+          <!-- Text Input -->
+          <div>
+            <h3 class="text-2xl font-semibold text-olak-dark mb-4">Text Input</h3>
+            <div class="space-y-4">
+              <div>
+                <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                  Adresse du bien <span class="text-olak-error">*</span>
+                </label>
+                <input type="text" class="input-olak" placeholder="12 rue de la République">
+                <p class="text-xs text-gray-500 mt-1">Aide: Entrez l'adresse complète du bien</p>
+              </div>
+              <code class="text-sm text-gray-500 block bg-gray-50 p-3 rounded">class="input-olak"</code>
+            </div>
+          </div>
+
+          <!-- Email Input -->
+          <div>
+            <label class="block text-sm font-semibold mb-2 text-olak-dark">
+              Email <span class="text-olak-error">*</span>
+            </label>
+            <input type="email" class="input-olak" placeholder="exemple@email.com">
+          </div>
+
+          <!-- Number Input -->
+          <div>
+            <label class="block text-sm font-semibold mb-2 text-olak-dark">
+              Surface (m²) <span class="text-olak-error">*</span>
+            </label>
+            <input type="number" class="input-olak" placeholder="75">
+          </div>
+
+          <!-- Select Dropdown -->
+          <div>
+            <h3 class="text-2xl font-semibold text-olak-dark mb-4">Select Dropdown</h3>
+            <label class="block text-sm font-semibold mb-2 text-olak-dark">
+              Type de bien <span class="text-olak-error">*</span>
+            </label>
+            <select class="input-olak">
+              <option value="">Sélectionnez...</option>
+              <option value="appartement">Appartement</option>
+              <option value="maison">Maison</option>
+              <option value="chambre">Chambre</option>
+            </select>
+          </div>
+
+          <!-- Textarea -->
+          <div>
+            <h3 class="text-2xl font-semibold text-olak-dark mb-4">Textarea</h3>
+            <label class="block text-sm font-semibold mb-2 text-olak-dark">
+              Description du bien
+            </label>
+            <textarea class="input-olak" rows="4" placeholder="Décrivez votre bien en détail..."></textarea>
+          </div>
+
+          <!-- Checkbox -->
+          <div>
+            <h3 class="text-2xl font-semibold text-olak-dark mb-4">Checkboxes</h3>
+            <div class="space-y-3">
+              <label class="flex items-center cursor-pointer">
+                <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer">
+                <span class="text-sm text-olak-dark">Le bien est situé en zone tendue</span>
+              </label>
+              <label class="flex items-center cursor-pointer">
+                <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer" checked>
+                <span class="text-sm text-olak-dark">J'accepte les APL (Checked state)</span>
+              </label>
+              <label class="flex items-center cursor-pointer opacity-50">
+                <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer" disabled>
+                <span class="text-sm text-olak-dark">Disabled checkbox</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Radio Buttons -->
+          <div>
+            <h3 class="text-2xl font-semibold text-olak-dark mb-4">Radio Buttons</h3>
+            <p class="text-gray-600 mb-4">Used for mutually exclusive choices</p>
+            <div class="space-y-2">
+              <label class="flex items-center cursor-pointer">
+                <input type="radio" name="rental_type" value="furnished" class="w-5 h-5 mr-3 accent-olak-primary cursor-pointer" checked>
+                <span class="text-sm text-olak-dark">Meublé</span>
+              </label>
+              <label class="flex items-center cursor-pointer">
+                <input type="radio" name="rental_type" value="unfurnished" class="w-5 h-5 mr-3 accent-olak-primary cursor-pointer">
+                <span class="text-sm text-olak-dark">Nue</span>
+              </label>
+              <label class="flex items-center cursor-pointer opacity-50">
+                <input type="radio" name="rental_type" value="other" class="w-5 h-5 mr-3 accent-olak-primary cursor-pointer" disabled>
+                <span class="text-sm text-olak-dark">Disabled option</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- File Upload -->
+          <div>
+            <h3 class="text-2xl font-semibold text-olak-dark mb-4">File Upload</h3>
+            <div class="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-olak-primary transition-all duration-300 cursor-pointer">
+              <svg class="mx-auto mb-4 w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+              </svg>
+              <p class="text-sm text-gray-600 mb-2">Glissez votre fichier ici ou cliquez pour sélectionner</p>
+              <p class="text-xs text-gray-500">PDF, JPG, PNG - Max 10MB</p>
+            </div>
+          </div>
+
+          <!-- Input States -->
+          <div>
+            <h3 class="text-2xl font-semibold text-olak-dark mb-4">Input States</h3>
+            <div class="space-y-4">
+              <div>
+                <label class="block text-sm font-semibold mb-2 text-olak-dark">Normal State</label>
+                <input type="text" class="input-olak" placeholder="Normal input">
+              </div>
+              <div>
+                <label class="block text-sm font-semibold mb-2 text-olak-dark">Focused State (click to see)</label>
+                <input type="text" class="input-olak" placeholder="Click to see focus state">
+              </div>
+              <div>
+                <label class="block text-sm font-semibold mb-2 text-olak-dark">Error State</label>
+                <input type="text" class="input-olak border-olak-error" value="Invalid input">
+                <p class="text-sm text-olak-error mt-1">Ce champ est requis</p>
+              </div>
+              <div>
+                <label class="block text-sm font-semibold mb-2 text-gray-400">Disabled State</label>
+                <input type="text" class="input-olak opacity-50 cursor-not-allowed bg-gray-100" placeholder="Disabled input" disabled>
+              </div>
+            </div>
+          </div>
+
+          <!-- Form Layout Example -->
+          <div>
+            <h3 class="text-2xl font-semibold text-olak-dark mb-4">Two-Column Form Layout</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                  Prénom <span class="text-olak-error">*</span>
+                </label>
+                <input type="text" class="input-olak" placeholder="Jean">
+              </div>
+              
+              <div>
+                <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                  Nom <span class="text-olak-error">*</span>
+                </label>
+                <input type="text" class="input-olak" placeholder="Dupont">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cards Section -->
+    <section id="cards" class="mb-16">
+      <div class="bg-white rounded-xl shadow-md p-8">
+        <h2 class="text-4xl font-bold text-olak-primary-dark mb-8 pb-4 border-b-2 border-olak-primary-light">Cards</h2>
+        
+        <div class="space-y-8">
+          <!-- Standard Property Cards -->
+          <div>
+            <h3 class="text-2xl font-semibold text-olak-dark mb-4">Standard Property Cards</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div class="card-olak">
+                <div class="flex justify-between items-start mb-4">
+                  <h3 class="font-bold text-xl text-olak-primary-dark">Appartement T3</h3>
+                  <span class="badge badge-success">Disponible</span>
+                </div>
+                <p class="text-sm text-gray-600 mb-4">75 m² • 2 chambres • Paris 15ème</p>
+                <div class="flex items-center justify-between">
+                  <p class="font-bold text-xl text-olak-primary">1 200 €/mois</p>
+                  <button class="btn-secondary px-4 py-2 text-sm">Détails</button>
+                </div>
+              </div>
+
+              <div class="card-olak">
+                <div class="flex justify-between items-start mb-4">
+                  <h3 class="font-bold text-xl text-olak-primary-dark">Maison T5</h3>
+                  <span class="badge badge-pending">En attente</span>
+                </div>
+                <p class="text-sm text-gray-600 mb-4">120 m² • 4 chambres • Lyon 6ème</p>
+                <div class="flex items-center justify-between">
+                  <p class="font-bold text-xl text-olak-primary">1 800 €/mois</p>
+                  <button class="btn-secondary px-4 py-2 text-sm">Détails</button>
+                </div>
+              </div>
+
+              <div class="card-olak">
+                <div class="flex justify-between items-start mb-4">
+                  <h3 class="font-bold text-xl text-olak-primary-dark">Chambre Meublée</h3>
+                  <span class="badge badge-error">Loué</span>
+                </div>
+                <p class="text-sm text-gray-600 mb-4">15 m² • Meublée • Marseille</p>
+                <div class="flex items-center justify-between">
+                  <p class="font-bold text-xl text-olak-primary">450 €/mois</p>
+                  <button class="btn-secondary px-4 py-2 text-sm opacity-50 cursor-not-allowed">Détails</button>
+                </div>
+              </div>
+            </div>
+            <code class="text-sm text-gray-500 mt-4 block bg-gray-50 p-3 rounded">class="card-olak"</code>
+          </div>
+
+          <!-- Empty State Card -->
+          <div>
+            <h3 class="text-2xl font-semibold text-olak-dark mb-4">Empty State Card</h3>
+            <div class="max-w-md">
+              <div class="card-olak text-center">
+                <svg class="w-16 h-16 mx-auto mb-4 text-olak-primary" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                </svg>
+                <h3 class="font-bold text-lg mb-2 text-olak-primary-dark">Ajoutez votre bien</h3>
+                <p class="text-sm text-gray-600 mb-4">Commencez par créer une annonce pour votre propriété</p>
+                <button class="btn-primary w-full">Commencer</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Application Card -->
+          <div>
+            <h3 class="text-2xl font-semibold text-olak-dark mb-4">Application Card</h3>
+            <div class="max-w-md">
+              <div class="card-olak">
+                <div class="flex justify-between items-start mb-4">
+                  <h3 class="font-bold text-xl text-olak-primary-dark">Candidature</h3>
+                  <span class="badge badge-pending">En attente</span>
+                </div>
+                <div class="mb-4">
+                  <p class="font-semibold text-olak-dark">Marie Dupont</p>
+                  <p class="text-sm text-gray-600">CDI • 2 800 € net/mois</p>
+                  <p class="text-sm text-gray-600">Garantie Visale</p>
+                </div>
+                <div class="flex gap-2">
+                  <button class="btn-primary px-4 py-2 text-sm flex-1">Accepter</button>
+                  <button class="btn-secondary px-4 py-2 text-sm flex-1">Refuser</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Info Card with Icon -->
+          <div>
+            <h3 class="text-2xl font-semibold text-olak-dark mb-4">Info Card with Icon</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div class="card-olak text-center">
+                <svg class="w-12 h-12 mx-auto mb-3 text-olak-success" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+                  <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"/>
+                </svg>
+                <p class="font-bold text-2xl text-olak-dark mb-1">24</p>
+                <p class="text-sm text-gray-600">Biens actifs</p>
+              </div>
+              <div class="card-olak text-center">
+                <svg class="w-12 h-12 mx-auto mb-3 text-olak-warning" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
+                </svg>
+                <p class="font-bold text-2xl text-olak-dark mb-1">8</p>
+                <p class="text-sm text-gray-600">Candidatures</p>
+              </div>
+              <div class="card-olak text-center">
+                <svg class="w-12 h-12 mx-auto mb-3 text-olak-primary" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                </svg>
+                <p class="font-bold text-2xl text-olak-dark mb-1">5</p>
+                <p class="text-sm text-gray-600">Visites prévues</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Badges Section -->
+    <section id="badges" class="mb-16">
+      <div class="bg-white rounded-xl shadow-md p-8">
+        <h2 class="text-4xl font-bold text-olak-primary-dark mb-8 pb-4 border-b-2 border-olak-primary-light">Badges & Status Indicators</h2>
+        
+        <div class="space-y-6">
+          <div>
+            <h3 class="text-xl font-semibold text-olak-dark mb-3">Status Badges</h3>
+            <div class="flex flex-wrap gap-3">
+              <span class="badge badge-success">Validé</span>
+              <span class="badge badge-pending">En attente</span>
+              <span class="badge badge-error">Refusé</span>
+              <span class="badge badge-zone-tendue">Zone tendue</span>
+              <span class="badge badge-furnished">Meublé</span>
+              <span class="badge badge-unfurnished">Nu</span>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-semibold text-olak-dark mb-3">Badge Sizes</h3>
+            <div class="flex flex-wrap gap-3 items-center">
+              <span class="badge badge-success px-2 py-1 text-xs">Small</span>
+              <span class="badge badge-success">Medium (Default)</span>
+              <span class="badge badge-success px-4 py-2 text-base">Large</span>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-semibold text-olak-dark mb-3">Usage Examples</h3>
+            <div class="space-y-3">
+              <div class="flex items-center gap-3">
+                <span class="text-gray-700">Propriétaire:</span>
+                <span class="badge badge-success">Compte validé</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-gray-700">Document:</span>
+                <span class="badge badge-pending">Vérification en cours</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-gray-700">Candidature:</span>
+                <span class="badge badge-error">Rejetée</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-gray-700">Location:</span>
+                <span class="badge badge-zone-tendue">Paris - Zone tendue</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Alerts Section -->
+    <section id="alerts" class="mb-16">
+      <div class="bg-white rounded-xl shadow-md p-8">
+        <h2 class="text-4xl font-bold text-olak-primary-dark mb-8 pb-4 border-b-2 border-olak-primary-light">Alerts & Messages</h2>
+        
+        <div class="space-y-4">
+          <!-- Success Alert -->
+          <div>
+            <h3 class="text-xl font-semibold text-olak-dark mb-3">Success Alert</h3>
+            <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg">
+              <div class="flex items-center">
+                <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <div>
+                  <p class="text-green-800 font-semibold">Votre bien a été publié avec succès !</p>
+                  <p class="text-green-700 text-sm mt-1">Vous pouvez maintenant recevoir des candidatures.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Warning Alert -->
+          <div>
+            <h3 class="text-xl font-semibold text-olak-dark mb-3">Warning Alert</h3>
+            <div class="bg-orange-50 border-l-4 border-orange-500 p-4 rounded-r-lg">
+              <div class="flex items-center">
+                <svg class="w-6 h-6 text-orange-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                </svg>
+                <div>
+                  <p class="text-orange-800 font-semibold">Ce bien est situé en zone tendue</p>
+                  <p class="text-orange-700 text-sm mt-1">Vérifiez le plafond de loyer applicable.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Error Alert -->
+          <div>
+            <h3 class="text-xl font-semibold text-olak-dark mb-3">Error Alert</h3>
+            <div class="bg-red-50 border-l-4 border-red-500 p-4 rounded-r-lg">
+              <div class="flex items-center">
+                <svg class="w-6 h-6 text-red-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+                </svg>
+                <div>
+                  <p class="text-red-800 font-semibold">Erreur de validation</p>
+                  <p class="text-red-700 text-sm mt-1">Veuillez remplir tous les champs obligatoires.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Info Alert -->
+          <div>
+            <h3 class="text-xl font-semibold text-olak-dark mb-3">Info Alert</h3>
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
+              <div class="flex items-center">
+                <svg class="w-6 h-6 text-blue-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+                </svg>
+                <div>
+                  <p class="text-blue-800 font-semibold">Information importante</p>
+                  <p class="text-blue-700 text-sm mt-1">Votre profil nécessite une validation par l'administrateur.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dismissible Alert -->
+          <div>
+            <h3 class="text-xl font-semibold text-olak-dark mb-3">Dismissible Alert</h3>
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg flex justify-between items-start">
+              <div class="flex items-center">
+                <svg class="w-6 h-6 text-blue-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+                </svg>
+                <p class="text-blue-800 font-semibold">Cette alerte peut être fermée</p>
+              </div>
+              <button class="text-blue-500 hover:text-blue-700">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tables Section -->
+    <section id="tables" class="mb-16">
+      <div class="bg-white rounded-xl shadow-md p-8">
+        <h2 class="text-4xl font-bold text-olak-primary-dark mb-8 pb-4 border-b-2 border-olak-primary-light">Tables</h2>
+        
+        <div class="space-y-8">
+          <div>
+            <h3 class="text-2xl font-semibold text-olak-dark mb-4">Standard Table</h3>
+            <div class="overflow-x-auto">
+              <table class="min-w-full bg-white rounded-lg overflow-hidden shadow-md">
+                <thead class="bg-olak-primary-light text-olak-dark">
+                  <tr>
+                    <th class="px-6 py-4 text-left text-sm font-semibold">Propriétaire</th>
+                    <th class="px-6 py-4 text-left text-sm font-semibold">Bien</th>
+                    <th class="px-6 py-4 text-left text-sm font-semibold">Loyer</th>
+                    <th class="px-6 py-4 text-left text-sm font-semibold">Statut</th>
+                    <th class="px-6 py-4 text-left text-sm font-semibold">Actions</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                  <tr class="hover:bg-olak-gray transition-colors">
+                    <td class="px-6 py-4 text-sm text-olak-dark">Jean Dupont</td>
+                    <td class="px-6 py-4 text-sm text-olak-dark">Appartement T3</td>
+                    <td class="px-6 py-4 text-sm font-semibold text-olak-primary">1 200 €</td>
+                    <td class="px-6 py-4"><span class="badge badge-success">Validé</span></td>
+                    <td class="px-6 py-4">
+                      <button class="text-olak-primary hover:text-olak-primary-dark text-sm font-semibold">Voir</button>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-olak-gray transition-colors">
+                    <td class="px-6 py-4 text-sm text-olak-dark">Marie Martin</td>
+                    <td class="px-6 py-4 text-sm text-olak-dark">Maison T5</td>
+                    <td class="px-6 py-4 text-sm font-semibold text-olak-primary">1 800 €</td>
+                    <td class="px-6 py-4"><span class="badge badge-pending">En attente</span></td>
+                    <td class="px-6 py-4">
+                      <button class="text-olak-primary hover:text-olak-primary-dark text-sm font-semibold">Voir</button>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-olak-gray transition-colors">
+                    <td class="px-6 py-4 text-sm text-olak-dark">Pierre Bernard</td>
+                    <td class="px-6 py-4 text-sm text-olak-dark">Chambre meublée</td>
+                    <td class="px-6 py-4 text-sm font-semibold text-olak-primary">450 €</td>
+                    <td class="px-6 py-4"><span class="badge badge-error">Refusé</span></td>
+                    <td class="px-6 py-4">
+                      <button class="text-olak-primary hover:text-olak-primary-dark text-sm font-semibold">Voir</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-2xl font-semibold text-olak-dark mb-4">Compact Table</h3>
+            <div class="overflow-x-auto">
+              <table class="min-w-full bg-white rounded-lg overflow-hidden shadow-sm text-sm">
+                <thead class="bg-gray-100">
+                  <tr>
+                    <th class="px-4 py-2 text-left font-semibold text-gray-700">Date</th>
+                    <th class="px-4 py-2 text-left font-semibold text-gray-700">Transaction</th>
+                    <th class="px-4 py-2 text-right font-semibold text-gray-700">Montant</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                  <tr class="hover:bg-gray-50">
+                    <td class="px-4 py-2">18/11/2024</td>
+                    <td class="px-4 py-2">Paiement loyer</td>
+                    <td class="px-4 py-2 text-right font-semibold text-olak-success">+1 200 €</td>
+                  </tr>
+                  <tr class="hover:bg-gray-50">
+                    <td class="px-4 py-2">15/11/2024</td>
+                    <td class="px-4 py-2">Frais de service</td>
+                    <td class="px-4 py-2 text-right font-semibold text-olak-error">-50 €</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Icons Section -->
+    <section id="icons" class="mb-16">
+      <div class="bg-white rounded-xl shadow-md p-8">
+        <h2 class="text-4xl font-bold text-olak-primary-dark mb-8 pb-4 border-b-2 border-olak-primary-light">Icons</h2>
+        
+        <div class="space-y-6">
+          <p class="text-gray-600">Common Material Design icons used throughout the platform</p>
+          
+          <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+            <!-- House Icon -->
+            <div class="text-center">
+              <svg class="w-12 h-12 mx-auto mb-2 text-olak-primary" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+              </svg>
+              <p class="text-xs text-gray-600">House</p>
+            </div>
+
+            <!-- User Icon -->
+            <div class="text-center">
+              <svg class="w-12 h-12 mx-auto mb-2 text-olak-primary" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+              </svg>
+              <p class="text-xs text-gray-600">User</p>
+            </div>
+
+            <!-- Document Icon -->
+            <div class="text-center">
+              <svg class="w-12 h-12 mx-auto mb-2 text-olak-primary" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+              </svg>
+              <p class="text-xs text-gray-600">Document</p>
+            </div>
+
+            <!-- Calendar Icon -->
+            <div class="text-center">
+              <svg class="w-12 h-12 mx-auto mb-2 text-olak-primary" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/>
+              </svg>
+              <p class="text-xs text-gray-600">Calendar</p>
+            </div>
+
+            <!-- Email Icon -->
+            <div class="text-center">
+              <svg class="w-12 h-12 mx-auto mb-2 text-olak-primary" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+              </svg>
+              <p class="text-xs text-gray-600">Email</p>
+            </div>
+
+            <!-- Settings Icon -->
+            <div class="text-center">
+              <svg class="w-12 h-12 mx-auto mb-2 text-olak-primary" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/>
+              </svg>
+              <p class="text-xs text-gray-600">Settings</p>
+            </div>
+          </div>
+
+          <div class="mt-8">
+            <h3 class="text-xl font-semibold text-olak-dark mb-4">Icon Sizes</h3>
+            <div class="flex items-center gap-8">
+              <div class="text-center">
+                <svg class="w-4 h-4 mx-auto mb-1 text-olak-primary" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                </svg>
+                <p class="text-xs text-gray-600">16px</p>
+              </div>
+              <div class="text-center">
+                <svg class="w-6 h-6 mx-auto mb-1 text-olak-primary" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                </svg>
+                <p class="text-xs text-gray-600">24px</p>
+              </div>
+              <div class="text-center">
+                <svg class="w-8 h-8 mx-auto mb-1 text-olak-primary" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                </svg>
+                <p class="text-xs text-gray-600">32px</p>
+              </div>
+              <div class="text-center">
+                <svg class="w-12 h-12 mx-auto mb-1 text-olak-primary" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                </svg>
+                <p class="text-xs text-gray-600">48px</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Navigation Section -->
+    <section id="navigation" class="mb-16">
+      <div class="bg-white rounded-xl shadow-md p-8">
+        <h2 class="text-4xl font-bold text-olak-primary-dark mb-8 pb-4 border-b-2 border-olak-primary-light">Navigation</h2>
+        
+        <div class="space-y-8">
+          <div>
+            <h3 class="text-2xl font-semibold text-olak-dark mb-4">Navigation Links</h3>
+            <div class="flex flex-wrap gap-2">
+              <a href="#" class="nav-link active">Tableau de bord</a>
+              <a href="#" class="nav-link">Mes biens</a>
+              <a href="#" class="nav-link">Candidatures</a>
+              <a href="#" class="nav-link">Documents</a>
+              <a href="#" class="nav-link">Paiements</a>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-2xl font-semibold text-olak-dark mb-4">Breadcrumbs</h3>
+            <nav class="flex" aria-label="Breadcrumb">
+              <ol class="flex items-center space-x-2 text-sm">
+                <li><a href="#" class="text-gray-500 hover:text-olak-primary transition-colors">Accueil</a></li>
+                <li><span class="text-gray-400">/</span></li>
+                <li><a href="#" class="text-gray-500 hover:text-olak-primary transition-colors">Mes biens</a></li>
+                <li><span class="text-gray-400">/</span></li>
+                <li><span class="text-olak-primary font-semibold">Appartement T3</span></li>
+              </ol>
+            </nav>
+          </div>
+
+          <div>
+            <h3 class="text-2xl font-semibold text-olak-dark mb-4">Pagination</h3>
+            <div class="flex items-center gap-2">
+              <button class="px-3 py-2 border border-gray-300 rounded hover:bg-olak-gray transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                </svg>
+              </button>
+              <button class="px-4 py-2 bg-olak-primary text-white rounded font-semibold">1</button>
+              <button class="px-4 py-2 border border-gray-300 rounded hover:bg-olak-gray transition-colors">2</button>
+              <button class="px-4 py-2 border border-gray-300 rounded hover:bg-olak-gray transition-colors">3</button>
+              <span class="px-2">...</span>
+              <button class="px-4 py-2 border border-gray-300 rounded hover:bg-olak-gray transition-colors">10</button>
+              <button class="px-3 py-2 border border-gray-300 rounded hover:bg-olak-gray transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rating Section -->
+    <section id="rating" class="mb-16">
+      <div class="bg-white rounded-xl shadow-md p-8">
+        <h2 class="text-4xl font-bold text-olak-primary-dark mb-8 pb-4 border-b-2 border-olak-primary-light">Rating Component</h2>
+        
+        <div class="space-y-6">
+          <div>
+            <h3 class="text-xl font-semibold text-olak-dark mb-4">Star Rating</h3>
+            <div class="flex items-center gap-1 mb-2">
+              <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8
+-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-6 h-6 text-gray-300" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <span class="ml-2 text-sm font-semibold text-olak-dark">4/5</span>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-semibold text-olak-dark mb-4">Multidimensional Rating Display</h3>
+            <div class="card-olak max-w-2xl">
+              <h4 class="font-bold text-lg mb-4 text-olak-dark">Note globale du candidat</h4>
+              <div class="space-y-3">
+                <div class="flex items-center justify-between">
+                  <span class="text-sm font-medium text-olak-dark">Ratio Salaire/Loyer</span>
+                  <div class="flex items-center gap-1">
+                    <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <span class="ml-2 text-xs font-semibold">5/5</span>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-sm font-medium text-olak-dark">Type de contrat</span>
+                  <div class="flex items-center gap-1">
+                    <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-4 h-4 text-gray-300" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <span class="ml-2 text-xs font-semibold">4/5</span>
+                  </div>
+                </div>
+                <div class="border-t pt-3 mt-3">
+                  <div class="flex items-center justify-between">
+                    <span class="font-bold text-olak-dark">Note globale</span>
+                    <span class="text-2xl font-bold text-olak-primary">4.2/5</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modals Section -->
+    <section id="modals" class="mb-16">
+      <div class="bg-white rounded-xl shadow-md p-8">
+        <h2 class="text-4xl font-bold text-olak-primary-dark mb-8 pb-4 border-b-2 border-olak-primary-light">Modals</h2>
+        
+        <div class="space-y-6">
+          <p class="text-gray-600">Example modal overlay and structure</p>
+          
+          <!-- Modal Preview (not functional, just visual) -->
+          <div class="border-2 border-dashed border-gray-300 rounded-lg p-8">
+            <div class="bg-white rounded-xl shadow-2xl max-w-md mx-auto p-6 border-2 border-olak-primary">
+              <div class="flex justify-between items-center mb-4">
+                <h3 class="text-2xl font-bold text-olak-primary-dark">Confirmer l'action</h3>
+                <button class="text-gray-400 hover:text-gray-600">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                  </svg>
+                </button>
+              </div>
+              
+              <p class="text-gray-600 mb-6">Êtes-vous sûr de vouloir accepter cette candidature ?</p>
+              
+              <div class="flex gap-3">
+                <button class="btn-secondary flex-1">Annuler</button>
+                <button class="btn-primary flex-1">Confirmer</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- States Section -->
+    <section id="states" class="mb-16">
+      <div class="bg-white rounded-xl shadow-md p-8">
+        <h2 class="text-4xl font-bold text-olak-primary-dark mb-8 pb-4 border-b-2 border-olak-primary-light">Loading & Empty States</h2>
+        
+        <div class="space-y-8">
+          <!-- Loading Spinner -->
+          <div>
+            <h3 class="text-2xl font-semibold text-olak-dark mb-4">Loading Spinner</h3>
+            <div class="bg-olak-gray p-12 rounded-lg">
+              <div class="flex items-center justify-center">
+                <div class="animate-spin rounded-full h-12 w-12 border-4 border-olak-primary-light border-t-olak-primary"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skeleton Screen -->
+          <div>
+            <h3 class="text-2xl font-semibold text-olak-dark mb-4">Skeleton Loading</h3>
+            <div class="card-olak animate-pulse">
+              <div class="h-6 bg-gray-200 rounded w-3/4 mb-4"></div>
+              <div class="h-4 bg-gray-200 rounded w-1/2 mb-4"></div>
+              <div class="h-4 bg-gray-200 rounded w-full mb-2"></div>
+              <div class="h-4 bg-gray-200 rounded w-5/6"></div>
+            </div>
+          </div>
+
+          <!-- Empty State -->
+          <div>
+            <h3 class="text-2xl font-semibold text-olak-dark mb-4">Empty State</h3>
+            <div class="card-olak text-center">
+              <svg class="w-24 h-24 mx-auto mb-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/>
+              </svg>
+              <h3 class="text-xl font-semibold text-gray-600 mb-2">Aucun bien pour le moment</h3>
+              <p class="text-gray-500 mb-6">Commencez par ajouter votre première propriété</p>
+              <button class="btn-primary">Ajouter un bien</button>
+            </div>
+          </div>
+
+          <!-- Progress Bar -->
+          <div>
+            <h3 class="text-2xl font-semibold text-olak-dark mb-4">Progress Bar</h3>
+            <div class="space-y-4">
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium text-olak-dark">Documents téléchargés</span>
+                  <span class="text-sm font-medium text-olak-dark">75%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-3">
+                  <div class="bg-olak-primary h-3 rounded-full transition-all" style="width: 75%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium text-olak-dark">Profil complété</span>
+                  <span class="text-sm font-medium text-olak-dark">100%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-3">
+                  <div class="bg-olak-success h-3 rounded-full transition-all" style="width: 100%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Spacing Section -->
+    <section id="spacing" class="mb-16">
+      <div class="bg-white rounded-xl shadow-md p-8">
+        <h2 class="text-4xl font-bold text-olak-primary-dark mb-8 pb-4 border-b-2 border-olak-primary-light">Spacing System</h2>
+        
+        <div class="space-y-6">
+          <p class="text-gray-600">Base unit: 8px - Use consistent spacing throughout the application</p>
+          
+          <div class="space-y-4">
+            <div class="flex items-center gap-4">
+              <div class="w-32 text-sm font-semibold">XS (8px)</div>
+              <div class="bg-olak-primary h-8 rounded" style="width: 8px"></div>
+              <code class="text-sm text-gray-600">p-2, m-2</code>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="w-32 text-sm font-semibold">SM (16px)</div>
+              <div class="bg-olak-primary h-8 rounded" style="width: 16px"></div>
+              <code class="text-sm text-gray-600">p-4, m-4</code>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="w-32 text-sm font-semibold">MD (24px)</div>
+              <div class="bg-olak-primary h-8 rounded" style="width: 24px"></div>
+              <code class="text-sm text-gray-600">p-6, m-6</code>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="w-32 text-sm font-semibold">LG (32px)</div>
+              <div class="bg-olak-primary h-8 rounded" style="width: 32px"></div>
+              <code class="text-sm text-gray-600">p-8, m-8</code>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="w-32 text-sm font-semibold">XL (48px)</div>
+              <div class="bg-olak-primary h-8 rounded" style="width: 48px"></div>
+              <code class="text-sm text-gray-600">p-12, m-12</code>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Grid System Section -->
+    <section id="grid" class="mb-16">
+      <div class="bg-white rounded-xl shadow-md p-8">
+        <h2 class="text-4xl font-bold text-olak-primary-dark mb-8 pb-4 border-b-2 border-olak-primary-light">Grid System</h2>
+        
+        <div class="space-y-8">
+          <div>
+            <h3 class="text-2xl font-semibold text-olak-dark mb-4">Responsive Grid</h3>
+            <p class="text-gray-600 mb-4">Mobile-first approach with breakpoints at sm (640px), md (768px), lg (1024px), xl (1280px)</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
+              <div class="bg-olak-primary text-white p-4 rounded text-center">Column 1</div>
+              <div class="bg-olak-primary-dark text-white p-4 rounded text-center">Column 2</div>
+              <div class="bg-olak-primary-light text-olak-dark p-4 rounded text-center">Column 3</div>
+            </div>
+            <code class="text-sm text-gray-600 block bg-gray-50 p-3 rounded">grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4</code>
+          </div>
+
+          <div>
+            <h3 class="text-2xl font-semibold text-olak-dark mb-4">Container</h3>
+            <div class="max-w-7xl mx-auto bg-olak-gray p-6 rounded">
+              <p class="text-center text-olak-dark">Max width container (1280px)</p>
+            </div>
+            <code class="text-sm text-gray-600 mt-2 block">max-w-7xl mx-auto px-4 sm:px-6 lg:px-8</code>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="bg-white rounded-xl shadow-md p-8 text-center">
+      <div class="mb-6">
+        <h3 class="text-2xl font-bold text-olak-primary-dark mb-2">Design System Ready</h3>
+        <p class="text-gray-600">All components follow OLAK brand guidelines and are production-ready</p>
+      </div>
+      
+      <div class="flex justify-center gap-4 mb-6">
+        <a href="/" class="btn-primary">Back to Home</a>
+        <a href="/typography" class="btn-secondary">View Compact Version</a>
+      </div>
+      
+      <div class="border-t border-gray-200 pt-6">
+        <p class="text-sm text-gray-600 mb-2">OLAK Design System v1.0</p>
+        <p class="text-xs text-gray-500">Built with Tailwind CSS, Inter Font & OLAK Brand Guidelines</p>
+        <p class="text-xs text-gray-500 mt-2">Design system includes: Typography • Colors • Buttons • Forms • Cards • Badges • Alerts • Tables • Icons • Navigation • States</p>
+      </div>
+    </div>
+
+  </div>
+</div>
