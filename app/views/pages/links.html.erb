@@ -571,19 +571,27 @@
         <ul class="space-y-1 text-sm">
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/tenant/leases</span>
+            <%= link_to tenant_leases_path, class: "text-blue-600 hover:underline" do %>
+              /tenant/leases
+            <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/tenant/leases/:id</span>
+            <%= link_to tenant_lease_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /tenant/leases/:id
+            <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/tenant/leases/:id/preview</span>
+            <%= link_to preview_tenant_lease_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /tenant/leases/:id/preview
+            <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/tenant/leases/:id/download</span>
+            <%= link_to download_tenant_lease_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /tenant/leases/:id/download
+            <% end %>
           </li>
         </ul>
       </div>
