@@ -1,5 +1,5 @@
 <!-- Admin Navigation Bar - Purple Theme -->
-<nav class="bg-white shadow-md border-b-4 border-purple-600">
+<nav class="bg-white shadow-md border-b-4 border-purple-600" data-controller="navbar">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       
@@ -39,8 +39,23 @@
         </a>
       </div>
 
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden">
+        <button
+          type="button"
+          class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-purple-700 hover:bg-purple-50 transition-colors"
+          data-navbar-target="menuButton"
+          data-action="click->navbar#toggle"
+          aria-expanded="false"
+          aria-label="Toggle navigation menu">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+
       <!-- User Dropdown -->
-      <div class="flex items-center">
+      <div class="hidden md:flex items-center">
         <div class="relative group">
           <button type="button" class="flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-purple-50 transition-colors">
             <div class="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center">
@@ -67,8 +82,10 @@
     </div>
   </div>
 
-  <!-- Mobile menu button (would be implemented with JavaScript) -->
-  <div class="md:hidden px-4 pb-3 space-y-1">
+  <!-- Mobile menu -->
+  <div
+    class="md:hidden px-4 pb-3 space-y-1 transition-all duration-300 ease-in-out"
+    data-navbar-target="menu">
     <%= link_to admin_root_path, class: "block px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-purple-50 hover:text-purple-700" do %>Tableau de bord<% end %>
     <%= link_to admin_owners_path, class: "block px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-purple-50 hover:text-purple-700" do %>Propriétaires<% end %>
     <a href="#" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-purple-50 hover:text-purple-700">Locataires</a>
