@@ -617,11 +617,15 @@
         <ul class="space-y-1 text-sm">
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/tenant/notifications</span>
+            <%= link_to tenant_notifications_path, class: "text-blue-600 hover:underline" do %>
+              /tenant/notifications
+            <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/tenant/notifications/:id</span>
+            <%= link_to tenant_notification_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /tenant/notifications/:id
+            <% end %>
           </li>
         </ul>
       </div>
