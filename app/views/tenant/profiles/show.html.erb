@@ -1,0 +1,244 @@
+<% content_for :title, "Mon Profil" %>
+
+<!-- Page Header -->
+<div class="mb-8">
+  <div class="flex justify-between items-center">
+    <div>
+      <h1 class="text-4xl font-bold text-olak-primary-dark mb-2">Mon Profil</h1>
+      <p class="text-gray-600">Gérez vos informations personnelles et documents</p>
+    </div>
+    <%= link_to edit_tenant_profile_path, class: "btn-primary flex items-center gap-2" do %>
+      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+        <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"/>
+      </svg>
+      Modifier mon profil
+    <% end %>
+  </div>
+</div>
+
+<!-- Document Status Alert -->
+<div class="mb-6">
+  <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
+    <div class="flex items-center">
+      <svg class="w-6 h-6 text-blue-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+      </svg>
+      <div>
+        <p class="text-blue-800 font-semibold">Dossier en cours de validation</p>
+        <p class="text-blue-700 text-sm mt-1">Vos documents sont en cours d'examen par l'administration.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Profile Information Card -->
+<div class="card-olak mb-6">
+  <div class="flex justify-between items-start mb-6">
+    <h2 class="text-2xl font-semibold text-olak-primary-dark">Informations personnelles</h2>
+    <span class="badge badge-success">Complet</span>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div>
+      <p class="text-sm font-semibold text-gray-600 mb-1">Nom complet</p>
+      <p class="text-base text-olak-dark">Marie Martin</p>
+    </div>
+    
+    <div>
+      <p class="text-sm font-semibold text-gray-600 mb-1">Email</p>
+      <p class="text-base text-olak-dark">marie.martin@example.fr</p>
+    </div>
+    
+    <div>
+      <p class="text-sm font-semibold text-gray-600 mb-1">Téléphone</p>
+      <p class="text-base text-olak-dark">06 98 76 54 32</p>
+    </div>
+    
+    <div>
+      <p class="text-sm font-semibold text-gray-600 mb-1">Date de naissance</p>
+      <p class="text-base text-olak-dark">22/08/1992</p>
+    </div>
+    
+    <div class="md:col-span-2">
+      <p class="text-sm font-semibold text-gray-600 mb-1">Adresse actuelle</p>
+      <p class="text-base text-olak-dark">45 Avenue de la République, 94200 Ivry-sur-Seine, France</p>
+    </div>
+    
+    <div>
+      <p class="text-sm font-semibold text-gray-600 mb-1">Compte créé le</p>
+      <p class="text-base text-olak-dark">5 novembre 2024</p>
+    </div>
+  </div>
+</div>
+
+<!-- Employment Information Card -->
+<div class="card-olak mb-6">
+  <div class="flex justify-between items-start mb-6">
+    <h2 class="text-2xl font-semibold text-olak-primary-dark">Informations professionnelles</h2>
+    <span class="badge badge-success">Validé</span>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div>
+      <p class="text-sm font-semibold text-gray-600 mb-1">Statut professionnel</p>
+      <p class="text-base text-olak-dark">CDI - Temps plein</p>
+    </div>
+    
+    <div>
+      <p class="text-sm font-semibold text-gray-600 mb-1">Salaire mensuel net</p>
+      <p class="text-base font-semibold text-green-600">2 500 €</p>
+    </div>
+    
+    <div>
+      <p class="text-sm font-semibold text-gray-600 mb-1">Employeur</p>
+      <p class="text-base text-olak-dark">TechCorp SARL</p>
+    </div>
+    
+    <div>
+      <p class="text-sm font-semibold text-gray-600 mb-1">Poste occupé</p>
+      <p class="text-base text-olak-dark">Développeuse Web</p>
+    </div>
+    
+    <div>
+      <p class="text-sm font-semibold text-gray-600 mb-1">Date d'embauche</p>
+      <p class="text-base text-olak-dark">15 janvier 2022</p>
+    </div>
+    
+    <div>
+      <p class="text-sm font-semibold text-gray-600 mb-1">Ancienneté</p>
+      <p class="text-base text-olak-dark">2 ans 10 mois</p>
+    </div>
+  </div>
+</div>
+
+<!-- Documents Status Card -->
+<div class="card-olak mb-6">
+  <div class="flex justify-between items-start mb-6">
+    <h2 class="text-2xl font-semibold text-olak-primary-dark">Documents</h2>
+    <%= link_to documents_tenant_profile_path, class: "btn-secondary text-sm" do %>
+      <svg class="w-4 h-4 inline-block mr-1" fill="currentColor" viewBox="0 0 20 20">
+        <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"/>
+      </svg>
+      Gérer mes documents
+    <% end %>
+  </div>
+  
+  <!-- Progress Bar -->
+  <div class="mb-6">
+    <div class="flex justify-between mb-2">
+      <span class="text-sm font-medium text-olak-dark">Progression du dossier</span>
+      <span class="text-sm font-semibold text-green-600">67%</span>
+    </div>
+    <div class="w-full bg-gray-200 rounded-full h-3">
+      <div class="bg-green-600 h-3 rounded-full transition-all" style="width: 67%"></div>
+    </div>
+  </div>
+  
+  <div class="space-y-3">
+    <div class="flex items-center justify-between p-3 bg-green-50 rounded-lg">
+      <div class="flex items-center gap-3">
+        <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+        </svg>
+        <span class="text-sm font-medium">Carte d'identité</span>
+      </div>
+      <span class="badge badge-success">Validé</span>
+    </div>
+
+    <div class="flex items-center justify-between p-3 bg-green-50 rounded-lg">
+      <div class="flex items-center gap-3">
+        <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+        </svg>
+        <span class="text-sm font-medium">Contrat de travail</span>
+      </div>
+      <span class="badge badge-success">Validé</span>
+    </div>
+
+    <div class="flex items-center justify-between p-3 bg-green-50 rounded-lg">
+      <div class="flex items-center gap-3">
+        <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+        </svg>
+        <span class="text-sm font-medium">3 dernières fiches de paie</span>
+      </div>
+      <span class="badge badge-success">Validé</span>
+    </div>
+
+    <div class="flex items-center justify-between p-3 bg-green-50 rounded-lg">
+      <div class="flex items-center gap-3">
+        <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+        </svg>
+        <span class="text-sm font-medium">Avis d'imposition</span>
+      </div>
+      <span class="badge badge-success">Validé</span>
+    </div>
+
+    <div class="flex items-center justify-between p-3 bg-orange-50 rounded-lg">
+      <div class="flex items-center gap-3">
+        <svg class="w-5 h-5 text-orange-500" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+        </svg>
+        <span class="text-sm font-medium">Justificatif de domicile</span>
+      </div>
+      <span class="badge badge-pending">Manquant</span>
+    </div>
+
+    <div class="flex items-center justify-between p-3 bg-orange-50 rounded-lg">
+      <div class="flex items-center gap-3">
+        <svg class="w-5 h-5 text-orange-500" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+        </svg>
+        <span class="text-sm font-medium">RIB</span>
+      </div>
+      <span class="badge badge-pending">Manquant</span>
+    </div>
+  </div>
+</div>
+
+<!-- Guarantor Information Card -->
+<div class="card-olak">
+  <div class="flex justify-between items-start mb-6">
+    <h2 class="text-2xl font-semibold text-olak-primary-dark">Garant</h2>
+    <span class="badge badge-success">Visale</span>
+  </div>
+  
+  <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
+    <div class="flex items-start gap-4 mb-4">
+      <svg class="w-12 h-12 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+      </svg>
+      <div class="flex-1">
+        <p class="font-bold text-lg text-blue-900 mb-1">Garantie Visale</p>
+        <p class="text-sm text-blue-700 mb-3">Garantie valide pour la location</p>
+        <div class="grid grid-cols-2 gap-4 text-sm">
+          <div>
+            <p class="text-blue-600 font-semibold mb-1">Numéro Visale</p>
+            <p class="text-blue-900">VIS-2024-123456</p>
+          </div>
+          <div>
+            <p class="text-blue-600 font-semibold mb-1">Date d'obtention</p>
+            <p class="text-blue-900">10 novembre 2024</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="flex gap-2">
+      <button class="btn-secondary flex-1">
+        <svg class="w-5 h-5 inline-block mr-2" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"/>
+        </svg>
+        Modifier
+      </button>
+      <button class="btn-secondary flex-1">
+        <svg class="w-5 h-5 inline-block mr-2" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+          <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+        </svg>
+        Voir les détails
+      </button>
+    </div>
+  </div>
+</div>

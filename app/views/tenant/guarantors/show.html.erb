@@ -1,0 +1,149 @@
+<% content_for :title, "Mon Garant" %>
+
+<!-- Page Header -->
+<div class="mb-8">
+  <div class="flex justify-between items-center">
+    <div>
+      <h1 class="text-4xl font-bold text-olak-primary-dark mb-2">Mon Garant</h1>
+      <p class="text-gray-600">Gérez les informations de votre garant</p>
+    </div>
+    <div class="flex gap-3">
+      <%= link_to edit_tenant_guarantor_path, class: "btn-secondary flex items-center gap-2" do %>
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"/>
+        </svg>
+        Modifier
+      <% end %>
+      <button class="btn-secondary text-olak-error border-olak-error hover:bg-red-50 flex items-center gap-2">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"/>
+        </svg>
+        Supprimer
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Info Alert -->
+<div class="mb-6">
+  <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
+    <div class="flex items-center">
+      <svg class="w-6 h-6 text-blue-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+      </svg>
+      <div>
+        <p class="text-blue-800 font-semibold">Garantie validée</p>
+        <p class="text-blue-700 text-sm mt-1">Votre garantie est active et valide pour vos candidatures.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Visale Guarantee Card -->
+<div class="card-olak mb-6">
+  <div class="flex justify-between items-start mb-6">
+    <h2 class="text-2xl font-semibold text-olak-primary-dark">Garantie Visale</h2>
+    <span class="badge badge-success">Validée</span>
+  </div>
+  
+  <div class="bg-blue-50 border-2 border-blue-200 rounded-lg p-6">
+    <div class="flex items-start gap-4 mb-6">
+      <svg class="w-16 h-16 text-blue-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+      </svg>
+      <div class="flex-1">
+        <p class="font-bold text-2xl text-blue-900 mb-2">Garantie Visale Active</p>
+        <p class="text-sm text-blue-700 mb-4">Caution gratuite pour votre location - Valable pour les baux de logement principal (loi de 1989)</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white rounded-lg p-4 border border-blue-200">
+            <p class="text-blue-600 font-semibold text-sm mb-1">Numéro Visale</p>
+            <p class="text-blue-900 font-bold text-lg">VIS-2024-123456</p>
+          </div>
+          
+          <div class="bg-white rounded-lg p-4 border border-blue-200">
+            <p class="text-blue-600 font-semibold text-sm mb-1">Date d'obtention</p>
+            <p class="text-blue-900 font-bold text-lg">10 novembre 2024</p>
+          </div>
+          
+          <div class="bg-white rounded-lg p-4 border border-blue-200">
+            <p class="text-blue-600 font-semibold text-sm mb-1">Couverture loyer maximum</p>
+            <p class="text-blue-900 font-bold text-lg">1 500 € / mois</p>
+            <p class="text-blue-600 text-xs mt-1">Région Île-de-France</p>
+          </div>
+          
+          <div class="bg-white rounded-lg p-4 border border-blue-200">
+            <p class="text-blue-600 font-semibold text-sm mb-1">Durée de couverture</p>
+            <p class="text-blue-900 font-bold text-lg">36 mensualités</p>
+            <p class="text-blue-600 text-xs mt-1">Pendant toute la durée du bail</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Coverage Details -->
+    <div class="bg-white rounded-lg p-4 border border-blue-200">
+      <h3 class="font-semibold text-blue-900 mb-3 flex items-center gap-2">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+        </svg>
+        Ce que couvre votre garantie Visale
+      </h3>
+      <ul class="space-y-2 text-sm text-blue-800">
+        <li class="flex items-start gap-2">
+          <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          <span>Loyers impayés jusqu'à 1 500 € par mois (Île-de-France) ou 1 300 € (autres régions)</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          <span>Dépôt de garantie jusqu'à 2 mois de loyer (charges comprises)</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          <span>Remise en état du logement en cas de dégradations locatives</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          <span>Valable pour location nue, meublée ou colocation (résidence principale)</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Eligibility Information Card -->
+<div class="card-olak">
+  <h2 class="text-2xl font-semibold text-olak-primary-dark mb-4">Informations sur l'éligibilité Visale</h2>
+  
+  <div class="bg-gray-50 rounded-lg p-6">
+    <h3 class="font-semibold text-olak-dark mb-3">Profils éligibles</h3>
+    <ul class="space-y-2 text-sm text-gray-700">
+      <li class="flex items-start gap-2">
+        <svg class="w-5 h-5 text-olak-primary flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+        </svg>
+        <span>Jeunes de 18 à 30 ans (salariés, alternants, étudiants)</span>
+      </li>
+      <li class="flex items-start gap-2">
+        <svg class="w-5 h-5 text-olak-primary flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+        </svg>
+        <span>Salariés de plus de 30 ans en reconversion, prise de poste ou mutation</span>
+      </li>
+      <li class="flex items-start gap-2">
+        <svg class="w-5 h-5 text-olak-primary flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+        </svg>
+        <span>Salariés du secteur privé en CDD, CDI ou intérim</span>
+      </li>
+    </ul>
+  </div>
+</div>

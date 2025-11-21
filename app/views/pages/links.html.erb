@@ -509,15 +509,21 @@
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/tenant/profile</span>
+            <%= link_to tenant_profile_path, class: "text-blue-600 hover:underline" do %>
+              /tenant/profile
+            <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/tenant/profile/edit</span>
+            <%= link_to edit_tenant_profile_path, class: "text-blue-600 hover:underline" do %>
+              /tenant/profile/edit
+            <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/tenant/profile/documents</span>
+            <%= link_to documents_tenant_profile_path, class: "text-blue-600 hover:underline" do %>
+              /tenant/profile/documents
+            <% end %>
           </li>
         </ul>
         
@@ -525,15 +531,21 @@
         <ul class="space-y-1 text-sm">
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/tenant/guarantor</span>
+            <%= link_to tenant_guarantor_path, class: "text-blue-600 hover:underline" do %>
+              /tenant/guarantor
+            <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/tenant/guarantor/new</span>
+            <%= link_to new_tenant_guarantor_path, class: "text-blue-600 hover:underline" do %>
+              /tenant/guarantor/new
+            <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/tenant/guarantor/edit</span>
+            <%= link_to edit_tenant_guarantor_path, class: "text-blue-600 hover:underline" do %>
+              /tenant/guarantor/edit
+            <% end %>
           </li>
         </ul>
       </div>
@@ -543,11 +555,15 @@
         <ul class="space-y-1 text-sm">
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/tenant/applications</span>
+            <%= link_to tenant_applications_path, class: "text-blue-600 hover:underline" do %>
+              /tenant/applications
+            <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/tenant/applications/:id</span>
+            <%= link_to tenant_application_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /tenant/applications/:id
+            <% end %>
           </li>
         </ul>
         
@@ -555,19 +571,27 @@
         <ul class="space-y-1 text-sm">
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/tenant/leases</span>
+            <%= link_to tenant_leases_path, class: "text-blue-600 hover:underline" do %>
+              /tenant/leases
+            <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/tenant/leases/:id</span>
+            <%= link_to tenant_lease_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /tenant/leases/:id
+            <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/tenant/leases/:id/preview</span>
+            <%= link_to preview_tenant_lease_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /tenant/leases/:id/preview
+            <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/tenant/leases/:id/download</span>
+            <%= link_to download_tenant_lease_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /tenant/leases/:id/download
+            <% end %>
           </li>
         </ul>
       </div>
@@ -577,11 +601,15 @@
         <ul class="space-y-1 text-sm">
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/tenant/rental_cv</span>
+            <%= link_to tenant_rental_cv_path, class: "text-blue-600 hover:underline" do %>
+              /tenant/rental_cv
+            <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/tenant/rental_cv/download</span>
+            <%= link_to download_tenant_rental_cv_path, class: "text-blue-600 hover:underline" do %>
+              /tenant/rental_cv/download
+            <% end %>
           </li>
         </ul>
         
@@ -589,11 +617,15 @@
         <ul class="space-y-1 text-sm">
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/tenant/notifications</span>
+            <%= link_to tenant_notifications_path, class: "text-blue-600 hover:underline" do %>
+              /tenant/notifications
+            <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/tenant/notifications/:id</span>
+            <%= link_to tenant_notification_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /tenant/notifications/:id
+            <% end %>
           </li>
         </ul>
       </div>
