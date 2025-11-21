@@ -254,29 +254,12 @@ Rails.application.routes.draw do
   end
   
   # ============================================================================
-  # EXISTING MOCKUP & DEVELOPMENT ROUTES
+  # DEVELOPMENT ROUTES
   # ============================================================================
-
-  get "home/index"
+  
+  # Typography/Design System pages
   get "typography", to: "pages#typography"
   get "typography2", to: "pages#typography2"
-  # devise_for :users  # Commented out - already defined on line 10 with custom controllers
-  
-  # Mockups routes
-  get 'mockups/index'
-  
-  # Admin mockups
-  get 'mockups/admin_users'
-  get 'mockups/admin_analytics'
-  
-  # Owner mockups
-  
-  # Tenant mockups
-  
-  # Legacy user mockups
-  get 'mockups/user_dashboard'
-  get 'mockups/user_profile'
-  get 'mockups/user_settings'
   
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
