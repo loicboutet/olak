@@ -1,0 +1,188 @@
+<% content_for :title, "Paiement annulé" %>
+
+<div class="min-h-screen bg-olak-gray py-8">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Cancel Icon -->
+    <div class="text-center mb-8">
+      <div class="inline-flex items-center justify-center w-24 h-24 rounded-full bg-olak-warning mb-6">
+        <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+        </svg>
+      </div>
+      <h1 class="text-5xl font-bold text-olak-primary-dark mb-4">Paiement annulé</h1>
+      <p class="text-xl text-gray-600">Votre transaction n'a pas été finalisée</p>
+    </div>
+
+    <!-- Warning Alert -->
+    <div class="bg-orange-50 border-l-4 border-orange-500 p-6 rounded-r-lg mb-8">
+      <div class="flex items-start">
+        <svg class="w-6 h-6 text-orange-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+        </svg>
+        <div>
+          <p class="text-orange-800 font-semibold text-lg mb-2">Transaction non aboutie</p>
+          <p class="text-orange-700 text-sm">
+            Votre paiement a été annulé et aucun montant n'a été débité de votre compte. 
+            Vous pouvez réessayer à tout moment.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reasons Section -->
+    <div class="bg-white rounded-xl shadow-md p-8 mb-6">
+      <h2 class="text-2xl font-semibold text-olak-dark mb-6">Raisons possibles</h2>
+      
+      <div class="space-y-4">
+        <div class="flex items-start gap-3">
+          <svg class="w-6 h-6 text-gray-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+          </svg>
+          <div>
+            <p class="font-semibold text-olak-dark">Vous avez annulé volontairement</p>
+            <p class="text-sm text-gray-600">Vous avez cliqué sur le bouton "Annuler" ou fermé la fenêtre pendant le paiement</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3">
+          <svg class="w-6 h-6 text-gray-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+          </svg>
+          <div>
+            <p class="font-semibold text-olak-dark">Informations de paiement incorrectes</p>
+            <p class="text-sm text-gray-600">Vérifiez que votre numéro de carte, date d'expiration et CVV sont corrects</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3">
+          <svg class="w-6 h-6 text-gray-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+          </svg>
+          <div>
+            <p class="font-semibold text-olak-dark">Fonds insuffisants</p>
+            <p class="text-sm text-gray-600">Votre carte bancaire ne dispose peut-être pas des fonds nécessaires</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3">
+          <svg class="w-6 h-6 text-gray-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1 a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+          </svg>
+          <div>
+            <p class="font-semibold text-olak-dark">Problème technique temporaire</p>
+            <p class="text-sm text-gray-600">Une erreur peut survenir lors de la communication avec le serveur de paiement</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Payment Details -->
+    <div class="bg-white rounded-xl shadow-md p-8 mb-6">
+      <h2 class="text-2xl font-semibold text-olak-dark mb-6">Détails du paiement tenté</h2>
+      
+      <dl class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+        <div>
+          <dt class="text-gray-600 mb-1">Montant</dt>
+          <dd class="font-bold text-xl text-olak-dark">150 €</dd>
+        </div>
+        <div>
+          <dt class="text-gray-600 mb-1">Date de tentative</dt>
+          <dd class="font-medium text-olak-dark">20 novembre 2024, 13:52</dd>
+        </div>
+        <div>
+          <dt class="text-gray-600 mb-1">Bail concerné</dt>
+          <dd class="font-medium text-olak-dark">Appartement T3 - Paris 15ème</dd>
+        </div>
+        <div>
+          <dt class="text-gray-600 mb-1">Statut</dt>
+          <dd><span class="badge badge-error">Annulé</span></dd>
+        </div>
+      </dl>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+      <%= link_to new_owner_payment_path, class: "btn-primary flex items-center justify-center gap-2 text-lg py-4" do %>
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd"/>
+        </svg>
+        Réessayer le paiement
+      <% end %>
+      
+      <%= link_to owner_payments_path, class: "btn-secondary flex items-center justify-center gap-2 text-lg py-4" do %>
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd"/>
+        </svg>
+        Retour aux paiements
+      <% end %>
+    </div>
+
+    <!-- Help Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      
+      <!-- Payment Methods -->
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-lg">
+        <div class="flex items-start">
+          <svg class="w-6 h-6 text-blue-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"/>
+            <path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd"/>
+          </svg>
+          <div>
+            <p class="text-blue-800 font-semibold mb-1">Moyens de paiement acceptés</p>
+            <p class="text-sm text-blue-700">
+              Nous acceptons Visa, Mastercard et American Express. 
+              Assurez-vous que votre carte est activée pour les paiements en ligne.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Support -->
+      <div class="bg-green-50 border-l-4 border-green-500 p-6 rounded-r-lg">
+        <div class="flex items-start">
+          <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+          </svg>
+          <div>
+            <p class="text-green-800 font-semibold mb-1">Besoin d'assistance ?</p>
+            <p class="text-sm text-green-700">
+              Notre équipe support est disponible au 01 23 45 67 89 
+              ou par email à support@olak.fr pour vous aider.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Additional Info -->
+    <div class="mt-8 bg-gray-50 border border-gray-200 p-6 rounded-lg">
+      <h3 class="font-semibold text-olak-dark mb-3 flex items-center gap-2">
+        <svg class="w-5 h-5 text-olak-primary" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+        </svg>
+        Bon à savoir
+      </h3>
+      <ul class="space-y-2 text-sm text-gray-700">
+        <li class="flex items-start gap-2">
+          <span class="text-olak-primary font-bold">•</span>
+          <span>Aucun montant n'a été débité de votre compte</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-olak-primary font-bold">•</span>
+          <span>Vous pouvez réessayer immédiatement ou plus tard</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-olak-primary font-bold">•</span>
+          <span>Tous vos paiements sont sécurisés par Stripe</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-olak-primary font-bold">•</span>
+          <span>Le bail n'a pas été généré tant que le paiement n'est pas finalisé</span>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</div>
