@@ -1,0 +1,231 @@
+<% content_for :title, "Modifier mon profil" %>
+
+<!-- Page Header -->
+<div class="mb-8">
+  <div class="flex justify-between items-center">
+    <div>
+      <h1 class="text-4xl font-bold text-olak-primary-dark mb-2">Modifier mon profil</h1>
+      <p class="text-gray-600">Mettez à jour vos informations personnelles et professionnelles</p>
+    </div>
+    <%= link_to tenant_profile_path, class: "btn-secondary" do %>
+      Annuler
+    <% end %>
+  </div>
+</div>
+
+<!-- Re-validation Warning Alert -->
+<div class="mb-6">
+  <div class="bg-orange-50 border-l-4 border-orange-500 p-4 rounded-r-lg">
+    <div class="flex items-center">
+      <svg class="w-6 h-6 text-orange-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+      </svg>
+      <div>
+        <p class="text-orange-800 font-semibold">Attention : Re-validation nécessaire</p>
+        <p class="text-orange-700 text-sm mt-1">Toute modification de vos informations nécessitera une nouvelle validation par l'administration.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Profile Edit Form -->
+<form>
+  <!-- Personal Information Section -->
+  <div class="card-olak mb-6">
+    <h2 class="text-2xl font-semibold text-olak-primary-dark mb-6">Informations personnelles</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div>
+        <label class="block text-sm font-semibold mb-2 text-olak-dark">
+          Prénom <span class="text-olak-error">*</span>
+        </label>
+        <input type="text" class="input-olak" value="Marie" placeholder="Prénom">
+      </div>
+      
+      <div>
+        <label class="block text-sm font-semibold mb-2 text-olak-dark">
+          Nom <span class="text-olak-error">*</span>
+        </label>
+        <input type="text" class="input-olak" value="Martin" placeholder="Nom">
+      </div>
+      
+      <div>
+        <label class="block text-sm font-semibold mb-2 text-olak-dark">
+          Email <span class="text-olak-error">*</span>
+        </label>
+        <input type="email" class="input-olak" value="marie.martin@example.fr" placeholder="email@exemple.fr">
+        <p class="text-xs text-gray-500 mt-1">Votre email de connexion</p>
+      </div>
+      
+      <div>
+        <label class="block text-sm font-semibold mb-2 text-olak-dark">
+          Téléphone <span class="text-olak-error">*</span>
+        </label>
+        <input type="tel" class="input-olak" value="06 98 76 54 32" placeholder="06 12 34 56 78">
+      </div>
+      
+      <div>
+        <label class="block text-sm font-semibold mb-2 text-olak-dark">
+          Date de naissance <span class="text-olak-error">*</span>
+        </label>
+        <input type="date" class="input-olak" value="1992-08-22">
+      </div>
+      
+      <div>
+        <label class="block text-sm font-semibold mb-2 text-olak-dark">
+          Nationalité <span class="text-olak-error">*</span>
+        </label>
+        <select class="input-olak">
+          <option value="française" selected>Française</option>
+          <option value="autre">Autre</option>
+        </select>
+      </div>
+      
+      <div class="md:col-span-2">
+        <label class="block text-sm font-semibold mb-2 text-olak-dark">
+          Adresse actuelle <span class="text-olak-error">*</span>
+        </label>
+        <input type="text" class="input-olak" value="45 Avenue de la République" placeholder="Numéro et rue">
+      </div>
+      
+      <div>
+        <label class="block text-sm font-semibold mb-2 text-olak-dark">
+          Code postal <span class="text-olak-error">*</span>
+        </label>
+        <input type="text" class="input-olak" value="94200" placeholder="75000">
+      </div>
+      
+      <div>
+        <label class="block text-sm font-semibold mb-2 text-olak-dark">
+          Ville <span class="text-olak-error">*</span>
+        </label>
+        <input type="text" class="input-olak" value="Ivry-sur-Seine" placeholder="Paris">
+      </div>
+    </div>
+  </div>
+  
+  <!-- Employment Information Section -->
+  <div class="card-olak mb-6">
+    <h2 class="text-2xl font-semibold text-olak-primary-dark mb-6">Informations professionnelles</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div>
+        <label class="block text-sm font-semibold mb-2 text-olak-dark">
+          Statut professionnel <span class="text-olak-error">*</span>
+        </label>
+        <select class="input-olak">
+          <option value="">Sélectionnez...</option>
+          <option value="cdi" selected>CDI - Temps plein</option>
+          <option value="cdd">CDD</option>
+          <option value="interim">Intérim</option>
+          <option value="freelance">Freelance / Auto-entrepreneur</option>
+          <option value="etudiant">Étudiant</option>
+          <option value="retraite">Retraité</option>
+          <option value="autre">Autre</option>
+        </select>
+      </div>
+      
+      <div>
+        <label class="block text-sm font-semibold mb-2 text-olak-dark">
+          Salaire mensuel net <span class="text-olak-error">*</span>
+        </label>
+        <input type="number" class="input-olak" value="2500" placeholder="2500">
+        <p class="text-xs text-gray-500 mt-1">En euros, hors primes</p>
+      </div>
+      
+      <div>
+        <label class="block text-sm font-semibold mb-2 text-olak-dark">
+          Employeur <span class="text-olak-error">*</span>
+        </label>
+        <input type="text" class="input-olak" value="TechCorp SARL" placeholder="Nom de l'entreprise">
+      </div>
+      
+      <div>
+        <label class="block text-sm font-semibold mb-2 text-olak-dark">
+          Poste occupé <span class="text-olak-error">*</span>
+        </label>
+        <input type="text" class="input-olak" value="Développeuse Web" placeholder="Intitulé du poste">
+      </div>
+      
+      <div>
+        <label class="block text-sm font-semibold mb-2 text-olak-dark">
+          Date d'embauche <span class="text-olak-error">*</span>
+        </label>
+        <input type="date" class="input-olak" value="2022-01-15">
+      </div>
+      
+      <div>
+        <label class="block text-sm font-semibold mb-2 text-olak-dark">
+          Type de contrat
+        </label>
+        <select class="input-olak">
+          <option value="temps_plein" selected>Temps plein</option>
+          <option value="temps_partiel">Temps partiel</option>
+        </select>
+      </div>
+      
+      <div class="md:col-span-2">
+        <label class="block text-sm font-semibold mb-2 text-olak-dark">
+          Adresse de l'employeur
+        </label>
+        <input type="text" class="input-olak" placeholder="Adresse complète de l'entreprise">
+      </div>
+    </div>
+  </div>
+  
+  <!-- Additional Information Section -->
+  <div class="card-olak mb-6">
+    <h2 class="text-2xl font-semibold text-olak-primary-dark mb-6">Informations complémentaires</h2>
+    
+    <div class="space-y-4">
+      <div>
+        <label class="block text-sm font-semibold mb-2 text-olak-dark">
+          Situation familiale
+        </label>
+        <select class="input-olak">
+          <option value="">Sélectionnez...</option>
+          <option value="celibataire" selected>Célibataire</option>
+          <option value="marie">Marié(e)</option>
+          <option value="pacse">Pacsé(e)</option>
+          <option value="concubinage">Concubinage</option>
+          <option value="divorce">Divorcé(e)</option>
+          <option value="veuf">Veuf(ve)</option>
+        </select>
+      </div>
+      
+      <div>
+        <label class="block text-sm font-semibold mb-2 text-olak-dark">
+          Nombre de personnes dans le foyer
+        </label>
+        <input type="number" class="input-olak" value="1" min="1" placeholder="1">
+      </div>
+      
+      <div>
+        <label class="flex items-center cursor-pointer">
+          <input type="checkbox" class="w-5 h-5 mr-3 accent-green-600 rounded cursor-pointer">
+          <span class="text-sm text-olak-dark">J'ai des animaux de compagnie</span>
+        </label>
+      </div>
+      
+      <div>
+        <label class="block text-sm font-semibold mb-2 text-olak-dark">
+          Commentaires ou précisions
+        </label>
+        <textarea class="input-olak" rows="4" placeholder="Informations complémentaires que vous souhaitez partager (optionnel)"></textarea>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Form Actions -->
+  <div class="flex justify-end gap-4">
+    <%= link_to tenant_profile_path, class: "btn-secondary px-8" do %>
+      Annuler
+    <% end %>
+    <button type="submit" class="btn-primary px-8">
+      <svg class="w-5 h-5 inline-block mr-2" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+      </svg>
+      Enregistrer les modifications
+    </button>
+  </div>
+</form>

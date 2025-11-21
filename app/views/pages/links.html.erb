@@ -509,15 +509,21 @@
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/tenant/profile</span>
+            <%= link_to tenant_profile_path, class: "text-blue-600 hover:underline" do %>
+              /tenant/profile
+            <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/tenant/profile/edit</span>
+            <%= link_to edit_tenant_profile_path, class: "text-blue-600 hover:underline" do %>
+              /tenant/profile/edit
+            <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/tenant/profile/documents</span>
+            <%= link_to documents_tenant_profile_path, class: "text-blue-600 hover:underline" do %>
+              /tenant/profile/documents
+            <% end %>
           </li>
         </ul>
         
