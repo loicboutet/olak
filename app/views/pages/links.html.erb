@@ -531,15 +531,21 @@
         <ul class="space-y-1 text-sm">
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/tenant/guarantor</span>
+            <%= link_to tenant_guarantor_path, class: "text-blue-600 hover:underline" do %>
+              /tenant/guarantor
+            <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/tenant/guarantor/new</span>
+            <%= link_to new_tenant_guarantor_path, class: "text-blue-600 hover:underline" do %>
+              /tenant/guarantor/new
+            <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <span class="text-gray-600">/tenant/guarantor/edit</span>
+            <%= link_to edit_tenant_guarantor_path, class: "text-blue-600 hover:underline" do %>
+              /tenant/guarantor/edit
+            <% end %>
           </li>
         </ul>
       </div>

@@ -1,0 +1,378 @@
+<% content_for :title, "Ajouter un garant" %>
+
+<!-- Page Header -->
+<div class="mb-8">
+  <div class="flex justify-between items-center">
+    <div>
+      <h1 class="text-4xl font-bold text-olak-primary-dark mb-2">Ajouter un garant</h1>
+      <p class="text-gray-600">Choisissez votre type de garantie pour votre dossier de location</p>
+    </div>
+    <%= link_to tenant_guarantor_path, class: "btn-secondary" do %>
+      Annuler
+    <% end %>
+  </div>
+</div>
+
+<!-- Info Alert -->
+<div class="mb-6">
+  <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
+    <div class="flex items-center">
+      <svg class="w-6 h-6 text-blue-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+      </svg>
+      <div>
+        <p class="text-blue-800 font-semibold">Pourquoi un garant ?</p>
+        <p class="text-blue-700 text-sm mt-1">Un garant renforce votre dossier de location et rassure les propriétaires sur votre solvabilité.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<form data-controller="guarantor-type">
+  <!-- Guarantor Type Selection -->
+  <div class="card-olak mb-6">
+    <h2 class="text-2xl font-semibold text-olak-primary-dark mb-6">Type de garantie</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Visale Option -->
+      <label class="relative cursor-pointer">
+        <input type="radio" name="guarantor_type" value="visale" class="peer sr-only" checked data-action="change->guarantor-type#toggleForm">
+        <div class="border-2 border-gray-300 rounded-lg p-6 transition-all peer-checked:border-olak-primary peer-checked:bg-olak-primary-light/10 hover:border-olak-primary-light">
+          <div class="flex items-start gap-4">
+            <div class="bg-blue-100 rounded-full p-3">
+              <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <h3 class="font-bold text-lg text-olak-dark mb-2">Garantie Visale</h3>
+              <p class="text-sm text-gray-600 mb-3">Caution gratuite de l'État pour les jeunes et salariés</p>
+              <ul class="text-xs text-gray-600 space-y-1">
+                <li class="flex items-start gap-1">
+                  <svg class="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Gratuit et rapide</span>
+                </li>
+                <li class="flex items-start gap-1">
+                  <svg class="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Jusqu'à 1 500 €/mois</span>
+                </li>
+                <li class="flex items-start gap-1">
+                  <svg class="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>18-30 ans ou reconversion</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </label>
+
+      <!-- Physical Person Option -->
+      <label class="relative cursor-pointer">
+        <input type="radio" name="guarantor_type" value="physical" class="peer sr-only" data-action="change->guarantor-type#toggleForm">
+        <div class="border-2 border-gray-300 rounded-lg p-6 transition-all peer-checked:border-olak-primary peer-checked:bg-olak-primary-light/10 hover:border-olak-primary-light">
+          <div class="flex items-start gap-4">
+            <div class="bg-purple-100 rounded-full p-3">
+              <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <h3 class="font-bold text-lg text-olak-dark mb-2">Personne physique</h3>
+              <p class="text-sm text-gray-600 mb-3">Un proche (parent, ami) se porte garant</p>
+              <ul class="text-xs text-gray-600 space-y-1">
+                <li class="flex items-start gap-1">
+                  <svg class="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Solution traditionnelle</span>
+                </li>
+                <li class="flex items-start gap-1">
+                  <svg class="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Documents à fournir</span>
+                </li>
+                <li class="flex items-start gap-1">
+                  <svg class="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Revenus suffisants requis</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </label>
+    </div>
+  </div>
+
+  <!-- Visale Form (shown by default) -->
+  <div id="visale-form" class="space-y-6" data-guarantor-type-target="visaleForm">
+    <div class="card-olak">
+      <h2 class="text-2xl font-semibold text-olak-primary-dark mb-6">Informations Visale</h2>
+      
+      <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
+        <div class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+          </svg>
+          <div class="text-sm text-blue-800">
+            <p class="font-semibold mb-1">Comment obtenir Visale ?</p>
+            <p>Rendez-vous sur <a href="https://www.visale.fr" target="_blank" class="underline font-semibold">www.visale.fr</a> pour faire votre demande en ligne. Vous recevrez votre numéro Visale par email.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label class="block text-sm font-semibold mb-2 text-olak-dark">
+            Numéro Visale <span class="text-olak-error">*</span>
+          </label>
+          <input type="text" class="input-olak" placeholder="VIS-2024-XXXXXX">
+          <p class="text-xs text-gray-500 mt-1">Format: VIS-XXXX-XXXXXX</p>
+        </div>
+        
+        <div>
+          <label class="block text-sm font-semibold mb-2 text-olak-dark">
+            Date d'obtention <span class="text-olak-error">*</span>
+          </label>
+          <input type="date" class="input-olak">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Physical Person Form (hidden by default, shown when radio selected) -->
+  <div id="physical-form" class="space-y-6 hidden" data-guarantor-type-target="physicalForm">
+    <!-- Personal Information -->
+    <div class="card-olak">
+      <h2 class="text-2xl font-semibold text-olak-primary-dark mb-6">Informations personnelles du garant</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label class="block text-sm font-semibold mb-2 text-olak-dark">
+            Civilité <span class="text-olak-error">*</span>
+          </label>
+          <select class="input-olak">
+            <option value="">Sélectionnez...</option>
+            <option value="mr">M.</option>
+            <option value="mme">Mme</option>
+          </select>
+        </div>
+        
+        <div>
+          <label class="block text-sm font-semibold mb-2 text-olak-dark">
+            Lien avec le locataire <span class="text-olak-error">*</span>
+          </label>
+          <select class="input-olak">
+            <option value="">Sélectionnez...</option>
+            <option value="parent">Parent</option>
+            <option value="famille">Autre membre de la famille</option>
+            <option value="ami">Ami</option>
+            <option value="autre">Autre</option>
+          </select>
+        </div>
+        
+        <div>
+          <label class="block text-sm font-semibold mb-2 text-olak-dark">
+            Prénom <span class="text-olak-error">*</span>
+          </label>
+          <input type="text" class="input-olak" placeholder="Jean">
+        </div>
+        
+        <div>
+          <label class="block text-sm font-semibold mb-2 text-olak-dark">
+            Nom <span class="text-olak-error">*</span>
+          </label>
+          <input type="text" class="input-olak" placeholder="Dupont">
+        </div>
+        
+        <div>
+          <label class="block text-sm font-semibold mb-2 text-olak-dark">
+            Date de naissance <span class="text-olak-error">*</span>
+          </label>
+          <input type="date" class="input-olak">
+        </div>
+        
+        <div>
+          <label class="block text-sm font-semibold mb-2 text-olak-dark">
+            Lieu de naissance <span class="text-olak-error">*</span>
+          </label>
+          <input type="text" class="input-olak" placeholder="Paris">
+        </div>
+        
+        <div class="md:col-span-2">
+          <label class="block text-sm font-semibold mb-2 text-olak-dark">
+            Adresse du domicile <span class="text-olak-error">*</span>
+          </label>
+          <input type="text" class="input-olak" placeholder="123 rue de la Paix">
+        </div>
+        
+        <div>
+          <label class="block text-sm font-semibold mb-2 text-olak-dark">
+            Code postal <span class="text-olak-error">*</span>
+          </label>
+          <input type="text" class="input-olak" placeholder="75002">
+        </div>
+        
+        <div>
+          <label class="block text-sm font-semibold mb-2 text-olak-dark">
+            Ville <span class="text-olak-error">*</span>
+          </label>
+          <input type="text" class="input-olak" placeholder="Paris">
+        </div>
+        
+        <div>
+          <label class="block text-sm font-semibold mb-2 text-olak-dark">
+            Téléphone <span class="text-olak-error">*</span>
+          </label>
+          <input type="tel" class="input-olak" placeholder="06 12 34 56 78">
+        </div>
+        
+        <div>
+          <label class="block text-sm font-semibold mb-2 text-olak-dark">
+            Email <span class="text-olak-error">*</span>
+          </label>
+          <input type="email" class="input-olak" placeholder="garant@exemple.fr">
+        </div>
+      </div>
+    </div>
+
+    <!-- Professional Information -->
+    <div class="card-olak">
+      <h2 class="text-2xl font-semibold text-olak-primary-dark mb-6">Informations professionnelles</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label class="block text-sm font-semibold mb-2 text-olak-dark">
+            Situation professionnelle <span class="text-olak-error">*</span>
+          </label>
+          <select class="input-olak">
+            <option value="">Sélectionnez...</option>
+            <option value="cdi">CDI</option>
+            <option value="cdd">CDD</option>
+            <option value="independant">Indépendant</option>
+            <option value="saisonnier">Saisonnier</option>
+            <option value="fonctionnaire">Fonctionnaire</option>
+            <option value="retraite">Retraité</option>
+            <option value="sans_emploi">Sans emploi</option>
+            <option value="autre">Autre</option>
+          </select>
+        </div>
+        
+        <div>
+          <label class="block text-sm font-semibold mb-2 text-olak-dark">
+            Activité professionnelle <span class="text-olak-error">*</span>
+          </label>
+          <input type="text" class="input-olak" placeholder="Ex: Cadre commercial">
+        </div>
+        
+        <div>
+          <label class="block text-sm font-semibold mb-2 text-olak-dark">
+            Salaire net mensuel <span class="text-olak-error">*</span>
+          </label>
+          <input type="number" class="input-olak" placeholder="3500">
+          <p class="text-xs text-gray-500 mt-1">En euros</p>
+        </div>
+        
+        <div>
+          <label class="block text-sm font-semibold mb-2 text-olak-dark">
+            Ancienneté dans cette activité <span class="text-olak-error">*</span>
+          </label>
+          <select class="input-olak">
+            <option value="">Sélectionnez...</option>
+            <option value="moins_3_mois">Moins de 3 mois</option>
+            <option value="plus_3_mois">Plus de 3 mois</option>
+            <option value="plus_1_an">Plus d'un an</option>
+            <option value="plus_2_ans">Plus de 2 ans</option>
+            <option value="plus_4_ans">Plus de 4 ans</option>
+            <option value="plus_6_ans">Plus de 6 ans</option>
+            <option value="plus_10_ans">Plus de 10 ans</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- Documents Upload -->
+    <div class="card-olak">
+      <h2 class="text-2xl font-semibold text-olak-primary-dark mb-6">Documents du garant</h2>
+      
+      <div class="space-y-4">
+        <!-- ID Card -->
+        <div>
+          <label class="block text-sm font-semibold mb-2 text-olak-dark">
+            Pièce d'identité <span class="text-olak-error">*</span>
+          </label>
+          <div class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-olak-primary transition-all cursor-pointer">
+            <svg class="mx-auto mb-3 w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+            </svg>
+            <p class="text-sm text-gray-600 mb-1">Glissez votre fichier ici ou cliquez pour sélectionner</p>
+            <p class="text-xs text-gray-500">PDF, JPG, PNG - Max 10MB</p>
+          </div>
+        </div>
+
+        <!-- Employment Contract -->
+        <div>
+          <label class="block text-sm font-semibold mb-2 text-olak-dark">
+            Contrat de travail <span class="text-olak-error">*</span>
+          </label>
+          <div class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-olak-primary transition-all cursor-pointer">
+            <svg class="mx-auto mb-3 w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+            </svg>
+            <p class="text-sm text-gray-600 mb-1">Glissez votre fichier ici ou cliquez pour sélectionner</p>
+            <p class="text-xs text-gray-500">PDF, JPG, PNG - Max 10MB</p>
+          </div>
+        </div>
+
+        <!-- Pay Slips -->
+        <div>
+          <label class="block text-sm font-semibold mb-2 text-olak-dark">
+            3 dernières fiches de paie <span class="text-olak-error">*</span>
+          </label>
+          <div class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-olak-primary transition-all cursor-pointer">
+            <svg class="mx-auto mb-3 w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+            </svg>
+            <p class="text-sm text-gray-600 mb-1">Glissez vos fichiers ici ou cliquez pour sélectionner</p>
+            <p class="text-xs text-gray-500">PDF, JPG, PNG - Max 10MB par fichier - 3 fichiers requis</p>
+          </div>
+        </div>
+
+        <!-- Tax Notice -->
+        <div>
+          <label class="block text-sm font-semibold mb-2 text-olak-dark">
+            Dernier avis d'imposition <span class="text-olak-error">*</span>
+          </label>
+          <div class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-olak-primary transition-all cursor-pointer">
+            <svg class="mx-auto mb-3 w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+            </svg>
+            <p class="text-sm text-gray-600 mb-1">Glissez votre fichier ici ou cliquez pour sélectionner</p>
+            <p class="text-xs text-gray-500">PDF, JPG, PNG - Max 10MB</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Form Actions -->
+  <div class="flex justify-end gap-4 mt-6">
+    <%= link_to tenant_guarantor_path, class: "btn-secondary px-8" do %>
+      Annuler
+    <% end %>
+    <button type="submit" class="btn-primary px-8">
+      <svg class="w-5 h-5 inline-block mr-2" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+      </svg>
+      Enregistrer le garant
+    </button>
+  </div>
+</form>
