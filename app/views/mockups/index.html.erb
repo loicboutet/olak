@@ -1,16 +1,657 @@
-<div class="mockup-index max-w-7xl mx-auto px-6 py-12">
-  <!-- Mockup Badge -->
-  <%= render 'shared/mockup_badge' %>
-  
-  <!-- Header -->
-  <div class="text-center mb-12">
-    <%= image_tag 'logo_olak.png', alt: 'OLAK', class: 'h-16 mx-auto mb-4' %>
-    <h1 class="text-5xl font-bold text-olak-primary-dark">Mockup Journey Explorer</h1>
-    <p class="text-gray-600 mt-4 text-lg">Explorez les parcours utilisateurs de la plateforme OLAK</p>
+<div class="container mx-auto px-4 py-8">
+  <div class="mb-8">
+    <h1 class="text-4xl font-bold text-gray-900 mb-2">OLAK Platform - Mockup Links</h1>
+    <p class="text-gray-600">Complete list of GET routes organized by role</p>
+  </div>
+
+  <!-- Public Routes -->
+  <div class="mb-8 bg-white shadow-md rounded-lg p-6">
+    <h2 class="text-2xl font-bold text-blue-600 mb-4 flex items-center">
+      <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+      </svg>
+      Public Routes
+    </h2>
+    <ul class="space-y-2">
+      <li class="flex items-center">
+        <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+        <%= link_to root_path, class: "text-blue-600 hover:underline" do %>/ (Home)<% end %>
+      </li>
+      <li class="flex items-center">
+        <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+        <%= link_to about_path, class: "text-blue-600 hover:underline" do %>/about (About)<% end %>
+      </li>
+      <li class="flex items-center">
+        <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+        <%= link_to contact_path, class: "text-blue-600 hover:underline" do %>/contact (Contact)<% end %>
+      </li>
+      <li class="flex items-center">
+        <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+        <%= link_to tenant_registration_path(token: 'example-token-123'), class: "text-blue-600 hover:underline" do %>
+          /candidats/inscription/:token (Tenant Registration)
+        <% end %>
+      </li>
+      <li class="flex items-center">
+        <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+        <%= link_to rental_cv_path(token: 'example-token-123'), class: "text-blue-600 hover:underline" do %>
+          /cv-locatif/:token (Shareable Rental CV)
+        <% end %>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Authentication Routes -->
+  <div class="mb-8 bg-white shadow-md rounded-lg p-6">
+    <h2 class="text-2xl font-bold text-purple-600 mb-4 flex items-center">
+      <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+      </svg>
+      Authentication Routes
+    </h2>
+    <ul class="space-y-2">
+      <li class="flex items-center">
+        <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+        <span class="text-gray-600">/users/sign_in (Login)</span>
+      </li>
+      <li class="flex items-center">
+        <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+        <span class="text-gray-600">/users/sign_up (Register)</span>
+      </li>
+      <li class="flex items-center">
+        <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+        <span class="text-gray-600">/users/password/new (Forgot Password)</span>
+      </li>
+      <li class="flex items-center">
+        <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+        <span class="text-gray-600">/users/password/edit (Reset Password)</span>
+      </li>
+      <li class="flex items-center">
+        <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+        <span class="text-gray-600">/users/confirmation/new (Resend Confirmation)</span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Admin Routes -->
+  <div class="mb-8 bg-white shadow-md rounded-lg p-6">
+    <h2 class="text-2xl font-bold text-red-600 mb-4 flex items-center">
+      <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+      </svg>
+      Admin Routes (requires admin? role)
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div>
+        <h3 class="font-semibold text-gray-700 mb-2">Dashboard</h3>
+        <ul class="space-y-1 text-sm">
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to admin_root_path, class: "text-blue-600 hover:underline" do %>
+              /admin (Admin Dashboard)
+            <% end %>
+          </li>
+        </ul>
+        
+        <h3 class="font-semibold text-gray-700 mb-2 mt-3">Owners</h3>
+        <ul class="space-y-1 text-sm">
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to admin_owners_path, class: "text-blue-600 hover:underline" do %>
+              /admin/owners
+            <% end %>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to new_admin_owner_path, class: "text-blue-600 hover:underline" do %>
+              /admin/owners/new
+            <% end %>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to admin_owner_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /admin/owners/:id
+            <% end %>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to edit_admin_owner_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /admin/owners/:id/edit
+            <% end %>
+          </li>
+        </ul>
+        
+        <h3 class="font-semibold text-gray-700 mb-2 mt-3">Tenants</h3>
+        <ul class="space-y-1 text-sm">
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <span class="text-gray-600"></span>
+            <%= link_to admin_tenants_path, class: "text-blue-600 hover:underline" do %>
+              /admin/tenants
+            <% end %>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to admin_tenant_path(id: 5), class: "text-blue-600 hover:underline" do %>
+              /admin/tenants/:id
+            <% end %>
+          </li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3 class="font-semibold text-gray-700 mb-2">Properties</h3>
+        <ul class="space-y-1 text-sm">
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to admin_properties_path, class: "text-blue-600 hover:underline" do %>
+              /admin/properties
+            <% end %>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to admin_property_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /admin/properties/:id
+            <% end %>
+          </li>
+        </ul>
+        
+        <h3 class="font-semibold text-gray-700 mb-2 mt-3">Applications</h3>
+        <ul class="space-y-1 text-sm">
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to admin_applications_path, class: "text-blue-600 hover:underline" do %>
+              /admin/applications
+            <% end %>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to admin_application_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /admin/applications/:id
+            <% end %>
+          </li>
+        </ul>
+        
+        <h3 class="font-semibold text-gray-700 mb-2 mt-3">Ratings</h3>
+        <ul class="space-y-1 text-sm">
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to new_admin_rating_path, class: "text-blue-600 hover:underline" do %>
+              /admin/ratings/new
+            <% end %>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to admin_rating_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /admin/ratings/:id
+            <% end %>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to edit_admin_rating_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /admin/ratings/:id/edit
+            <% end %>
+          </li>
+        </ul>
+        
+        <h3 class="font-semibold text-gray-700 mb-2 mt-3">Visits</h3>
+        <ul class="space-y-1 text-sm">
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to admin_visits_path, class: "text-blue-600 hover:underline" do %>
+              /admin/visits
+            <% end %>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to new_admin_visit_path, class: "text-blue-600 hover:underline" do %>
+              /admin/visits/new
+            <% end %>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to edit_admin_visit_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /admin/visits/:id/edit
+            <% end %>
+          </li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3 class="font-semibold text-gray-700 mb-2">Payments</h3>
+        <ul class="space-y-1 text-sm">
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to admin_payments_path, class: "text-blue-600 hover:underline" do %>
+              /admin/payments
+            <% end %>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to dashboard_admin_payments_path, class: "text-blue-600 hover:underline" do %>
+              /admin/payments/dashboard
+            <% end %>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to admin_payment_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /admin/payments/:id
+            <% end %>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to export_admin_payments_path, class: "text-blue-600 hover:underline" do %>
+              /admin/payments/export
+            <% end %>
+          </li>
+        </ul>
+        
+        <h3 class="font-semibold text-gray-700 mb-2 mt-3">Invoices</h3>
+        <ul class="space-y-1 text-sm">
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to admin_invoices_path, class: "text-blue-600 hover:underline" do %>
+              /admin/invoices
+            <% end %>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to new_admin_invoice_path, class: "text-blue-600 hover:underline" do %>
+              /admin/invoices/new
+            <% end %>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to admin_invoice_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /admin/invoices/:id
+            <% end %>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to download_admin_invoice_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /admin/invoices/:id/download
+            <% end %>
+          </li>
+        </ul>
+        
+        <h3 class="font-semibold text-gray-700 mb-2 mt-3">Accounting</h3>
+        <ul class="space-y-1 text-sm">
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to admin_accounting_exports_path, class: "text-blue-600 hover:underline" do %>
+              /admin/accounting_exports
+            <% end %>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to download_admin_accounting_export_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /admin/accounting_exports/:id/download
+            <% end %>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Owner Routes -->
+  <div class="mb-8 bg-white shadow-md rounded-lg p-6">
+    <h2 class="text-2xl font-bold text-amber-600 mb-4 flex items-center">
+      <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+      </svg>
+      Owner Routes (requires owner? role)
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div>
+        <h3 class="font-semibold text-gray-700 mb-2">Dashboard & Profile</h3>
+        <ul class="space-y-1 text-sm">
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to owner_root_path, class: "text-blue-600 hover:underline" do %>
+              /owner (Owner Dashboard)
+            <% end %>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to owner_profile_path, class: "text-blue-600 hover:underline" do %>
+              /owner/profile
+            <% end %>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to edit_owner_profile_path, class: "text-blue-600 hover:underline" do %>
+              /owner/profile/edit
+            <% end %>
+          </li>
+        </ul>
+        
+        <h3 class="font-semibold text-gray-700 mb-2 mt-3">Properties</h3>
+        <ul class="space-y-1 text-sm">
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to owner_properties_path, class: "text-blue-600 hover:underline" do %>
+              /owner/properties
+            <% end %>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to new_owner_property_path, class: "text-blue-600 hover:underline" do %>
+              /owner/properties/new
+            <% end %>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to owner_property_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /owner/properties/:id
+            <% end %>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to edit_owner_property_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /owner/properties/:id/edit
+            <% end %>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to wizard_step_two_owner_property_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /owner/properties/:id/wizard_step_two
+            <% end %>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to wizard_step_three_owner_property_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /owner/properties/:id/wizard_step_three
+            <% end %>
+          </li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3 class="font-semibold text-gray-700 mb-2">Applications</h3>
+        <ul class="space-y-1 text-sm">
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to owner_applications_path, class: "text-blue-600 hover:underline" do %>
+              /owner/applications
+            <% end %>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to owner_application_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /owner/applications/:id
+            <% end %>
+          </li>
+        </ul>
+        
+        <h3 class="font-semibold text-gray-700 mb-2 mt-3">Leases</h3>
+        <ul class="space-y-1 text-sm">
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to owner_leases_path, class: "text-blue-600 hover:underline" do %>
+              /owner/leases
+            <% end %>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to owner_lease_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /owner/leases/:id
+            <% end %>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to preview_owner_lease_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /owner/leases/:id/preview
+            <% end %>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to download_owner_lease_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /owner/leases/:id/download
+            <% end %>
+          </li>
+        </ul>
+        
+        <h3 class="font-semibold text-gray-700 mb-2 mt-3">Payments</h3>
+        <ul class="space-y-1 text-sm">
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to owner_payments_path, class: "text-blue-600 hover:underline" do %>
+              /owner/payments
+            <% end %>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to new_owner_payment_path, class: "text-blue-600 hover:underline" do %>
+              /owner/payments/new
+            <% end %>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to owner_payment_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /owner/payments/:id
+            <% end %>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to success_owner_payment_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /owner/payments/:id/success
+            <% end %>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to cancel_owner_payment_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /owner/payments/:id/cancel
+            <% end %>
+          </li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3 class="font-semibold text-gray-700 mb-2">Invoices</h3>
+        <ul class="space-y-1 text-sm">
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to owner_invoices_path, class: "text-blue-600 hover:underline" do %>
+              /owner/invoices
+            <% end %>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to owner_invoice_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /owner/invoices/:id
+            <% end %>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to download_owner_invoice_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /owner/invoices/:id/download
+            <% end %>
+          </li>
+        </ul>
+        
+        <h3 class="font-semibold text-gray-700 mb-2 mt-3">Notifications</h3>
+        <ul class="space-y-1 text-sm">
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to owner_notifications_path, class: "text-blue-600 hover:underline" do %>
+              /owner/notifications
+            <% end %>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to owner_notification_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /owner/notifications/:id
+            <% end %>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Tenant Routes -->
+  <div class="mb-8 bg-white shadow-md rounded-lg p-6">
+    <h2 class="text-2xl font-bold text-teal-600 mb-4 flex items-center">
+      <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+      </svg>
+      Tenant Routes (requires tenant? role)
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div>
+        <h3 class="font-semibold text-gray-700 mb-2">Dashboard & Profile</h3>
+        <ul class="space-y-1 text-sm">
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to tenant_root_path, class: "text-blue-600 hover:underline" do %>
+              /tenant (Tenant Dashboard)
+            <% end %>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to tenant_profile_path, class: "text-blue-600 hover:underline" do %>
+              /tenant/profile
+            <% end %>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to edit_tenant_profile_path, class: "text-blue-600 hover:underline" do %>
+              /tenant/profile/edit
+            <% end %>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to documents_tenant_profile_path, class: "text-blue-600 hover:underline" do %>
+              /tenant/profile/documents
+            <% end %>
+          </li>
+        </ul>
+        
+        <h3 class="font-semibold text-gray-700 mb-2 mt-3">Guarantor</h3>
+        <ul class="space-y-1 text-sm">
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to tenant_guarantor_path, class: "text-blue-600 hover:underline" do %>
+              /tenant/guarantor
+            <% end %>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to new_tenant_guarantor_path, class: "text-blue-600 hover:underline" do %>
+              /tenant/guarantor/new
+            <% end %>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to edit_tenant_guarantor_path, class: "text-blue-600 hover:underline" do %>
+              /tenant/guarantor/edit
+            <% end %>
+          </li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3 class="font-semibold text-gray-700 mb-2">Applications</h3>
+        <ul class="space-y-1 text-sm">
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to tenant_applications_path, class: "text-blue-600 hover:underline" do %>
+              /tenant/applications
+            <% end %>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to tenant_application_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /tenant/applications/:id
+            <% end %>
+          </li>
+        </ul>
+        
+        <h3 class="font-semibold text-gray-700 mb-2 mt-3">Leases</h3>
+        <ul class="space-y-1 text-sm">
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to tenant_leases_path, class: "text-blue-600 hover:underline" do %>
+              /tenant/leases
+            <% end %>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to tenant_lease_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /tenant/leases/:id
+            <% end %>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to preview_tenant_lease_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /tenant/leases/:id/preview
+            <% end %>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to download_tenant_lease_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /tenant/leases/:id/download
+            <% end %>
+          </li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3 class="font-semibold text-gray-700 mb-2">Rental CV</h3>
+        <ul class="space-y-1 text-sm">
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to tenant_rental_cv_path, class: "text-blue-600 hover:underline" do %>
+              /tenant/rental_cv
+            <% end %>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to download_tenant_rental_cv_path, class: "text-blue-600 hover:underline" do %>
+              /tenant/rental_cv/download
+            <% end %>
+          </li>
+        </ul>
+        
+        <h3 class="font-semibold text-gray-700 mb-2 mt-3">Notifications</h3>
+        <ul class="space-y-1 text-sm">
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to tenant_notifications_path, class: "text-blue-600 hover:underline" do %>
+              /tenant/notifications
+            <% end %>
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+            <%= link_to tenant_notification_path(id: 1), class: "text-blue-600 hover:underline" do %>
+              /tenant/notifications/:id
+            <% end %>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Note -->
+  <div class="mt-8 bg-blue-50 border border-blue-200 rounded-lg p-4">
+    <h3 class="text-lg font-semibold text-blue-900 mb-2">📋 Route Documentation</h3>
+    <p class="text-sm text-blue-800">
+      This page lists all GET routes in the OLAK platform. Routes are organized by role and require appropriate authentication. 
+      For complete route information including POST, PATCH, and DELETE methods, please refer to 
+      <code class="bg-blue-100 px-2 py-1 rounded">doc/routes.md</code>.
+    </p>
+    <div class="mt-3 text-xs text-blue-700">
+      <p><strong>Role-based Access:</strong></p>
+      <ul class="list-disc ml-5 mt-1">
+        <li><strong>Admin routes:</strong> Require <code>user.admin?</code> to return true</li>
+        <li><strong>Owner routes:</strong> Require <code>user.owner?</code> to return true</li>
+        <li><strong>Tenant routes:</strong> Require <code>user.tenant?</code> to return true</li>
+      </ul>
+    </div>
   </div>
   
   <!-- Journey Cards -->
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+  <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
     <!-- Admin Journey Card -->
     <div class="bg-white rounded-xl p-6 shadow-md border-2 border-purple-100 hover:shadow-xl transition-all duration-300">
       <div class="text-center">
@@ -22,21 +663,6 @@
         </div>
         <h2 class="text-2xl font-bold text-purple-600 mb-3">Admin</h2>
         <p class="text-gray-600 mb-6 text-sm">Gestion de la plateforme, validation des utilisateurs et propriétés</p>
-        
-        <div class="space-y-2 mb-6 text-left">
-          <div class="text-sm text-gray-600">
-            <span class="font-semibold">17 mockups:</span>
-            <ul class="mt-2 space-y-1 ml-4 list-disc">
-              <li>Dashboard</li>
-              <li>Gestion Propriétaires</li>
-              <li>Gestion Locataires</li>
-              <li>Gestion Propriétés</li>
-              <li>Applications & Notation</li>
-              <li>Calendrier de visites</li>
-              <li>Paiements & Facturation</li>
-            </ul>
-          </div>
-        </div>
         
         <%= link_to "Explorer →", mockups_admin_dashboard_path, class: "block w-full bg-purple-600 hover:bg-purple-700 text-white font-medium py-2 px-4 rounded-lg transition-colors" %>
       </div>
@@ -52,22 +678,7 @@
         </div>
         <h2 class="text-2xl font-bold text-blue-600 mb-3">Propriétaire</h2>
         <p class="text-gray-600 mb-6 text-sm">Gestion des biens, candidatures et baux</p>
-        
-        <div class="space-y-2 mb-6 text-left">
-          <div class="text-sm text-gray-600">
-            <span class="font-semibold">22 mockups:</span>
-            <ul class="mt-2 space-y-1 ml-4 list-disc">
-              <li>Dashboard & Profil</li>
-              <li>Wizard création propriété</li>
-              <li>Gestion propriétés</li>
-              <li>Candidatures proposées</li>
-              <li>Gestion des baux</li>
-              <li>Paiements & Factures</li>
-              <li>Notifications</li>
-            </ul>
-          </div>
-        </div>
-        
+
         <%= link_to "Explorer →", mockups_owner_dashboard_path, class: "block w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors" %>
       </div>
     </div>
@@ -82,21 +693,6 @@
         </div>
         <h2 class="text-2xl font-bold text-green-600 mb-3">Locataire</h2>
         <p class="text-gray-600 mb-6 text-sm">Profil, documents, candidatures et CV locatif</p>
-        
-        <div class="space-y-2 mb-6 text-left">
-          <div class="text-sm text-gray-600">
-            <span class="font-semibold">13 mockups:</span>
-            <ul class="mt-2 space-y-1 ml-4 list-disc">
-              <li>Dashboard & Profil</li>
-              <li>Upload documents</li>
-              <li>Gestion garants</li>
-              <li>Mes candidatures</li>
-              <li>Gestion des baux</li>
-              <li>CV Locatif partageable</li>
-              <li>Notifications</li>
-            </ul>
-          </div>
-        </div>
         
         <%= link_to "Explorer →", mockups_tenant_dashboard_path, class: "block w-full bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-lg transition-colors" %>
       </div>
@@ -113,40 +709,11 @@
         <h2 class="text-2xl font-bold text-gray-700 mb-3">Public</h2>
         <p class="text-gray-600 mb-6 text-sm">Page d'annonce OLAK (bonus)</p>
         
-        <div class="space-y-2 mb-6 text-left">
-          <div class="text-sm text-gray-600">
-            <span class="font-semibold">1 mockup:</span>
-            <ul class="mt-2 space-y-1 ml-4 list-disc">
-              <li>Landing page (one-pager)</li>
-              <li>Présentation OLAK</li>
-              <li>Fonctionnalités clés</li>
-              <li>Contact</li>
-            </ul>
-          </div>
-        </div>
-        
         <%= link_to "Voir →", mockups_landing_path, class: "block w-full bg-gray-600 hover:bg-gray-700 text-white font-medium py-2 px-4 rounded-lg transition-colors" %>
       </div>
     </div>
   </div>
   
-  <!-- Legacy Mockups Section -->
-  <div class="mt-12 p-6 bg-yellow-50 border-2 border-yellow-200 rounded-xl">
-    <h3 class="text-xl font-bold text-yellow-800 mb-4">
-      <svg class="inline-block w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20">
-        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
-      </svg>
-      Mockups Existants (Legacy)
-    </h3>
-    <p class="text-yellow-700 mb-4">Ces mockups existent déjà mais ne suivent pas encore le design system OLAK:</p>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
-      <%#= link_to "Admin Analytics", mockups_admin_analytics_path, class: "block p-3 bg-white rounded-lg hover:bg-yellow-100 transition-colors text-center" %>
-      <%#= link_to "Admin Users", mockups_admin_users_path, class: "block p-3 bg-white rounded-lg hover:bg-yellow-100 transition-colors text-center" %>
-      <%#= link_to "User Dashboard", mockups_user_dashboard_path, class: "block p-3 bg-white rounded-lg hover:bg-yellow-100 transition-colors text-center" %>
-      <%#= link_to "User Profile", mockups_user_profile_path, class: "block p-3 bg-white rounded-lg hover:bg-yellow-100 transition-colors text-center" %>
-      <%#= link_to "User Settings", mockups_user_settings_path, class: "block p-3 bg-white rounded-lg hover:bg-yellow-100 transition-colors text-center" %>
-    </div>
-  </div>
   
   <!-- Legend -->
   <div class="mt-12 bg-gray-50 p-6 rounded-xl border border-gray-200">
