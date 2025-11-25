@@ -15,15 +15,15 @@
     <ul class="space-y-2">
       <li class="flex items-center">
         <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-        <%= link_to root_path, class: "text-blue-600 hover:underline" do %>/ (Home)<% end %>
+        <%= link_to mockups_landing_path, class: "text-blue-600 hover:underline" do %>/mockups/landing (Home)<% end %>
       </li>
       <li class="flex items-center">
         <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-        <%= link_to about_path, class: "text-blue-600 hover:underline" do %>/about (About)<% end %>
+        <%= link_to mockups_about_path, class: "text-blue-600 hover:underline" do %>/mockups/about (About)<% end %>
       </li>
       <li class="flex items-center">
         <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-        <%= link_to contact_path, class: "text-blue-600 hover:underline" do %>/contact (Contact)<% end %>
+        <%= link_to mockups_contact_path, class: "text-blue-600 hover:underline" do %>/mockups/contact (Contact)<% end %>
       </li>
       <li class="flex items-center">
         <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
@@ -86,8 +86,8 @@
         <ul class="space-y-1 text-sm">
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to admin_root_path, class: "text-blue-600 hover:underline" do %>
-              /admin (Admin Dashboard)
+            <%= link_to mockups_admin_dashboard_path, class: "text-blue-600 hover:underline" do %>
+              /mockups/admin (Admin Dashboard)
             <% end %>
           </li>
         </ul>
@@ -96,25 +96,25 @@
         <ul class="space-y-1 text-sm">
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to admin_owners_path, class: "text-blue-600 hover:underline" do %>
-              /admin/owners
+            <%= link_to mockups_admin_owners_list_path, class: "text-blue-600 hover:underline" do %>
+              /mockups/admin/owners
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to new_admin_owner_path, class: "text-blue-600 hover:underline" do %>
-              /admin/owners/new
+            <%= link_to mockups_admin_owner_create_path, class: "text-blue-600 hover:underline" do %>
+              /mockups/admin/owners/new
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to admin_owner_path(id: 1), class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_admin_owner_detail_path, class: "text-blue-600 hover:underline" do %>
               /admin/owners/:id
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to edit_admin_owner_path(id: 1), class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_admin_owner_edit_path, class: "text-blue-600 hover:underline" do %>
               /admin/owners/:id/edit
             <% end %>
           </li>
@@ -125,14 +125,14 @@
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
             <span class="text-gray-600"></span>
-            <%= link_to admin_tenants_path, class: "text-blue-600 hover:underline" do %>
-              /admin/tenants
+            <%= link_to mockups_admin_tenants_list_path, class: "text-blue-600 hover:underline" do %>
+              /mockup/admin/tenants
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to admin_tenant_path(id: 5), class: "text-blue-600 hover:underline" do %>
-              /admin/tenants/:id
+            <%= link_to mockups_admin_tenant_detail_path, class: "text-blue-600 hover:underline" do %>
+              /mockup/admin/tenants/:id
             <% end %>
           </li>
         </ul>
@@ -143,13 +143,13 @@
         <ul class="space-y-1 text-sm">
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to admin_properties_path, class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_admin_properties_list_path, class: "text-blue-600 hover:underline" do %>
               /admin/properties
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to admin_property_path(id: 1), class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_admin_property_detail_path, class: "text-blue-600 hover:underline" do %>
               /admin/properties/:id
             <% end %>
           </li>
@@ -159,13 +159,13 @@
         <ul class="space-y-1 text-sm">
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to admin_applications_path, class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_admin_applications_list_path, class: "text-blue-600 hover:underline" do %>
               /admin/applications
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to admin_application_path(id: 1), class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_admin_application_detail_path, class: "text-blue-600 hover:underline" do %>
               /admin/applications/:id
             <% end %>
           </li>
@@ -175,19 +175,19 @@
         <ul class="space-y-1 text-sm">
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to new_admin_rating_path, class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_admin_rating_form_path, class: "text-blue-600 hover:underline" do %>
               /admin/ratings/new
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to admin_rating_path(id: 1), class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_admin_rating_form_path, class: "text-blue-600 hover:underline" do %>
               /admin/ratings/:id
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to edit_admin_rating_path(id: 1), class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_admin_rating_form_path, class: "text-blue-600 hover:underline" do %>
               /admin/ratings/:id/edit
             <% end %>
           </li>
@@ -197,19 +197,19 @@
         <ul class="space-y-1 text-sm">
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to admin_visits_path, class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_admin_visits_calendar_path, class: "text-blue-600 hover:underline" do %>
               /admin/visits
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to new_admin_visit_path, class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_admin_visit_form_path, class: "text-blue-600 hover:underline" do %>
               /admin/visits/new
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to edit_admin_visit_path(id: 1), class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_admin_visit_form_path, class: "text-blue-600 hover:underline" do %>
               /admin/visits/:id/edit
             <% end %>
           </li>
@@ -221,25 +221,25 @@
         <ul class="space-y-1 text-sm">
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to admin_payments_path, class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_admin_payments_list_path, class: "text-blue-600 hover:underline" do %>
               /admin/payments
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to dashboard_admin_payments_path, class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_admin_payments_dashboard_path, class: "text-blue-600 hover:underline" do %>
               /admin/payments/dashboard
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to admin_payment_path(id: 1), class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_admin_payments_list_path, class: "text-blue-600 hover:underline" do %>
               /admin/payments/:id
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to export_admin_payments_path, class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_admin_payments_list_path, class: "text-blue-600 hover:underline" do %>
               /admin/payments/export
             <% end %>
           </li>
@@ -249,25 +249,25 @@
         <ul class="space-y-1 text-sm">
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to admin_invoices_path, class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_admin_invoices_list_path, class: "text-blue-600 hover:underline" do %>
               /admin/invoices
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to new_admin_invoice_path, class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_admin_invoice_create_path, class: "text-blue-600 hover:underline" do %>
               /admin/invoices/new
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to admin_invoice_path(id: 1), class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_admin_invoices_list_path, class: "text-blue-600 hover:underline" do %>
               /admin/invoices/:id
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to download_admin_invoice_path(id: 1), class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_admin_invoices_list_path, class: "text-blue-600 hover:underline" do %>
               /admin/invoices/:id/download
             <% end %>
           </li>
@@ -277,13 +277,13 @@
         <ul class="space-y-1 text-sm">
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to admin_accounting_exports_path, class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_admin_accounting_export_path, class: "text-blue-600 hover:underline" do %>
               /admin/accounting_exports
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to download_admin_accounting_export_path(id: 1), class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_admin_accounting_export_path, class: "text-blue-600 hover:underline" do %>
               /admin/accounting_exports/:id/download
             <% end %>
           </li>
@@ -307,19 +307,19 @@
         <ul class="space-y-1 text-sm">
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to owner_root_path, class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_owner_dashboard_path, class: "text-blue-600 hover:underline" do %>
               /owner (Owner Dashboard)
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to owner_profile_path, class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_owner_profile_show_path, class: "text-blue-600 hover:underline" do %>
               /owner/profile
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to edit_owner_profile_path, class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_owner_profile_edit_path, class: "text-blue-600 hover:underline" do %>
               /owner/profile/edit
             <% end %>
           </li>
@@ -329,37 +329,37 @@
         <ul class="space-y-1 text-sm">
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to owner_properties_path, class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_owner_properties_list_path, class: "text-blue-600 hover:underline" do %>
               /owner/properties
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to new_owner_property_path, class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_owner_property_step1_path, class: "text-blue-600 hover:underline" do %>
               /owner/properties/new
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to owner_property_path(id: 1), class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_owner_property_show_path, class: "text-blue-600 hover:underline" do %>
               /owner/properties/:id
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to edit_owner_property_path(id: 1), class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_owner_property_show_path, class: "text-blue-600 hover:underline" do %>
               /owner/properties/:id/edit
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to wizard_step_two_owner_property_path(id: 1), class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_owner_property_step2_apartment_path, class: "text-blue-600 hover:underline" do %>
               /owner/properties/:id/wizard_step_two
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to wizard_step_three_owner_property_path(id: 1), class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_owner_property_step3_building_path, class: "text-blue-600 hover:underline" do %>
               /owner/properties/:id/wizard_step_three
             <% end %>
           </li>
@@ -371,13 +371,13 @@
         <ul class="space-y-1 text-sm">
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to owner_applications_path, class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_owner_applications_list_path, class: "text-blue-600 hover:underline" do %>
               /owner/applications
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to owner_application_path(id: 1), class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_owner_application_detail_path, class: "text-blue-600 hover:underline" do %>
               /owner/applications/:id
             <% end %>
           </li>
@@ -387,25 +387,25 @@
         <ul class="space-y-1 text-sm">
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to owner_leases_path, class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_owner_leases_list_path, class: "text-blue-600 hover:underline" do %>
               /owner/leases
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to owner_lease_path(id: 1), class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_owner_lease_show_path, class: "text-blue-600 hover:underline" do %>
               /owner/leases/:id
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to preview_owner_lease_path(id: 1), class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_owner_lease_show_path, class: "text-blue-600 hover:underline" do %>
               /owner/leases/:id/preview
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to download_owner_lease_path(id: 1), class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_owner_lease_show_path, class: "text-blue-600 hover:underline" do %>
               /owner/leases/:id/download
             <% end %>
           </li>
@@ -415,31 +415,31 @@
         <ul class="space-y-1 text-sm">
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to owner_payments_path, class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_owner_payments_list_path, class: "text-blue-600 hover:underline" do %>
               /owner/payments
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to new_owner_payment_path, class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_owner_payment_form_path, class: "text-blue-600 hover:underline" do %>
               /owner/payments/new
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to owner_payment_path(id: 1), class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_owner_payments_list_path, class: "text-blue-600 hover:underline" do %>
               /owner/payments/:id
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to success_owner_payment_path(id: 1), class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_owner_payment_success_path, class: "text-blue-600 hover:underline" do %>
               /owner/payments/:id/success
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to cancel_owner_payment_path(id: 1), class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_owner_payments_list_path, class: "text-blue-600 hover:underline" do %>
               /owner/payments/:id/cancel
             <% end %>
           </li>
@@ -451,19 +451,19 @@
         <ul class="space-y-1 text-sm">
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to owner_invoices_path, class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_owner_invoices_list_path, class: "text-blue-600 hover:underline" do %>
               /owner/invoices
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to owner_invoice_path(id: 1), class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_owner_invoices_list_path, class: "text-blue-600 hover:underline" do %>
               /owner/invoices/:id
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to download_owner_invoice_path(id: 1), class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_owner_invoices_list_path, class: "text-blue-600 hover:underline" do %>
               /owner/invoices/:id/download
             <% end %>
           </li>
@@ -473,13 +473,13 @@
         <ul class="space-y-1 text-sm">
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to owner_notifications_path, class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_owner_notifications_path, class: "text-blue-600 hover:underline" do %>
               /owner/notifications
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to owner_notification_path(id: 1), class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_owner_notifications_path, class: "text-blue-600 hover:underline" do %>
               /owner/notifications/:id
             <% end %>
           </li>
@@ -503,25 +503,25 @@
         <ul class="space-y-1 text-sm">
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to tenant_root_path, class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_tenant_dashboard_path, class: "text-blue-600 hover:underline" do %>
               /tenant (Tenant Dashboard)
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to tenant_profile_path, class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_tenant_profile_show_path, class: "text-blue-600 hover:underline" do %>
               /tenant/profile
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to edit_tenant_profile_path, class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_tenant_profile_edit_path, class: "text-blue-600 hover:underline" do %>
               /tenant/profile/edit
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to documents_tenant_profile_path, class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_tenant_documents_path, class: "text-blue-600 hover:underline" do %>
               /tenant/profile/documents
             <% end %>
           </li>
@@ -531,19 +531,19 @@
         <ul class="space-y-1 text-sm">
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to tenant_guarantor_path, class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_tenant_guarantor_show_path, class: "text-blue-600 hover:underline" do %>
               /tenant/guarantor
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to new_tenant_guarantor_path, class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_tenant_guarantor_form_path, class: "text-blue-600 hover:underline" do %>
               /tenant/guarantor/new
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to edit_tenant_guarantor_path, class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_tenant_guarantor_form_path, class: "text-blue-600 hover:underline" do %>
               /tenant/guarantor/edit
             <% end %>
           </li>
@@ -555,13 +555,13 @@
         <ul class="space-y-1 text-sm">
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to tenant_applications_path, class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_tenant_applications_list_path, class: "text-blue-600 hover:underline" do %>
               /tenant/applications
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to tenant_application_path(id: 1), class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_tenant_application_show_path, class: "text-blue-600 hover:underline" do %>
               /tenant/applications/:id
             <% end %>
           </li>
@@ -571,25 +571,25 @@
         <ul class="space-y-1 text-sm">
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to tenant_leases_path, class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_tenant_leases_list_path, class: "text-blue-600 hover:underline" do %>
               /tenant/leases
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to tenant_lease_path(id: 1), class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_tenant_lease_show_path, class: "text-blue-600 hover:underline" do %>
               /tenant/leases/:id
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to preview_tenant_lease_path(id: 1), class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_tenant_lease_preview_path, class: "text-blue-600 hover:underline" do %>
               /tenant/leases/:id/preview
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to download_tenant_lease_path(id: 1), class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_tenant_lease_preview_path, class: "text-blue-600 hover:underline" do %>
               /tenant/leases/:id/download
             <% end %>
           </li>
@@ -601,13 +601,13 @@
         <ul class="space-y-1 text-sm">
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to tenant_rental_cv_path, class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_tenant_rental_cv_path, class: "text-blue-600 hover:underline" do %>
               /tenant/rental_cv
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to download_tenant_rental_cv_path, class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_tenant_rental_cv_path, class: "text-blue-600 hover:underline" do %>
               /tenant/rental_cv/download
             <% end %>
           </li>
@@ -617,13 +617,13 @@
         <ul class="space-y-1 text-sm">
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to tenant_notifications_path, class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_tenant_notifications_path, class: "text-blue-600 hover:underline" do %>
               /tenant/notifications
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to tenant_notification_path(id: 1), class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_tenant_notifications_path, class: "text-blue-600 hover:underline" do %>
               /tenant/notifications/:id
             <% end %>
           </li>

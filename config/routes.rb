@@ -263,17 +263,24 @@ Rails.application.routes.draw do
     
     # Public journey mockup (one-pager only)
     get 'landing', to: 'public_landing'
+    get 'about'
+    get 'contact'
+    get 'candidats/inscription/:token', to: 'candidats_inscription'
+    get 'cv-locatif/:token', to: 'cv_locatif'
+
     # Admin namespace
     namespace :admin do
       get 'dashboard'
       get 'owners_list'
       get 'owner_detail'
       get 'owner_create'
+      get 'owner_edit'
       get 'tenants_list'
       get 'tenant_detail'
       get 'properties_list'
       get 'property_detail'
       get 'applications_list'
+      get 'application_detail'
       get 'rating_form'
       get 'visits_calendar'
       get 'visit_form'

@@ -1,0 +1,174 @@
+<div class="min-h-screen bg-olak-gray">
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-b from-white to-olak-gray py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <%= image_tag 'logo_olak.png', alt: 'OLAK', class: 'h-24 mx-auto mb-8' %>
+      
+      <h1 class="text-5xl md:text-6xl font-bold text-olak-primary-dark leading-tight mb-6">
+        Contactez-nous
+      </h1>
+      
+      <p class="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        Une question ? Un projet ? Notre équipe est à votre écoute
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Information & Form Section -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        
+        <!-- Contact Information -->
+        <div>
+          <h2 class="text-4xl font-bold text-olak-primary-dark mb-8">
+            Restons en contact
+          </h2>
+          
+          <p class="text-lg text-gray-600 leading-relaxed mb-8">
+            Que vous soyez propriétaire, locataire ou simplement curieux d'en savoir plus sur notre plateforme, n'hésitez pas à nous contacter. Nous serons ravis de répondre à toutes vos questions.
+          </p>
+          
+          <div class="space-y-6">
+            <!-- Email -->
+            <div class="flex items-start gap-4">
+              <div class="bg-olak-primary-light rounded-lg p-3">
+                <svg class="w-6 h-6 text-olak-primary" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg text-olak-primary-dark mb-1">Email</h3>
+                <a href="mailto:contact@olak.fr" class="text-olak-primary hover:text-olak-primary-dark transition-colors font-semibold">
+                  contact@olak.fr
+                </a>
+              </div>
+            </div>
+
+            <!-- Response Time -->
+            <div class="flex items-start gap-4">
+              <div class="bg-olak-primary-light rounded-lg p-3">
+                <svg class="w-6 h-6 text-olak-primary" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg text-olak-primary-dark mb-1">Temps de réponse</h3>
+                <p class="text-gray-600">Nous répondons généralement sous 24-48 heures</p>
+              </div>
+            </div>
+
+            <!-- Availability -->
+            <div class="flex items-start gap-4">
+              <div class="bg-olak-primary-light rounded-lg p-3">
+                <svg class="w-6 h-6 text-olak-primary" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg text-olak-primary-dark mb-1">Disponibilité</h3>
+                <p class="text-gray-600">Lundi - Vendredi, 9h00 - 18h00</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Info Alert -->
+          <div class="mt-8 bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-blue-500 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+              </svg>
+              <div>
+                <p class="text-blue-800 font-semibold text-sm">Notre plateforme est en cours de finalisation</p>
+                <p class="text-blue-700 text-sm mt-1">Nous vous tiendrons informés dès son lancement.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="bg-white rounded-xl shadow-md p-8 border-2 border-olak-primary-light">
+          <h3 class="text-2xl font-bold text-olak-primary-dark mb-6">Envoyez-nous un message</h3>
+          
+          <%= form_with url: contact_path, method: :post, class: "space-y-6" do |f| %>
+            <!-- Name Field -->
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Nom complet <span class="text-olak-error">*</span>
+              </label>
+              <input type="text" name="name" class="input-olak" placeholder="Jean Dupont" required>
+            </div>
+
+            <!-- Email Field -->
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Email <span class="text-olak-error">*</span>
+              </label>
+              <input type="email" name="email" class="input-olak" placeholder="jean.dupont@exemple.com" required>
+            </div>
+
+            <!-- Subject Field -->
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Sujet <span class="text-olak-error">*</span>
+              </label>
+              <select name="subject" class="input-olak" required>
+                <option value="">Sélectionnez un sujet...</option>
+                <option value="information">Demande d'information</option>
+                <option value="proprietaire">Je suis propriétaire</option>
+                <option value="locataire">Je suis locataire</option>
+                <option value="partenariat">Opportunité de partenariat</option>
+                <option value="autre">Autre</option>
+              </select>
+            </div>
+
+            <!-- Message Field -->
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Message <span class="text-olak-error">*</span>
+              </label>
+              <textarea name="message" class="input-olak" rows="6" placeholder="Décrivez votre demande en détail..." required></textarea>
+              <p class="text-xs text-gray-500 mt-1">Minimum 10 caractères</p>
+            </div>
+
+            <!-- Submit Button -->
+            <div>
+              <button type="submit" class="btn-primary w-full">
+                <span class="flex items-center justify-center gap-2">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"/>
+                  </svg>
+                  Envoyer le message
+                </span>
+              </button>
+            </div>
+
+            <p class="text-xs text-gray-500 text-center">
+              En envoyant ce formulaire, vous acceptez que vos données soient utilisées pour vous répondre.
+            </p>
+          <% end %>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Additional Info Section -->
+  <section class="py-16 bg-olak-gray">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold text-olak-primary-dark mb-6">
+        Vous préférez nous écrire directement ?
+      </h2>
+      <p class="text-lg text-gray-600 mb-8">
+        N'hésitez pas à nous contacter par email à tout moment
+      </p>
+      <a href="mailto:contact@olak.fr" class="btn-secondary inline-flex items-center gap-2">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+          <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+        </svg>
+        contact@olak.fr
+      </a>
+    </div>
+  </section>
+</div>

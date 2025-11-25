@@ -12,8 +12,12 @@ class MockupsController < ApplicationController
     @public_route = public_mockup_route
   end
   
-  # Public page (one-pager only)
+  # Public pages
   def public_landing; end
+  def about; end
+  def contact; end
+  def candidats_inscription; end
+  def cv_locatif; end
   
   private
   
