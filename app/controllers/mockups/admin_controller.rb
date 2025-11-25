@@ -16,6 +16,8 @@ module Mockups
     def property_detail; end
     def applications_list; end
     def rating_form; end
+    def rating_show; end
+    def rating_edit; end
     def visits_calendar; end
     def visit_form; end
     def payments_dashboard; end

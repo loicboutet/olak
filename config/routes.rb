@@ -282,6 +282,8 @@ Rails.application.routes.draw do
       get 'applications_list'
       get 'application_detail'
       get 'rating_form'
+      get 'rating_show'
+      get 'rating_edit'
       get 'visits_calendar'
       get 'visit_form'
       get 'payments_dashboard'

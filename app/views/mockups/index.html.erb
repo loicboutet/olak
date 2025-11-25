@@ -144,13 +144,13 @@
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
             <%= link_to mockups_admin_properties_list_path, class: "text-blue-600 hover:underline" do %>
-              /admin/properties
+              /mockups/admin/properties
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
             <%= link_to mockups_admin_property_detail_path, class: "text-blue-600 hover:underline" do %>
-              /admin/properties/:id
+              /mockups/admin/properties/:id
             <% end %>
           </li>
         </ul>
@@ -160,13 +160,13 @@
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
             <%= link_to mockups_admin_applications_list_path, class: "text-blue-600 hover:underline" do %>
-              /admin/applications
+              /mockups/admin/applications
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
             <%= link_to mockups_admin_application_detail_path, class: "text-blue-600 hover:underline" do %>
-              /admin/applications/:id
+              /mockups/admin/applications/:id
             <% end %>
           </li>
         </ul>
@@ -176,18 +176,18 @@
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
             <%= link_to mockups_admin_rating_form_path, class: "text-blue-600 hover:underline" do %>
-              /admin/ratings/new
+              /mockups/admin/ratings/new
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to mockups_admin_rating_form_path, class: "text-blue-600 hover:underline" do %>
-              /admin/ratings/:id
+            <%= link_to mockups_admin_rating_show_path, class: "text-blue-600 hover:underline" do %>
+              /mockups/admin/ratings/:id
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to mockups_admin_rating_form_path, class: "text-blue-600 hover:underline" do %>
+            <%= link_to mockups_admin_rating_edit_path, class: "text-blue-600 hover:underline" do %>
               /admin/ratings/:id/edit
             <% end %>
           </li>
