@@ -281,7 +281,7 @@ Rails.application.routes.draw do
       get 'property_detail'
       get 'applications_list'
       get 'application_detail'
-      get 'rating_form'
+      get 'rating_form' # new
       get 'rating_show'
       get 'rating_edit'
       get 'visits_calendar'
