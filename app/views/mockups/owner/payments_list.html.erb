@@ -1,0 +1,212 @@
+<% content_for :title, "Historique des paiements" %>
+
+<div class="min-h-screen bg-olak-gray py-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Header -->
+    <div class="mb-8">
+      <h1 class="text-5xl font-bold text-olak-primary-dark leading-tight mb-4">Mes Paiements</h1>
+      <p class="text-lg text-gray-600">Consultez l'historique de vos paiements et factures</p>
+    </div>
+
+    <!-- Filters -->
+    <div class="bg-white rounded-xl shadow-md p-6 mb-6">
+      <h3 class="text-lg font-semibold text-olak-dark mb-4">Filtrer par statut</h3>
+      <div class="flex flex-wrap gap-3">
+        <button class="btn-primary px-4 py-2 text-sm">Tous les paiements</button>
+        <button class="btn-secondary px-4 py-2 text-sm">En attente</button>
+        <button class="btn-secondary px-4 py-2 text-sm">Complétés</button>
+        <button class="btn-secondary px-4 py-2 text-sm">Échoués</button>
+      </div>
+    </div>
+
+    <!-- Payments Table -->
+    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+      <div class="overflow-x-auto">
+        <table class="min-w-full bg-white">
+          <thead class="bg-olak-primary-light text-olak-dark">
+            <tr>
+              <th class="px-6 py-4 text-left text-sm font-semibold">Date</th>
+              <th class="px-6 py-4 text-left text-sm font-semibold">Bail</th>
+              <th class="px-6 py-4 text-left text-sm font-semibold">Montant</th>
+              <th class="px-6 py-4 text-left text-sm font-semibold">Zone</th>
+              <th class="px-6 py-4 text-left text-sm font-semibold">Statut</th>
+              <th class="px-6 py-4 text-left text-sm font-semibold">Actions</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-200">
+            
+            <!-- Payment Row 1 - Completed -->
+            <tr class="hover:bg-olak-gray transition-colors">
+              <td class="px-6 py-4 text-sm text-olak-dark">15 nov 2024</td>
+              <td class="px-6 py-4">
+                <div class="text-sm font-semibold text-olak-dark">Appartement T3</div>
+                <div class="text-xs text-gray-600">Paris 15ème</div>
+              </td>
+              <td class="px-6 py-4 text-sm font-bold text-olak-primary">150 €</td>
+              <td class="px-6 py-4">
+                <span class="badge badge-zone-tendue text-xs">Zone tendue</span>
+              </td>
+              <td class="px-6 py-4">
+                <span class="badge badge-success">Complété</span>
+              </td>
+              <td class="px-6 py-4">
+                <div class="flex gap-2">
+                  <%= link_to mockups_owner_payments_list_path, class: "text-olak-primary hover:text-olak-primary-dark text-sm font-semibold" do %>
+                    Voir
+                  <% end %>
+                  <span class="text-gray-300">|</span>
+                  <a href="#" class="text-olak-primary hover:text-olak-primary-dark text-sm font-semibold">Facture</a>
+                </div>
+              </td>
+            </tr>
+
+            <!-- Payment Row 2 - Completed -->
+            <tr class="hover:bg-olak-gray transition-colors">
+              <td class="px-6 py-4 text-sm text-olak-dark">12 nov 2024</td>
+              <td class="px-6 py-4">
+                <div class="text-sm font-semibold text-olak-dark">Maison T5</div>
+                <div class="text-xs text-gray-600">Lyon 6ème</div>
+              </td>
+              <td class="px-6 py-4 text-sm font-bold text-olak-primary">200 €</td>
+              <td class="px-6 py-4">
+                <span class="badge badge-success text-xs">Non tendue</span>
+              </td>
+              <td class="px-6 py-4">
+                <span class="badge badge-success">Complété</span>
+              </td>
+              <td class="px-6 py-4">
+                <div class="flex gap-2">
+                  <%= link_to mockups_owner_payments_list_path, class: "text-olak-primary hover:text-olak-primary-dark text-sm font-semibold" do %>
+                    Voir
+                  <% end %>
+                  <span class="text-gray-300">|</span>
+                  <a href="#" class="text-olak-primary hover:text-olak-primary-dark text-sm font-semibold">Facture</a>
+                </div>
+              </td>
+            </tr>
+
+            <!-- Payment Row 3 - Pending -->
+            <tr class="hover:bg-olak-gray transition-colors">
+              <td class="px-6 py-4 text-sm text-olak-dark">18 nov 2024</td>
+              <td class="px-6 py-4">
+                <div class="text-sm font-semibold text-olak-dark">Chambre meublée</div>
+                <div class="text-xs text-gray-600">Marseille</div>
+              </td>
+              <td class="px-6 py-4 text-sm font-bold text-olak-primary">100 €</td>
+              <td class="px-6 py-4">
+                <span class="badge badge-zone-tendue text-xs">Zone tendue</span>
+              </td>
+                  <%= link_to mockups_owner_payments_list_path, class: "text-olak-primary hover:text-olak-primary-dark text-sm font-semibold" do %>
+                    Voir
+                  <% end %>
+                  <span class="text-gray-300">|</span>
+                  <%= link_to mockups_owner_payment_form_path, class: "text-olak-primary hover:text-olak-primary-dark text-sm font-semibold" do %>
+                    Payer
+                  <% end %>
+                </div>
+              </td>
+            </tr>
+
+            <!-- Payment Row 4 - Failed -->
+            <tr class="hover:bg-olak-gray transition-colors">
+              <td class="px-6 py-4 text-sm text-olak-dark">05 nov 2024</td>
+              <td class="px-6 py-4">
+                <div class="text-sm font-semibold text-olak-dark">Studio</div>
+                <div class="text-xs text-gray-600">Nice</div>
+              </td>
+              <td class="px-6 py-4 text-sm font-bold text-olak-primary">100 €</td>
+              <td class="px-6 py-4">
+                <span class="badge badge-success text-xs">Non tendue</span>
+              </td>
+              <td class="px-6 py-4">
+                <span class="badge badge-error">Échoué</span>
+              </td>
+              <td class="px-6 py-4">
+                <div class="flex gap-2">
+                  <%= link_to mockups_owner_payments_list_path, class: "text-olak-primary hover:text-olak-primary-dark text-sm font-semibold" do %>
+                    Voir
+                  <% end %>
+                  <span class="text-gray-300">|</span>
+                  <%= link_to mockups_owner_payment_form_path, class: "text-olak-primary hover:text-olak-primary-dark text-sm font-semibold" do %>
+                    Réessayer
+                  <% end %>
+                </div>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Pagination -->
+      <div class="bg-gray-50 px-6 py-4 border-t border-gray-200">
+        <div class="flex items-center justify-between">
+          <div class="text-sm text-gray-600">
+            Affichage de <span class="font-semibold">1</span> à <span class="font-semibold">4</span> sur <span class="font-semibold">4</span> paiements
+          </div>
+          <div class="flex items-center gap-2">
+            <button class="px-3 py-2 border border-gray-300 rounded hover:bg-olak-gray transition-colors disabled:opacity-50" disabled>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+              </svg>
+            </button>
+            <button class="px-4 py-2 bg-olak-primary text-white rounded font-semibold">1</button>
+            <button class="px-3 py-2 border border-gray-300 rounded hover:bg-olak-gray transition-colors disabled:opacity-50" disabled>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Summary Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+      <div class="card-olak text-center">
+        <svg class="w-12 h-12 mx-auto mb-3 text-olak-success" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+        </svg>
+        <p class="font-bold text-2xl text-olak-dark mb-1">2</p>
+        <p class="text-sm text-gray-600">Paiements complétés</p>
+      </div>
+      <div class="card-olak text-center">
+        <svg class="w-12 h-12 mx-auto mb-3 text-olak-warning" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 000 2h6a1 1 0 100-2H7z" clip-rule="evenodd"/>
+        </svg>
+        <p class="font-bold text-2xl text-olak-dark mb-1">1</p>
+        <p class="text-sm text-gray-600">En attente</p>
+      </div>
+      <div class="card-olak text-center">
+        <svg class="w-12 h-12 mx-auto mb-3 text-olak-primary" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"/>
+        </svg>
+        <p class="font-bold text-2xl text-olak-dark mb-1">450 €</p>
+        <p class="text-sm text-gray-600">Total payé</p>
+      </div>
+    </div>
+
+    <!-- Info Alert -->
+    <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg mt-6">
+      <div class="flex items-start">
+        <svg class="w-6 h-6 text-blue-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+        </svg>
+        <div>
+          <p class="text-sm text-blue-800 font-semibold mb-1">À propos des frais de service</p>
+          <p class="text-xs text-blue-700">
+            Les frais de service OLAK varient selon la localisation du bien. Les biens en zone tendue ont des frais réduits pour faciliter l'accès au logement.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+              <td class="px-6 py-4">
+                <span class="badge badge-pending">En attente</span>
+              </td>
+              <td class="px-6 py-4">
+                <div class="flex gap-2">

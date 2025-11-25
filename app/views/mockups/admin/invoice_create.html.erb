@@ -1,0 +1,278 @@
+<div class="min-h-screen bg-olak-gray py-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Page Header -->
+    <div class="mb-8">
+      <h1 class="text-4xl font-bold text-olak-primary-dark mb-2">Créer une facture manuelle</h1>
+      <p class="text-gray-600">Générez une facture personnalisée pour un propriétaire</p>
+      
+      <!-- Breadcrumbs -->
+      <nav class="flex text-sm mt-4">
+        <ol class="flex items-center space-x-2">
+          <li><%= link_to "Admin", admin_root_path, class: "text-gray-500 hover:text-olak-primary transition-colors" %></li>
+          <li><span class="text-gray-400">/</span></li>
+          <li><%= link_to "Factures", admin_invoices_path, class: "text-gray-500 hover:text-olak-primary transition-colors" %></li>
+          <li><span class="text-gray-400">/</span></li>
+          <li><span class="text-olak-primary font-semibold">Nouvelle facture</span></li>
+        </ol>
+      </nav>
+    </div>
+
+    <!-- Info Alert -->
+    <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6 rounded-r-lg">
+      <div class="flex items-center">
+        <svg class="w-6 h-6 text-blue-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+        </svg>
+        <div>
+          <p class="text-blue-800 font-semibold">Facture manuelle</p>
+          <p class="text-blue-700 text-sm mt-1">Cette facture sera générée manuellement et envoyée au propriétaire sélectionné.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Two Column Layout: Form + Preview -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      
+      <!-- Left Column: Form -->
+      <div class="card-olak">
+        <h2 class="text-2xl font-semibold text-olak-dark mb-6 pb-4 border-b border-gray-200">Informations de facturation</h2>
+        
+        <form class="space-y-6">
+          <!-- Owner Selection -->
+          <div>
+            <label class="block text-sm font-semibold mb-2 text-olak-dark">
+              Propriétaire <span class="text-olak-error">*</span>
+            </label>
+            <select class="input-olak">
+              <option value="">Sélectionnez un propriétaire...</option>
+              <option value="1" selected>Jean Dupont - jean.dupont@example.olak.fr</option>
+              <option value="2">Marie Martin - marie.martin@example.olak.fr</option>
+              <option value="3">Pierre Bernard - pierre.bernard@example.olak.fr</option>
+              <option value="4">Sophie Leblanc - sophie.leblanc@example.olak.fr</option>
+              <option value="5">Thomas Petit - thomas.petit@example.olak.fr</option>
+            </select>
+            <p class="text-xs text-gray-500 mt-1">Sélectionnez le propriétaire qui recevra cette facture</p>
+          </div>
+
+          <!-- Property/Lease Selection (Optional) -->
+          <div>
+            <label class="block text-sm font-semibold mb-2 text-olak-dark">
+              Bien associé (optionnel)
+            </label>
+            <select class="input-olak">
+              <option value="">Aucun bien spécifique</option>
+              <option value="1">45 Avenue des Champs-Élysées, 75008 Paris</option>
+              <option value="2">12 Rue de la République, 69002 Lyon</option>
+              <option value="3">8 Boulevard de la Liberté, 13001 Marseille</option>
+            </select>
+            <p class="text-xs text-gray-500 mt-1">Lier cette facture à un bien existant</p>
+          </div>
+
+          <!-- Invoice Date -->
+          <div>
+            <label class="block text-sm font-semibold mb-2 text-olak-dark">
+              Date de facture <span class="text-olak-error">*</span>
+            </label>
+            <input type="date" class="input-olak" value="2024-11-20">
+            <p class="text-xs text-gray-500 mt-1">Date d'émission de la facture</p>
+          </div>
+
+          <!-- Due Date -->
+          <div>
+            <label class="block text-sm font-semibold mb-2 text-olak-dark">
+              Date d'échéance <span class="text-olak-error">*</span>
+            </label>
+            <input type="date" class="input-olak" value="2024-12-04">
+            <p class="text-xs text-gray-500 mt-1">Date limite de paiement (14 jours par défaut)</p>
+          </div>
+
+          <!-- Service Type -->
+          <div>
+            <label class="block text-sm font-semibold mb-2 text-olak-dark">
+              Type de service <span class="text-olak-error">*</span>
+            </label>
+            <select class="input-olak">
+              <option value="">Sélectionnez un type...</option>
+              <option value="lease_fee" selected>Frais de bail</option>
+              <option value="management_fee">Frais de gestion</option>
+              <option value="service_fee">Prestation de service</option>
+              <option value="other">Autre</option>
+            </select>
+          </div>
+
+          <!-- Service Description -->
+          <div>
+            <label class="block text-sm font-semibold mb-2 text-olak-dark">
+              Description du service <span class="text-olak-error">*</span>
+            </label>
+            <textarea class="input-olak" rows="4" placeholder="Décrivez le service facturé...">Frais de mise en location du bien. Comprend l'évaluation du dossier locataire, la rédaction du bail, et l'accompagnement administratif complet.</textarea>
+            <p class="text-xs text-gray-500 mt-1">Cette description apparaîtra sur la facture</p>
+          </div>
+
+          <!-- Amount HT -->
+          <div>
+            <label class="block text-sm font-semibold mb-2 text-olak-dark">
+              Montant HT <span class="text-olak-error">*</span>
+            </label>
+            <div class="relative">
+              <input type="number" step="0.01" class="input-olak pr-12" placeholder="0.00" value="3000.00">
+              <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500">€</span>
+            </div>
+            <p class="text-xs text-gray-500 mt-1">Montant hors taxes</p>
+          </div>
+
+          <!-- VAT Rate -->
+          <div>
+            <label class="block text-sm font-semibold mb-2 text-olak-dark">
+              Taux de TVA <span class="text-olak-error">*</span>
+            </label>
+            <select class="input-olak">
+              <option value="20" selected>20% (taux normal)</option>
+              <option value="10">10% (taux intermédiaire)</option>
+              <option value="5.5">5,5% (taux réduit)</option>
+              <option value="0">0% (exonéré)</option>
+            </select>
+          </div>
+
+          <!-- VAT Amount (Auto-calculated display) -->
+          <div class="bg-olak-gray p-4 rounded-lg">
+            <div class="flex justify-between items-center mb-2">
+              <span class="text-sm font-semibold text-olak-dark">Montant TVA</span>
+              <span class="text-lg font-bold text-olak-dark">600,00 €</span>
+            </div>
+            <div class="flex justify-between items-center">
+              <span class="text-base font-bold text-olak-primary-dark">Total TTC</span>
+              <span class="text-xl font-bold text-olak-primary">3 600,00 €</span>
+            </div>
+          </div>
+
+          <!-- Internal Notes -->
+          <div>
+            <label class="block text-sm font-semibold mb-2 text-olak-dark">
+              Notes internes (optionnel)
+            </label>
+            <textarea class="input-olak" rows="3" placeholder="Notes visibles uniquement par l'administration..."></textarea>
+            <p class="text-xs text-gray-500 mt-1">Ces notes n'apparaîtront pas sur la facture</p>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="flex gap-3 pt-4 border-t border-gray-200">
+            <%= link_to admin_invoices_path, class: "btn-secondary flex-1" do %>
+              Annuler
+            <% end %>
+            <button type="submit" class="btn-primary flex-1 flex items-center justify-center gap-2">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+                <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"/>
+              </svg>
+              Générer la facture
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Right Column: Preview -->
+      <div class="sticky top-8 self-start">
+        <div class="card-olak">
+          <h2 class="text-2xl font-semibold text-olak-dark mb-6 pb-4 border-b border-gray-200">Aperçu de la facture</h2>
+          
+          <!-- Invoice Preview -->
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-8">
+            <!-- Logo and Title -->
+            <div class="flex justify-between items-start mb-8">
+              <div>
+                <h3 class="text-3xl font-bold text-olak-primary-dark">ôlak</h3>
+                <p class="text-sm text-gray-600 mt-1">Plateforme de location</p>
+              </div>
+              <div class="text-right">
+                <p class="text-2xl font-bold text-olak-dark">FACTURE</p>
+                <p class="text-sm text-gray-600 mt-1">N° INV-2024-NEW</p>
+              </div>
+            </div>
+
+            <!-- Company Details -->
+            <div class="grid grid-cols-2 gap-6 mb-8 pb-6 border-b border-gray-200">
+              <div>
+                <p class="text-xs font-semibold text-gray-600 mb-2">DE:</p>
+                <p class="font-semibold text-olak-dark">OLAK SAS</p>
+                <p class="text-sm text-gray-600">123 Rue de l'Innovation</p>
+                <p class="text-sm text-gray-600">75001 Paris, France</p>
+                <p class="text-sm text-gray-600">SIRET: 123 456 789 00012</p>
+              </div>
+              <div>
+                <p class="text-xs font-semibold text-gray-600 mb-2">À:</p>
+                <p class="font-semibold text-olak-dark">Jean Dupont</p>
+                <p class="text-sm text-gray-600">jean.dupont@example.olak.fr</p>
+                <p class="text-sm text-gray-600">06 12 34 56 78</p>
+                <p class="text-sm text-gray-600">123 Rue de la Paix</p>
+                <p class="text-sm text-gray-600">75002 Paris</p>
+              </div>
+            </div>
+
+            <!-- Invoice Details -->
+            <div class="grid grid-cols-2 gap-4 mb-8 text-sm">
+              <div>
+                <p class="text-gray-600">Date d'émission:</p>
+                <p class="font-semibold text-olak-dark">20/11/2024</p>
+              </div>
+              <div>
+                <p class="text-gray-600">Date d'échéance:</p>
+                <p class="font-semibold text-olak-dark">04/12/2024</p>
+              </div>
+            </div>
+
+            <!-- Line Items -->
+            <div class="mb-6">
+              <table class="w-full text-sm">
+                <thead class="border-b-2 border-gray-300">
+                  <tr>
+                    <th class="text-left py-2 text-gray-600 font-semibold">Description</th>
+                    <th class="text-right py-2 text-gray-600 font-semibold">Montant</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="border-b border-gray-200">
+                    <td class="py-3">
+                      <p class="font-semibold text-olak-dark">Frais de bail</p>
+                      <p class="text-xs text-gray-600 mt-1">Frais de mise en location du bien. Comprend l'évaluation du dossier locataire, la rédaction du bail, et l'accompagnement administratif complet.</p>
+                    </td>
+                    <td class="text-right py-3 font-semibold">3 000,00 €</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Totals -->
+            <div class="border-t-2 border-gray-300 pt-4">
+              <div class="flex justify-between mb-2 text-sm">
+                <span class="text-gray-600">Sous-total HT:</span>
+                <span class="font-semibold">3 000,00 €</span>
+              </div>
+              <div class="flex justify-between mb-3 text-sm">
+                <span class="text-gray-600">TVA (20%):</span>
+                <span class="font-semibold">600,00 €</span>
+              </div>
+              <div class="flex justify-between bg-olak-primary-light p-3 rounded">
+                <span class="text-lg font-bold text-olak-dark">Total TTC:</span>
+                <span class="text-xl font-bold text-olak-primary">3 600,00 €</span>
+              </div>
+            </div>
+
+            <!-- Footer Note -->
+            <div class="mt-8 pt-6 border-t border-gray-200 text-xs text-gray-500 text-center">
+              <p>Paiement par virement bancaire ou carte bancaire</p>
+              <p class="mt-1">En cas de retard de paiement, une pénalité de 3% sera appliquée</p>
+            </div>
+          </div>
+          
+          <!-- Preview Note -->
+          <p class="text-xs text-gray-500 mt-4 text-center italic">
+            Ceci est un aperçu. La facture finale sera générée au format PDF.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

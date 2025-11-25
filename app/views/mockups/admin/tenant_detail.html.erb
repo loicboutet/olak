@@ -1,0 +1,395 @@
+<% content_for :title, "Locataire - Sophie Dubois - OLAK Admin" %>
+
+<div class="space-y-6">
+  <!-- Breadcrumb -->
+  <nav class="flex mb-6" aria-label="Breadcrumb">
+    <ol class="flex items-center space-x-2 text-sm">
+      <li>
+        <%= link_to admin_root_path, class: "text-gray-500 hover:text-purple-700" do %>
+          Tableau de bord
+        <% end %>
+      </li>
+      <li><span class="text-gray-400">/</span></li>
+      <li>
+        <%= link_to admin_tenants_path, class: "text-gray-500 hover:text-purple-700" do %>
+          Locataires
+        <% end %>
+      </li>
+      <li><span class="text-gray-400">/</span></li>
+      <li><span class="text-purple-700 font-semibold">Sophie Dubois</span></li>
+    </ol>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="flex justify-between items-start">
+    <div>
+      <h1 class="text-3xl font-bold text-olak-primary-dark">Sophie Dubois</h1>
+      <p class="text-gray-600 mt-2">Locataire - Profil et documents</p>
+    </div>
+    <div class="flex gap-3">
+      <%= link_to admin_tenants_path, class: "bg-gray-100 text-gray-700 px-5 py-2.5 rounded-lg font-semibold hover:bg-gray-200 transition-colors" do %>
+        Retour
+      <% end %>
+    </div>
+  </div>
+
+  <!-- Status Alert (Documents validated) -->
+  <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg">
+    <div class="flex items-center">
+      <svg class="w-6 h-6 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+      </svg>
+      <div>
+        <p class="font-semibold text-green-800">Documents validés</p>
+        <p class="text-sm text-green-700 mt-1">Tous les documents ont été vérifiés et validés le 12 janvier 2024.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <!-- Main Content (Left Column) -->
+    <div class="lg:col-span-2 space-y-6">
+      <!-- Personal Information -->
+      <div class="bg-white rounded-xl p-6 shadow-md">
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-xl font-bold text-olak-primary-dark">Informations Personnelles</h2>
+          <span class="px-3 py-1.5 rounded-full text-sm font-semibold bg-green-100 text-green-800">
+            Validé
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <p class="text-sm font-semibold text-gray-500 mb-1">Prénom</p>
+            <p class="text-base text-gray-900">Sophie</p>
+          </div>
+          <div>
+            <p class="text-sm font-semibold text-gray-500 mb-1">Nom</p>
+            <p class="text-base text-gray-900">Dubois</p>
+          </div>
+          <div>
+            <p class="text-sm font-semibold text-gray-500 mb-1">Email</p>
+            <p class="text-base text-gray-900">sophie.dubois@example.fr</p>
+          </div>
+          <div>
+            <p class="text-sm font-semibold text-gray-500 mb-1">Téléphone</p>
+            <p class="text-base text-gray-900">06 45 67 89 12</p>
+          </div>
+          <div class="md:col-span-2">
+            <p class="text-sm font-semibold text-gray-500 mb-1">Adresse actuelle</p>
+            <p class="text-base text-gray-900">12 Rue Victor Hugo, 75016 Paris</p>
+          </div>
+          <div>
+            <p class="text-sm font-semibold text-gray-500 mb-1">Date de naissance</p>
+            <p class="text-base text-gray-900">15 mars 1992 (31 ans)</p>
+          </div>
+          <div>
+            <p class="text-sm font-semibold text-gray-500 mb-1">Date d'inscription</p>
+            <p class="text-base text-gray-900">10 Janvier 2024</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Employment Details -->
+      <div class="bg-white rounded-xl p-6 shadow-md">
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-xl font-bold text-olak-primary-dark">Situation Professionnelle</h2>
+          <span class="px-3 py-1.5 rounded-full text-sm font-semibold bg-green-100 text-green-800">
+            CDI
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <p class="text-sm font-semibold text-gray-500 mb-1">Employeur</p>
+            <p class="text-base text-gray-900 font-semibold">Tech Solutions SAS</p>
+          </div>
+          <div>
+            <p class="text-sm font-semibold text-gray-500 mb-1">Poste</p>
+            <p class="text-base text-gray-900">Développeuse Full Stack</p>
+          </div>
+          <div>
+            <p class="text-sm font-semibold text-gray-500 mb-1">Type de contrat</p>
+            <p class="text-base text-gray-900">CDI - Temps plein</p>
+          </div>
+          <div>
+            <p class="text-sm font-semibold text-gray-500 mb-1">Ancienneté</p>
+            <p class="text-base text-gray-900">Depuis juin 2020 (4 ans)</p>
+          </div>
+          <div>
+            <p class="text-sm font-semibold text-gray-500 mb-1">Salaire net mensuel</p>
+            <p class="text-lg font-bold text-olak-primary">3 200 €</p>
+          </div>
+          <div>
+            <p class="text-sm font-semibold text-gray-500 mb-1">Ratio loyer/salaire</p>
+            <p class="text-base text-gray-900">Excellent (< 33%)</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Guarantor Information -->
+      <div class="bg-white rounded-xl p-6 shadow-md">
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-xl font-bold text-olak-primary-dark">Garant</h2>
+          <span class="px-3 py-1.5 rounded-full text-sm font-semibold bg-blue-100 text-blue-800">
+            Personne physique
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <p class="text-sm font-semibold text-gray-500 mb-1">Nom du garant</p>
+            <p class="text-base text-gray-900 font-semibold">Marie Dubois</p>
+          </div>
+          <div>
+            <p class="text-sm font-semibold text-gray-500 mb-1">Lien de parenté</p>
+            <p class="text-base text-gray-900">Mère</p>
+          </div>
+          <div>
+            <p class="text-sm font-semibold text-gray-500 mb-1">Situation professionnelle</p>
+            <p class="text-base text-gray-900">Retraitée de la fonction publique</p>
+          </div>
+          <div>
+            <p class="text-sm font-semibold text-gray-500 mb-1">Contact</p>
+            <p class="text-base text-gray-900">06 12 34 56 78</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Documents -->
+      <div class="bg-white rounded-xl p-6 shadow-md">
+        <h2 class="text-xl font-bold text-olak-primary-dark mb-6">Documents</h2>
+        
+        <div class="space-y-3">
+          <!-- Document: ID -->
+          <div class="flex items-center justify-between p-4 border-2 border-gray-200 rounded-lg hover:border-purple-300 transition-colors">
+            <div class="flex items-center">
+              <svg class="w-8 h-8 text-green-500 mr-4" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <div>
+                <p class="font-semibold text-gray-900">Pièce d'identité</p>
+                <p class="text-sm text-gray-500">carte_identite.pdf • 245 KB</p>
+              </div>
+            </div>
+            <div class="flex gap-2">
+              <button class="px-4 py-2 text-sm font-semibold text-purple-700 bg-purple-100 rounded-lg hover:bg-purple-200 transition-colors">
+                Voir
+              </button>
+            </div>
+          </div>
+
+          <!-- Document: Contract -->
+          <div class="flex items-center justify-between p-4 border-2 border-gray-200 rounded-lg hover:border-purple-300 transition-colors">
+            <div class="flex items-center">
+              <svg class="w-8 h-8 text-green-500 mr-4" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <div>
+                <p class="font-semibold text-gray-900">Contrat de travail</p>
+                <p class="text-sm text-gray-500">contrat_travail.pdf • 180 KB</p>
+              </div>
+            </div>
+            <div class="flex gap-2">
+              <button class="px-4 py-2 text-sm font-semibold text-purple-700 bg-purple-100 rounded-lg hover:bg-purple-200 transition-colors">
+                Voir
+              </button>
+            </div>
+          </div>
+
+          <!-- Document: Pay Slips -->
+          <div class="flex items-center justify-between p-4 border-2 border-gray-200 rounded-lg hover:border-purple-300 transition-colors">
+            <div class="flex items-center">
+              <svg class="w-8 h-8 text-green-500 mr-4" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <div>
+                <p class="font-semibold text-gray-900">Bulletins de salaire (3 mois)</p>
+                <p class="text-sm text-gray-500">bulletins_salaire.pdf • 520 KB</p>
+              </div>
+            </div>
+            <div class="flex gap-2">
+              <button class="px-4 py-2 text-sm font-semibold text-purple-700 bg-purple-100 rounded-lg hover:bg-purple-200 transition-colors">
+                Voir
+              </button>
+            </div>
+          </div>
+
+          <!-- Document: Tax Notice -->
+          <div class="flex items-center justify-between p-4 border-2 border-gray-200 rounded-lg hover:border-purple-300 transition-colors">
+            <div class="flex items-center">
+              <svg class="w-8 h-8 text-green-500 mr-4" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <div>
+                <p class="font-semibold text-gray-900">Avis d'imposition</p>
+                <p class="text-sm text-gray-500">avis_imposition.pdf • 280 KB</p>
+              </div>
+            </div>
+            <div class="flex gap-2">
+              <button class="px-4 py-2 text-sm font-semibold text-purple-700 bg-purple-100 rounded-lg hover:bg-purple-200 transition-colors">
+                Voir
+              </button>
+            </div>
+          </div>
+
+          <!-- Document: Guarantor Docs -->
+          <div class="flex items-center justify-between p-4 border-2 border-gray-200 rounded-lg hover:border-purple-300 transition-colors">
+            <div class="flex items-center">
+              <svg class="w-8 h-8 text-green-500 mr-4" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <div>
+                <p class="font-semibold text-gray-900">Documents du garant</p>
+                <p class="text-sm text-gray-500">docs_garant.pdf • 350 KB</p>
+              </div>
+            </div>
+            <div class="flex gap-2">
+              <button class="px-4 py-2 text-sm font-semibold text-purple-700 bg-purple-100 rounded-lg hover:bg-purple-200 transition-colors">
+                Voir
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Application History -->
+      <div class="bg-white rounded-xl p-6 shadow-md">
+        <h2 class="text-xl font-bold text-olak-primary-dark mb-6">Historique des candidatures (3)</h2>
+        
+        <div class="space-y-4">
+          <div class="p-4 border-2 border-gray-200 rounded-lg">
+            <div class="flex justify-between items-start mb-2">
+              <div>
+                <h3 class="font-bold text-gray-900">Appartement T3</h3>
+                <p class="text-sm text-gray-600">Paris 15ème • 1 200 €/mois</p>
+              </div>
+              <span class="px-3 py-1 rounded-full text-sm font-semibold bg-blue-100 text-blue-800">
+                Proposée au propriétaire
+              </span>
+            </div>
+            <p class="text-xs text-gray-500">Candidature du 15 janvier 2024</p>
+          </div>
+
+          <div class="p-4 border-2 border-gray-200 rounded-lg">
+            <div class="flex justify-between items-start mb-2">
+              <div>
+                <h3 class="font-bold text-gray-900">Maison T4</h3>
+                <p class="text-sm text-gray-600">Boulogne-Billancourt • 1 800 €/mois</p>
+              </div>
+              <span class="px-3 py-1 rounded-full text-sm font-semibold bg-yellow-100 text-yellow-800">
+                En attente
+              </span>
+            </div>
+            <p class="text-xs text-gray-500">Candidature du 20 janvier 2024</p>
+          </div>
+
+          <div class="p-4 border-2 border-gray-200 rounded-lg">
+            <div class="flex justify-between items-start mb-2">
+              <div>
+                <h3 class="font-bold text-gray-900">Chambre meublée</h3>
+                <p class="text-sm text-gray-600">Paris 16ème • 650 €/mois</p>
+              </div>
+              <span class="px-3 py-1 rounded-full text-sm font-semibold bg-red-100 text-red-800">
+                Refusée
+              </span>
+            </div>
+            <p class="text-xs text-gray-500">Candidature du 08 janvier 2024</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Validation Sidebar (Right Column) -->
+    <div class="space-y-6">
+      <!-- Document Validation Form -->
+      <div class="bg-white rounded-xl p-6 shadow-md">
+        <h2 class="text-xl font-bold text-olak-primary-dark mb-6">Validation des documents</h2>
+        
+        <div class="mb-6 p-4 bg-green-50 rounded-lg border-2 border-green-200">
+          <div class="flex items-center mb-2">
+            <svg class="w-5 h-5 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <p class="font-semibold text-green-800">Documents validés</p>
+          </div>
+          <p class="text-sm text-green-700">Le 12 janvier 2024 par Admin OLAK</p>
+        </div>
+
+        <form class="space-y-4">
+          <div>
+            <label class="block text-sm font-semibold mb-2 text-olak-dark">
+              Notes (optionnel)
+            </label>
+            <textarea rows="4" class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg text-base transition-all duration-300 focus:outline-none focus:border-purple-600 focus:ring-4 focus:ring-purple-600/10" placeholder="Ajoutez une note..."></textarea>
+          </div>
+
+          <div class="flex flex-col gap-3">
+            <%= link_to validate_documents_admin_tenant_path(1), method: :patch, class: "w-full bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-green-700 hover:shadow-lg text-center opacity-50 cursor-not-allowed" do %>
+              <svg class="w-5 h-5 inline-block mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              Documents déjà validés
+            <% end %>
+          </div>
+        </form>
+      </div>
+
+      <!-- Activity Log -->
+      <div class="bg-white rounded-xl p-6 shadow-md">
+        <h2 class="text-xl font-bold text-olak-primary-dark mb-6">Activité récente</h2>
+        
+        <div class="space-y-4">
+          <div class="flex gap-3">
+            <div class="w-2 h-2 bg-green-600 rounded-full mt-2"></div>
+            <div>
+              <p class="text-sm font-semibold text-gray-900">Documents validés</p>
+              <p class="text-xs text-gray-500">12 janvier 2024 à 10:15</p>
+            </div>
+          </div>
+          <div class="flex gap-3">
+            <div class="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+            <div>
+              <p class="text-sm font-semibold text-gray-900">Nouvelle candidature</p>
+              <p class="text-xs text-gray-500">20 janvier 2024 à 14:20</p>
+            </div>
+          </div>
+          <div class="flex gap-3">
+            <div class="w-2 h-2 bg-gray-300 rounded-full mt-2"></div>
+            <div>
+              <p class="text-sm font-semibold text-gray-900">Documents uploadés</p>
+              <p class="text-xs text-gray-500">10 janvier 2024 à 16:45</p>
+            </div>
+          </div>
+          <div class="flex gap-3">
+            <div class="w-2 h-2 bg-gray-300 rounded-full mt-2"></div>
+            <div>
+              <p class="text-sm font-semibold text-gray-900">Compte créé</p>
+              <p class="text-xs text-gray-500">10 janvier 2024 à 16:30</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Stats -->
+      <div class="bg-white rounded-xl p-6 shadow-md">
+        <h2 class="text-xl font-bold text-olak-primary-dark mb-6">Statistiques</h2>
+        
+        <div class="space-y-4">
+          <div class="flex justify-between items-center">
+            <span class="text-sm text-gray-600">Candidatures</span>
+            <span class="text-lg font-bold text-olak-primary">3</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <span class="text-sm text-gray-600">Documents</span>
+            <span class="text-lg font-bold text-green-600">5/5</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <span class="text-sm text-gray-600">Taux de réponse</span>
+            <span class="text-lg font-bold text-olak-primary">100%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

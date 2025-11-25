@@ -1,0 +1,198 @@
+<div class="mockup-index max-w-7xl mx-auto px-6 py-12">
+  <!-- Mockup Badge -->
+  <%= render 'shared/mockup_badge' %>
+  
+  <!-- Header -->
+  <div class="text-center mb-12">
+    <%= image_tag 'logo_olak.png', alt: 'OLAK', class: 'h-16 mx-auto mb-4' %>
+    <h1 class="text-5xl font-bold text-olak-primary-dark">Mockup Journey Explorer</h1>
+    <p class="text-gray-600 mt-4 text-lg">Explorez les parcours utilisateurs de la plateforme OLAK</p>
+  </div>
+  
+  <!-- Journey Cards -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    <!-- Admin Journey Card -->
+    <div class="bg-white rounded-xl p-6 shadow-md border-2 border-purple-100 hover:shadow-xl transition-all duration-300">
+      <div class="text-center">
+        <div class="w-16 h-16 mx-auto mb-4 bg-purple-100 rounded-full flex items-center justify-center">
+          <svg class="w-10 h-10 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+            <path d="M19 8h-2V6h-2v2h-2v2h2v2h2v-2h2z" fill="currentColor"/>
+          </svg>
+        </div>
+        <h2 class="text-2xl font-bold text-purple-600 mb-3">Admin</h2>
+        <p class="text-gray-600 mb-6 text-sm">Gestion de la plateforme, validation des utilisateurs et propriétés</p>
+        
+        <div class="space-y-2 mb-6 text-left">
+          <div class="text-sm text-gray-600">
+            <span class="font-semibold">17 mockups:</span>
+            <ul class="mt-2 space-y-1 ml-4 list-disc">
+              <li>Dashboard</li>
+              <li>Gestion Propriétaires</li>
+              <li>Gestion Locataires</li>
+              <li>Gestion Propriétés</li>
+              <li>Applications & Notation</li>
+              <li>Calendrier de visites</li>
+              <li>Paiements & Facturation</li>
+            </ul>
+          </div>
+        </div>
+        
+        <%= link_to "Explorer →", mockups_admin_dashboard_path, class: "block w-full bg-purple-600 hover:bg-purple-700 text-white font-medium py-2 px-4 rounded-lg transition-colors" %>
+      </div>
+    </div>
+    
+    <!-- Owner Journey Card -->
+    <div class="bg-white rounded-xl p-6 shadow-md border-2 border-blue-100 hover:shadow-xl transition-all duration-300">
+      <div class="text-center">
+        <div class="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
+          <svg class="w-10 h-10 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+          </svg>
+        </div>
+        <h2 class="text-2xl font-bold text-blue-600 mb-3">Propriétaire</h2>
+        <p class="text-gray-600 mb-6 text-sm">Gestion des biens, candidatures et baux</p>
+        
+        <div class="space-y-2 mb-6 text-left">
+          <div class="text-sm text-gray-600">
+            <span class="font-semibold">22 mockups:</span>
+            <ul class="mt-2 space-y-1 ml-4 list-disc">
+              <li>Dashboard & Profil</li>
+              <li>Wizard création propriété</li>
+              <li>Gestion propriétés</li>
+              <li>Candidatures proposées</li>
+              <li>Gestion des baux</li>
+              <li>Paiements & Factures</li>
+              <li>Notifications</li>
+            </ul>
+          </div>
+        </div>
+        
+        <%= link_to "Explorer →", mockups_owner_dashboard_path, class: "block w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors" %>
+      </div>
+    </div>
+    
+    <!-- Tenant Journey Card -->
+    <div class="bg-white rounded-xl p-6 shadow-md border-2 border-green-100 hover:shadow-xl transition-all duration-300">
+      <div class="text-center">
+        <div class="w-16 h-16 mx-auto mb-4 bg-green-100 rounded-full flex items-center justify-center">
+          <svg class="w-10 h-10 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+          </svg>
+        </div>
+        <h2 class="text-2xl font-bold text-green-600 mb-3">Locataire</h2>
+        <p class="text-gray-600 mb-6 text-sm">Profil, documents, candidatures et CV locatif</p>
+        
+        <div class="space-y-2 mb-6 text-left">
+          <div class="text-sm text-gray-600">
+            <span class="font-semibold">13 mockups:</span>
+            <ul class="mt-2 space-y-1 ml-4 list-disc">
+              <li>Dashboard & Profil</li>
+              <li>Upload documents</li>
+              <li>Gestion garants</li>
+              <li>Mes candidatures</li>
+              <li>Gestion des baux</li>
+              <li>CV Locatif partageable</li>
+              <li>Notifications</li>
+            </ul>
+          </div>
+        </div>
+        
+        <%= link_to "Explorer →", mockups_tenant_dashboard_path, class: "block w-full bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-lg transition-colors" %>
+      </div>
+    </div>
+    
+    <!-- Public Journey Card -->
+    <div class="bg-white rounded-xl p-6 shadow-md border-2 border-gray-200 hover:shadow-xl transition-all duration-300">
+      <div class="text-center">
+        <div class="w-16 h-16 mx-auto mb-4 bg-gray-100 rounded-full flex items-center justify-center">
+          <svg class="w-10 h-10 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+          </svg>
+        </div>
+        <h2 class="text-2xl font-bold text-gray-700 mb-3">Public</h2>
+        <p class="text-gray-600 mb-6 text-sm">Page d'annonce OLAK (bonus)</p>
+        
+        <div class="space-y-2 mb-6 text-left">
+          <div class="text-sm text-gray-600">
+            <span class="font-semibold">1 mockup:</span>
+            <ul class="mt-2 space-y-1 ml-4 list-disc">
+              <li>Landing page (one-pager)</li>
+              <li>Présentation OLAK</li>
+              <li>Fonctionnalités clés</li>
+              <li>Contact</li>
+            </ul>
+          </div>
+        </div>
+        
+        <%= link_to "Voir →", mockups_landing_path, class: "block w-full bg-gray-600 hover:bg-gray-700 text-white font-medium py-2 px-4 rounded-lg transition-colors" %>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Legacy Mockups Section -->
+  <div class="mt-12 p-6 bg-yellow-50 border-2 border-yellow-200 rounded-xl">
+    <h3 class="text-xl font-bold text-yellow-800 mb-4">
+      <svg class="inline-block w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+      </svg>
+      Mockups Existants (Legacy)
+    </h3>
+    <p class="text-yellow-700 mb-4">Ces mockups existent déjà mais ne suivent pas encore le design system OLAK:</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+      <%#= link_to "Admin Analytics", mockups_admin_analytics_path, class: "block p-3 bg-white rounded-lg hover:bg-yellow-100 transition-colors text-center" %>
+      <%#= link_to "Admin Users", mockups_admin_users_path, class: "block p-3 bg-white rounded-lg hover:bg-yellow-100 transition-colors text-center" %>
+      <%#= link_to "User Dashboard", mockups_user_dashboard_path, class: "block p-3 bg-white rounded-lg hover:bg-yellow-100 transition-colors text-center" %>
+      <%#= link_to "User Profile", mockups_user_profile_path, class: "block p-3 bg-white rounded-lg hover:bg-yellow-100 transition-colors text-center" %>
+      <%#= link_to "User Settings", mockups_user_settings_path, class: "block p-3 bg-white rounded-lg hover:bg-yellow-100 transition-colors text-center" %>
+    </div>
+  </div>
+  
+  <!-- Legend -->
+  <div class="mt-12 bg-gray-50 p-6 rounded-xl border border-gray-200">
+    <h3 class="text-xl font-bold text-gray-800 mb-4">Légende des Mockups</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+      <div class="flex items-start">
+        <span class="inline-block w-4 h-4 bg-yellow-400 rounded-full mr-3 mt-0.5"></span>
+        <div>
+          <strong class="text-gray-800">Badge "MOCKUP"</strong>
+          <p class="text-gray-600">Toutes les pages mockup affichent un badge jaune pour les distinguer des pages réelles</p>
+        </div>
+      </div>
+      <div class="flex items-start">
+        <span class="inline-block w-4 h-4 bg-purple-500 rounded-full mr-3 mt-0.5"></span>
+        <div>
+          <strong class="text-gray-800">Admin (Violet)</strong>
+          <p class="text-gray-600">Les pages admin utilisent des accents violets</p>
+        </div>
+      </div>
+      <div class="flex items-start">
+        <span class="inline-block w-4 h-4 bg-blue-500 rounded-full mr-3 mt-0.5"></span>
+        <div>
+          <strong class="text-gray-800">Propriétaire (Bleu)</strong>
+          <p class="text-gray-600">Les pages propriétaire utilisent des accents bleus</p>
+        </div>
+      </div>
+      <div class="flex items-start">
+        <span class="inline-block w-4 h-4 bg-green-500 rounded-full mr-3 mt-0.5"></span>
+        <div>
+          <strong class="text-gray-800">Locataire (Vert)</strong>
+          <p class="text-gray-600">Les pages locataire utilisent des accents verts</p>
+        </div>
+      </div>
+    </div>
+    <div class="mt-4 p-4 bg-blue-50 rounded-lg">
+      <p class="text-sm text-blue-800">
+        <strong>Note:</strong> Les mockups sont des interfaces statiques pour validation avant développement. 
+        Les formulaires ne soumettent pas de données et les boutons naviguent uniquement entre les mockups.
+      </p>
+    </div>
+  </div>
+  
+  <div class="mt-8 text-center text-gray-600">
+    <p class="text-sm">
+      Tous les mockups suivent le <strong>Design System OLAK</strong> documenté dans 
+      <code class="bg-gray-100 px-2 py-1 rounded">doc/design_system.md</code>
+    </p>
+  </div>
+</div>

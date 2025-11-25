@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>OLAK Locataire - <%= content_for(:title) || "Tableau de bord" %></title>
+    <title>OLAK Admin Mockup - <%= content_for(:title) || "Tableau de bord" %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -14,10 +14,10 @@
 
   <body class="bg-olak-gray min-h-screen">
     <!-- Mockup Badge -->
-    <%#= render "shared/mockup_badge" %>
+    <%= render "shared/mockup_badge" %>
     
-    <!-- Tenant Navigation Bar (Green Theme) -->
-    <%= render "shared/navbar_tenant" %>
+    <!-- Admin Navigation Bar (Purple Theme) -->
+    <%= render "shared/mockup_navbar_admin" %>
     
     <!-- Main Content -->
     <main class="min-h-screen pb-12">
@@ -50,6 +50,6 @@
     </main>
     
     <!-- Shared Footer -->
-    <%= render "shared/footer" %>
+    <%= render "shared/mockup_footer" %>
   </body>
 </html>

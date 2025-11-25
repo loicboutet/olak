@@ -1,0 +1,220 @@
+<% content_for :title, "Modifier mon profil" %>
+
+<!-- Page Header -->
+<div class="mb-8">
+  <div class="flex justify-between items-center">
+    <div>
+      <h1 class="text-4xl font-bold text-olak-primary-dark mb-2">Modifier mon profil</h1>
+      <p class="text-gray-600">Mettez à jour vos informations personnelles</p>
+    </div>
+    <%= link_to mockups_owner_profile_show_path, class: "btn-secondary" do %>
+      Annuler
+    <% end %>
+  </div>
+</div>
+
+<!-- Re-validation Warning Alert -->
+<div class="mb-6">
+  <div class="bg-orange-50 border-l-4 border-orange-500 p-4 rounded-r-lg">
+    <div class="flex items-center">
+      <svg class="w-6 h-6 text-orange-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+      </svg>
+      <div>
+        <p class="text-orange-800 font-semibold">Attention : Re-validation nécessaire</p>
+        <p class="text-orange-700 text-sm mt-1">Toute modification de vos informations nécessitera une nouvelle validation par l'administration.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Profile Edit Form -->
+<form>
+  <!-- Personal Information Section -->
+  <div class="card-olak mb-6">
+    <h2 class="text-2xl font-semibold text-olak-primary-dark mb-6">Informations personnelles</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div>
+        <label class="block text-sm font-semibold mb-2 text-olak-dark">
+          Prénom <span class="text-olak-error">*</span>
+        </label>
+        <input type="text" class="input-olak" value="Jean" placeholder="Prénom">
+      </div>
+      
+      <div>
+        <label class="block text-sm font-semibold mb-2 text-olak-dark">
+          Nom <span class="text-olak-error">*</span>
+        </label>
+        <input type="text" class="input-olak" value="Dupont" placeholder="Nom">
+      </div>
+      
+      <div>
+        <label class="block text-sm font-semibold mb-2 text-olak-dark">
+          Email <span class="text-olak-error">*</span>
+        </label>
+        <input type="email" class="input-olak" value="jean.dupont@example.fr" placeholder="email@exemple.fr">
+        <p class="text-xs text-gray-500 mt-1">Votre email de connexion</p>
+      </div>
+      
+      <div>
+        <label class="block text-sm font-semibold mb-2 text-olak-dark">
+          Téléphone <span class="text-olak-error">*</span>
+        </label>
+        <input type="tel" class="input-olak" value="06 12 34 56 78" placeholder="06 12 34 56 78">
+      </div>
+      
+      <div>
+        <label class="block text-sm font-semibold mb-2 text-olak-dark">
+          Date de naissance <span class="text-olak-error">*</span>
+        </label>
+        <input type="date" class="input-olak" value="1975-03-15">
+      </div>
+      
+      <div>
+        <label class="block text-sm font-semibold mb-2 text-olak-dark">
+          Type de propriétaire <span class="text-olak-error">*</span>
+        </label>
+        <select class="input-olak">
+          <option value="physical" selected>Personne physique</option>
+          <option value="company">Société</option>
+        </select>
+      </div>
+      
+      <div class="md:col-span-2">
+        <label class="block text-sm font-semibold mb-2 text-olak-dark">
+          Adresse <span class="text-olak-error">*</span>
+        </label>
+        <input type="text" class="input-olak" value="123 Rue de la Paix" placeholder="Numéro et rue">
+      </div>
+      
+      <div>
+        <label class="block text-sm font-semibold mb-2 text-olak-dark">
+          Code postal <span class="text-olak-error">*</span>
+        </label>
+        <input type="text" class="input-olak" value="75002" placeholder="75000">
+      </div>
+      
+      <div>
+        <label class="block text-sm font-semibold mb-2 text-olak-dark">
+          Ville <span class="text-olak-error">*</span>
+        </label>
+        <input type="text" class="input-olak" value="Paris" placeholder="Paris">
+      </div>
+    </div>
+  </div>
+  
+  <!-- Documents Section -->
+  <div class="card-olak mb-6">
+    <h2 class="text-2xl font-semibold text-olak-primary-dark mb-6">Documents justificatifs</h2>
+    
+    <div class="space-y-6">
+      <!-- Identity Document -->
+      <div>
+        <label class="block text-sm font-semibold mb-2 text-olak-dark">
+          Pièce d'identité <span class="text-olak-error">*</span>
+        </label>
+        <div class="flex items-center gap-4 p-4 bg-olak-gray rounded-lg mb-2">
+          <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+            <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <div class="flex-1">
+            <p class="font-semibold text-olak-dark">CNI-Jean-Dupont.pdf</p>
+            <p class="text-sm text-gray-600">2.3 MB • Vérifié le 12/01/2024</p>
+          </div>
+          <button type="button" class="text-red-600 hover:text-red-700 text-sm font-semibold">
+            Remplacer
+          </button>
+        </div>
+        <div class="border-2 border-dashed border-gray-300 rounded-lg p-4 text-center hover:border-blue-500 transition-all duration-300 cursor-pointer">
+          <svg class="mx-auto mb-2 w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+          </svg>
+          <p class="text-sm text-gray-600">Cliquez pour télécharger un nouveau document</p>
+          <p class="text-xs text-gray-500 mt-1">PDF, JPG, PNG - Max 10MB</p>
+        </div>
+      </div>
+      
+      <!-- Address Proof -->
+      <div>
+        <label class="block text-sm font-semibold mb-2 text-olak-dark">
+          Justificatif de domicile <span class="text-olak-error">*</span>
+        </label>
+        <div class="flex items-center gap-4 p-4 bg-olak-gray rounded-lg mb-2">
+          <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+            <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <div class="flex-1">
+            <p class="font-semibold text-olak-dark">Facture-EDF-2024.pdf</p>
+            <p class="text-sm text-gray-600">1.8 MB • Vérifié le 12/01/2024</p>
+          </div>
+          <button type="button" class="text-red-600 hover:text-red-700 text-sm font-semibold">
+            Remplacer
+          </button>
+        </div>
+      </div>
+      
+      <!-- Bank Details (RIB) -->
+      <div>
+        <label class="block text-sm font-semibold mb-2 text-olak-dark">
+          RIB <span class="text-olak-error">*</span>
+        </label>
+        <div class="flex items-center gap-4 p-4 bg-olak-gray rounded-lg mb-2">
+          <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+            <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <div class="flex-1">
+            <p class="font-semibold text-olak-dark">RIB-Jean-Dupont.pdf</p>
+            <p class="text-sm text-gray-600">0.5 MB • Vérifié le 12/01/2024</p>
+          </div>
+          <button type="button" class="text-red-600 hover:text-red-700 text-sm font-semibold">
+            Remplacer
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Co-owner Management Section -->
+  <div class="card-olak mb-6">
+    <h2 class="text-2xl font-semibold text-olak-primary-dark mb-6">Co-propriétaire</h2>
+    
+    <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
+      <div class="flex items-start gap-4 mb-4">
+        <svg class="w-6 h-6 text-blue-600 mt-1" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+        </svg>
+        <div>
+          <p class="text-blue-800 font-semibold mb-2">Ajouter un co-propriétaire (optionnel)</p>
+          <p class="text-blue-700 text-sm">Si vous êtes propriétaire à plusieurs, vous pouvez ajouter les informations du co-propriétaire.</p>
+        </div>
+      </div>
+      
+      <button type="button" class="btn-secondary w-full">
+        <svg class="w-5 h-5 inline-block mr-2" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z"/>
+        </svg>
+        Ajouter un co-propriétaire
+      </button>
+    </div>
+  </div>
+  
+  <!-- Form Actions -->
+  <div class="flex justify-end gap-4">
+    <%= link_to mockups_owner_profile_show_path, class: "btn-secondary px-8" do %>
+      Annuler
+    <% end %>
+    <button type="submit" class="btn-primary px-8">
+      <svg class="w-5 h-5 inline-block mr-2" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+      </svg>
+      Enregistrer les modifications
+    </button>
+  </div>
+</form>

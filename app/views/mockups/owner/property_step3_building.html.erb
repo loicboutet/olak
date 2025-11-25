@@ -1,0 +1,306 @@
+<% content_for :title, "Ajouter un bien - Étape 3/3" %>
+
+<div class="min-h-screen bg-olak-gray py-8">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Progress Indicator -->
+    <div class="mb-8">
+      <div class="flex items-center justify-center">
+        <div class="flex items-center">
+          <!-- Step 1 - Completed -->
+          <div class="flex items-center">
+            <div class="w-10 h-10 bg-olak-primary rounded-full flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+            <span class="ml-2 text-sm font-medium text-olak-primary">Type de bien</span>
+          </div>
+          
+          <div class="w-16 h-1 bg-olak-primary mx-2"></div>
+          
+          <!-- Step 2 - Completed -->
+          <div class="flex items-center">
+            <div class="w-10 h-10 bg-olak-primary rounded-full flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+            <span class="ml-2 text-sm font-medium text-olak-primary">Détails du bien</span>
+          </div>
+          
+          <div class="w-16 h-1 bg-olak-primary mx-2"></div>
+          
+          <!-- Step 3 - Current -->
+          <div class="flex items-center">
+            <div class="w-10 h-10 bg-olak-primary rounded-full flex items-center justify-center">
+              <span class="text-white font-bold">3</span>
+            </div>
+            <span class="ml-2 text-sm font-medium text-olak-primary">Bâtiment</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Form Card -->
+    <div class="bg-white rounded-xl shadow-md p-8">
+      <h1 class="text-4xl font-bold text-olak-primary-dark mb-2">Informations sur le bâtiment</h1>
+      <p class="text-gray-600 mb-8">Dernière étape : renseignez les détails de l'immeuble</p>
+
+      <form class="space-y-6">
+        
+        <!-- Building Type Section -->
+        <div class="border-b border-gray-200 pb-6">
+          <h2 class="text-2xl font-semibold text-olak-dark mb-4">Type de bâtiment</h2>
+          
+          <div class="space-y-2">
+            <label class="flex items-center cursor-pointer p-4 border-2 border-olak-primary bg-olak-primary-light rounded-lg">
+              <input type="radio" name="building_type" value="apartment" class="w-5 h-5 mr-3 accent-olak-primary cursor-pointer" checked>
+              <div>
+                <span class="text-base font-semibold text-olak-dark">Immeuble collectif</span>
+                <p class="text-sm text-gray-600">Plusieurs appartements dans le même bâtiment</p>
+              </div>
+            </label>
+            
+            <label class="flex items-center cursor-pointer p-4 border-2 border-gray-300 rounded-lg hover:border-olak-primary transition-colors">
+              <input type="radio" name="building_type" value="house" class="w-5 h-5 mr-3 accent-olak-primary cursor-pointer">
+              <div>
+                <span class="text-base font-semibold text-olak-dark">Maison individuelle</span>
+                <p class="text-sm text-gray-600">Bâtiment indépendant</p>
+              </div>
+            </label>
+            
+            <label class="flex items-center cursor-pointer p-4 border-2 border-gray-300 rounded-lg hover:border-olak-primary transition-colors">
+              <input type="radio" name="building_type" value="villa" class="w-5 h-5 mr-3 accent-olak-primary cursor-pointer">
+              <div>
+                <span class="text-base font-semibold text-olak-dark">Petite copropriété</span>
+                <p class="text-sm text-gray-600">Moins de 10 lots</p>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- Building Details Section -->
+        <div class="border-b border-gray-200 pb-6">
+          <h2 class="text-2xl font-semibold text-olak-dark mb-4">Caractéristiques du bâtiment</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Année de construction
+              </label>
+              <input type="number" class="input-olak" placeholder="1985" value="1995">
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Nombre d'étages
+              </label>
+              <input type="number" class="input-olak" placeholder="5" value="6">
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Nombre total de lots
+              </label>
+              <input type="number" class="input-olak" placeholder="24" value="32">
+              <p class="text-xs text-gray-500 mt-1">Dans l'immeuble</p>
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Isolation
+              </label>
+              <select class="input-olak">
+                <option value="">Sélectionnez...</option>
+                <option value="good" selected>Bonne isolation</option>
+                <option value="average">Isolation moyenne</option>
+                <option value="poor">Isolation à refaire</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Building Amenities Section -->
+        <div class="border-b border-gray-200 pb-6">
+          <h2 class="text-2xl font-semibold text-olak-dark mb-4">Équipements communs</h2>
+          <p class="text-sm text-gray-600 mb-4">Sélectionnez les équipements disponibles dans l'immeuble</p>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <label class="flex items-center cursor-pointer">
+              <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer" checked>
+              <span class="text-sm text-olak-dark">Ascenseur</span>
+            </label>
+            
+            <label class="flex items-center cursor-pointer">
+              <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer" checked>
+              <span class="text-sm text-olak-dark">Interphone</span>
+            </label>
+            
+            <label class="flex items-center cursor-pointer">
+              <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer">
+              <span class="text-sm text-olak-dark">Digicode</span>
+            </label>
+            
+            <label class="flex items-center cursor-pointer">
+              <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer">
+              <span class="text-sm text-olak-dark">Gardien</span>
+            </label>
+            
+            <label class="flex items-center cursor-pointer">
+              <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer" checked>
+              <span class="text-sm text-olak-dark">Parking collectif</span>
+            </label>
+            
+            <label class="flex items-center cursor-pointer">
+              <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer">
+              <span class="text-sm text-olak-dark">Local vélos</span>
+            </label>
+            
+            <label class="flex items-center cursor-pointer">
+              <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer">
+              <span class="text-sm text-olak-dark">Local poubelles</span>
+            </label>
+            
+            <label class="flex items-center cursor-pointer">
+              <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer">
+              <span class="text-sm text-olak-dark">Espace vert</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Access Information Section -->
+        <div class="border-b border-gray-200 pb-6">
+          <h2 class="text-2xl font-semibold text-olak-dark mb-4">Informations d'accès</h2>
+          
+          <div class="space-y-4">
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Code d'entrée
+              </label>
+              <input type="text" class="input-olak" placeholder="A1234B">
+              <p class="text-xs text-gray-500 mt-1">Facultatif - Pour les visites</p>
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Instructions d'accès
+              </label>
+              <textarea class="input-olak" rows="3" placeholder="Ex: Bâtiment A, 2ème porte à gauche après l'ascenseur"></textarea>
+              <p class="text-xs text-gray-500 mt-1">Ces informations seront partagées avec les candidats pour les visites</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Heating Section -->
+        <div class="border-b border-gray-200 pb-6">
+          <h2 class="text-2xl font-semibold text-olak-dark mb-4">Chauffage</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Type de chauffage
+              </label>
+              <select class="input-olak">
+                <option value="">Sélectionnez...</option>
+                <option value="individual" selected>Individuel</option>
+                <option value="collective">Collectif</option>
+                <option value="mixed">Mixte</option>
+              </select>
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Énergie
+              </label>
+              <select class="input-olak">
+                <option value="">Sélectionnez...</option>
+                <option value="gas" selected>Gaz</option>
+                <option value="electric">Électrique</option>
+                <option value="fuel">Fioul</option>
+                <option value="wood">Bois</option>
+                <option value="heat_pump">Pompe à chaleur</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copropriété Information -->
+        <div class="border-b border-gray-200 pb-6">
+          <h2 class="text-2xl font-semibold text-olak-dark mb-4">Copropriété</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Charges de copropriété (€/mois)
+              </label>
+              <input type="number" class="input-olak" placeholder="120" value="120">
+              <p class="text-xs text-gray-500 mt-1">Montant mensuel moyen</p>
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Syndic
+              </label>
+              <input type="text" class="input-olak" placeholder="Nom du syndic">
+            </div>
+          </div>
+          
+          <div class="mt-4">
+            <label class="flex items-center cursor-pointer">
+              <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer">
+              <span class="text-sm text-olak-dark">Procédure en cours (travaux, contentieux, etc.)</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Additional Notes Section -->
+        <div class="pb-6">
+          <h2 class="text-2xl font-semibold text-olak-dark mb-4">Informations complémentaires</h2>
+          
+          <div>
+            <label class="block text-sm font-semibold mb-2 text-olak-dark">
+              Notes additionnelles
+            </label>
+            <textarea class="input-olak" rows="4" placeholder="Ajoutez toute information utile concernant le bien ou l'immeuble..."></textarea>
+          </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="flex gap-3 items-center justify-between pt-6">
+          <button type="button" class="btn-secondary flex items-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+            </svg>
+            Retour
+          </button>
+          
+          <div class="flex gap-3">
+            <button type="button" class="btn-secondary">
+              Enregistrer comme brouillon
+            </button>
+            <button type="submit" class="btn-primary flex items-center gap-2">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              Publier le bien
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- Success Preview -->
+    <div class="mt-6 bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg">
+      <div class="flex items-start">
+        <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+        </svg>
+        <div>
+          <p class="text-green-800 font-semibold">Dernière étape !</p>
+          <p class="text-green-700 text-sm mt-1">Une fois publié, votre bien sera visible par l'équipe OLAK qui pourra commencer à recevoir des candidatures.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

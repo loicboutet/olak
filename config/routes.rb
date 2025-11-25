@@ -254,6 +254,81 @@ Rails.application.routes.draw do
   end
   
   # ============================================================================
+  # MOCKUPS NAMESPACE
+  # ============================================================================
+  
+  namespace :mockups do
+    # Mockup Journey Explorer - Central hub
+    root 'index'
+    
+    # Public journey mockup (one-pager only)
+    get 'landing', to: 'public_landing'
+    # Admin namespace
+    namespace :admin do
+      get 'dashboard'
+      get 'owners_list'
+      get 'owner_detail'
+      get 'owner_create'
+      get 'tenants_list'
+      get 'tenant_detail'
+      get 'properties_list'
+      get 'property_detail'
+      get 'applications_list'
+      get 'rating_form'
+      get 'visits_calendar'
+      get 'visit_form'
+      get 'payments_dashboard'
+      get 'payments_list'
+      get 'invoices_list'
+      get 'invoice_create'
+      get 'accounting_export'
+    end
+    
+    # Owner namespace
+    namespace :owner do
+      get 'dashboard'
+      get 'profile_show'
+      get 'profile_edit'
+      get 'property_step1'
+      get 'property_step2_apartment'
+      get 'property_step2_house'
+      get 'property_step2_room'
+      get 'property_step3_building'
+      get 'property_step3_room'
+      get 'equipment_interface'
+      get 'properties_list'
+      get 'property_show'
+      get 'applications_list'
+      get 'application_detail'
+      get 'leases_list'
+      get 'lease_show'
+      get 'lease_preview'
+      get 'payment_form'
+      get 'payment_success'
+      get 'payments_list'
+      get 'invoices_list'
+      get 'notifications'
+    end
+    
+    # Tenant namespace
+    namespace :tenant do
+      get 'dashboard'
+      get 'profile_show'
+      get 'profile_edit'
+      get 'documents'
+      get 'guarantor_form'
+      get 'guarantor_show'
+      get 'applications_list'
+      get 'application_show'
+      get 'leases_list'
+      get 'lease_show'
+      get 'lease_preview'
+      get 'rental_cv'
+      get 'notifications'
+    end
+  end
+  
+  # ============================================================================
   # DEVELOPMENT ROUTES
   # ============================================================================
   
