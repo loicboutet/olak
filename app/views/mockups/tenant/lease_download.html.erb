@@ -1,0 +1,280 @@
+<% content_for :title, "Téléchargement du bail" %>
+
+<div class="min-h-screen bg-olak-gray py-8">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Success Message -->
+    <div class="bg-green-50 border-l-4 border-green-500 p-6 mb-8 rounded-r-lg">
+      <div class="flex items-start">
+        <svg class="w-8 h-8 text-green-500 mr-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+        </svg>
+        <div>
+          <h2 class="text-2xl font-bold text-green-800 mb-2">Félicitations !</h2>
+          <p class="text-green-700">Votre bail a été signé avec succès. Vous pouvez maintenant télécharger le document.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lease Summary Card -->
+    <div class="bg-white rounded-xl shadow-md p-8 mb-6">
+      <div class="flex items-start justify-between mb-6">
+        <div>
+          <h1 class="text-4xl font-bold text-olak-primary-dark mb-2">Votre bail</h1>
+          <p class="text-xl text-gray-700">Appartement T3 - Paris 15ème</p>
+        </div>
+        <span class="badge badge-success text-lg px-4 py-2">Signé</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        <div>
+          <h3 class="text-lg font-semibold text-olak-dark mb-3">Informations du bail</h3>
+          <dl class="space-y-2 text-sm">
+            <div class="flex justify-between">
+              <dt class="text-gray-600">Numéro:</dt>
+              <dd class="font-medium text-olak-dark">#<%= params[:id] || '1' %></dd>
+            </div>
+            <div class="flex justify-between">
+              <dt class="text-gray-600">Type:</dt>
+              <dd><span class="badge badge-furnished text-xs">Meublé</span></dd>
+            </div>
+            <div class="flex justify-between">
+              <dt class="text-gray-600">Date de début:</dt>
+              <dd class="font-medium text-olak-dark">01/12/2024</dd>
+            </div>
+            <div class="flex justify-between">
+              <dt class="text-gray-600">Durée:</dt>
+              <dd class="font-medium text-olak-dark">12 mois</dd>
+            </div>
+            <div class="flex justify-between">
+              <dt class="text-gray-600">Loyer mensuel:</dt>
+              <dd class="font-medium text-olak-dark">1 200 € + 150 € charges</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold text-olak-dark mb-3">Signatures</h3>
+          <dl class="space-y-3 text-sm">
+            <div class="bg-green-50 p-3 rounded">
+              <div class="flex items-center gap-2 mb-1">
+                <svg class="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <dt class="font-semibold text-green-800">Propriétaire (M. Dupont)</dt>
+              </div>
+              <dd class="text-green-700 text-xs">Signé le 15/11/2024 à 14:30</dd>
+            </div>
+
+            <div class="bg-green-50 p-3 rounded">
+              <div class="flex items-center gap-2 mb-1">
+                <svg class="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <dt class="font-semibold text-green-800">Vous</dt>
+              </div>
+              <dd class="text-green-700 text-xs">Signé le 18/11/2024 à 10:15</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+
+      <!-- Download Button -->
+      <div class="border-t pt-6">
+        <button class="w-full btn-primary text-lg py-4 flex items-center justify-center gap-3">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+          </svg>
+          Télécharger le bail signé (PDF)
+        </button>
+        <p class="text-center text-sm text-gray-500 mt-2">
+          Bail_Appartement_T3_Paris_15_signe.pdf • 2.4 MB
+        </p>
+      </div>
+    </div>
+
+    <!-- Next Steps for Tenant -->
+    <div class="bg-white rounded-xl shadow-md p-6 mb-6">
+      <h3 class="text-xl font-semibold text-olak-dark mb-4 flex items-center gap-2">
+        <svg class="w-6 h-6 text-olak-primary" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+        </svg>
+        Prochaines étapes avant l'emménagement
+      </h3>
+      
+      <div class="space-y-4">
+        <div class="flex items-start gap-3 p-4 bg-olak-gray rounded-lg">
+          <div class="flex-shrink-0 w-8 h-8 rounded-full bg-olak-warning text-white flex items-center justify-center font-bold text-sm">
+            1
+          </div>
+          <div>
+            <h4 class="font-semibold text-olak-dark mb-1 flex items-center gap-2">
+              Assurance habitation
+              <span class="badge badge-error text-xs">Obligatoire</span>
+            </h4>
+            <p class="text-sm text-gray-600 mb-2">Souscrivez une assurance habitation avant l'entrée dans les lieux</p>
+            <p class="text-xs text-gray-500">À fournir au propriétaire avant le 01/12/2024</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3 p-4 bg-olak-gray rounded-lg">
+          <div class="flex-shrink-0 w-8 h-8 rounded-full bg-olak-primary text-white flex items-center justify-center font-bold text-sm">
+            2
+          </div>
+          <div>
+            <h4 class="font-semibold text-olak-dark mb-1">Dépôt de garantie</h4>
+            <p class="text-sm text-gray-600 mb-2">Versez le dépôt de garantie de 2 400 € au propriétaire</p>
+            <p class="text-xs text-gray-500">À régler avant l'état des lieux d'entrée</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3 p-4 bg-olak-gray rounded-lg">
+          <div class="flex-shrink-0 w-8 h-8 rounded-full bg-olak-primary text-white flex items-center justify-center font-bold text-sm">
+            3
+          </div>
+          <div>
+            <h4 class="font-semibold text-olak-dark mb-1">Premier loyer</h4>
+            <p class="text-sm text-gray-600 mb-2">Le premier loyer est dû le 01/12/2024</p>
+            <p class="text-xs text-gray-500">Montant: 1 350 € (loyer + charges)</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3 p-4 bg-olak-gray rounded-lg">
+          <div class="flex-shrink-0 w-8 h-8 rounded-full bg-olak-primary text-white flex items-center justify-center font-bold text-sm">
+            4
+          </div>
+          <div>
+            <h4 class="font-semibold text-olak-dark mb-1">État des lieux d'entrée</h4>
+            <p class="text-sm text-gray-600 mb-2">Rendez-vous prévu le 30/11/2024 avec le propriétaire</p>
+            <p class="text-xs text-gray-500">Adresse: 45 Avenue des Champs-Élysées, 75008 Paris</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3 p-4 bg-olak-gray rounded-lg">
+          <div class="flex-shrink-0 w-8 h-8 rounded-full bg-olak-primary text-white flex items-center justify-center font-bold text-sm">
+            5
+          </div>
+          <div>
+            <h4 class="font-semibold text-olak-dark mb-1">Remise des clés</h4>
+            <p class="text-sm text-gray-600 mb-2">Prévue le 01/12/2024 après signature de l'état des lieux</p>
+            <p class="text-xs text-gray-500">Contact propriétaire: 06 12 34 56 78</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3 p-4 bg-olak-gray rounded-lg">
+          <div class="flex-shrink-0 w-8 h-8 rounded-full bg-olak-primary text-white flex items-center justify-center font-bold text-sm">
+            6
+          </div>
+          <div>
+            <h4 class="font-semibold text-olak-dark mb-1">Services et abonnements</h4>
+            <p class="text-sm text-gray-600 mb-2">Souscrivez vos abonnements (électricité, gaz, internet...)</p>
+            <p class="text-xs text-gray-500">À prévoir avant ou juste après l'emménagement</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Important Documents -->
+    <div class="bg-white rounded-xl shadow-md p-6 mb-6">
+      <h3 class="text-xl font-semibold text-olak-dark mb-4">Documents importants</h3>
+      
+      <div class="space-y-3">
+        <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50 transition-colors">
+          <div class="flex items-center gap-3">
+            <svg class="w-5 h-5 text-olak-primary" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" clip-rule="evenodd"/>
+            </svg>
+            <div>
+              <p class="font-medium text-olak-dark">Bail signé</p>
+              <p class="text-xs text-gray-500">PDF • 2.4 MB</p>
+            </div>
+          </div>
+          <button class="text-olak-primary hover:text-olak-primary-dark font-semibold text-sm">
+            Télécharger
+          </button>
+        </div>
+
+        <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50 transition-colors">
+          <div class="flex items-center gap-3">
+            <svg class="w-5 h-5 text-olak-primary" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" clip-rule="evenodd"/>
+            </svg>
+            <div>
+              <p class="font-medium text-olak-dark">Notice d'information</p>
+              <p class="text-xs text-gray-500">PDF • 1.2 MB</p>
+            </div>
+          </div>
+          <button class="text-olak-primary hover:text-olak-primary-dark font-semibold text-sm">
+            Télécharger
+          </button>
+        </div>
+
+        <div class="flex items-center justify-between p-3 border rounded hover:bg-gray-50 transition-colors">
+          <div class="flex items-center gap-3">
+            <svg class="w-5 h-5 text-olak-primary" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" clip-rule="evenodd"/>
+            </svg>
+            <div>
+              <p class="font-medium text-olak-dark">Dossier de diagnostic technique</p>
+              <p class="text-xs text-gray-500">PDF • 3.8 MB</p>
+            </div>
+          </div>
+          <button class="text-olak-primary hover:text-olak-primary-dark font-semibold text-sm">
+            Télécharger
+          </button>
+        </div>
+
+        <div class="flex items-center justify-between p-3 border rounded bg-gray-50">
+          <div class="flex items-center gap-3">
+            <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" clip-rule="evenodd"/>
+            </svg>
+            <div>
+              <p class="font-medium text-gray-500">État des lieux</p>
+              <p class="text-xs text-gray-400">Après signature le 30/11/2024</p>
+            </div>
+          </div>
+          <span class="text-gray-400 text-sm">À venir</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Information Alerts -->
+    <div class="space-y-4 mb-6">
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
+        <div class="flex items-start">
+          <svg class="w-6 h-6 text-blue-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+          </svg>
+          <div>
+            <p class="text-sm text-blue-800 font-semibold mb-1">Conservation des documents</p>
+            <p class="text-xs text-blue-700">Conservez précieusement le bail signé et tous les documents pendant toute la durée de la location et jusqu'à restitution complète du dépôt de garantie.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-orange-50 border-l-4 border-orange-500 p-4 rounded-r-lg">
+        <div class="flex items-start">
+          <svg class="w-6 h-6 text-orange-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+          </svg>
+          <div>
+            <p class="text-sm text-orange-800 font-semibold mb-1">Assurance obligatoire</p>
+            <p class="text-xs text-orange-700">N'oubliez pas de souscrire une assurance habitation avant l'entrée dans les lieux. L'attestation doit être fournie au propriétaire.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Actions -->
+    <div class="flex gap-4">
+      <%= link_to tenant_leases_path, class: "flex-1 btn-secondary text-center" do %>
+        Retour à mes baux
+      <% end %>
+      <%= link_to tenant_lease_path(id: params[:id] || 1), class: "flex-1 btn-primary text-center" do %>
+        Voir les détails du bail
+      <% end %>
+    </div>
+
+  </div>
+</div>

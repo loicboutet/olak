@@ -356,11 +356,16 @@ Rails.application.routes.draw do
       
       get 'applications_list'
       get 'application_show'
+
       get 'leases_list'
       get 'lease_show'
       get 'lease_preview'
+      get 'lease_download'
+
       get 'rental_cv'
+
       get 'notifications'
+      get 'notification_show'
     end
   end
   

@@ -17,10 +17,15 @@ module Mockups
 
     def applications_list; end
     def application_show; end
+
     def leases_list; end
     def lease_show; end
     def lease_preview; end
+    def lease_download; end
+
     def rental_cv; end
+
     def notifications; end
+    def notification_show; end
   end
 end

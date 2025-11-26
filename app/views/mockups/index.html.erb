@@ -577,13 +577,13 @@
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
             <%= link_to mockups_tenant_applications_list_path, class: "text-blue-600 hover:underline" do %>
-              /tenant/applications
+              /mockups/tenant/applications
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
             <%= link_to mockups_tenant_application_show_path, class: "text-blue-600 hover:underline" do %>
-              /tenant/applications/:id
+              /mockups/tenant/applications/:id
             <% end %>
           </li>
         </ul>
@@ -593,25 +593,25 @@
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
             <%= link_to mockups_tenant_leases_list_path, class: "text-blue-600 hover:underline" do %>
-              /tenant/leases
+              /mockups/tenant/leases
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
             <%= link_to mockups_tenant_lease_show_path, class: "text-blue-600 hover:underline" do %>
-              /tenant/leases/:id
+              /mockups/tenant/leases/:id
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
             <%= link_to mockups_tenant_lease_preview_path, class: "text-blue-600 hover:underline" do %>
-              /tenant/leases/:id/preview
+              /mockups/tenant/leases/:id/preview
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to mockups_tenant_lease_preview_path, class: "text-blue-600 hover:underline" do %>
-              /tenant/leases/:id/download
+            <%= link_to mockups_tenant_lease_download_path, class: "text-blue-600 hover:underline" do %>
+              /mockups/tenant/leases/:id/download
             <% end %>
           </li>
         </ul>
@@ -623,13 +623,7 @@
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
             <%= link_to mockups_tenant_rental_cv_path, class: "text-blue-600 hover:underline" do %>
-              /tenant/rental_cv
-            <% end %>
-          </li>
-          <li class="flex items-center">
-            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to mockups_tenant_rental_cv_path, class: "text-blue-600 hover:underline" do %>
-              /tenant/rental_cv/download
+              /mockups/tenant/rental_cv
             <% end %>
           </li>
         </ul>
@@ -639,13 +633,13 @@
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
             <%= link_to mockups_tenant_notifications_path, class: "text-blue-600 hover:underline" do %>
-              /tenant/notifications
+              /mockups/tenant/notifications
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to mockups_tenant_notifications_path, class: "text-blue-600 hover:underline" do %>
-              /tenant/notifications/:id
+            <%= link_to mockups_tenant_notification_show_path, class: "text-blue-600 hover:underline" do %>
+              /mockups/tenant/notifications/:id
             <% end %>
           </li>
         </ul>
