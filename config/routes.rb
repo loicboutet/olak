@@ -299,7 +299,8 @@ Rails.application.routes.draw do
       get 'invoice_show'
       get 'invoice_download'
 
-      get 'accounting_export'
+      get 'accounting_exports'
+      get 'accounting_export_download'
     end
     
     # Owner namespace

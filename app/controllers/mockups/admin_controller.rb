@@ -32,6 +32,7 @@ module Mockups
     def invoice_show; end
     def invoice_download; end
 
-    def accounting_export; end
+    def accounting_exports; end
+    def accounting_export_download; end
   end
 end
