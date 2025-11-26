@@ -7,9 +7,9 @@
     <div class="mb-8">
       <nav class="flex mb-4" aria-label="Breadcrumb">
         <ol class="flex items-center space-x-2 text-sm">
-          <li><%= link_to "Accueil", admin_root_path, class: "text-gray-500 hover:text-olak-primary transition-colors" %></li>
+          <li><%= link_to "Accueil", mockups_admin_dashboard_path, class: "text-gray-500 hover:text-olak-primary transition-colors" %></li>
           <li><span class="text-gray-400">/</span></li>
-          <li><%= link_to "Candidatures", admin_applications_path, class: "text-gray-500 hover:text-olak-primary transition-colors" %></li>
+          <li><%= link_to "Candidatures", mockups_admin_applications_list_path, class: "text-gray-500 hover:text-olak-primary transition-colors" %></li>
           <li><span class="text-gray-400">/</span></li>
           <li><span class="text-olak-primary font-semibold">Marie Dupont</span></li>
         </ol>
@@ -21,7 +21,7 @@
           <p class="text-gray-600 mt-2">Appartement T3 • Paris 15ème • 1 200 €/mois</p>
         </div>
         <div class="flex gap-2">
-          <%= link_to admin_applications_path, class: "btn-secondary" do %>
+          <%= link_to mockups_admin_applications_list_path, class: "btn-secondary" do %>
             <svg class="w-5 h-5 inline-block mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
             </svg>

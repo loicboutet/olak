@@ -10,7 +10,7 @@
           <h1 class="text-4xl font-bold text-olak-primary-dark">Détails de la notification</h1>
         </div>
         <div class="flex gap-3">
-          <%= link_to tenant_notifications_path, class: "btn-secondary" do %>
+          <%= link_to mockups_tenant_notifications_path, class: "btn-secondary" do %>
             <svg class="w-5 h-5 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
             </svg>
@@ -131,14 +131,14 @@
 
       <!-- Action Buttons -->
       <div class="mt-8 flex gap-3">
-        <%= link_to tenant_application_path(id: 1), class: "btn-primary" do %>
+        <%= link_to mockups_tenant_application_show_path, class: "btn-primary" do %>
           <svg class="w-5 h-5 inline mr-2" fill="currentColor" viewBox="0 0 20 20">
             <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
             <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
           </svg>
           Voir ma candidature
         <% end %>
-        <%= link_to tenant_root_path, class: "btn-secondary" do %>
+        <%= link_to mockups_tenant_dashboard_path, class: "btn-secondary" do %>
           <svg class="w-5 h-5 inline mr-2" fill="currentColor" viewBox="0 0 20 20">
             <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
           </svg>
@@ -151,7 +151,7 @@
     <div class="bg-white rounded-xl shadow-md p-6">
       <h3 class="text-xl font-semibold text-olak-dark mb-4">Notifications liées</h3>
       <div class="space-y-3">
-        <%= link_to tenant_notification_path(id: 2), class: "block hover:bg-olak-gray p-4 rounded-lg transition-colors" do %>
+        <%= link_to mockups_tenant_notification_show_path, class: "block hover:bg-olak-gray p-4 rounded-lg transition-colors" do %>
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-3">
               <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">

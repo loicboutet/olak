@@ -268,10 +268,10 @@
 
     <!-- Actions -->
     <div class="flex gap-4">
-      <%= link_to tenant_leases_path, class: "flex-1 btn-secondary text-center" do %>
+      <%= link_to mockups_tenant_leases_list_path, class: "flex-1 btn-secondary text-center" do %>
         Retour à mes baux
       <% end %>
-      <%= link_to tenant_lease_path(id: params[:id] || 1), class: "flex-1 btn-primary text-center" do %>
+      <%= link_to mockups_tenant_lease_show_path, class: "flex-1 btn-primary text-center" do %>
         Voir les détails du bail
       <% end %>
     </div>

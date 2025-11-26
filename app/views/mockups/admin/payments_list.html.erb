@@ -7,7 +7,7 @@
         <h1 class="text-4xl font-bold text-olak-primary-dark mb-2">Liste des paiements</h1>
         <p class="text-gray-600">Suivi détaillé de toutes les transactions</p>
       </div>
-      <%= link_to export_admin_payments_path, class: "btn-primary flex items-center gap-2" do %>
+      <%= link_to mockups_admin_payments_export_path, class: "btn-primary flex items-center gap-2" do %>
         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
           <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
         </svg>
@@ -109,7 +109,7 @@
               <td class="px-6 py-4 text-sm"><span class="badge badge-zone-tendue">Paris</span></td>
               <td class="px-6 py-4"><span class="badge badge-success">Confirmé</span></td>
               <td class="px-6 py-4 space-x-2">
-                <%= link_to "Voir", admin_payment_path(id: 1), class: "text-olak-primary hover:text-olak-primary-dark text-sm font-semibold" %>
+                <%= link_to "Voir", mockups_admin_payments_show_path, class: "text-olak-primary hover:text-olak-primary-dark text-sm font-semibold" %>
               </td>
             </tr>
 
@@ -122,7 +122,7 @@
               <td class="px-6 py-4 text-sm"><span class="badge badge-zone-tendue">Lyon</span></td>
               <td class="px-6 py-4"><span class="badge badge-pending">En attente</span></td>
               <td class="px-6 py-4 space-x-2">
-                <%= link_to "Voir", admin_payment_path(id: 2), class: "text-olak-primary hover:text-olak-primary-dark text-sm font-semibold" %>
+                <%= link_to "Voir", mockups_admin_payments_show_path, class: "text-olak-primary hover:text-olak-primary-dark text-sm font-semibold" %>
               </td>
             </tr>
 
@@ -135,7 +135,7 @@
               <td class="px-6 py-4 text-sm"><span class="badge badge-zone-tendue">Marseille</span></td>
               <td class="px-6 py-4"><span class="badge badge-success">Confirmé</span></td>
               <td class="px-6 py-4 space-x-2">
-                <%= link_to "Voir", admin_payment_path(id: 3), class: "text-olak-primary hover:text-olak-primary-dark text-sm font-semibold" %>
+                <%= link_to "Voir", mockups_admin_payments_show_path, class: "text-olak-primary hover:text-olak-primary-dark text-sm font-semibold" %>
               </td>
             </tr>
 
@@ -148,7 +148,7 @@
               <td class="px-6 py-4 text-sm"><span class="badge badge-unfurnished">Bordeaux</span></td>
               <td class="px-6 py-4"><span class="badge badge-success">Confirmé</span></td>
               <td class="px-6 py-4 space-x-2">
-                <%= link_to "Voir", admin_payment_path(id: 4), class: "text-olak-primary hover:text-olak-primary-dark text-sm font-semibold" %>
+                <%= link_to "Voir", mockups_admin_payments_show_path, class: "text-olak-primary hover:text-olak-primary-dark text-sm font-semibold" %>
               </td>
             </tr>
 
@@ -161,7 +161,7 @@
               <td class="px-6 py-4 text-sm"><span class="badge badge-unfurnished">Lille</span></td>
               <td class="px-6 py-4"><span class="badge badge-pending">En attente</span></td>
               <td class="px-6 py-4 space-x-2">
-                <%= link_to "Voir", admin_payment_path(id: 5), class: "text-olak-primary hover:text-olak-primary-dark text-sm font-semibold" %>
+                <%= link_to "Voir", mockups_admin_payments_show_path, class: "text-olak-primary hover:text-olak-primary-dark text-sm font-semibold" %>
               </td>
             </tr>
           </tbody>
@@ -195,7 +195,7 @@
 
     <!-- Back to Dashboard -->
     <div class="mt-8">
-      <%= link_to dashboard_admin_payments_path, class: "btn-secondary" do %>
+      <%= link_to mockups_admin_payments_dashboard_path, class: "btn-secondary" do %>
         ← Retour au tableau de bord
       <% end %>
     </div>

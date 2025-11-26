@@ -4,9 +4,9 @@
   <!-- Breadcrumb -->
   <nav class="mb-6" aria-label="Breadcrumb">
     <ol class="flex items-center space-x-2 text-sm">
-      <li><%= link_to "Admin", admin_root_path, class: "text-gray-500 hover:text-olak-primary transition-colors" %></li>
+      <li><%= link_to "Admin", mockups_admin_dashboard_path, class: "text-gray-500 hover:text-olak-primary transition-colors" %></li>
       <li><span class="text-gray-400">/</span></li>
-      <li><%= link_to "Applications", admin_applications_path, class: "text-gray-500 hover:text-olak-primary transition-colors" %></li>
+      <li><%= link_to "Applications", mockups_admin_applications_list_path, class: "text-gray-500 hover:text-olak-primary transition-colors" %></li>
       <li><span class="text-gray-400">/</span></li>
       <li><span class="text-olak-primary font-semibold">Noter le candidat</span></li>
     </ol>
@@ -202,7 +202,7 @@
 
       <!-- Actions -->
       <div class="flex gap-3 pt-4">
-        <%= link_to "Annuler", admin_applications_path, class: "btn-secondary flex-1 text-center" %>
+        <%= link_to "Annuler", mockups_admin_applications_list_path, class: "btn-secondary flex-1 text-center" %>
         <button type="submit" class="btn-primary flex-1">
           Enregistrer et proposer au propriétaire
         </button>

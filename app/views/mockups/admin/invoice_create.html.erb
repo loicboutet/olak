@@ -9,9 +9,9 @@
       <!-- Breadcrumbs -->
       <nav class="flex text-sm mt-4">
         <ol class="flex items-center space-x-2">
-          <li><%= link_to "Admin", admin_root_path, class: "text-gray-500 hover:text-olak-primary transition-colors" %></li>
+          <li><%= link_to "Admin", mockups_admin_dashboard_path, class: "text-gray-500 hover:text-olak-primary transition-colors" %></li>
           <li><span class="text-gray-400">/</span></li>
-          <li><%= link_to "Factures", admin_invoices_path, class: "text-gray-500 hover:text-olak-primary transition-colors" %></li>
+          <li><%= link_to "Factures", mockups_admin_invoices_list_path, class: "text-gray-500 hover:text-olak-primary transition-colors" %></li>
           <li><span class="text-gray-400">/</span></li>
           <li><span class="text-olak-primary font-semibold">Nouvelle facture</span></li>
         </ol>
@@ -158,7 +158,7 @@
 
           <!-- Action Buttons -->
           <div class="flex gap-3 pt-4 border-t border-gray-200">
-            <%= link_to admin_invoices_path, class: "btn-secondary flex-1" do %>
+            <%= link_to mockups_admin_invoices_list_path, class: "btn-secondary flex-1" do %>
               Annuler
             <% end %>
             <button type="submit" class="btn-primary flex-1 flex items-center justify-center gap-2">

@@ -4,7 +4,7 @@
   <!-- Page Header -->
   <div class="mb-8">
     <div class="flex items-center gap-4 mb-4">
-      <%= link_to admin_visits_path, class: "text-olak-primary hover:text-olak-primary-dark" do %>
+      <%= link_to mockups_admin_visits_calendar_path, class: "text-olak-primary hover:text-olak-primary-dark" do %>
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
         </svg>
@@ -18,7 +18,7 @@
 
   <!-- Form Card -->
   <div class="bg-white rounded-xl shadow-md p-8">
-    <%= form_with url: admin_visits_path, method: :post, class: "space-y-6" do |form| %>
+    <%= form_with url: "#", method: :post, class: "space-y-6" do |form| %>
       
       <!-- Property Selection -->
       <div>
@@ -235,7 +235,7 @@
 
       <!-- Form Actions -->
       <div class="flex gap-3 items-center justify-between pt-6 border-t border-gray-200">
-        <%= link_to admin_visits_path, class: "btn-secondary" do %>
+        <%= link_to mockups_admin_visits_calendar_path, class: "btn-secondary" do %>
           Annuler
         <% end %>
         

@@ -25,18 +25,20 @@
         <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
         <%= link_to mockups_contact_path, class: "text-blue-600 hover:underline" do %>/mockups/contact (Contact)<% end %>
       </li>
-      <li class="flex items-center">
-        <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-        <%= link_to tenant_registration_path(token: 'example-token-123'), class: "text-blue-600 hover:underline" do %>
-          /candidats/inscription/:token (Tenant Registration)
-        <% end %>
-      </li>
-      <li class="flex items-center">
-        <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-        <%= link_to rental_cv_path(token: 'example-token-123'), class: "text-blue-600 hover:underline" do %>
-          /cv-locatif/:token (Shareable Rental CV)
-        <% end %>
-      </li>
+      <!--
+        <li class="flex items-center">
+          <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+          <%#= link_to "mockups_candidats_inscription_path(token: 'example-token-123')", class: "text-blue-600 hover:underline" do %>
+            /mockups/candidats/inscription/:token (Tenant Registration)
+          <%# end %>
+        </li>
+        <li class="flex items-center">
+          <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
+          <%#= link_to "mockups_cv_locatif_path(token: 'example-token-123')", class: "text-blue-600 hover:underline" do %>
+            /mockups/cv-locatif/:token (Shareable Rental CV)
+          <%# end %>
+        </li>
+      -->
     </ul>
   </div>
 
@@ -277,14 +279,14 @@
         <ul class="space-y-1 text-sm">
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to mockups_admin_accounting_exports_path, class: "text-blue-600 hover:underline" do %>
-              /mockups/admin/accounting_exports
+            <%= link_to mockups_admin_accounting_export_path, class: "text-blue-600 hover:underline" do %>
+              /mockups/admin/accounting_export
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
             <%= link_to mockups_admin_accounting_export_download_path, class: "text-blue-600 hover:underline" do %>
-              /mockups/admin/accounting_exports/:id/download
+              /mockups/admin/accounting_export/:id/download
             <% end %>
           </li>
         </ul>

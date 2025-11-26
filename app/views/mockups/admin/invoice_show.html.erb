@@ -8,7 +8,7 @@
           <h1 class="text-4xl font-bold text-olak-primary-dark mb-2">Détails de la facture</h1>
           <p class="text-gray-600">Facture N° INV-2024-001</p>
         </div>
-        <%= link_to download_admin_invoice_path(id: 1), class: "btn-primary flex items-center gap-2" do %>
+        <%= link_to mockups_admin_invoice_download_path, class: "btn-primary flex items-center gap-2" do %>
           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
             <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
           </svg>
@@ -19,9 +19,9 @@
       <!-- Breadcrumbs -->
       <nav class="flex text-sm mb-4">
         <ol class="flex items-center space-x-2">
-          <li><%= link_to "Admin", admin_root_path, class: "text-gray-500 hover:text-olak-primary transition-colors" %></li>
+          <li><%= link_to "Admin", mockups_admin_dashboard_path, class: "text-gray-500 hover:text-olak-primary transition-colors" %></li>
           <li><span class="text-gray-400">/</span></li>
-          <li><%= link_to "Factures", admin_invoices_path, class: "text-gray-500 hover:text-olak-primary transition-colors" %></li>
+          <li><%= link_to "Factures", mockups_admin_invoices_list_path, class: "text-gray-500 hover:text-olak-primary transition-colors" %></li>
           <li><span class="text-gray-400">/</span></li>
           <li><span class="text-olak-primary font-semibold">INV-2024-001</span></li>
         </ol>
@@ -171,11 +171,11 @@
 
     <!-- Action Buttons -->
     <div class="flex gap-4">
-      <%= link_to admin_invoices_path, class: "btn-secondary" do %>
+      <%= link_to mockups_admin_invoices_list_path, class: "btn-secondary" do %>
         ← Retour à la liste
       <% end %>
       
-      <%= link_to download_admin_invoice_path(id: 1), class: "btn-primary flex items-center gap-2" do %>
+      <%= link_to mockups_admin_invoice_download_path, class: "btn-primary flex items-center gap-2" do %>
         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
           <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
         </svg>

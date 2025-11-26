@@ -56,7 +56,7 @@
         </div>
         <div>
           <p class="text-sm text-gray-600 mb-1">Actions</p>
-          <%= link_to "Voir le profil", admin_owner_path(id: 1), class: "text-olak-primary hover:text-olak-primary-dark font-semibold" %>
+          <%= link_to "Voir le profil", mockups_admin_owner_detail_path, class: "text-olak-primary hover:text-olak-primary-dark font-semibold" %>
         </div>
       </div>
     </div>
@@ -155,10 +155,10 @@
 
     <!-- Action Buttons -->
     <div class="flex gap-4">
-      <%= link_to admin_payments_path, class: "btn-secondary" do %>
+      <%= link_to mockups_admin_payments_list_path, class: "btn-secondary" do %>
         ← Retour à la liste
       <% end %>
-      <%= link_to dashboard_admin_payments_path, class: "btn-secondary" do %>
+      <%= link_to mockups_admin_payments_dashboard_path, class: "btn-secondary" do %>
         Tableau de bord
       <% end %>
     </div>

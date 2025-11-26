@@ -131,7 +131,7 @@
             </svg>
             Générer l'export
           </button>
-          <%= link_to "Annuler", dashboard_admin_payments_path, class: "btn-secondary" %>
+          <%= link_to "Annuler", mockups_admin_payments_dashboard_path, class: "btn-secondary" %>
         </div>
       </form>
     </div>
@@ -158,7 +158,7 @@
               <td class="px-6 py-4 text-sm"><span class="badge badge-success">CSV</span></td>
               <td class="px-6 py-4 text-sm text-olak-dark">120 paiements</td>
               <td class="px-6 py-4">
-                <%= link_to download_admin_accounting_export_path(id: 1), class: "text-olak-primary hover:text-olak-primary-dark text-sm font-semibold flex items-center gap-1" do %>
+                <%= link_to mockups_admin_accounting_export_download_path, class: "text-olak-primary hover:text-olak-primary-dark text-sm font-semibold flex items-center gap-1" do %>
                   <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
                   </svg>
@@ -172,7 +172,7 @@
               <td class="px-6 py-4 text-sm"><span class="badge badge-furnished">Excel</span></td>
               <td class="px-6 py-4 text-sm text-olak-dark">35 paiements</td>
               <td class="px-6 py-4">
-                <%= link_to download_admin_accounting_export_path(id: 2), class: "text-olak-primary hover:text-olak-primary-dark text-sm font-semibold flex items-center gap-1" do %>
+                <%= link_to mockups_admin_accounting_export_download_path, class: "text-olak-primary hover:text-olak-primary-dark text-sm font-semibold flex items-center gap-1" do %>
                   <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
                   </svg>
@@ -186,7 +186,7 @@
               <td class="px-6 py-4 text-sm"><span class="badge badge-success">CSV</span></td>
               <td class="px-6 py-4 text-sm text-olak-dark">42 paiements</td>
               <td class="px-6 py-4">
-                <%= link_to download_admin_accounting_export_path(id: 3), class: "text-olak-primary hover:text-olak-primary-dark text-sm font-semibold flex items-center gap-1" do %>
+                <%= link_to mockups_admin_accounting_export_download_path, class: "text-olak-primary hover:text-olak-primary-dark text-sm font-semibold flex items-center gap-1" do %>
                   <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
                   </svg>
@@ -201,7 +201,7 @@
 
     <!-- Back Button -->
     <div class="mt-8">
-      <%= link_to dashboard_admin_payments_path, class: "btn-secondary" do %>
+      <%= link_to mockups_admin_payments_dashboard_path, class: "btn-secondary" do %>
         ← Retour au tableau de bord des paiements
       <% end %>
     </div>

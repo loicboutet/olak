@@ -24,7 +24,7 @@
     </div>
 
     <!-- Registration Form -->
-    <%= form_with url: tenant_registration_path(@token), method: :post, local: true, class: "space-y-8" do |f| %>
+    <%= form_with url: "#", method: :post, local: true, class: "space-y-8" do |f| %>
       
       <!-- Section 1: Personal Information -->
       <div class="card-olak">
@@ -305,7 +305,7 @@
     <!-- Additional Help -->
     <div class="mt-8 text-center">
       <p class="text-sm text-gray-600">
-        Besoin d'aide ? <a href="<%= contact_path %>" class="text-olak-primary hover:text-olak-primary-dark font-semibold">Contactez-nous</a>
+        Besoin d'aide ? <a href="<%= mockups_contact_path %>" class="text-olak-primary hover:text-olak-primary-dark font-semibold">Contactez-nous</a>
       </p>
     </div>
 

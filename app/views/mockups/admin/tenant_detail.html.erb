@@ -5,13 +5,13 @@
   <nav class="flex mb-6" aria-label="Breadcrumb">
     <ol class="flex items-center space-x-2 text-sm">
       <li>
-        <%= link_to admin_root_path, class: "text-gray-500 hover:text-purple-700" do %>
+        <%= link_to mockups_admin_dashboard_path, class: "text-gray-500 hover:text-purple-700" do %>
           Tableau de bord
         <% end %>
       </li>
       <li><span class="text-gray-400">/</span></li>
       <li>
-        <%= link_to admin_tenants_path, class: "text-gray-500 hover:text-purple-700" do %>
+        <%= link_to mockups_admin_tenants_list_path, class: "text-gray-500 hover:text-purple-700" do %>
           Locataires
         <% end %>
       </li>
@@ -27,7 +27,7 @@
       <p class="text-gray-600 mt-2">Locataire - Profil et documents</p>
     </div>
     <div class="flex gap-3">
-      <%= link_to admin_tenants_path, class: "bg-gray-100 text-gray-700 px-5 py-2.5 rounded-lg font-semibold hover:bg-gray-200 transition-colors" do %>
+      <%= link_to mockups_admin_tenants_list_path, class: "bg-gray-100 text-gray-700 px-5 py-2.5 rounded-lg font-semibold hover:bg-gray-200 transition-colors" do %>
         Retour
       <% end %>
     </div>
@@ -325,7 +325,7 @@
           </div>
 
           <div class="flex flex-col gap-3">
-            <%= link_to validate_documents_admin_tenant_path(1), method: :patch, class: "w-full bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-green-700 hover:shadow-lg text-center opacity-50 cursor-not-allowed" do %>
+            <%= link_to "#", method: :patch, class: "w-full bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-green-700 hover:shadow-lg text-center opacity-50 cursor-not-allowed" do %>
               <svg class="w-5 h-5 inline-block mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
               </svg>

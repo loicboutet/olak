@@ -5,13 +5,13 @@
   <nav class="flex mb-6" aria-label="Breadcrumb">
     <ol class="flex items-center space-x-2 text-sm">
       <li>
-        <%= link_to admin_root_path, class: "text-gray-500 hover:text-purple-700" do %>
+        <%= link_to mockups_admin_dashboard_path, class: "text-gray-500 hover:text-purple-700" do %>
           Tableau de bord
         <% end %>
       </li>
       <li><span class="text-gray-400">/</span></li>
       <li>
-        <%= link_to admin_owners_path, class: "text-gray-500 hover:text-purple-700" do %>
+        <%= link_to mockups_admin_owners_list_path, class: "text-gray-500 hover:text-purple-700" do %>
           Propriétaires
         <% end %>
       </li>
@@ -27,13 +27,13 @@
       <p class="text-gray-600 mt-2">Propriétaire - Profil et documents</p>
     </div>
     <div class="flex gap-3">
-      <%= link_to edit_admin_owner_path(1), class: "bg-white text-purple-700 px-5 py-2.5 rounded-lg font-semibold border-2 border-purple-700 transition-all duration-300 hover:bg-purple-700 hover:text-white" do %>
+      <%= link_to mockups_admin_owner_edit_path, class: "bg-white text-purple-700 px-5 py-2.5 rounded-lg font-semibold border-2 border-purple-700 transition-all duration-300 hover:bg-purple-700 hover:text-white" do %>
         <svg class="w-4 h-4 inline-block mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
         </svg>
         Modifier
       <% end %>
-      <%= link_to admin_owners_path, class: "bg-gray-100 text-gray-700 px-5 py-2.5 rounded-lg font-semibold hover:bg-gray-200 transition-colors" do %>
+      <%= link_to mockups_admin_owners_list_path, class: "bg-gray-100 text-gray-700 px-5 py-2.5 rounded-lg font-semibold hover:bg-gray-200 transition-colors" do %>
         Retour
       <% end %>
     </div>
@@ -219,7 +219,7 @@
           </div>
 
           <div class="flex flex-col gap-3">
-            <%= link_to validate_admin_owner_path(1), method: :patch, class: "w-full bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-green-700 hover:shadow-lg text-center" do %>
+            <%= link_to "#", method: :patch, class: "w-full bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-green-700 hover:shadow-lg text-center" do %>
               <svg class="w-5 h-5 inline-block mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
               </svg>
