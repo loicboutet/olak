@@ -10,8 +10,11 @@ module Mockups
     def profile_show; end
     def profile_edit; end
     def documents; end
-    def guarantor_form; end
+
     def guarantor_show; end
+    def guarantor_form; end # new
+    def guarantor_edit; end
+
     def applications_list; end
     def application_show; end
     def leases_list; end

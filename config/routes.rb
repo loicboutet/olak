@@ -349,8 +349,11 @@ Rails.application.routes.draw do
       get 'profile_show'
       get 'profile_edit'
       get 'documents'
-      get 'guarantor_form'
+
       get 'guarantor_show'
+      get 'guarantor_form'
+      get 'guarantor_edit'
+      
       get 'applications_list'
       get 'application_show'
       get 'leases_list'
