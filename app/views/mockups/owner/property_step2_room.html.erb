@@ -1,0 +1,389 @@
+<% content_for :title, "Ajouter un bien - Étape 2/3" %>
+
+<div class="min-h-screen bg-olak-gray py-8">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Progress Indicator -->
+    <div class="mb-8">
+      <div class="flex items-center justify-center">
+        <div class="flex items-center">
+          <!-- Step 1 - Completed -->
+          <div class="flex items-center">
+            <div class="w-10 h-10 bg-olak-primary rounded-full flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+            <span class="ml-2 text-sm font-medium text-olak-primary">Type de bien</span>
+          </div>
+          
+          <div class="w-16 h-1 bg-olak-primary mx-2"></div>
+          
+          <!-- Step 2 - Current -->
+          <div class="flex items-center">
+            <div class="w-10 h-10 bg-olak-primary rounded-full flex items-center justify-center">
+              <span class="text-white font-bold">2</span>
+            </div>
+            <span class="ml-2 text-sm font-medium text-olak-primary">Détails de la chambre</span>
+          </div>
+          
+          <div class="w-16 h-1 bg-gray-300 mx-2"></div>
+          
+          <!-- Step 3 - Pending -->
+          <div class="flex items-center">
+            <div class="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center">
+              <span class="text-gray-500 font-bold">3</span>
+            </div>
+            <span class="ml-2 text-sm font-medium text-gray-500">Immeuble</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Form Card -->
+    <div class="bg-white rounded-xl shadow-md p-8">
+      <div class="flex items-center gap-3 mb-4">
+        <svg class="w-10 h-10 text-olak-primary" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V7H1v10h22V7h-2v4h-2z"/>
+        </svg>
+        <div>
+          <h1 class="text-4xl font-bold text-olak-primary-dark">Détails de votre chambre</h1>
+          <p class="text-gray-600">Renseignez les informations de la chambre à louer</p>
+        </div>
+      </div>
+
+      <form class="space-y-6 mt-8">
+        
+        <!-- Container Type Selection -->
+        <div class="border-b border-gray-200 pb-6">
+          <h2 class="text-2xl font-semibold text-olak-dark mb-4">Type de logement contenant la chambre</h2>
+          <p class="text-sm text-gray-600 mb-4">La chambre est située dans :</p>
+          
+          <div class="space-y-3">
+            <label class="flex items-center cursor-pointer p-4 border-2 border-olak-primary bg-olak-primary-light rounded-lg">
+              <input type="radio" name="container_type" value="apartment" class="w-5 h-5 mr-3 accent-olak-primary cursor-pointer" checked>
+              <div>
+                <span class="text-base font-semibold text-olak-dark">Dans un appartement</span>
+                <p class="text-sm text-gray-600">La chambre fait partie d'un appartement dans un immeuble collectif</p>
+              </div>
+            </label>
+            
+            <label class="flex items-center cursor-pointer p-4 border-2 border-gray-300 rounded-lg hover:border-olak-primary transition-colors">
+              <input type="radio" name="container_type" value="house" class="w-5 h-5 mr-3 accent-olak-primary cursor-pointer">
+              <div>
+                <span class="text-base font-semibold text-olak-dark">Dans une maison</span>
+                <p class="text-sm text-gray-600">La chambre fait partie d'une maison individuelle</p>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- Address Section -->
+        <div class="border-b border-gray-200 pb-6">
+          <h2 class="text-2xl font-semibold text-olak-dark mb-4">Adresse</h2>
+          
+          <div class="space-y-4">
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Adresse complète <span class="text-olak-error">*</span>
+              </label>
+              <input type="text" class="input-olak" placeholder="12 rue de la République" value="45 Avenue des Champs-Élysées">
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                  Code postal <span class="text-olak-error">*</span>
+                </label>
+                <input type="text" class="input-olak" placeholder="75001" value="75008">
+              </div>
+              
+              <div>
+                <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                  Ville <span class="text-olak-error">*</span>
+                </label>
+                <input type="text" class="input-olak" placeholder="Paris" value="Paris">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                  Étage
+                </label>
+                <input type="number" class="input-olak" placeholder="3" value="2">
+              </div>
+              
+              <div>
+                <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                  Porte ou précision
+                </label>
+                <input type="text" class="input-olak" placeholder="Porte droite" value="Porte gauche">
+              </div>
+            </div>
+            
+            <!-- Zone Tendue Warning -->
+            <div class="bg-orange-50 border-l-4 border-orange-500 p-4 rounded-r-lg">
+              <div class="flex items-center">
+                <svg class="w-6 h-6 text-orange-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                </svg>
+                <div>
+                  <p class="text-orange-800 font-semibold">Ce bien est situé en zone tendue</p>
+                  <p class="text-orange-700 text-sm mt-1">Un plafond de loyer s'applique pour l'ensemble du logement. Le loyer de la chambre sera calculé proportionnellement.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Room Details Section -->
+        <div class="border-b border-gray-200 pb-6">
+          <h2 class="text-2xl font-semibold text-olak-dark mb-4">Caractéristiques de la chambre</h2>
+          <p class="text-sm text-gray-600 mb-4">Parties privatives (jouissance exclusive du locataire)</p>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Numéro ou description de la chambre <span class="text-olak-error">*</span>
+              </label>
+              <input type="text" class="input-olak" placeholder="Chambre 1" value="Chambre 1">
+              <p class="text-xs text-gray-500 mt-1">Ex: Chambre 1, Chambre nord, etc.</p>
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Surface privative (m²) <span class="text-olak-error">*</span>
+              </label>
+              <input type="number" class="input-olak" placeholder="15" value="15">
+              <p class="text-xs text-gray-500 mt-1">Surface de la chambre uniquement</p>
+            </div>
+          </div>
+
+          <!-- Private Bathroom Section -->
+          <div class="mt-6 bg-olak-gray p-6 rounded-lg">
+            <label class="flex items-center cursor-pointer mb-4">
+              <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer" id="private_bathroom">
+              <span class="text-base font-semibold text-olak-dark">Salle de bain privative</span>
+            </label>
+            
+            <div id="bathroom_details" class="space-y-4 pl-8 hidden">
+              <p class="text-sm text-gray-600 mb-3">Installations sanitaires privatives :</p>
+              
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <label class="flex items-center cursor-pointer">
+                  <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer">
+                  <span class="text-sm text-olak-dark">Lavabo / Vasque</span>
+                </label>
+                
+                <label class="flex items-center cursor-pointer">
+                  <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer">
+                  <span class="text-sm text-olak-dark">Douche</span>
+                </label>
+                
+                <label class="flex items-center cursor-pointer">
+                  <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer">
+                  <span class="text-sm text-olak-dark">Baignoire</span>
+                </label>
+                
+                <label class="flex items-center cursor-pointer">
+                  <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer">
+                  <span class="text-sm text-olak-dark">Toilettes</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Shared Areas Section -->
+        <div class="border-b border-gray-200 pb-6">
+          <h2 class="text-2xl font-semibold text-olak-dark mb-4">Parties communes</h2>
+          <p class="text-sm text-gray-600 mb-4">Jouissance partagée avec les autres occupants</p>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Surface totale du logement (m²) <span class="text-olak-error">*</span>
+              </label>
+              <input type="number" class="input-olak" placeholder="65" value="75">
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Nombre total de pièces principales <span class="text-olak-error">*</span>
+              </label>
+              <input type="number" class="input-olak" placeholder="3" value="4">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm font-semibold mb-3 text-olak-dark">
+              Équipements communs partagés
+            </label>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+              <label class="flex items-center cursor-pointer">
+                <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer" checked>
+                <span class="text-sm text-olak-dark">Cuisine équipée</span>
+              </label>
+              
+              <label class="flex items-center cursor-pointer">
+                <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer" checked>
+                <span class="text-sm text-olak-dark">Salon / Séjour</span>
+              </label>
+              
+              <label class="flex items-center cursor-pointer">
+                <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer" checked>
+                <span class="text-sm text-olak-dark">Salle de bain commune</span>
+              </label>
+              
+              <label class="flex items-center cursor-pointer">
+                <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer" checked>
+                <span class="text-sm text-olak-dark">Toilettes communes</span>
+              </label>
+              
+              <label class="flex items-center cursor-pointer">
+                <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer">
+                <span class="text-sm text-olak-dark">Balcon / Terrasse</span>
+              </label>
+              
+              <label class="flex items-center cursor-pointer">
+                <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer">
+                <span class="text-sm text-olak-dark">Jardin</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rent Section with Zone Tendue Calculation -->
+        <div class="border-b border-gray-200 pb-6">
+          <h2 class="text-2xl font-semibold text-olak-dark mb-4">Loyer et charges de la chambre</h2>
+          
+          <!-- Zone Tendue Info -->
+          <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg mb-6">
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-blue-500 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+              </svg>
+              <div>
+                <p class="text-blue-800 font-semibold">Calcul du loyer en zone tendue</p>
+                <p class="text-blue-700 text-sm mt-1">Loyer total max du logement : <strong>1 800 €</strong> | Loyer restant à répartir : <strong>1 350 €</strong></p>
+                <p class="text-blue-700 text-xs mt-1">Le loyer de cette chambre ne peut dépasser le montant restant disponible</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Loyer hors charges (€/mois) <span class="text-olak-error">*</span>
+              </label>
+              <input type="number" class="input-olak" placeholder="450" value="400">
+              <p class="text-xs text-gray-500 mt-1">Maximum pour cette chambre : 1 350 €</p>
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Charges (€/mois)
+              </label>
+              <input type="number" class="input-olak" placeholder="50" value="50">
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Dépôt de garantie (€)
+              </label>
+              <input type="number" class="input-olak" placeholder="800" value="800">
+              <p class="text-xs text-gray-500 mt-1">2 mois de loyer hors charges pour chambre meublée</p>
+            </div>
+            
+            <div class="bg-olak-gray p-4 rounded-lg">
+              <p class="text-sm font-semibold text-olak-dark mb-1">Loyer total charges comprises</p>
+              <p class="text-3xl font-bold text-olak-primary">450 €<span class="text-lg">/mois</span></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Documents Section -->
+        <div class="border-b border-gray-200 pb-6">
+          <h2 class="text-2xl font-semibold text-olak-dark mb-4">Documents</h2>
+          <p class="text-sm text-gray-600 mb-4">Téléchargez les documents nécessaires</p>
+          
+          <div class="space-y-4">
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Diagnostic de Performance Énergétique (DPE) <span class="text-olak-error">*</span>
+              </label>
+              <div class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-olak-primary transition-all duration-300 cursor-pointer">
+                <svg class="mx-auto mb-3 w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+                </svg>
+                <p class="text-sm text-gray-600 mb-1">Glissez votre fichier ici ou cliquez pour sélectionner</p>
+                <p class="text-xs text-gray-500">PDF, JPG, PNG - Max 10MB</p>
+              </div>
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Photos de la chambre et des parties communes
+              </label>
+              <div class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-olak-primary transition-all duration-300 cursor-pointer">
+                <svg class="mx-auto mb-3 w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                </svg>
+                <p class="text-sm text-gray-600 mb-1">Glissez vos photos ici ou cliquez pour sélectionner</p>
+                <p class="text-xs text-gray-500">JPG, PNG - Max 5MB par photo - Plusieurs photos acceptées</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="flex gap-3 items-center justify-between pt-6">
+          <button type="button" class="btn-secondary flex items-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+            </svg>
+            Retour
+          </button>
+          
+          <div class="flex gap-3">
+            <button type="button" class="btn-secondary">
+              Enregistrer comme brouillon
+            </button>
+            <button type="submit" class="btn-primary flex items-center gap-2">
+              Suivant
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- Help Section -->
+    <div class="mt-6 bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg">
+      <div class="flex items-start">
+        <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+        </svg>
+        <div>
+          <p class="text-green-800 font-semibold">Location de chambre en zone tendue</p>
+          <p class="text-green-700 text-sm mt-1">Le loyer de la chambre sera vérifié pour respecter le plafond légal du logement complet. Assurez-vous que la somme des loyers de toutes les chambres ne dépasse pas le loyer maximum autorisé.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Toggle private bathroom details
+  document.getElementById('private_bathroom').addEventListener('change', function() {
+    const details = document.getElementById('bathroom_details');
+    if (this.checked) {
+      details.classList.remove('hidden');
+    } else {
+      details.classList.add('hidden');
+    }
+  });
+</script>
