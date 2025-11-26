@@ -308,25 +308,39 @@ Rails.application.routes.draw do
       get 'dashboard'
       get 'profile_show'
       get 'profile_edit'
+
+      get 'properties_list'
       get 'property_step1'
+      get 'property_show'
+      get 'property_edit'
+
       get 'property_step2_apartment'
       get 'property_step2_house'
       get 'property_step2_room'
+      
       get 'property_step3_building'
       get 'property_step3_room'
       get 'equipment_interface'
-      get 'properties_list'
-      get 'property_show'
+      
       get 'applications_list'
       get 'application_detail'
+
       get 'leases_list'
       get 'lease_show'
       get 'lease_preview'
-      get 'payment_form'
-      get 'payment_success'
+      get 'lease_download'
+      
       get 'payments_list'
+      get 'payment_form'
+      get 'payment_show'
+      get 'payment_success'
+      get 'payment_cancel'
+      
       get 'invoices_list'
+      get 'invoice_show'
+
       get 'notifications'
+      get 'notification_show'
     end
     
     # Tenant namespace
