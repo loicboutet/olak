@@ -1,0 +1,391 @@
+<% content_for :title, "Interface des équipements répétables" %>
+
+<div class="min-h-screen bg-olak-gray py-8">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Header -->
+    <div class="bg-white rounded-xl shadow-md p-8 mb-6">
+      <h1 class="text-4xl font-bold text-olak-primary-dark mb-2">Champs répétables</h1>
+      <p class="text-gray-600">Démonstration de l'interface pour ajouter et supprimer des éléments dynamiquement</p>
+    </div>
+
+    <!-- Example 1: Simple Equipment List -->
+    <div class="bg-white rounded-xl shadow-md p-8 mb-6">
+      <h2 class="text-2xl font-semibold text-olak-dark mb-4">Exemple 1 : Liste d'équipements simple</h2>
+      <p class="text-sm text-gray-600 mb-6">Ajoutez et supprimez des équipements de base</p>
+      
+      <div class="space-y-3 mb-4" id="equipment-list">
+        <!-- Equipment items will be added here -->
+        <div class="flex items-center gap-3 equipment-item">
+          <input type="text" class="input-olak flex-1" placeholder="Nom de l'équipement" value="Cuisine équipée">
+          <button type="button" class="text-red-500 hover:text-red-700 transition-colors p-2" onclick="removeItem(this)">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="flex items-center gap-3 equipment-item">
+          <input type="text" class="input-olak flex-1" placeholder="Nom de l'équipement" value="Réfrigérateur">
+          <button type="button" class="text-red-500 hover:text-red-700 transition-colors p-2" onclick="removeItem(this)">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="flex items-center gap-3 equipment-item">
+          <input type="text" class="input-olak flex-1" placeholder="Nom de l'équipement" value="Lave-vaisselle">
+          <button type="button" class="text-red-500 hover:text-red-700 transition-colors p-2" onclick="removeItem(this)">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+      <button type="button" class="btn-primary flex items-center gap-2" onclick="addEquipment()">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"/>
+        </svg>
+        Ajouter un équipement
+      </button>
+    </div>
+
+    <!-- Example 2: Nested Repeatable (Heating Systems) -->
+    <div class="bg-white rounded-xl shadow-md p-8 mb-6">
+      <h2 class="text-2xl font-semibold text-olak-dark mb-4">Exemple 2 : Systèmes de chauffage (imbriqués)</h2>
+      <p class="text-sm text-gray-600 mb-6">Chaque système peut avoir plusieurs appareils</p>
+      
+      <div class="space-y-6" id="heating-systems">
+        <!-- Heating System 1 -->
+        <div class="border-2 border-olak-primary-light rounded-lg p-6 heating-system">
+          <div class="flex justify-between items-start mb-4">
+            <h3 class="text-lg font-semibold text-olak-dark">Système de chauffage #1</h3>
+            <button type="button" class="text-red-500 hover:text-red-700 transition-colors" onclick="removeItem(this.closest('.heating-system'))">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+              </svg>
+            </button>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">Type de chauffage</label>
+              <select class="input-olak">
+                <option value="gas" selected>Gaz</option>
+                <option value="electric">Électrique</option>
+                <option value="fuel">Fioul</option>
+              </select>
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">Modalité</label>
+              <select class="input-olak">
+                <option value="individual" selected>Individuel</option>
+                <option value="collective">Collectif</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="bg-olak-gray p-4 rounded-lg">
+            <label class="block text-sm font-semibold mb-3 text-olak-dark">Appareils de chauffage</label>
+            <div class="space-y-2 mb-3 heating-devices">
+              <div class="flex items-center gap-2 device-item">
+                <input type="text" class="input-olak flex-1" value="Chaudière murale">
+                <button type="button" class="text-red-500 hover:text-red-700 p-1" onclick="removeItem(this)">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <button type="button" class="btn-secondary px-3 py-2 text-sm flex items-center gap-1" onclick="addHeatingDevice(this)">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"/>
+              </svg>
+              Ajouter un appareil
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <button type="button" class="btn-primary flex items-center gap-2 mt-4" onclick="addHeatingSystem()">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"/>
+        </svg>
+        Ajouter un système de chauffage
+      </button>
+    </div>
+
+    <!-- Example 3: Improvements/Works -->
+    <div class="bg-white rounded-xl shadow-md p-8 mb-6">
+      <h2 class="text-2xl font-semibold text-olak-dark mb-4">Exemple 3 : Travaux d'amélioration</h2>
+      <p class="text-sm text-gray-600 mb-6">Suivez les travaux effectués sur le bien</p>
+      
+      <div class="space-y-4 mb-4" id="improvements-list">
+        <div class="card-olak improvement-item">
+          <div class="flex justify-between items-start mb-4">
+            <h3 class="text-lg font-semibold text-olak-dark">Travaux #1</h3>
+            <button type="button" class="text-red-500 hover:text-red-700 transition-colors" onclick="removeItem(this.closest('.improvement-item'))">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+              </svg>
+            </button>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">Nature des travaux</label>
+              <input type="text" class="input-olak" value="Isolation thermique">
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">Date de fin</label>
+              <input type="date" class="input-olak" value="2024-03-15">
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">Montant (€)</label>
+              <input type="number" class="input-olak" value="8500">
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">Type</label>
+              <select class="input-olak">
+                <option value="energy" selected>Travaux énergétiques</option>
+                <option value="improvement">Amélioration</option>
+                <option value="conformity">Mise en conformité</option>
+              </select>
+            </div>
+            
+            <div class="md:col-span-2">
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">Description</label>
+              <textarea class="input-olak" rows="2">Isolation des combles et remplacement des fenêtres par du double vitrage</textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-olak improvement-item">
+          <div class="flex justify-between items-start mb-4">
+            <h3 class="text-lg font-semibold text-olak-dark">Travaux #2</h3>
+            <button type="button" class="text-red-500 hover:text-red-700 transition-colors" onclick="removeItem(this.closest('.improvement-item'))">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+              </svg>
+            </button>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">Nature des travaux</label>
+              <input type="text" class="input-olak" value="Rénovation électrique">
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">Date de fin</label>
+              <input type="date" class="input-olak" value="2024-01-20">
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">Montant (€)</label>
+              <input type="number" class="input-olak" value="4200">
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">Type</label>
+              <select class="input-olak">
+                <option value="energy">Travaux énergétiques</option>
+                <option value="improvement">Amélioration</option>
+                <option value="conformity" selected>Mise en conformité</option>
+              </select>
+            </div>
+            
+            <div class="md:col-span-2">
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">Description</label>
+              <textarea class="input-olak" rows="2">Mise aux normes de l'installation électrique complète</textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <button type="button" class="btn-primary flex items-center gap-2" onclick="addImprovement()">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"/>
+        </svg>
+        Ajouter des travaux
+      </button>
+    </div>
+
+    <!-- Code Examples -->
+    <div class="bg-white rounded-xl shadow-md p-8">
+      <h2 class="text-2xl font-semibold text-olak-dark mb-4">Utilisation</h2>
+      <p class="text-sm text-gray-600 mb-4">Cette interface démontre trois patterns de champs répétables :</p>
+      
+      <div class="space-y-4">
+        <div class="bg-olak-gray p-4 rounded-lg">
+          <h3 class="font-semibold text-olak-dark mb-2">1. Liste simple</h3>
+          <p class="text-sm text-gray-700">Un seul champ par élément avec bouton de suppression</p>
+          <p class="text-xs text-gray-500 mt-2">Utilisation : équipements, tags, catégories</p>
+        </div>
+        
+        <div class="bg-olak-gray p-4 rounded-lg">
+          <h3 class="font-semibold text-olak-dark mb-2">2. Champs imbriqués</h3>
+          <p class="text-sm text-gray-700">Groupes contenant des sous-listes répétables</p>
+          <p class="text-xs text-gray-500 mt-2">Utilisation : systèmes complexes, configurations hiérarchiques</p>
+        </div>
+        
+        <div class="bg-olak-gray p-4 rounded-lg">
+          <h3 class="font-semibold text-olak-dark mb-2">3. Formulaires complexes</h3>
+          <p class="text-sm text-gray-700">Plusieurs champs par élément dans une carte</p>
+          <p class="text-xs text-gray-500 mt-2">Utilisation : entités complètes, fiches détaillées</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  let equipmentCounter = 4;
+  let heatingSystemCounter = 2;
+  let improvementCounter = 3;
+
+  // Simple equipment list functions
+  function addEquipment() {
+    const container = document.getElementById('equipment-list');
+    const newItem = document.createElement('div');
+    newItem.className = 'flex items-center gap-3 equipment-item';
+    newItem.innerHTML = `
+      <input type="text" class="input-olak flex-1" placeholder="Nom de l'équipement">
+      <button type="button" class="text-red-500 hover:text-red-700 transition-colors p-2" onclick="removeItem(this)">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+        </svg>
+      </button>
+    `;
+    container.appendChild(newItem);
+  }
+
+  // Heating system functions
+  function addHeatingSystem() {
+    const container = document.getElementById('heating-systems');
+    const newSystem = document.createElement('div');
+    newSystem.className = 'border-2 border-olak-primary-light rounded-lg p-6 heating-system';
+    newSystem.innerHTML = `
+      <div class="flex justify-between items-start mb-4">
+        <h3 class="text-lg font-semibold text-olak-dark">Système de chauffage #${heatingSystemCounter}</h3>
+        <button type="button" class="text-red-500 hover:text-red-700 transition-colors" onclick="removeItem(this.closest('.heating-system'))">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+          </svg>
+        </button>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+        <div>
+          <label class="block text-sm font-semibold mb-2 text-olak-dark">Type de chauffage</label>
+          <select class="input-olak">
+            <option value="gas">Gaz</option>
+            <option value="electric">Électrique</option>
+            <option value="fuel">Fioul</option>
+          </select>
+        </div>
+        
+        <div>
+          <label class="block text-sm font-semibold mb-2 text-olak-dark">Modalité</label>
+          <select class="input-olak">
+            <option value="individual">Individuel</option>
+            <option value="collective">Collectif</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="bg-olak-gray p-4 rounded-lg">
+        <label class="block text-sm font-semibold mb-3 text-olak-dark">Appareils de chauffage</label>
+        <div class="space-y-2 mb-3 heating-devices">
+        </div>
+        <button type="button" class="btn-secondary px-3 py-2 text-sm flex items-center gap-1" onclick="addHeatingDevice(this)">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"/>
+          </svg>
+          Ajouter un appareil
+        </button>
+      </div>
+    `;
+    container.appendChild(newSystem);
+    heatingSystemCounter++;
+  }
+
+  function addHeatingDevice(button) {
+    const devicesContainer = button.previousElementSibling;
+    const newDevice = document.createElement('div');
+    newDevice.className = 'flex items-center gap-2 device-item';
+    newDevice.innerHTML = `
+      <input type="text" class="input-olak flex-1" placeholder="Type d'appareil">
+      <button type="button" class="text-red-500 hover:text-red-700 p-1" onclick="removeItem(this)">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+        </svg>
+      </button>
+    `;
+    devicesContainer.appendChild(newDevice);
+  }
+
+  // Improvements functions
+  function addImprovement() {
+    const container = document.getElementById('improvements-list');
+    const newItem = document.createElement('div');
+    newItem.className = 'card-olak improvement-item';
+    newItem.innerHTML = `
+      <div class="flex justify-between items-start mb-4">
+        <h3 class="text-lg font-semibold text-olak-dark">Travaux #${improvementCounter}</h3>
+        <button type="button" class="text-red-500 hover:text-red-700 transition-colors" onclick="removeItem(this.closest('.improvement-item'))">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+          </svg>
+        </button>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-semibold mb-2 text-olak-dark">Nature des travaux</label>
+          <input type="text" class="input-olak" placeholder="Description des travaux">
+        </div>
+        
+        <div>
+          <label class="block text-sm font-semibold mb-2 text-olak-dark">Date de fin</label>
+          <input type="date" class="input-olak">
+        </div>
+        
+        <div>
+          <label class="block text-sm font-semibold mb-2 text-olak-dark">Montant (€)</label>
+          <input type="number" class="input-olak" placeholder="0">
+        </div>
+        
+        <div>
+          <label class="block text-sm font-semibold mb-2 text-olak-dark">Type</label>
+          <select class="input-olak">
+            <option value="energy">Travaux énergétiques</option>
+            <option value="improvement">Amélioration</option>
+            <option value="conformity">Mise en conformité</option>
+          </select>
+        </div>
+        
+        <div class="md:col-span-2">
+          <label class="block text-sm font-semibold mb-2 text-olak-dark">Description</label>
+          <textarea class="input-olak" rows="2" placeholder="Description détaillée des travaux effectués"></textarea>
+        </div>
+      </div>
+    `;
+    container.appendChild(newItem);
+    improvementCounter++;
+  }
+
+  // Generic remove function
+  function removeItem(element) {
+    const item = element.closest('.equipment-item, .device-item, .improvement-item, .heating-system');
+    if (item) {
+      item.remove();
+    }
+  }
+</script>
