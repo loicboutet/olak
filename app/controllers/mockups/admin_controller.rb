@@ -20,10 +20,18 @@ module Mockups
     def rating_edit; end
     def visits_calendar; end
     def visit_form; end
+    def visit_edit; end
+
     def payments_dashboard; end
     def payments_list; end
+    def payments_show; end
+    def payments_export; end
+    
     def invoices_list; end
     def invoice_create; end
+    def invoice_show; end
+    def invoice_download; end
+
     def accounting_export; end
   end
 end

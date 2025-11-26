@@ -198,19 +198,19 @@
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
             <%= link_to mockups_admin_visits_calendar_path, class: "text-blue-600 hover:underline" do %>
-              /admin/visits
+              /mockups/admin/visits
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
             <%= link_to mockups_admin_visit_form_path, class: "text-blue-600 hover:underline" do %>
-              /admin/visits/new
+              /mockups/admin/visits/new
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to mockups_admin_visit_form_path, class: "text-blue-600 hover:underline" do %>
-              /admin/visits/:id/edit
+            <%= link_to mockups_admin_visit_edit_path, class: "text-blue-600 hover:underline" do %>
+              /mockups/admin/visits/:id/edit
             <% end %>
           </li>
         </ul>
@@ -222,25 +222,25 @@
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
             <%= link_to mockups_admin_payments_list_path, class: "text-blue-600 hover:underline" do %>
-              /admin/payments
+              /mockups/admin/payments
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
             <%= link_to mockups_admin_payments_dashboard_path, class: "text-blue-600 hover:underline" do %>
-              /admin/payments/dashboard
+              /mockups/admin/payments/dashboard
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to mockups_admin_payments_list_path, class: "text-blue-600 hover:underline" do %>
-              /admin/payments/:id
+            <%= link_to mockups_admin_payments_show_path, class: "text-blue-600 hover:underline" do %>
+              /mockups/admin/payments/:id
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to mockups_admin_payments_list_path, class: "text-blue-600 hover:underline" do %>
-              /admin/payments/export
+            <%= link_to mockups_admin_payments_export_path, class: "text-blue-600 hover:underline" do %>
+              /mockups/admin/payments/export
             <% end %>
           </li>
         </ul>
@@ -250,25 +250,25 @@
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
             <%= link_to mockups_admin_invoices_list_path, class: "text-blue-600 hover:underline" do %>
-              /admin/invoices
+              /mockups/admin/invoices
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
             <%= link_to mockups_admin_invoice_create_path, class: "text-blue-600 hover:underline" do %>
-              /admin/invoices/new
+              /mockups/admin/invoices/new
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to mockups_admin_invoices_list_path, class: "text-blue-600 hover:underline" do %>
-              /admin/invoices/:id
+            <%= link_to mockups_admin_invoice_show_path, class: "text-blue-600 hover:underline" do %>
+              /mockups/admin/invoices/:id
             <% end %>
           </li>
           <li class="flex items-center">
             <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mr-2">GET</span>
-            <%= link_to mockups_admin_invoices_list_path, class: "text-blue-600 hover:underline" do %>
-              /admin/invoices/:id/download
+            <%= link_to mockups_admin_invoice_download_path, class: "text-blue-600 hover:underline" do %>
+              /mockups/admin/invoices/:id/download
             <% end %>
           </li>
         </ul>

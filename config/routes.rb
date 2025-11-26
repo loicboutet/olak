@@ -284,12 +284,21 @@ Rails.application.routes.draw do
       get 'rating_form' # new
       get 'rating_show'
       get 'rating_edit'
-      get 'visits_calendar'
-      get 'visit_form'
+      
+      get 'visits_calendar' # index
+      get 'visit_form' # new
+      get 'visit_edit' # edit
+      
       get 'payments_dashboard'
-      get 'payments_list'
-      get 'invoices_list'
-      get 'invoice_create'
+      get 'payments_list' # index
+      get 'payments_show'
+      get 'payments_export'
+
+      get 'invoices_list' # index
+      get 'invoice_create' # new
+      get 'invoice_show'
+      get 'invoice_download'
+
       get 'accounting_export'
     end
     
