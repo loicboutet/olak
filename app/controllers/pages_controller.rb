@@ -3,6 +3,7 @@ class PagesController < ApplicationController
 
   def home
     # Public landing page - OLAK announcement
+    redirect_to mockups_root_path
   end
 
   def links

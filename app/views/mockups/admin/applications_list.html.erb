@@ -1,0 +1,377 @@
+<% content_for :title, "Gestion des Candidatures - Admin OLAK" %>
+
+<div class="min-h-screen bg-olak-gray py-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Page Header -->
+    <div class="mb-8">
+      <nav class="flex mb-4" aria-label="Breadcrumb">
+        <ol class="flex items-center space-x-2 text-sm">
+          <li><%= link_to "Accueil", mockups_admin_dashboard_path, class: "text-gray-500 hover:text-olak-primary transition-colors" %></li>
+          <li><span class="text-gray-400">/</span></li>
+          <li><span class="text-olak-primary font-semibold">Candidatures</span></li>
+        </ol>
+      </nav>
+      
+      <div class="flex justify-between items-center">
+        <div>
+          <h1 class="text-4xl font-bold text-olak-primary-dark leading-tight">Gestion des Candidatures</h1>
+          <p class="text-gray-600 mt-2">Gérez et évaluez les candidatures des locataires</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Filters Section -->
+    <div class="card-olak mb-6">
+      <h2 class="text-xl font-semibold text-olak-dark mb-4">Filtres</h2>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <div>
+          <label class="block text-sm font-semibold mb-2 text-olak-dark">Statut</label>
+          <select class="input-olak">
+            <option value="">Tous les statuts</option>
+            <option value="pending">En attente d'évaluation</option>
+            <option value="rated">Évalué</option>
+            <option value="proposed">Proposé au propriétaire</option>
+            <option value="accepted">Accepté</option>
+            <option value="rejected">Rejeté</option>
+          </select>
+        </div>
+        
+        <div>
+          <label class="block text-sm font-semibold mb-2 text-olak-dark">Bien</label>
+          <select class="input-olak">
+            <option value="">Tous les biens</option>
+            <option value="1">Appartement T3 - Paris 15ème</option>
+            <option value="2">Maison T5 - Lyon 6ème</option>
+            <option value="3">Chambre meublée - Marseille</option>
+          </select>
+        </div>
+        
+        <div>
+          <label class="block text-sm font-semibold mb-2 text-olak-dark">Propriétaire</label>
+          <select class="input-olak">
+            <option value="">Tous les propriétaires</option>
+            <option value="1">Jean Dupont</option>
+            <option value="2">Marie Martin</option>
+            <option value="3">Pierre Bernard</option>
+          </select>
+        </div>
+        
+        <div>
+          <label class="block text-sm font-semibold mb-2 text-olak-dark">Rechercher</label>
+          <input type="text" class="input-olak" placeholder="Nom du candidat...">
+        </div>
+      </div>
+      
+      <div class="mt-4 flex gap-2">
+        <button class="btn-primary px-4 py-2 text-sm">Appliquer les filtres</button>
+        <button class="btn-secondary px-4 py-2 text-sm">Réinitialiser</button>
+      </div>
+    </div>
+
+    <!-- Statistics Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6">
+      <div class="card-olak text-center">
+        <svg class="w-12 h-12 mx-auto mb-3 text-olak-warning" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+          <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"/>
+        </svg>
+        <p class="font-bold text-2xl text-olak-dark mb-1">12</p>
+        <p class="text-sm text-gray-600">En attente</p>
+      </div>
+      
+      <div class="card-olak text-center">
+        <svg class="w-12 h-12 mx-auto mb-3 text-olak-primary" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1.323l3.954 1.582 1.599-.8a1 1 0 01.894 1.79l-1.233.616 1.738 5.42a1 1 0 01-.285 1.05A3.989 3.989 0 0115 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.715-5.349L11 6.477V16h2a1 1 0 110 2H7a1 1 0 110-2h2V6.477L6.237 7.582l1.715 5.349a1 1 0 01-.285 1.05A3.989 3.989 0 015 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.738-5.42-1.233-.617a1 1 0 01.894-1.788l1.599.799L9 4.323V3a1 1 0 011-1z" clip-rule="evenodd"/>
+        </svg>
+        <p class="font-bold text-2xl text-olak-dark mb-1">8</p>
+        <p class="text-sm text-gray-600">Évaluées</p>
+      </div>
+      
+      <div class="card-olak text-center">
+        <svg class="w-12 h-12 mx-auto mb-3 text-olak-success" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+        </svg>
+        <p class="font-bold text-2xl text-olak-dark mb-1">5</p>
+        <p class="text-sm text-gray-600">Acceptées</p>
+      </div>
+      
+      <div class="card-olak text-center">
+        <svg class="w-12 h-12 mx-auto mb-3 text-olak-error" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+        </svg>
+        <p class="font-bold text-2xl text-olak-dark mb-1">3</p>
+        <p class="text-sm text-gray-600">Rejetées</p>
+      </div>
+    </div>
+
+    <!-- Applications List -->
+    <div class="card-olak">
+      <div class="flex justify-between items-center mb-6">
+        <h2 class="text-2xl font-semibold text-olak-dark">Liste des Candidatures</h2>
+        <span class="text-sm text-gray-600">28 candidatures au total</span>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="min-w-full bg-white rounded-lg overflow-hidden">
+          <thead class="bg-olak-primary-light text-olak-dark">
+            <tr>
+              <th class="px-6 py-4 text-left text-sm font-semibold">Candidat</th>
+              <th class="px-6 py-4 text-left text-sm font-semibold">Bien</th>
+              <th class="px-6 py-4 text-left text-sm font-semibold">Propriétaire</th>
+              <th class="px-6 py-4 text-left text-sm font-semibold">Date</th>
+              <th class="px-6 py-4 text-left text-sm font-semibold">Note</th>
+              <th class="px-6 py-4 text-left text-sm font-semibold">Statut</th>
+              <th class="px-6 py-4 text-left text-sm font-semibold">Actions</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-200">
+            <!-- Application 1 - Pending -->
+            <tr class="hover:bg-olak-gray transition-colors">
+              <td class="px-6 py-4">
+                <div class="flex items-center">
+                  <div class="flex-shrink-0 h-10 w-10 bg-olak-primary rounded-full flex items-center justify-center">
+                    <span class="text-white font-semibold text-sm">MD</span>
+                  </div>
+                  <div class="ml-4">
+                    <div class="text-sm font-semibold text-olak-dark">Marie Dupont</div>
+                    <div class="text-xs text-gray-500">marie.dupont@example.com</div>
+                  </div>
+                </div>
+              </td>
+              <td class="px-6 py-4">
+                <div class="text-sm font-medium text-olak-dark">Appartement T3</div>
+                <div class="text-xs text-gray-500">75 m² • Paris 15ème</div>
+                <div class="text-xs font-semibold text-olak-primary">1 200 €/mois</div>
+              </td>
+              <td class="px-6 py-4">
+                <div class="text-sm text-olak-dark">Jean Dupont</div>
+              </td>
+              <td class="px-6 py-4">
+                <div class="text-sm text-gray-600">15/11/2024</div>
+                <div class="text-xs text-gray-500">Il y a 3 jours</div>
+              </td>
+              <td class="px-6 py-4">
+                <span class="text-sm text-gray-400">Non évalué</span>
+              </td>
+              <td class="px-6 py-4">
+                <span class="badge badge-pending">En attente</span>
+              </td>
+              <td class="px-6 py-4">
+                <div class="flex gap-2">
+                  <%= link_to mockups_admin_application_detail_path, class: "btn-secondary px-3 py-1 text-xs" do %>
+                    Voir
+                  <% end %>
+                  <button class="btn-primary px-3 py-1 text-xs">Évaluer</button>
+                </div>
+              </td>
+            </tr>
+
+            <!-- Application 2 - Rated -->
+            <tr class="hover:bg-olak-gray transition-colors">
+              <td class="px-6 py-4">
+                <div class="flex items-center">
+                  <div class="flex-shrink-0 h-10 w-10 bg-olak-primary rounded-full flex items-center justify-center">
+                    <span class="text-white font-semibold text-sm">PB</span>
+                  </div>
+                  <div class="ml-4">
+                    <div class="text-sm font-semibold text-olak-dark">Pierre Bernard</div>
+                    <div class="text-xs text-gray-500">pierre.bernard@example.com</div>
+                  </div>
+                </div>
+              </td>
+              <td class="px-6 py-4">
+                <div class="text-sm font-medium text-olak-dark">Maison T5</div>
+                <div class="text-xs text-gray-500">120 m² • Lyon 6ème</div>
+                <div class="text-xs font-semibold text-olak-primary">1 800 €/mois</div>
+              </td>
+              <td class="px-6 py-4">
+                <div class="text-sm text-olak-dark">Marie Martin</div>
+              </td>
+              <td class="px-6 py-4">
+                <div class="text-sm text-gray-600">12/11/2024</div>
+                <div class="text-xs text-gray-500">Il y a 6 jours</div>
+              </td>
+              <td class="px-6 py-4">
+                <div class="flex items-center gap-1">
+                  <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <span class="text-sm font-semibold text-olak-dark">4.2/5</span>
+                </div>
+              </td>
+              <td class="px-6 py-4">
+                <span class="badge badge-success">Évalué</span>
+              </td>
+              <td class="px-6 py-4">
+                <div class="flex gap-2">
+                  <%= link_to mockups_admin_application_detail_path, class: "btn-secondary px-3 py-1 text-xs" do %>
+                    Voir
+                  <% end %>
+                  <button class="bg-olak-primary text-white px-3 py-1 text-xs rounded-lg hover:bg-olak-primary-dark transition-colors font-semibold">
+                    Proposer
+                  </button>
+                </div>
+              </td>
+            </tr>
+
+            <!-- Application 3 - Proposed -->
+            <tr class="hover:bg-olak-gray transition-colors">
+              <td class="px-6 py-4">
+                <div class="flex items-center">
+                  <div class="flex-shrink-0 h-10 w-10 bg-olak-primary rounded-full flex items-center justify-center">
+                    <span class="text-white font-semibold text-sm">SM</span>
+                  </div>
+                  <div class="ml-4">
+                    <div class="text-sm font-semibold text-olak-dark">Sophie Martin</div>
+                    <div class="text-xs text-gray-500">sophie.martin@example.com</div>
+                  </div>
+                </div>
+              </td>
+              <td class="px-6 py-4">
+                <div class="text-sm font-medium text-olak-dark">Chambre meublée</div>
+                <div class="text-xs text-gray-500">15 m² • Marseille</div>
+                <div class="text-xs font-semibold text-olak-primary">450 €/mois</div>
+              </td>
+              <td class="px-6 py-4">
+                <div class="text-sm text-olak-dark">Pierre Bernard</div>
+              </td>
+              <td class="px-6 py-4">
+                <div class="text-sm text-gray-600">10/11/2024</div>
+                <div class="text-xs text-gray-500">Il y a 8 jours</div>
+              </td>
+              <td class="px-6 py-4">
+                <div class="flex items-center gap-1">
+                  <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <span class="text-sm font-semibold text-olak-dark">4.5/5</span>
+                </div>
+              </td>
+              <td class="px-6 py-4">
+                <span class="badge" style="background-color: #60A5FA; color: white;">Proposé</span>
+              </td>
+              <td class="px-6 py-4">
+                <div class="flex gap-2">
+                  <%= link_to mockups_admin_application_detail_path, class: "btn-secondary px-3 py-1 text-xs" do %>
+                    Voir
+                  <% end %>
+                  <button class="px-3 py-1 text-xs text-gray-400 cursor-not-allowed" disabled>
+                    Proposé
+                  </button>
+                </div>
+              </td>
+            </tr>
+
+            <!-- Application 4 - Accepted -->
+            <tr class="hover:bg-olak-gray transition-colors">
+              <td class="px-6 py-4">
+                <div class="flex items-center">
+                  <div class="flex-shrink-0 h-10 w-10 bg-olak-success rounded-full flex items-center justify-center">
+                    <span class="text-white font-semibold text-sm">LC</span>
+                  </div>
+                  <div class="ml-4">
+                    <div class="text-sm font-semibold text-olak-dark">Luc Chevalier</div>
+                    <div class="text-xs text-gray-500">luc.chevalier@example.com</div>
+                  </div>
+                </div>
+              </td>
+              <td class="px-6 py-4">
+                <div class="text-sm font-medium text-olak-dark">Studio meublé</div>
+                <div class="text-xs text-gray-500">25 m² • Nice</div>
+                <div class="text-xs font-semibold text-olak-primary">650 €/mois</div>
+              </td>
+              <td class="px-6 py-4">
+                <div class="text-sm text-olak-dark">Anne Dubois</div>
+              </td>
+              <td class="px-6 py-4">
+                <div class="text-sm text-gray-600">05/11/2024</div>
+                <div class="text-xs text-gray-500">Il y a 13 jours</div>
+              </td>
+              <td class="px-6 py-4">
+                <div class="flex items-center gap-1">
+                  <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <span class="text-sm font-semibold text-olak-dark">4.8/5</span>
+                </div>
+              </td>
+              <td class="px-6 py-4">
+                <span class="badge badge-success">Accepté</span>
+              </td>
+              <td class="px-6 py-4">
+                <div class="flex gap-2">
+                  <%= link_to mockups_admin_application_detail_path, class: "btn-secondary px-3 py-1 text-xs" do %>
+                    Voir
+                  <% end %>
+                </div>
+              </td>
+            </tr>
+
+            <!-- Application 5 - Rejected -->
+            <tr class="hover:bg-olak-gray transition-colors">
+              <td class="px-6 py-4">
+                <div class="flex items-center">
+                  <div class="flex-shrink-0 h-10 w-10 bg-gray-400 rounded-full flex items-center justify-center">
+                    <span class="text-white font-semibold text-sm">TL</span>
+                  </div>
+                  <div class="ml-4">
+                    <div class="text-sm font-semibold text-gray-500">Thomas Leroy</div>
+                    <div class="text-xs text-gray-400">thomas.leroy@example.com</div>
+                  </div>
+                </div>
+              </td>
+              <td class="px-6 py-4">
+                <div class="text-sm font-medium text-gray-600">Appartement T2</div>
+                <div class="text-xs text-gray-400">45 m² • Toulouse</div>
+                <div class="text-xs font-semibold text-gray-500">850 €/mois</div>
+              </td>
+              <td class="px-6 py-4">
+                <div class="text-sm text-gray-600">Marc Petit</div>
+              </td>
+              <td class="px-6 py-4">
+                <div class="text-sm text-gray-500">01/11/2024</div>
+                <div class="text-xs text-gray-400">Il y a 17 jours</div>
+              </td>
+              <td class="px-6 py-4">
+                <div class="flex items-center gap-1">
+                  <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <span class="text-sm font-semibold text-gray-500">2.8/5</span>
+                </div>
+              </td>
+              <td class="px-6 py-4">
+                <span class="badge badge-error">Rejeté</span>
+              </td>
+              <td class="px-6 py-4">
+                <div class="flex gap-2">
+                  <%= link_to mockups_admin_application_detail_path, class: "btn-secondary px-3 py-1 text-xs opacity-50" do %>
+                    Voir
+                  <% end %>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Pagination -->
+      <div class="mt-6 flex items-center justify-between">
+        <div class="text-sm text-gray-600">
+          Affichage de 1 à 5 sur 28 candidatures
+        </div>
+        <div class="flex items-center gap-2">
+          <button class="px-3 py-2 border border-gray-300 rounded hover:bg-olak-gray transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+            </svg>
+          </button>
+          <button class="px-4 py-2 bg-olak-primary text-white rounded font-semibold">1</button>
+          <button class="px-4 py-2 border border-gray-300 rounded hover:bg-olak-gray transition-colors">2</button>
+          <button class="px-4 py-2 border border-gray-300 rounded hover:bg-olak-gray transition-colors">3</button>
+          <span class="px-2">...</span>
+          <button class="px-4 py-2 border border-gray-300 rounded hover:bg-olak-gray transition-colors">6</button>
+          <button class="px-3 py-2 border border-gray-300 rounded hover:bg-olak-gray transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,220 @@
+<% content_for :title, "Paiement des frais de service" %>
+
+<div class="min-h-screen bg-olak-gray py-8">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Header -->
+    <div class="mb-6">
+      <%= link_to mockups_owner_payments_list_path, class: "text-olak-primary hover:text-olak-primary-dark font-semibold flex items-center gap-2" do %>
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Retour aux paiements
+      <% end %>
+    </div>
+
+    <div class="mb-8">
+      <h1 class="text-4xl font-bold text-olak-primary-dark mb-2">Paiement des frais de service</h1>
+      <p class="text-gray-600">Finalisez le paiement pour publier votre bail</p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      
+      <!-- Payment Form -->
+      <div class="lg:col-span-2">
+        <div class="bg-white rounded-xl shadow-md p-8">
+          <h2 class="text-2xl font-semibold text-olak-dark mb-6">Informations de paiement</h2>
+          
+          <!-- Stripe Payment Form (Mockup) -->
+          <form class="space-y-6">
+            
+            <!-- Card Number -->
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Numéro de carte <span class="text-olak-error">*</span>
+              </label>
+              <div class="relative">
+                <input type="text" class="input-olak pl-12" placeholder="1234 5678 9012 3456" maxlength="19">
+                <div class="absolute left-4 top-1/2 transform -translate-y-1/2">
+                  <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <rect x="2" y="5" width="20" height="14" rx="2" stroke-width="2"/>
+                    <path d="M2 10h20" stroke-width="2"/>
+                  </svg>
+                </div>
+              </div>
+              <p class="text-xs text-gray-500 mt-1">Visa, Mastercard, American Express</p>
+            </div>
+
+            <!-- Card Holder Name -->
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Nom sur la carte <span class="text-olak-error">*</span>
+              </label>
+              <input type="text" class="input-olak" placeholder="Jean Dupont">
+            </div>
+
+            <!-- Expiry and CVV -->
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                  Date d'expiration <span class="text-olak-error">*</span>
+                </label>
+                <input type="text" class="input-olak" placeholder="MM/AA" maxlength="5">
+              </div>
+              <div>
+                <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                  CVV <span class="text-olak-error">*</span>
+                </label>
+                <input type="text" class="input-olak" placeholder="123" maxlength="4">
+              </div>
+            </div>
+
+            <!-- Billing Address -->
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Adresse de facturation
+              </label>
+              <input type="text" class="input-olak mb-3" placeholder="Rue et numéro">
+              <div class="grid grid-cols-2 gap-3">
+                <input type="text" class="input-olak" placeholder="Code postal">
+                <input type="text" class="input-olak" placeholder="Ville">
+              </div>
+            </div>
+
+            <!-- Terms Acceptance -->
+            <div class="bg-olak-gray p-4 rounded-lg">
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer mt-0.5" required>
+                <span class="text-sm text-olak-dark">
+                  J'accepte les <a href="#" class="text-olak-primary hover:underline">conditions générales de vente</a> 
+                  et la <a href="#" class="text-olak-primary hover:underline">politique de confidentialité</a> d'OLAK. 
+                  Je comprends que ce paiement est non remboursable une fois le bail publié.
+                </span>
+              </label>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="flex gap-3">
+              <%= link_to mockups_owner_payments_list_path, class: "btn-secondary flex-1 text-center" do %>
+                Annuler
+              <% end %>
+              <%= link_to mockups_owner_payment_success_path, class: "btn-primary flex-1 text-center flex items-center justify-center gap-2" do %>
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/>
+                </svg>
+                Payer 150 €
+              <% end %>
+            </div>
+
+            <!-- Secure Payment Badge -->
+            <div class="text-center pt-4">
+              <div class="flex items-center justify-center gap-2 text-xs text-gray-600">
+                <svg class="w-4 h-4 text-olak-success" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/>
+                </svg>
+                <span>Paiement sécurisé par Stripe</span>
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+
+      <!-- Order Summary Sidebar -->
+      <div class="space-y-6">
+        
+        <!-- Amount Card -->
+        <div class="bg-white rounded-xl shadow-md p-6
+">
+          <h3 class="text-xl font-semibold text-olak-dark mb-4">Récapitulatif</h3>
+          
+          <!-- Lease Info -->
+          <div class="mb-4 pb-4 border-b border-gray-200">
+            <p class="text-sm text-gray-600 mb-1">Bail pour</p>
+            <p class="font-bold text-olak-dark">Appartement T3</p>
+            <p class="text-sm text-gray-600">Paris 15ème</p>
+          </div>
+
+          <!-- Pricing Details -->
+          <dl class="space-y-3 text-sm">
+            <div class="flex justify-between">
+              <dt class="text-gray-600">Frais de service</dt>
+              <dd class="font-semibold text-olak-dark">150 €</dd>
+            </div>
+            <div class="flex justify-between">
+              <dt class="text-gray-600">TVA (20%)</dt>
+              <dd class="font-semibold text-olak-dark">30 €</dd>
+            </div>
+            <div class="border-t pt-3 flex justify-between">
+              <dt class="font-bold text-olak-dark">Total</dt>
+              <dd class="font-bold text-2xl text-olak-primary">150 €</dd>
+            </div>
+          </dl>
+        </div>
+
+        <!-- Zone Info -->
+        <div class="bg-orange-50 border-l-4 border-orange-500 p-4 rounded-r-lg">
+          <div class="flex items-start">
+            <svg class="w-6 h-6 text-orange-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+            </svg>
+            <div>
+              <p class="text-sm text-orange-800 font-semibold mb-1">Zone tendue</p>
+              <p class="text-xs text-orange-700">
+                Ce bien est situé en zone tendue. Tarif réduit applicable : 150 € au lieu de 200 €.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- What's Included -->
+        <div class="bg-white rounded-xl shadow-md p-6">
+          <h3 class="text-lg font-semibold text-olak-dark mb-4">Ce qui est inclus</h3>
+          <ul class="space-y-3 text-sm">
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-olak-success flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <span class="text-gray-700">Génération automatique du bail</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-olak-success flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <span class="text-gray-700">Signature électronique sécurisée</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-olak-success flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <span class="text-gray-700">Archivage numérique sécurisé</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-olak-success flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <span class="text-gray-700">Support client dédié</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Help -->
+        <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
+          <div class="flex items-start">
+            <svg class="w-6 h-6 text-blue-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/>
+            </svg>
+            <div>
+              <p class="text-sm text-blue-800 font-semibold mb-1">Besoin d'aide ?</p>
+              <p class="text-xs text-blue-700">
+                Contactez notre support au 01 23 45 67 89 ou par email à support@olak.fr
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>

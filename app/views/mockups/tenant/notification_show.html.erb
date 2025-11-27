@@ -1,0 +1,174 @@
+<% content_for :title, "Notification - OLAK" %>
+
+<div class="min-h-screen bg-olak-gray py-8">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Header -->
+    <div class="mb-8">
+      <div class="flex items-center justify-between">
+        <div>
+          <h1 class="text-4xl font-bold text-olak-primary-dark">Détails de la notification</h1>
+        </div>
+        <div class="flex gap-3">
+          <%= link_to mockups_tenant_notifications_path, class: "btn-secondary" do %>
+            <svg class="w-5 h-5 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+            </svg>
+            Retour aux notifications
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <!-- Notification Card -->
+    <div class="bg-white rounded-xl shadow-md p-8 mb-6">
+      <!-- Icon and Title -->
+      <div class="flex items-start gap-6 mb-6">
+        <div class="flex-shrink-0">
+          <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center">
+            <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+        </div>
+        <div class="flex-1">
+          <div class="flex items-start justify-between mb-2">
+            <div>
+              <h2 class="text-3xl font-bold text-olak-primary-dark mb-2">Candidature acceptée !</h2>
+              <div class="flex items-center gap-4 text-sm text-gray-500">
+                <span class="flex items-center gap-1">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                  </svg>
+                  Reçu le 21 novembre 2024 à 15:30
+                </span>
+                <span class="flex items-center gap-1">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+                    <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"/>
+                  </svg>
+                  Type: Candidature
+                </span>
+              </div>
+            </div>
+            <span class="badge badge-success">Lue</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="border-t border-gray-200 my-6"></div>
+
+      <!-- Message Content -->
+      <div class="prose max-w-none">
+        <div class="bg-green-50 border-l-4 border-green-500 p-6 rounded-r-lg mb-6">
+          <div class="flex items-center mb-3">
+            <svg class="w-6 h-6 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <p class="text-green-800 font-bold text-lg">Bonne nouvelle !</p>
+          </div>
+          <p class="text-green-700 text-base leading-relaxed">
+            Félicitations ! Le propriétaire a accepté votre candidature pour le bien suivant.
+          </p>
+        </div>
+
+        <h3 class="text-xl font-semibold text-olak-dark mb-4">Informations sur le bien</h3>
+        <div class="card-olak">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0">
+              <div class="w-20 h-20 bg-olak-primary-light rounded-lg flex items-center justify-center">
+                <svg class="w-10 h-10 text-olak-primary-dark" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                </svg>
+              </div>
+            </div>
+            <div class="flex-1">
+              <h4 class="font-bold text-lg text-olak-primary-dark mb-2">Appartement T3 - Paris 15ème</h4>
+              <div class="grid grid-cols-2 gap-3 text-sm text-gray-700">
+                <p><strong>Type:</strong> Location meublée</p>
+                <p><strong>Surface:</strong> 65 m²</p>
+                <p><strong>Loyer:</strong> 1 500 € / mois</p>
+                <p><strong>Charges:</strong> 150 € / mois</p>
+                <p><strong>Dépôt de garantie:</strong> 1 500 €</p>
+                <p><strong>Disponibilité:</strong> 01/12/2024</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="text-xl font-semibold text-olak-dark mt-6 mb-4">Prochaines étapes</h3>
+        <div class="space-y-3">
+          <div class="flex items-start gap-3">
+            <div class="flex-shrink-0 mt-1">
+              <div class="w-6 h-6 bg-olak-primary text-white rounded-full flex items-center justify-center text-sm font-bold">1</div>
+            </div>
+            <div>
+              <p class="font-semibold text-olak-dark">Génération du bail</p>
+              <p class="text-sm text-gray-600">Un bail sera automatiquement généré et vous sera envoyé pour signature électronique.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="flex-shrink-0 mt-1">
+              <div class="w-6 h-6 bg-olak-primary text-white rounded-full flex items-center justify-center text-sm font-bold">2</div>
+            </div>
+            <div>
+              <p class="font-semibold text-olak-dark">Signature électronique</p>
+              <p class="text-sm text-gray-600">Vous recevrez un lien pour signer le bail électroniquement via SignNow.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="flex-shrink-0 mt-1">
+              <div class="w-6 h-6 bg-olak-primary text-white rounded-full flex items-center justify-center text-sm font-bold">3</div>
+            </div>
+            <div>
+              <p class="font-semibold text-olak-dark">Finalisation</p>
+              <p class="text-sm text-gray-600">Après signature des deux parties, vous recevrez une copie du bail signé.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="mt-8 flex gap-3">
+        <%= link_to mockups_tenant_application_show_path, class: "btn-primary" do %>
+          <svg class="w-5 h-5 inline mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+            <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+          </svg>
+          Voir ma candidature
+        <% end %>
+        <%= link_to mockups_tenant_dashboard_path, class: "btn-secondary" do %>
+          <svg class="w-5 h-5 inline mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+          </svg>
+          Retour au tableau de bord
+        <% end %>
+      </div>
+    </div>
+
+    <!-- Related Notifications -->
+    <div class="bg-white rounded-xl shadow-md p-6">
+      <h3 class="text-xl font-semibold text-olak-dark mb-4">Notifications liées</h3>
+      <div class="space-y-3">
+        <%= link_to mockups_tenant_notification_show_path, class: "block hover:bg-olak-gray p-4 rounded-lg transition-colors" do %>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z" clip-rule="evenodd"/>
+              </svg>
+              <div>
+                <p class="font-semibold text-olak-dark">Bail prêt à signer</p>
+                <p class="text-sm text-gray-600">Il y a 1 heure</p>
+              </div>
+            </div>
+            <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+  </div>
+</div>

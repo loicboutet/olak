@@ -1,0 +1,182 @@
+<% content_for :title, "Paiement réussi" %>
+
+<div class="min-h-screen bg-olak-gray py-8">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Success Message -->
+    <div class="text-center mb-8">
+      <div class="inline-flex items-center justify-center w-24 h-24 rounded-full bg-olak-success mb-6">
+        <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+        </svg>
+      </div>
+      <h1 class="text-5xl font-bold text-olak-primary-dark mb-4">Paiement réussi !</h1>
+      <p class="text-xl text-gray-600">Votre transaction a été traitée avec succès</p>
+    </div>
+
+    <!-- Success Alert -->
+    <div class="bg-green-50 border-l-4 border-green-500 p-6 rounded-r-lg mb-8">
+      <div class="flex items-start">
+        <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+        </svg>
+        <div>
+          <p class="text-green-800 font-semibold text-lg mb-2">Paiement confirmé</p>
+          <p class="text-green-700 text-sm">
+            Votre paiement de <span class="font-bold">150 €</span> a été traité avec succès. 
+            Un email de confirmation vous a été envoyé à votre adresse.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Payment Summary Card -->
+    <div class="bg-white rounded-xl shadow-md p-8 mb-6">
+      <h2 class="text-2xl font-semibold text-olak-dark mb-6">Récapitulatif du paiement</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <div>
+          <p class="text-sm text-gray-600 mb-1">Numéro de transaction</p>
+          <p class="font-bold text-olak-dark">TXN-2024-11-15-0001</p>
+        </div>
+        <div>
+          <p class="text-sm text-gray-600 mb-1">Date et heure</p>
+          <p class="font-bold text-olak-dark">15 novembre 2024, 14:30</p>
+        </div>
+        <div>
+          <p class="text-sm text-gray-600 mb-1">Montant payé</p>
+          <p class="font-bold text-2xl text-olak-primary">150 €</p>
+        </div>
+        <div>
+          <p class="text-sm text-gray-600 mb-1">Méthode de paiement</p>
+          <p class="font-bold text-olak-dark flex items-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <rect x="2" y="5" width="20" height="14" rx="2" stroke-width="2"/>
+              <path d="M2 10h20" stroke-width="2"/>
+            </svg>
+            Carte •••• 4242
+          </p>
+        </div>
+      </div>
+
+      <div class="border-t pt-6">
+        <h3 class="font-semibold text-olak-dark mb-3">Bail concerné</h3>
+        <div class="bg-olak-gray p-4 rounded-lg">
+          <p class="font-bold text-olak-dark mb-1">Appartement T3</p>
+          <p class="text-sm text-gray-600">Paris 15ème • Zone tendue</p>
+          <p class="text-sm text-gray-600">Locataire: Marie Dupont</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Next Steps -->
+    <div class="bg-white rounded-xl shadow-md p-8 mb-6">
+      <h2 class="text-2xl font-semibold text-olak-dark mb-6">Prochaines étapes</h2>
+      
+      <div class="space-y-4">
+        <div class="flex items-start gap-4">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-olak-primary text-white font-bold flex-shrink-0">
+            1
+          </div>
+          <div>
+            <p class="font-semibold text-olak-dark mb-1">Génération du bail</p>
+            <p class="text-sm text-gray-600">
+              Le bail sera automatiquement généré selon les informations du bien et du locataire. 
+              Vous recevrez une notification une fois qu'il sera prêt.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-olak-primary text-white font-bold flex-shrink-0">
+            2
+          </div>
+          <div>
+            <p class="font-semibold text-olak-dark mb-1">Signature électronique</p>
+            <p class="text-sm text-gray-600">
+              Vous et votre locataire recevrez un lien pour signer électroniquement le bail via SignNow. 
+              La signature est sécurisée et juridiquement valable.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-olak-primary text-white font-bold flex-shrink-0">
+            3
+          </div>
+          <div>
+            <p class="font-semibold text-olak-dark mb-1">Finalisation</p>
+            <p class="text-sm text-gray-600">
+              Une fois les deux parties signées, vous recevrez une copie du bail signé. 
+              Vous pourrez le télécharger à tout moment depuis votre espace.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+      <a href="#" class="btn-primary flex items-center justify-center gap-2">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z" clip-rule="evenodd"/>
+        </svg>
+        Télécharger le reçu
+      </a>
+      
+      <%= link_to mockups_owner_payment_show_path, class: "btn-secondary flex items-center justify-center gap-2" do %>
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+          <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+        </svg>
+        Voir les détails
+      <% end %>
+      
+      <%= link_to mockups_owner_dashboard_path, class: "btn-secondary flex items-center justify-center gap-2" do %>
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+        </svg>
+        Tableau de bord
+      <% end %>
+    </div>
+
+    <!-- Information Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      
+      <!-- Email Confirmation -->
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-lg">
+        <div class="flex items-start">
+          <svg class="w-6 h-6 text-blue-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+          </svg>
+          <div>
+            <p class="text-blue-800 font-semibold mb-1">Email de confirmation envoyé</p>
+            <p class="text-sm text-blue-700">
+              Un email récapitulatif a été envoyé à votre adresse. 
+              Vérifiez également vos spams si vous ne le recevez pas.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Support -->
+      <div class="bg-green-50 border-l-4 border-green-500 p-6 rounded-r-lg">
+        <div class="flex items-start">
+          <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-2 0c0 .993-.241 1.929-.668 2.754l-1.524-1.525a3.997 3.997 0 00.078-2.183l1.562-1.562C15.802 8.249 16 9.1 16 10zm-5.165 3.913l1.58 1.58A5.98 5.98 0 0110 16a5.976 5.976 0 01-2.516-.552l1.562-1.562a4.006 4.006 0 001.789.027zm-4.677-2.796a4.002 4.002 0 01-.041-2.08l-.08.08-1.53-1.533A5.98 5.98 0 004 10c0 .954.223 1.856.619 2.657l1.54-1.54zm1.088-6.45A5.974 5.974 0 0110 4c.954 0 1.856.223 2.657.619l-1.54 1.54a4.002 4.002 0 00-2.346.033L7.246 4.668zM12 10a2 2 0 11-4 0 2 2 0 014 0z" clip-rule="evenodd"/>
+          </svg>
+          <div>
+            <p class="text-green-800 font-semibold mb-1">Support disponible</p>
+            <p class="text-sm text-green-700">
+              Une question ? Nous sommes là pour vous aider. 
+              Contactez-nous au 01 23 45 67 89 ou support@olak.fr
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>

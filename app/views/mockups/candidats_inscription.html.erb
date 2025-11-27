@@ -1,0 +1,313 @@
+<% content_for :title, "Inscription Candidat Locataire - OLAK" %>
+
+<div class="min-h-screen bg-olak-gray py-12">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Header -->
+    <div class="text-center mb-8">
+      <%= image_tag 'logo_olak.png', alt: 'OLAK', class: 'h-16 mx-auto mb-4' %>
+      <h1 class="text-4xl font-bold text-olak-primary-dark mb-2">Inscription Candidat Locataire</h1>
+      <p class="text-gray-600">Complétez votre profil pour candidater aux biens disponibles</p>
+    </div>
+
+    <!-- Info Alert -->
+    <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg mb-8">
+      <div class="flex items-center">
+        <svg class="w-6 h-6 text-blue-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+        </svg>
+        <div>
+          <p class="text-blue-800 font-semibold">Lien d'inscription unique</p>
+          <p class="text-blue-700 text-sm mt-1">Ce lien vous a été envoyé par l'administrateur OLAK. Il est valide pour une seule inscription.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Registration Form -->
+    <%= form_with url: "#", method: :post, local: true, class: "space-y-8" do |f| %>
+      
+      <!-- Section 1: Personal Information -->
+      <div class="card-olak">
+        <div class="mb-6">
+          <h2 class="text-2xl font-bold text-olak-primary-dark mb-2">Informations Personnelles</h2>
+          <p class="text-sm text-gray-600">Vos informations de base</p>
+        </div>
+
+        <div class="space-y-6">
+          <!-- Gender -->
+          <div>
+            <label class="block text-sm font-semibold mb-3 text-olak-dark">
+              Civilité <span class="text-olak-error">*</span>
+            </label>
+            <div class="flex gap-6">
+              <label class="flex items-center cursor-pointer">
+                <input type="radio" name="tenant[gender]" value="monsieur" class="w-5 h-5 mr-3 accent-olak-primary cursor-pointer" checked>
+                <span class="text-sm text-olak-dark">Monsieur</span>
+              </label>
+              <label class="flex items-center cursor-pointer">
+                <input type="radio" name="tenant[gender]" value="madame" class="w-5 h-5 mr-3 accent-olak-primary cursor-pointer">
+                <span class="text-sm text-olak-dark">Madame</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- First Name & Last Name -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Prénom <span class="text-olak-error">*</span>
+              </label>
+              <input type="text" name="tenant[first_name]" class="input-olak" placeholder="Jean" required>
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Nom <span class="text-olak-error">*</span>
+              </label>
+              <input type="text" name="tenant[last_name]" class="input-olak" placeholder="Dupont" required>
+            </div>
+          </div>
+
+          <!-- Birth Date & Birth Place -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Date de naissance <span class="text-olak-error">*</span>
+              </label>
+              <input type="date" name="tenant[birth_date]" class="input-olak" required>
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Lieu de naissance <span class="text-olak-error">*</span>
+              </label>
+              <input type="text" name="tenant[birth_place]" class="input-olak" placeholder="Paris, France" required>
+            </div>
+          </div>
+
+          <!-- Phone Number -->
+          <div>
+            <label class="block text-sm font-semibold mb-2 text-olak-dark">
+              Numéro de téléphone <span class="text-olak-error">*</span>
+            </label>
+            <input type="tel" name="tenant[phone_number]" class="input-olak" placeholder="06 12 34 56 78" required>
+            <p class="text-xs text-gray-500 mt-1">Format: 06 12 34 56 78</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 2: Employment Information -->
+      <div class="card-olak">
+        <div class="mb-6">
+          <h2 class="text-2xl font-bold text-olak-primary-dark mb-2">Informations Professionnelles</h2>
+          <p class="text-sm text-gray-600">Votre situation professionnelle et revenus</p>
+        </div>
+
+        <div class="space-y-6">
+          <!-- Employment Status -->
+          <div>
+            <label class="block text-sm font-semibold mb-2 text-olak-dark">
+              Statut professionnel <span class="text-olak-error">*</span>
+            </label>
+            <select name="tenant[employment_status]" class="input-olak" required>
+              <option value="">Sélectionnez votre statut...</option>
+              <option value="cdi">CDI (Contrat à Durée Indéterminée)</option>
+              <option value="cdd">CDD (Contrat à Durée Déterminée)</option>
+              <option value="independent">Indépendant / Auto-entrepreneur</option>
+              <option value="seasonal">Saisonnier</option>
+              <option value="civil_servant">Fonctionnaire</option>
+              <option value="unemployed">Sans emploi</option>
+              <option value="other">Autre</option>
+            </select>
+          </div>
+
+          <!-- Employment Activity -->
+          <div>
+            <label class="block text-sm font-semibold mb-2 text-olak-dark">
+              Activité professionnelle <span class="text-olak-error">*</span>
+            </label>
+            <input type="text" name="tenant[employment_activity]" class="input-olak" placeholder="Ex: Développeur web, Infirmière, Commercial..." required>
+            <p class="text-xs text-gray-500 mt-1">Précisez votre métier ou secteur d'activité</p>
+          </div>
+
+          <!-- Monthly Net Salary & Employment Seniority -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Salaire mensuel net <span class="text-olak-error">*</span>
+              </label>
+              <div class="relative">
+                <input type="number" name="tenant[monthly_net_salary]" class="input-olak pr-12" placeholder="2500" step="0.01" min="0" required>
+                <span class="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 font-semibold">€</span>
+              </div>
+              <p class="text-xs text-gray-500 mt-1">Montant mensuel net après impôts</p>
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Ancienneté <span class="text-olak-error">*</span>
+              </label>
+              <select name="tenant[employment_seniority]" class="input-olak" required>
+                <option value="">Sélectionnez...</option>
+                <option value="less_3_months">Moins de 3 mois</option>
+                <option value="more_3_months">Plus de 3 mois</option>
+                <option value="more_1_year">Plus d'1 an</option>
+                <option value="more_2_years">Plus de 2 ans</option>
+                <option value="more_4_years">Plus de 4 ans</option>
+                <option value="more_6_years">Plus de 6 ans</option>
+                <option value="more_10_years">Plus de 10 ans</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 3: Document Upload -->
+      <div class="card-olak">
+        <div class="mb-6">
+          <h2 class="text-2xl font-bold text-olak-primary-dark mb-2">Documents Justificatifs</h2>
+          <p class="text-sm text-gray-600">Tous les documents sont obligatoires pour valider votre dossier</p>
+        </div>
+
+        <div class="space-y-6">
+          <!-- Document 1: Identity Card -->
+          <div>
+            <label class="block text-sm font-semibold mb-2 text-olak-dark">
+              Pièce d'identité (recto-verso) <span class="text-olak-error">*</span>
+            </label>
+            <div class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-olak-primary transition-all duration-300 cursor-pointer">
+              <svg class="mx-auto mb-3 w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+              </svg>
+              <p class="text-sm text-gray-600 mb-1">Glissez votre fichier ici ou cliquez pour sélectionner</p>
+              <p class="text-xs text-gray-500">PDF, JPG, PNG - Max 10MB</p>
+              <input type="file" name="tenant[identity_card]" class="hidden" accept=".pdf,.jpg,.jpeg,.png">
+            </div>
+          </div>
+
+          <!-- Document 2: Employment Contract -->
+          <div>
+            <label class="block text-sm font-semibold mb-2 text-olak-dark">
+              Contrat de travail <span class="text-olak-error">*</span>
+            </label>
+            <div class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-olak-primary transition-all duration-300 cursor-pointer">
+              <svg class="mx-auto mb-3 w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+              </svg>
+              <p class="text-sm text-gray-600 mb-1">Glissez votre fichier ici ou cliquez pour sélectionner</p>
+              <p class="text-xs text-gray-500">PDF, JPG, PNG - Max 10MB</p>
+              <input type="file" name="tenant[employment_contract]" class="hidden" accept=".pdf,.jpg,.jpeg,.png">
+            </div>
+          </div>
+
+          <!-- Document 3: Pay Slip 1 -->
+          <div>
+            <label class="block text-sm font-semibold mb-2 text-olak-dark">
+              Bulletin de salaire 1 (mois le plus récent) <span class="text-olak-error">*</span>
+            </label>
+            <div class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-olak-primary transition-all duration-300 cursor-pointer">
+              <svg class="mx-auto mb-3 w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+              </svg>
+              <p class="text-sm text-gray-600 mb-1">Glissez votre fichier ici ou cliquez pour sélectionner</p>
+              <p class="text-xs text-gray-500">PDF, JPG, PNG - Max 10MB</p>
+              <input type="file" name="tenant[pay_slip_1]" class="hidden" accept=".pdf,.jpg,.jpeg,.png">
+            </div>
+          </div>
+
+          <!-- Document 4: Pay Slip 2 -->
+          <div>
+            <label class="block text-sm font-semibold mb-2 text-olak-dark">
+              Bulletin de salaire 2 (mois N-1) <span class="text-olak-error">*</span>
+            </label>
+            <div class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-olak-primary transition-all duration-300 cursor-pointer">
+              <svg class="mx-auto mb-3 w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+              </svg>
+              <p class="text-sm text-gray-600 mb-1">Glissez votre fichier ici ou cliquez pour sélectionner</p>
+              <p class="text-xs text-gray-500">PDF, JPG, PNG - Max 10MB</p>
+              <input type="file" name="tenant[pay_slip_2]" class="hidden" accept=".pdf,.jpg,.jpeg,.png">
+            </div>
+          </div>
+
+          <!-- Document 5: Pay Slip 3 -->
+          <div>
+            <label class="block text-sm font-semibold mb-2 text-olak-dark">
+              Bulletin de salaire 3 (mois N-2) <span class="text-olak-error">*</span>
+            </label>
+            <div class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-olak-primary transition-all duration-300 cursor-pointer">
+              <svg class="mx-auto mb-3 w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+              </svg>
+              <p class="text-sm text-gray-600 mb-1">Glissez votre fichier ici ou cliquez pour sélectionner</p>
+              <p class="text-xs text-gray-500">PDF, JPG, PNG - Max 10MB</p>
+              <input type="file" name="tenant[pay_slip_3]" class="hidden" accept=".pdf,.jpg,.jpeg,.png">
+            </div>
+          </div>
+
+          <!-- Document 6: Tax Notice -->
+          <div>
+            <label class="block text-sm font-semibold mb-2 text-olak-dark">
+              Avis d'imposition <span class="text-olak-error">*</span>
+            </label>
+            <div class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-olak-primary transition-all duration-300 cursor-pointer">
+              <svg class="mx-auto mb-3 w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+              </svg>
+              <p class="text-sm text-gray-600 mb-1">Glissez votre fichier ici ou cliquez pour sélectionner</p>
+              <p class="text-xs text-gray-500">PDF, JPG, PNG - Max 10MB</p>
+              <input type="file" name="tenant[tax_notice]" class="hidden" accept=".pdf,.jpg,.jpeg,.png">
+            </div>
+          </div>
+
+          <!-- Help Text -->
+          <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
+            <div class="flex items-start">
+              <svg class="w-5 h-5 text-blue-500 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+              </svg>
+              <div>
+                <p class="text-blue-800 font-semibold text-sm">Information importante</p>
+                <p class="text-blue-700 text-sm mt-1">Vos documents seront vérifiés par l'administrateur OLAK. Vous pourrez ensuite candidater aux biens disponibles. Un garant pourra être ajouté ultérieurement depuis votre espace personnel.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 4: Terms & Actions -->
+      <div class="card-olak">
+        <div class="space-y-6">
+          <!-- Terms Acceptance -->
+          <label class="flex items-start cursor-pointer">
+            <input type="checkbox" name="tenant[terms_accepted]" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer mt-0.5" required>
+            <span class="text-sm text-olak-dark">
+              J'accepte les <a href="#" class="text-olak-primary hover:text-olak-primary-dark font-semibold">conditions générales d'utilisation</a> et la <a href="#" class="text-olak-primary hover:text-olak-primary-dark font-semibold">politique de confidentialité</a> de la plateforme OLAK <span class="text-olak-error">*</span>
+            </span>
+          </label>
+
+          <!-- Action Button -->
+          <div>
+            <button type="submit" class="btn-primary w-full">
+              Créer mon compte
+            </button>
+          </div>
+
+          <!-- Required Fields Note -->
+          <p class="text-xs text-gray-500 text-center">
+            <span class="text-olak-error">*</span> Champs obligatoires
+          </p>
+        </div>
+      </div>
+
+    <% end %>
+
+    <!-- Additional Help -->
+    <div class="mt-8 text-center">
+      <p class="text-sm text-gray-600">
+        Besoin d'aide ? <a href="<%= mockups_contact_path %>" class="text-olak-primary hover:text-olak-primary-dark font-semibold">Contactez-nous</a>
+      </p>
+    </div>
+
+  </div>
+</div>

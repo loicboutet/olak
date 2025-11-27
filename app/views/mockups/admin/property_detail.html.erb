@@ -1,0 +1,461 @@
+<% content_for :title, "Bien - Appartement T3 - OLAK Admin" %>
+
+<div class="space-y-6">
+  <!-- Breadcrumb -->
+  <nav class="flex mb-6" aria-label="Breadcrumb">
+    <ol class="flex items-center space-x-2 text-sm">
+      <li>
+        <%= link_to mockups_admin_dashboard_path, class: "text-gray-500 hover:text-purple-700" do %>
+          Tableau de bord
+        <% end %>
+      </li>
+      <li><span class="text-gray-400">/</span></li>
+      <li>
+        <%= link_to mockups_admin_properties_list_path, class: "text-gray-500 hover:text-purple-700" do %>
+          Biens
+        <% end %>
+      </li>
+      <li><span class="text-gray-400">/</span></li>
+      <li><span class="text-purple-700 font-semibold">Appartement T3</span></li>
+    </ol>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="flex justify-between items-start">
+    <div>
+      <h1 class="text-3xl font-bold text-olak-primary-dark">Appartement T3</h1>
+      <p class="text-gray-600 mt-2">45 Avenue des Champs-Élysées, 75008 Paris</p>
+    </div>
+    <div class="flex gap-3">
+      <%= link_to mockups_admin_properties_list_path, class: "bg-gray-100 text-gray-700 px-5 py-2.5 rounded-lg font-semibold hover:bg-gray-200 transition-colors" do %>
+        Retour
+      <% end %>
+    </div>
+  </div>
+
+  <!-- Status Alerts -->
+  <div class="flex gap-4">
+    <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg flex-1">
+      <div class="flex items-center">
+        <svg class="w-6 h-6 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+        </svg>
+        <div>
+          <p class="font-semibold text-green-800">Bien actif</p>
+          <p class="text-sm text-green-700 mt-1">Ce bien est publié et accepte les candidatures</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-orange-50 border-l-4 border-orange-500 p-4 rounded-r-lg flex-1">
+      <div class="flex items-center">
+        <svg class="w-6 h-6 text-orange-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+        </svg>
+        <div>
+          <p class="font-semibold text-orange-800">Zone tendue</p>
+          <p class="text-sm text-orange-700 mt-1">Plafonnement du loyer applicable</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <!-- Main Content (Left Column) -->
+    <div class="lg:col-span-2 space-y-6">
+      <!-- Property Information -->
+      <div class="bg-white rounded-xl p-6 shadow-md">
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-xl font-bold text-olak-primary-dark">Informations du bien</h2>
+          <div class="flex gap-2">
+            <span class="px-3 py-1.5 rounded-full text-sm font-semibold bg-blue-100 text-blue-800">
+              Meublé
+            </span>
+            <span class="px-3 py-1.5 rounded-full text-sm font-semibold bg-green-100 text-green-800">
+              Actif
+            </span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <p class="text-sm font-semibold text-gray-500 mb-1">Type de bien</p>
+            <p class="text-base text-gray-900">Appartement</p>
+          </div>
+          <div>
+            <p class="text-sm font-semibold text-gray-500 mb-1">Nombre de pièces</p>
+            <p class="text-base text-gray-900">T3 (3 pièces)</p>
+          </div>
+          <div>
+            <p class="text-sm font-semibold text-gray-500 mb-1">Surface habitable</p>
+            <p class="text-base text-gray-900">65 m²</p>
+          </div>
+          <div>
+            <p class="text-sm font-semibold text-gray-500 mb-1">Chambres</p>
+            <p class="text-base text-gray-900">2 chambres</p>
+          </div>
+          <div>
+            <p class="text-sm font-semibold text-gray-500 mb-1">Étage</p>
+            <p class="text-base text-gray-900">3ème étage</p>
+          </div>
+          <div>
+            <p class="text-sm font-semibold text-gray-500 mb-1">Ascenseur</p>
+            <p class="text-base text-gray-900">✓ Oui</p>
+          </div>
+          <div class="md:col-span-2">
+            <p class="text-sm font-semibold text-gray-500 mb-1">Adresse complète</p>
+            <p class="text-base text-gray-900">45 Avenue des Champs-Élysées, 75008 Paris</p>
+          </div>
+          <div>
+            <p class="text-sm font-semibold text-gray-500 mb-1">Type de location</p>
+            <p class="text-base text-gray-900">Location meublée</p>
+          </div>
+          <div>
+            <p class="text-sm font-semibold text-gray-500 mb-1">Zone tendue</p>
+            <p class="text-base text-orange-600 font-semibold">✓ Oui</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Financial Information -->
+      <div class="bg-white rounded-xl p-6 shadow-md">
+        <h2 class="text-xl font-bold text-olak-primary-dark mb-6">Informations financières</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <p class="text-sm font-semibold text-gray-500 mb-1">Loyer mensuel</p>
+            <p class="text-2xl font-bold text-olak-primary">1 500 €</p>
+          </div>
+          <div>
+            <p class="text-sm font-semibold text-gray-500 mb-1">Charges mensuelles</p>
+            <p class="text-xl font-semibold text-gray-900">150 €</p>
+          </div>
+          <div>
+            <p class="text-sm font-semibold text-gray-500 mb-1">Loyer charges comprises</p>
+            <p class="text-xl font-bold text-olak-primary">1 650 €</p>
+          </div>
+          <div>
+            <p class="text-sm font-semibold text-gray-500 mb-1">Dépôt de garantie</p>
+            <p class="text-xl font-semibold text-gray-900">3 000 €</p>
+          </div>
+        </div>
+
+        <div class="mt-6 p-4 bg-orange-50 rounded-lg border border-orange-200">
+          <p class="text-sm font-semibold text-orange-800 mb-2">
+            <svg class="w-5 h-5 inline mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+            </svg>
+            Zone tendue - Plafonnement applicable
+          </p>
+          <p class="text-sm text-orange-700">Le loyer respecte le plafond légal pour cette zone.</p>
+        </div>
+      </div>
+
+      <!-- Equipment & Amenities -->
+      <div class="bg-white rounded-xl p-6 shadow-md">
+        <h2 class="text-xl font-bold text-olak-primary-dark mb-6">Équipements et commodités</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <p class="text-sm font-semibold text-gray-700 mb-3">Équipements du logement</p>
+            <ul class="space-y-2">
+              <li class="flex items-center text-sm text-gray-600">
+                <svg class="w-4 h-4 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                Four électrique
+              </li>
+              <li class="flex items-center text-sm text-gray-600">
+                <svg class="w-4 h-4 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                Réfrigérateur
+              </li>
+              <li class="flex items-center text-sm text-gray-600">
+                <svg class="w-4 h-4 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                Lave-linge
+              </li>
+              <li class="flex items-center text-sm text-gray-600">
+                <svg class="w-4 h-4 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                Lave-vaisselle
+              </li>
+              <li class="flex items-center text-sm text-gray-600">
+                <svg class="w-4 h-4 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                Micro-ondes
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="text-sm font-semibold text-gray-700 mb-3">Commodités de l'immeuble</p>
+            <ul class="space-y-2">
+              <li class="flex items-center text-sm text-gray-600">
+                <svg class="w-4 h-4 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                Ascenseur
+              </li>
+              <li class="flex items-center text-sm text-gray-600">
+                <svg class="w-4 h-4 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                Digicode
+              </li>
+              <li class="flex items-center text-sm text-gray-600">
+                <svg class="w-4 h-4 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                Parking
+              </li>
+              <li class="flex items-center text-sm text-gray-600">
+                <svg class="w-4 h-4 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                Cave
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Documents -->
+      <div class="bg-white rounded-xl p-6 shadow-md">
+        <h2 class="text-xl font-bold text-olak-primary-dark mb-6">Documents du bien</h2>
+
+        <div class="space-y-3">
+          <div class="flex items-center justify-between p-4 border-2 border-gray-200 rounded-lg hover:border-purple-300 transition-colors">
+            <div class="flex items-center">
+              <div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center mr-3">
+                <svg class="w-5 h-5 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-900">DPE (Diagnostic de Performance Énergétique)</p>
+                <p class="text-sm text-gray-500">dpe.pdf • 245 KB • Ajouté le 15/01/2024</p>
+              </div>
+            </div>
+            <button class="px-4 py-2 text-sm font-semibold text-purple-700 bg-purple-100 rounded-lg hover:bg-purple-200 transition-colors">
+              Voir
+            </button>
+          </div>
+
+          <div class="flex items-center justify-between p-4 border-2 border-gray-200 rounded-lg hover:border-purple-300 transition-colors">
+            <div class="flex items-center">
+              <div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center mr-3">
+                <svg class="w-5 h-5 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-900">Photos du bien</p>
+                <p class="text-sm text-gray-500">photos.pdf • 1.2 MB • Ajouté le 15/01/2024</p>
+              </div>
+            </div>
+            <button class="px-4 py-2 text-sm font-semibold text-purple-700 bg-purple-100 rounded-lg hover:bg-purple-200 transition-colors">
+              Voir
+            </button>
+          </div>
+
+          <div class="flex items-center justify-between p-4 border-2 border-gray-200 rounded-lg hover:border-purple-300 transition-colors">
+            <div class="flex items-center">
+              <div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center mr-3">
+                <svg class="w-5 h-5 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-900">État des lieux d'entrée (modèle)</p>
+                <p class="text-sm text-gray-500">etat_lieux.pdf • 180 KB • Ajouté le 15/01/2024</p>
+              </div>
+            </div>
+            <button class="px-4 py-2 text-sm font-semibold text-purple-700 bg-purple-100 rounded-lg hover:bg-purple-200 transition-colors">
+              Voir
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Applications for this Property -->
+      <div class="bg-white rounded-xl p-6 shadow-md">
+        <h2 class="text-xl font-bold text-olak-primary-dark mb-6">Candidatures pour ce bien (5)</h2>
+
+        <div class="space-y-4">
+          <div class="p-4 border-2 border-gray-200 rounded-lg">
+            <div class="flex justify-between items-start mb-2">
+              <div>
+                <h3 class="font-bold text-gray-900">Sophie Dubois</h3>
+                <p class="text-sm text-gray-600">CDI • 3 200 €/mois • Garant physique</p>
+              </div>
+              <span class="px-3 py-1 rounded-full text-sm font-semibold bg-blue-100 text-blue-800">
+                Proposée
+              </span>
+            </div>
+            <div class="flex items-center justify-between mt-3">
+              <p class="text-xs text-gray-500">Candidature du 15 janvier 2024</p>
+              <%= link_to mockups_admin_tenant_detail_path, class: "text-sm font-semibold text-purple-700 hover:text-purple-900" do %>
+                Voir le profil →
+              <% end %>
+            </div>
+          </div>
+
+          <div class="p-4 border-2 border-gray-200 rounded-lg">
+            <div class="flex justify-between items-start mb-2">
+              <div>
+                <h3 class="font-bold text-gray-900">Marie Martin</h3>
+                <p class="text-sm text-gray-600">CDD • 2 500 €/mois • Garant Visale</p>
+              </div>
+              <span class="px-3 py-1 rounded-full text-sm font-semibold bg-yellow-100 text-yellow-800">
+                En attente
+              </span>
+            </div>
+            <div class="flex items-center justify-between mt-3">
+              <p class="text-xs text-gray-500">Candidature du 20 janvier 2024</p>
+              <%= link_to mockups_admin_tenant_detail_path, class: "text-sm font-semibold text-purple-700 hover:text-purple-900" do %>
+                Voir le profil →
+              <% end %>
+            </div>
+          </div>
+
+          <div class="p-4 border-2 border-gray-200 rounded-lg">
+            <div class="flex justify-between items-start mb-2">
+              <div>
+                <h3 class="font-bold text-gray-900">Lucas Petit</h3>
+                <p class="text-sm text-gray-600">CDI • 3 800 €/mois • Garant physique</p>
+              </div>
+              <span class="px-3 py-1 rounded-full text-sm font-semibold bg-yellow-100 text-yellow-800">
+                En attente
+              </span>
+            </div>
+            <div class="flex items-center justify-between mt-3">
+              <p class="text-xs text-gray-500">Candidature du 18 janvier 2024</p>
+              <%= link_to mockups_admin_tenant_detail_path, class: "text-sm font-semibold text-purple-700 hover:text-purple-900" do %>
+                Voir le profil →
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Sidebar -->
+    <div class="space-y-6">
+      <!-- Owner Information -->
+      <div class="bg-white rounded-xl p-6 shadow-md">
+        <h2 class="text-xl font-bold text-olak-primary-dark mb-6">Propriétaire</h2>
+
+        <div class="flex items-center mb-4">
+          <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-3">
+            <span class="text-purple-700 font-semibold">JD</span>
+          </div>
+          <div>
+            <p class="font-bold text-gray-900">Jean Dupont</p>
+            <p class="text-sm text-gray-500">Personne physique</p>
+          </div>
+        </div>
+
+        <div class="space-y-3">
+          <div class="flex items-center text-sm text-gray-600">
+            <svg class="w-4 h-4 mr-2 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+              <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+            </svg>
+            jean.dupont@example.fr
+          </div>
+          <div class="flex items-center text-sm text-gray-600">
+            <svg class="w-4 h-4 mr-2 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+            </svg>
+            06 12 34 56 78
+          </div>
+        </div>
+
+        <div class="mt-6">
+          <%= link_to mockups_admin_owner_detail_path, class: "w-full bg-purple-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-purple-700 transition-colors text-center block" do %>
+            Voir le profil
+          <% end %>
+        </div>
+      </div>
+
+      <!-- Quick Stats -->
+      <div class="bg-white rounded-xl p-6 shadow-md">
+        <h2 class="text-xl font-bold text-olak-primary-dark mb-6">Statistiques</h2>
+
+        <div class="space-y-4">
+          <div class="flex justify-between items-center">
+            <span class="text-sm text-gray-600">Candidatures</span>
+            <span class="text-lg font-bold text-olak-primary">5</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <span class="text-sm text-gray-600">Proposées au propriétaire</span>
+            <span class="text-lg font-bold text-blue-600">1</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <span class="text-sm text-gray-600">En attente</span>
+            <span class="text-lg font-bold text-yellow-600">4</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <span class="text-sm text-gray-600">Jours depuis publication</span>
+            <span class="text-lg font-bold text-gray-700">5</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Activity Log -->
+      <div class="bg-white rounded-xl p-6 shadow-md">
+        <h2 class="text-xl font-bold text-olak-primary-dark mb-6">Activité récente</h2>
+
+        <div class="space-y-4">
+          <div class="flex gap-3">
+            <div class="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+            <div>
+              <p class="text-sm font-semibold text-gray-900">Nouvelle candidature</p>
+              <p class="text-xs text-gray-500">20 janvier 2024</p>
+            </div>
+          </div>
+          <div class="flex gap-3">
+            <div class="w-2 h-2 bg-purple-600 rounded-full mt-2"></div>
+            <div>
+              <p class="text-sm font-semibold text-gray-900">Candidature proposée au propriétaire</p>
+              <p class="text-xs text-gray-500">15 janvier 2024</p>
+            </div>
+          </div>
+          <div class="flex gap-3">
+            <div class="w-2 h-2 bg-gray-300 rounded-full mt-2"></div>
+            <div>
+              <p class="text-sm font-semibold text-gray-900">Bien publié</p>
+              <p class="text-xs text-gray-500">15 janvier 2024</p>
+            </div>
+          </div>
+          <div class="flex gap-3">
+            <div class="w-2 h-2 bg-gray-300 rounded-full mt-2"></div>
+            <div>
+              <p class="text-sm font-semibold text-gray-900">Bien créé</p>
+              <p class="text-xs text-gray-500">15 janvier 2024</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Map Placeholder (Future Feature) -->
+      <div class="bg-white rounded-xl p-6 shadow-md">
+        <h2 class="text-xl font-bold text-olak-primary-dark mb-4">Localisation</h2>
+        <div class="bg-gray-100 rounded-lg h-64 flex items-center justify-center border-2 border-dashed border-gray-300">
+          <div class="text-center">
+            <svg class="w-12 h-12 mx-auto mb-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            <p class="text-sm text-gray-500 font-semibold">Carte interactive</p>
+            <p class="text-xs text-gray-400 mt-1">Fonctionnalité à venir</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

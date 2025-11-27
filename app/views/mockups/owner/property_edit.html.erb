@@ -1,0 +1,328 @@
+<% content_for :title, "Modifier le bien" %>
+
+<div class="min-h-screen bg-olak-gray py-8">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Header -->
+    <div class="mb-6">
+      <%= link_to mockups_owner_property_show_path, class: "text-olak-primary hover:text-olak-primary-dark font-semibold flex items-center gap-2" do %>
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Retour au bien
+      <% end %>
+    </div>
+
+    <!-- Warning Alert -->
+    <div class="mb-6 bg-orange-50 border-l-4 border-orange-500 p-4 rounded-r-lg">
+      <div class="flex items-center">
+        <svg class="w-6 h-6 text-orange-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+        </svg>
+        <div>
+          <p class="text-orange-800 font-semibold">Modifications après publication</p>
+          <p class="text-orange-700 text-sm mt-1">Les modifications importantes peuvent nécessiter une révision par l'équipe OLAK.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Form Card -->
+    <div class="bg-white rounded-xl shadow-md p-8">
+      <h1 class="text-4xl font-bold text-olak-primary-dark mb-2">Modifier votre bien</h1>
+      <p class="text-gray-600 mb-8">Appartement T3 - Paris 15ème</p>
+
+      <form class="space-y-8">
+        
+        <!-- Property Type (Read-only) -->
+        <div class="border-b border-gray-200 pb-6">
+          <h2 class="text-2xl font-semibold text-olak-dark mb-4">Type de bien</h2>
+          <div class="bg-olak-gray p-4 rounded-lg flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <svg class="w-8 h-8 text-olak-primary" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+              </svg>
+              <div>
+                <p class="font-semibold text-olak-dark">Appartement</p>
+                <p class="text-sm text-gray-600">Location d'un appartement entier</p>
+              </div>
+            </div>
+            <span class="text-xs text-gray-500">Type non modifiable</span>
+          </div>
+        </div>
+
+        <!-- Address Section -->
+        <div class="border-b border-gray-200 pb-6">
+          <h2 class="text-2xl font-semibold text-olak-dark mb-4">Adresse</h2>
+          
+          <div class="space-y-4">
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Adresse complète <span class="text-olak-error">*</span>
+              </label>
+              <input type="text" class="input-olak" value="45 Avenue des Champs-Élysées">
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                  Code postal <span class="text-olak-error">*</span>
+                </label>
+                <input type="text" class="input-olak" value="75008">
+              </div>
+              
+              <div>
+                <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                  Ville <span class="text-olak-error">*</span>
+                </label>
+                <input type="text" class="input-olak" value="Paris">
+              </div>
+            </div>
+            
+            <div class="bg-orange-50 border-l-4 border-orange-500 p-4 rounded-r-lg">
+              <div class="flex items-center">
+                <svg class="w-6 h-6 text-orange-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                </svg>
+                <div>
+                  <p class="text-orange-800 font-semibold">Ce bien est situé en zone tendue</p>
+                  <p class="text-orange-700 text-sm mt-1">Un plafond de loyer s'applique</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rental Type Section -->
+        <div class="border-b border-gray-200 pb-6">
+          <h2 class="text-2xl font-semibold text-olak-dark mb-4">Type de location</h2>
+          
+          <div class="space-y-2">
+            <label class="flex items-center cursor-pointer p-4 border-2 border-olak-primary bg-olak-primary-light rounded-lg">
+              <input type="radio" name="rental_type" value="furnished" class="w-5 h-5 mr-3 accent-olak-primary cursor-pointer" checked>
+              <div>
+                <span class="text-base font-semibold text-olak-dark">Meublé</span>
+                <p class="text-sm text-gray-600">Location avec meubles et équipements</p>
+              </div>
+            </label>
+            
+            <label class="flex items-center cursor-pointer p-4 border-2 border-gray-300 rounded-lg hover:border-olak-primary transition-colors">
+              <input type="radio" name="rental_type" value="unfurnished" class="w-5 h-5 mr-3 accent-olak-primary cursor-pointer">
+              <div>
+                <span class="text-base font-semibold text-olak-dark">Nue</span>
+                <p class="text-sm text-gray-600">Location sans meubles</p>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- Property Details Section -->
+        <div class="border-b border-gray-200 pb-6">
+          <h2 class="text-2xl font-semibold text-olak-dark mb-4">Caractéristiques</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Surface habitable (m²) <span class="text-olak-error">*</span>
+              </label>
+              <input type="number" class="input-olak" value="65">
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Nombre de pièces <span class="text-olak-error">*</span>
+              </label>
+              <input type="number" class="input-olak" value="3">
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Nombre de chambres <span class="text-olak-error">*</span>
+              </label>
+              <input type="number" class="input-olak" value="2">
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Nombre de salles de bain
+              </label>
+              <input type="number" class="input-olak" value="1">
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Étage
+              </label>
+              <input type="number" class="input-olak" value="3">
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Ascenseur
+              </label>
+              <select class="input-olak">
+                <option value="">Sélectionnez...</option>
+                <option value="yes" selected>Oui</option>
+                <option value="no">Non</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Equipment Section -->
+        <div class="border-b border-gray-200 pb-6">
+          <h2 class="text-2xl font-semibold text-olak-dark mb-4">Équipements</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <label class="flex items-center cursor-pointer">
+              <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer" checked>
+              <span class="text-sm text-olak-dark">Cuisine équipée</span>
+            </label>
+            <label class="flex items-center cursor-pointer">
+              <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer" checked>
+              <span class="text-sm text-olak-dark">Plaques de cuisson</span>
+            </label>
+            <label class="flex items-center cursor-pointer">
+              <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer">
+              <span class="text-sm text-olak-dark">Four</span>
+            </label>
+            <label class="flex items-center cursor-pointer">
+              <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer" checked>
+              <span class="text-sm text-olak-dark">Réfrigérateur</span>
+            </label>
+            <label class="flex items-center cursor-pointer">
+              <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer">
+              <span class="text-sm text-olak-dark">Lave-vaisselle</span>
+            </label>
+            <label class="flex items-center cursor-pointer">
+              <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer">
+              <span class="text-sm text-olak-dark">Lave-linge</span>
+            </label>
+            <label class="flex items-center cursor-pointer">
+              <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer" checked>
+              <span class="text-sm text-olak-dark">Balcon</span>
+            </label>
+            <label class="flex items-center cursor-pointer">
+              <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer">
+              <span class="text-sm text-olak-dark">Terrasse</span>
+            </label>
+            <label class="flex items-center cursor-pointer">
+              <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer">
+              <span class="text-sm text-olak-dark">Cave</span>
+            </label>
+            <label class="flex items-center cursor-pointer">
+              <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer" checked>
+              <span class="text-sm text-olak-dark">Parking</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Rent Section -->
+        <div class="border-b border-gray-200 pb-6">
+          <h2 class="text-2xl font-semibold text-olak-dark mb-4">Loyer et charges</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Loyer hors charges (€/mois) <span class="text-olak-error">*</span>
+              </label>
+              <input type="number" class="input-olak" value="1350">
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Charges (€/mois)
+              </label>
+              <input type="number" class="input-olak" value="150">
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Dépôt de garantie (€)
+              </label>
+              <input type="number" class="input-olak" value="2700">
+            </div>
+            
+            <div class="bg-olak-gray p-4 rounded-lg">
+              <p class="text-sm font-semibold text-olak-dark mb-1">Loyer total</p>
+              <p class="text-3xl font-bold text-olak-primary">1 500 €<span class="text-lg">/mois</span></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Building Details -->
+        <div class="border-b border-gray-200 pb-6">
+          <h2 class="text-2xl font-semibold text-olak-dark mb-4">Informations sur le bâtiment</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Année de construction
+              </label>
+              <input type="number" class="input-olak" value="1995">
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Nombre d'étages
+              </label>
+              <input type="number" class="input-olak" value="6">
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Type de chauffage
+              </label>
+              <select class="input-olak">
+                <option value="">Sélectionnez...</option>
+                <option value="individual" selected>Individuel</option>
+                <option value="collective">Collectif</option>
+              </select>
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Énergie
+              </label>
+              <select class="input-olak">
+                <option value="">Sélectionnez...</option>
+                <option value="gas" selected>Gaz</option>
+                <option value="electric">Électrique</option>
+                <option value="fuel">Fioul</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Description -->
+        <div class="border-b border-gray-200 pb-6">
+          <h2 class="text-2xl font-semibold text-olak-dark mb-4">Description</h2>
+          
+          <div>
+            <label class="block text-sm font-semibold mb-2 text-olak-dark">
+              Description du bien
+            </label>
+            <textarea class="input-olak" rows="6">Magnifique appartement T3 de 65m² situé au cœur du 15ème arrondissement de Paris. Cet appartement lumineux et rénové offre tout le confort moderne avec une cuisine équipée, deux belles chambres et une salle de bain moderne. Proche des commerces et transports.</textarea>
+          </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="flex gap-2 items-center justify-between pt-6">
+          <%= link_to mockups_owner_property_show_path, class: "btn-secondary flex items-center gap-2" do %>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+            Annuler
+          <% end %>
+          
+          <button type="submit" class="btn-primary flex items-center gap-2">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+            Enregistrer les modifications
+          </button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</div>

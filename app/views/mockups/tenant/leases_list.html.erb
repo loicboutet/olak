@@ -1,0 +1,214 @@
+<% content_for :title, "Mes Baux" %>
+
+<div class="min-h-screen bg-olak-gray py-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Header -->
+    <div class="mb-8">
+      <h1 class="text-5xl font-bold text-olak-primary-dark leading-tight mb-4">Mes Baux</h1>
+      <p class="text-lg text-gray-600">Consultez et signez vos contrats de location</p>
+    </div>
+
+    <!-- Filters -->
+    <div class="bg-white rounded-xl shadow-md p-6 mb-6">
+      <h3 class="text-lg font-semibold text-olak-dark mb-4">Filtrer par statut</h3>
+      <div class="flex flex-wrap gap-3">
+        <button class="btn-primary px-4 py-2 text-sm">Tous les baux</button>
+        <button class="btn-secondary px-4 py-2 text-sm">À signer</button>
+        <button class="btn-secondary px-4 py-2 text-sm">Signés</button>
+        <button class="btn-secondary px-4 py-2 text-sm">Actifs</button>
+      </div>
+    </div>
+
+    <!-- Leases Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      <!-- Lease Card 1 - Both Signed -->
+      <div class="card-olak hover:shadow-lg transition-shadow">
+        <div class="flex justify-between items-start mb-4">
+          <div>
+            <h3 class="font-bold text-xl text-olak-primary-dark mb-1">Appartement T3</h3>
+            <p class="text-sm text-gray-600">Paris 15ème</p>
+          </div>
+          <span class="badge badge-success">Actif</span>
+        </div>
+        
+        <div class="space-y-2 mb-4 text-sm">
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
+            </svg>
+            <span class="text-gray-700">Propriétaire: M. Jean Dupont</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+            </svg>
+            <span class="text-gray-700">Début: 01/12/2024</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"/>
+            </svg>
+            <span class="text-gray-700 font-semibold">1 200 €/mois</span>
+          </div>
+        </div>
+
+        <div class="border-t pt-4 space-y-2 text-xs text-gray-600">
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-olak-success" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span>Propriétaire: Signé le 15/11/2024</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-olak-success" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span>Vous: Signé le 18/11/2024</span>
+          </div>
+        </div>
+
+        <div class="flex gap-2 mt-4">
+          <%= link_to mockups_tenant_lease_show_path, class: "btn-secondary flex-1 text-center text-sm" do %>
+            Voir détails
+          <% end %>
+          <%= link_to mockups_tenant_lease_download_path, class: "btn-primary flex-1 text-center text-sm flex items-center justify-center gap-1" do %>
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+            Télécharger
+          <% end %>
+        </div>
+      </div>
+
+      <!-- Lease Card 2 - Owner Signed, Tenant Needs to Sign -->
+      <div class="card-olak hover:shadow-lg transition-shadow border-2 border-olak-warning">
+        <div class="flex justify-between items-start mb-4">
+          <div>
+            <h3 class="font-bold text-xl text-olak-primary-dark mb-1">Studio</h3>
+            <p class="text-sm text-gray-600">Lyon 3ème</p>
+          </div>
+          <span class="badge badge-warning">À signer</span>
+        </div>
+        
+        <div class="space-y-2 mb-4 text-sm">
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
+            </svg>
+            <span class="text-gray-700">Propriétaire: Mme Marie Martin</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+            </svg>
+            <span class="text-gray-700">Début: 15/01/2025</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"/>
+            </svg>
+            <span class="text-gray-700 font-semibold">650 €/mois</span>
+          </div>
+        </div>
+
+        <div class="border-t pt-4 space-y-2 text-xs text-gray-600">
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-olak-success" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span>Propriétaire: Signé le 20/11/2024</span>
+          </div>
+         <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-olak-warning" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 000 2h6a1 1 0 100-2H7z" clip-rule="evenodd"/>
+            </svg>
+            <span class="font-semibold text-olak-warning">Vous: En attente de votre signature</span>
+          </div>
+        </div>
+
+        <div class="flex gap-2 mt-4">
+          <%= link_to mockups_tenant_lease_preview_path, class: "btn-primary w-full text-center text-sm flex items-center justify-center gap-1" do %>
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"/>
+            </svg>
+            Signer le bail
+          <% end %>
+        </div>
+      </div>
+
+      <!-- Lease Card 3 - Pending Both Signatures -->
+      <div class="card-olak hover:shadow-lg transition-shadow">
+        <div class="flex justify-between items-start mb-4">
+          <div>
+            <h3 class="font-bold text-xl text-olak-primary-dark mb-1">Chambre meublée</h3>
+            <p class="text-sm text-gray-600">Marseille</p>
+          </div>
+          <span class="badge badge-pending">En attente</span>
+        </div>
+        
+        <div class="space-y-2 mb-4 text-sm">
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
+            </svg>
+            <span class="text-gray-700">Propriétaire: M. Pierre Bernard</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+            </svg>
+            <span class="text-gray-700">Début: 01/02/2025</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"/>
+            </svg>
+            <span class="text-gray-700 font-semibold">450 €/mois</span>
+          </div>
+        </div>
+
+        <div class="border-t pt-4 space-y-2 text-xs text-gray-600">
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 000 2h6a1 1 0 100-2H7z" clip-rule="evenodd"/>
+            </svg>
+            <span>Propriétaire: En cours de génération</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 000 2h6a1 1 0 100-2H7z" clip-rule="evenodd"/>
+            </svg>
+            <span>Vous: En attente du bail</span>
+          </div>
+        </div>
+
+        <div class="flex gap-2 mt-4">
+          <%= link_to mockups_tenant_lease_show_path, class: "btn-secondary w-full text-center text-sm" do %>
+            Voir détails
+          <% end %>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Empty State (hidden when there are leases) -->
+    <!-- 
+    <div class="card-olak text-center max-w-md mx-auto">
+      <svg class="w-24 h-24 mx-auto mb-4 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" clip-rule="evenodd"/>
+      </svg>
+      <h3 class="text-xl font-semibold text-gray-600 mb-2">Aucun bail pour le moment</h3>
+      <p class="text-gray-500 mb-6">Vos baux apparaîtront ici après acceptation de votre candidature</p>
+      <%= link_to mockups_tenant_applications_list_path, class: "btn-primary" do %>
+        Voir mes candidatures
+      <% end %>
+    </div>
+    -->
+
+  </div>
+</div>

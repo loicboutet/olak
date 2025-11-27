@@ -1,0 +1,196 @@
+<div class="min-h-screen bg-olak-gray py-8">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Page Header -->
+    <div class="mb-8">
+      <h1 class="text-4xl font-bold text-olak-primary-dark mb-2">Export comptable</h1>
+      <p class="text-gray-600">Exportez les données de paiement pour votre comptabilité</p>
+    </div>
+
+    <!-- Export Form Card -->
+    <div class="card-olak mb-8">
+      <h3 class="text-2xl font-semibold text-olak-dark mb-6">Générer un export</h3>
+      
+      <form class="space-y-6">
+        <!-- Date Range -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-sm font-semibold mb-2 text-olak-dark">
+              Date de début <span class="text-olak-error">*</span>
+            </label>
+            <input type="date" class="input-olak" value="2024-01-01">
+          </div>
+          
+          <div>
+            <label class="block text-sm font-semibold mb-2 text-olak-dark">
+              Date de fin <span class="text-olak-error">*</span>
+            </label>
+            <input type="date" class="input-olak" value="2024-11-18">
+          </div>
+        </div>
+
+        <!-- Format Selection -->
+        <div>
+          <label class="block text-sm font-semibold mb-2 text-olak-dark">
+            Format d'export <span class="text-olak-error">*</span>
+          </label>
+          <div class="space-y-2">
+            <label class="flex items-center cursor-pointer">
+              <input type="radio" name="format" value="csv" class="w-5 h-5 mr-3 accent-olak-primary cursor-pointer" checked>
+              <span class="text-sm text-olak-dark">CSV (Excel compatible)</span>
+            </label>
+            <label class="flex items-center cursor-pointer">
+              <input type="radio" name="format" value="excel" class="w-5 h-5 mr-3 accent-olak-primary cursor-pointer">
+              <span class="text-sm text-olak-dark">Excel (.xlsx)</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Filter Options -->
+        <div>
+          <label class="block text-sm font-semibold mb-2 text-olak-dark">Filtres optionnels</label>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm mb-2 text-gray-600">Zone</label>
+              <select class="input-olak">
+                <option value="">Toutes les zones</option>
+                <option value="paris">Zone tendue - Paris</option>
+                <option value="lyon">Zone tendue - Lyon</option>
+                <option value="marseille">Zone tendue - Marseille</option>
+                <option value="other">Hors zone tendue</option>
+              </select>
+            </div>
+            
+            <div>
+              <label class="block text-sm mb-2 text-gray-600">Statut</label>
+              <select class="input-olak">
+                <option value="">Tous les statuts</option>
+                <option value="completed">Confirmé uniquement</option>
+                <option value="pending">En attente uniquement</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Data Fields -->
+        <div>
+          <label class="block text-sm font-semibold mb-2 text-olak-dark">Champs à inclure</label>
+          <div class="space-y-2">
+            <label class="flex items-center cursor-pointer">
+              <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer" checked>
+              <span class="text-sm text-olak-dark">Identifiant de paiement</span>
+            </label>
+            <label class="flex items-center cursor-pointer">
+              <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer" checked>
+              <span class="text-sm text-olak-dark">Date et heure</span>
+            </label>
+            <label class="flex items-center cursor-pointer">
+              <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer" checked>
+              <span class="text-sm text-olak-dark">Informations propriétaire</span>
+            </label>
+            <label class="flex items-center cursor-pointer">
+              <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer" checked>
+              <span class="text-sm text-olak-dark">Adresse du bien</span>
+            </label>
+            <label class="flex items-center cursor-pointer">
+              <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer" checked>
+              <span class="text-sm text-olak-dark">Montant</span>
+            </label>
+            <label class="flex items-center cursor-pointer">
+              <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer">
+              <span class="text-sm text-olak-dark">Frais Stripe</span>
+            </label>
+            <label class="flex items-center cursor-pointer">
+              <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer">
+              <span class="text-sm text-olak-dark">ID Transaction Stripe</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Info Alert -->
+        <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
+          <div class="flex items-start">
+            <svg class="w-6 h-6 text-blue-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+            </svg>
+            <div>
+              <p class="text-blue-800 font-semibold">Information</p>
+              <p class="text-blue-700 text-sm mt-1">
+                L'export contiendra tous les paiements correspondant aux critères sélectionnés. 
+                Les données sensibles sont protégées selon les normes RGPD.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="flex gap-3">
+          <button type="submit" class="btn-primary flex items-center gap-2">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+            Générer l'export
+          </button>
+          <%= link_to "Annuler", mockups_admin_payments_list_path, class: "btn-secondary" %>
+        </div>
+      </form>
+    </div>
+
+    <!-- Export History -->
+    <div class="card-olak">
+      <h3 class="text-2xl font-semibold text-olak-dark mb-6">Historique des exports</h3>
+      
+      <div class="overflow-x-auto">
+        <table class="min-w-full bg-white rounded-lg overflow-hidden">
+          <thead class="bg-olak-primary-light text-olak-dark">
+            <tr>
+              <th class="px-6 py-4 text-left text-sm font-semibold">Date d'export</th>
+              <th class="px-6 py-4 text-left text-sm font-semibold">Période</th>
+              <th class="px-6 py-4 text-left text-sm font-semibold">Format</th>
+              <th class="px-6 py-4 text-left text-sm font-semibold">Lignes</th>
+              <th class="px-6 py-4 text-left text-sm font-semibold">Actions</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-200">
+            <tr class="hover:bg-olak-gray transition-colors">
+              <td class="px-6 py-4 text-sm text-olak-dark">15/11/2024 10:30</td>
+              <td class="px-6 py-4 text-sm text-gray-600">01/01/2024 - 15/11/2024</td>
+              <td class="px-6 py-4 text-sm"><span class="badge badge-success">CSV</span></td>
+              <td class="px-6 py-4 text-sm text-olak-dark">120 paiements</td>
+              <td class="px-6 py-4">
+                <button class="text-olak-primary hover:text-olak-primary-dark text-sm font-semibold flex items-center gap-1">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                  </svg>
+                  Télécharger
+                </button>
+              </td>
+            </tr>
+            <tr class="hover:bg-olak-gray transition-colors">
+              <td class="px-6 py-4 text-sm text-olak-dark">01/11/2024 09:15</td>
+              <td class="px-6 py-4 text-sm text-gray-600">01/10/2024 - 31/10/2024</td>
+              <td class="px-6 py-4 text-sm"><span class="badge badge-primary">Excel</span></td>
+              <td class="px-6 py-4 text-sm text-olak-dark">35 paiements</td>
+              <td class="px-6 py-4">
+                <button class="text-olak-primary hover:text-olak-primary-dark text-sm font-semibold flex items-center gap-1">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                  </svg>
+                  Télécharger
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Back Button -->
+    <div class="mt-8">
+      <%= link_to mockups_admin_payments_dashboard_path, class: "btn-secondary" do %>
+        ← Retour au tableau de bord
+      <% end %>
+    </div>
+
+  </div>
+</div>

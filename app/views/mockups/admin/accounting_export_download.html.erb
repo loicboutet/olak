@@ -1,0 +1,168 @@
+<div class="min-h-screen bg-olak-gray py-8">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Success Message -->
+    <div class="bg-green-50 border-l-4 border-green-500 p-6 rounded-r-lg mb-8">
+      <div class="flex items-center">
+        <svg class="w-8 h-8 text-green-500 mr-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+        </svg>
+        <div>
+          <p class="text-green-800 font-semibold text-lg">Export comptable prêt au téléchargement !</p>
+          <p class="text-green-700 text-sm mt-1">Le fichier d'export est maintenant disponible.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Download Card -->
+    <div class="card-olak mb-6">
+      <div class="text-center py-8">
+        <!-- File Icon -->
+        <svg class="w-24 h-24 mx-auto mb-6 text-olak-primary" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6z"/>
+          <path d="M14 2v6h6"/>
+          <path d="M9 13h6M9 17h6"/>
+        </svg>
+        
+        <h1 class="text-3xl font-bold text-olak-primary-dark mb-2">export_paiements_2024-01-01_2024-11-15.csv</h1>
+        <p class="text-gray-600 mb-8">Export comptable - 120 paiements</p>
+        
+        <!-- Download Button -->
+        <button class="btn-primary px-8 py-4 text-lg mb-4 flex items-center gap-3 mx-auto">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+          </svg>
+          Télécharger le fichier
+        </button>
+        
+        <p class="text-sm text-gray-500">Taille du fichier: ~85 KB</p>
+      </div>
+    </div>
+
+    <!-- Export Details Card -->
+    <div class="card-olak mb-6">
+      <h2 class="text-xl font-semibold text-olak-dark mb-4 pb-3 border-b border-gray-200">Informations de l'export</h2>
+      
+      <div class="grid grid-cols-2 gap-4 text-sm">
+        <div>
+          <p class="text-gray-600">Date de génération:</p>
+          <p class="font-semibold text-olak-dark">15/11/2024 10:30</p>
+        </div>
+        <div>
+          <p class="text-gray-600">Période couverte:</p>
+          <p class="font-semibold text-olak-dark">01/01/2024 - 15/11/2024</p>
+        </div>
+        <div>
+          <p class="text-gray-600">Format:</p>
+          <p><span class="badge badge-success">CSV</span></p>
+        </div>
+        <div>
+          <p class="text-gray-600">Nombre de lignes:</p>
+          <p class="font-semibold text-olak-dark">120 paiements</p>
+        </div>
+        <div>
+          <p class="text-gray-600">Montant total:</p>
+          <p class="font-semibold text-olak-primary">261 000,00 €</p>
+        </div>
+        <div>
+          <p class="text-gray-600">Encodage:</p>
+          <p class="font-semibold text-olak-dark">UTF-8</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Info Alert -->
+    <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6 rounded-r-lg">
+      <div class="flex items-center">
+        <svg class="w-6 h-6 text-blue-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+        </svg>
+        <div>
+          <p class="text-blue-800 font-semibold">Mockup - Téléchargement simulé</p>
+          <p class="text-blue-700 text-sm mt-1">Dans l'application réelle, un fichier CSV/Excel serait automatiquement téléchargé. Le fichier contiendrait toutes les données de paiement au format comptable standard.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Data Preview -->
+    <div class="card-olak mb-6">
+      <h3 class="text-lg font-semibold text-olak-dark mb-4">Aperçu des données</h3>
+      <p class="text-sm text-gray-600 mb-4">Colonnes incluses dans l'export:</p>
+      
+      <div class="bg-olak-gray p-4 rounded-lg">
+        <ul class="grid grid-cols-2 gap-2 text-sm">
+          <li class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-olak-primary" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            Identifiant de paiement
+          </li>
+          <li class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-olak-primary" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            Date et heure
+          </li>
+          <li class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-olak-primary" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            Informations propriétaire
+          </li>
+          <li class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-olak-primary" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            Adresse du bien
+          </li>
+          <li class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-olak-primary" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            Montant
+          </li>
+          <li class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-olak-primary" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            Zone
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Additional Actions -->
+    <div class="card-olak">
+      <h3 class="text-lg font-semibold text-olak-dark mb-4">Actions supplémentaires</h3>
+      
+      <div class="space-y-3">
+        <button class="w-full btn-secondary flex items-center justify-center gap-2">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+          </svg>
+          Envoyer par email au comptable
+        </button>
+        
+        <button class="w-full btn-secondary flex items-center justify-center gap-2">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M4 2a2 2 0 00-2 2v11a3 3 0 106 0V4a2 2 0 00-2-2H4zm1 14a1 1 0 100-2 1 1 0 000 2zm5-1.757l4.9-4.9a2 2 0 000-2.828L13.485 5.1a2 2 0 00-2.828 0L10 5.757v8.486zM16 18H9.071l6-6H16a2 2 0 012 2v2a2 2 0 01-2 2z" clip-rule="evenodd"/>
+          </svg>
+          Générer un nouvel export
+        </button>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="mt-8 flex gap-4">
+      <%= link_to mockups_admin_accounting_export_path, class: "btn-secondary" do %>
+        ← Retour à la page d'export
+      <% end %>
+      
+      <%= link_to mockups_admin_payments_dashboard_path, class: "btn-secondary" do %>
+        Retour au tableau de bord
+      <% end %>
+    </div>
+
+  </div>
+</div>

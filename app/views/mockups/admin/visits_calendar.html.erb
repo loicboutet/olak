@@ -1,0 +1,304 @@
+<% content_for :title, "Gestion des Visites - Admin OLAK" %>
+
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+  <!-- Page Header -->
+  <div class="mb-8">
+    <div class="flex justify-between items-center">
+      <div>
+        <h1 class="text-4xl font-bold text-olak-primary-dark mb-2">Calendrier des Visites</h1>
+        <p class="text-gray-600">Planifiez et gérez les visites de propriétés</p>
+      </div>
+      <%= link_to mockups_admin_visit_form_path, class: "btn-primary flex items-center gap-2" do %>
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/>
+        </svg>
+        Planifier une visite
+      <% end %>
+    </div>
+  </div>
+
+  <!-- View Toggle & Filters -->
+  <div class="bg-white rounded-xl shadow-md p-6 mb-6">
+    <div class="flex flex-wrap gap-4 items-center justify-between">
+      <!-- View Toggle -->
+      <div class="flex gap-2">
+        <button class="px-4 py-2 bg-olak-primary text-white rounded-lg font-semibold">
+          Semaine
+        </button>
+        <button class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg font-semibold hover:bg-gray-200">
+          Mois
+        </button>
+        <button class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg font-semibold hover:bg-gray-200">
+          Liste
+        </button>
+      </div>
+
+      <!-- Date Navigation -->
+      <div class="flex items-center gap-4">
+        <button class="p-2 hover:bg-gray-100 rounded-lg">
+          <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+          </svg>
+        </button>
+        <span class="text-lg font-semibold text-olak-dark">18 - 24 Novembre 2024</span>
+        <button class="p-2 hover:bg-gray-100 rounded-lg">
+          <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </button>
+        <button class="btn-secondary px-4 py-2 text-sm ml-2">Aujourd'hui</button>
+      </div>
+
+      <!-- Filters -->
+      <div class="flex gap-2">
+        <select class="input-olak px-3 py-2 text-sm">
+          <option>Toutes les propriétés</option>
+          <option>Appartement Paris 15ème</option>
+          <option>Maison Lyon 6ème</option>
+          <option>Chambre Marseille</option>
+        </select>
+        <select class="input-olak px-3 py-2 text-sm">
+          <option>Tous les statuts</option>
+          <option>Planifiées</option>
+          <option>Confirmées</option>
+          <option>Complétées</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Calendar Grid (Week View) -->
+  <div class="bg-white rounded-xl shadow-md mb-6 overflow-hidden">
+    <div class="grid grid-cols-7 border-b border-gray-200">
+      <% %w[Lun Mar Mer Jeu Ven Sam Dim].each do |day| %>
+        <div class="px-4 py-3 text-center font-semibold text-olak-dark bg-olak-primary-light">
+          <%= day %>
+        </div>
+      <% end %>
+    </div>
+    <div class="grid grid-cols-7 divide-x divide-gray-200">
+      <% (18..24).each do |date| %>
+        <div class="min-h-[150px] p-2 bg-white hover:bg-olak-gray transition-colors">
+          <div class="text-right mb-2">
+            <span class="<%= date == 20 ? 'bg-olak-primary text-white px-2 py-1 rounded-full text-sm font-bold' : 'text-gray-600 text-sm' %>">
+              <%= date %>
+            </span>
+          </div>
+          
+          <% if date == 20 %>
+            <!-- Example visit on current day -->
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-2 rounded text-xs mb-1 cursor-pointer hover:bg-blue-100">
+              <div class="font-semibold text-blue-900">10:00</div>
+              <div class="text-blue-800">Appt T3 Paris</div>
+              <div class="text-blue-600">M. Martin</div>
+            </div>
+          <% elsif date == 22 %>
+            <!-- Example visit on Friday -->
+            <div class="bg-green-50 border-l-4 border-green-500 p-2 rounded text-xs mb-1 cursor-pointer hover:bg-green-100">
+              <div class="font-semibold text-green-900">14:30</div>
+              <div class="text-green-800">Maison Lyon</div>
+              <div class="text-green-600">Mme Dubois</div>
+            </div>
+            <div class="bg-purple-50 border-l-4 border-purple-500 p-2 rounded text-xs cursor-pointer hover:bg-purple-100">
+              <div class="font-semibold text-purple-900">16:00</div>
+              <div class="text-purple-800">Chambre Marseille</div>
+              <div class="text-purple-600">M. Petit</div>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <!-- Upcoming Visits List -->
+  <div class="mb-6">
+    <h2 class="text-2xl font-bold text-olak-primary-dark mb-4">Visites à venir</h2>
+    
+    <div class="space-y-4">
+      <!-- Visit Card 1 -->
+      <div class="card-olak hover:shadow-lg transition-shadow">
+        <div class="flex justify-between items-start mb-4">
+          <div class="flex items-start gap-4">
+            <div class="bg-blue-100 text-blue-800 rounded-lg p-3 text-center">
+              <div class="text-2xl font-bold">20</div>
+              <div class="text-xs">NOV</div>
+            </div>
+            <div>
+              <h3 class="font-bold text-xl text-olak-primary-dark mb-1">Appartement T3 - Paris 15ème</h3>
+              <div class="text-sm text-gray-600 space-y-1">
+                <div class="flex items-center gap-2">
+                  <svg class="w-4 h-4 text-olak-primary" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Mercredi 20 Novembre 2024 à 10:00</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <svg class="w-4 h-4 text-olak-primary" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>45 Avenue des Champs-Élysées, 75008 Paris</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <svg class="w-4 h-4 text-olak-primary" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
+                  </svg>
+                  <span>Marie Martin • marie.martin@example.olak.fr • 06 98 76 54 32</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="badge badge-success">Confirmée</span>
+          </div>
+        </div>
+        <div class="bg-olak-gray p-3 rounded-lg mb-4">
+          <p class="text-sm text-gray-700"><strong>Note:</strong> Candidat très intéressé, a déjà visité 2 autres biens</p>
+        </div>
+        <div class="flex gap-2">
+          <%= link_to mockups_admin_visit_edit_path, class: "btn-secondary px-4 py-2 text-sm flex items-center gap-2" do %>
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"/>
+            </svg>
+            Modifier
+          <% end %>
+          <button class="btn-secondary px-4 py-2 text-sm">Envoyer rappel</button>
+          <button class="px-4 py-2 border border-red-500 text-red-600 rounded-lg font-semibold hover:bg-red-50 text-sm">Annuler</button>
+        </div>
+      </div>
+
+      <!-- Visit Card 2 -->
+      <div class="card-olak hover:shadow-lg transition-shadow">
+        <div class="flex justify-between items-start mb-4">
+          <div class="flex items-start gap-4">
+            <div class="bg-green-100 text-green-800 rounded-lg p-3 text-center">
+              <div class="text-2xl font-bold">22</div>
+              <div class="text-xs">NOV</div>
+            </div>
+            <div>
+              <h3 class="font-bold text-xl text-olak-primary-dark mb-1">Maison T5 - Lyon 6ème</h3>
+              <div class="text-sm text-gray-600 space-y-1">
+                <div class="flex items-center gap-2">
+                  <svg class="w-4 h-4 text-olak-primary" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Vendredi 22 Novembre 2024 à 14:30</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <svg class="w-4 h-4 text-olak-primary" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>78 Rue de la République, 69006 Lyon</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <svg class="w-4 h-4 text-olak-primary" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
+                  </svg>
+                  <span>Sophie Dubois • sophie.dubois@example.olak.fr • 06 12 34 56 78</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="badge badge-pending">Planifiée</span>
+          </div>
+        </div>
+        <div class="bg-olak-gray p-3 rounded-lg mb-4">
+          <p class="text-sm text-gray-700"><strong>Note:</strong> Première visite, famille avec 2 enfants</p>
+        </div>
+        <div class="flex gap-2">
+          <%= link_to mockups_admin_visit_edit_path, class: "btn-secondary px-4 py-2 text-sm flex items-center gap-2" do %>
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"/>
+            </svg>
+            Modifier
+          <% end %>
+          <button class="btn-secondary px-4 py-2 text-sm">Envoyer rappel</button>
+          <button class="px-4 py-2 border border-red-500 text-red-600 rounded-lg font-semibold hover:bg-red-50 text-sm">Annuler</button>
+        </div>
+      </div>
+
+      <!-- Visit Card 3 -->
+      <div class="card-olak hover:shadow-lg transition-shadow">
+        <div class="flex justify-between items-start mb-4">
+          <div class="flex items-start gap-4">
+            <div class="bg-purple-100 text-purple-800 rounded-lg p-3 text-center">
+              <div class="text-2xl font-bold">22</div>
+              <div class="text-xs">NOV</div>
+            </div>
+            <div>
+              <h3 class="font-bold text-xl text-olak-primary-dark mb-1">Chambre Meublée - Marseille</h3>
+              <div class="text-sm text-gray-600 space-y-1">
+                <div class="flex items-center gap-2">
+                  <svg class="w-4 h-4 text-olak-primary" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Vendredi 22 Novembre 2024 à 16:00</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <svg class="w-4 h-4 text-olak-primary" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>12 Boulevard Longchamp, 13001 Marseille</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <svg class="w-4 h-4 text-olak-primary" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
+                  </svg>
+                  <span>Thomas Petit • thomas.petit@example.olak.fr • 07 45 67 89 01</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="badge badge-pending">Planifiée</span>
+          </div>
+        </div>
+        <div class="bg-olak-gray p-3 rounded-lg mb-4">
+          <p class="text-sm text-gray-700"><strong>Note:</strong> Étudiant en master, recherche logement proche faculté</p>
+        </div>
+        <div class="flex gap-2">
+          <%= link_to mockups_admin_visit_edit_path, class: "btn-secondary px-4 py-2 text-sm flex items-center gap-2" do %>
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"/>
+            </svg>
+            Modifier
+          <% end %>
+          <button class="btn-secondary px-4 py-2 text-sm">Envoyer rappel</button>
+          <button class="px-4 py-2 border border-red-500 text-red-600 rounded-lg font-semibold hover:bg-red-50 text-sm">Annuler</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stats Summary -->
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+    <div class="card-olak text-center">
+      <svg class="w-12 h-12 mx-auto mb-3 text-olak-primary" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+      </svg>
+      <p class="font-bold text-2xl text-olak-dark mb-1">8</p>
+      <p class="text-sm text-gray-600">Visites cette semaine</p>
+    </div>
+    <div class="card-olak text-center">
+      <svg class="w-12 h-12 mx-auto mb-3 text-olak-success" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+      </svg>
+      <p class="font-bold text-2xl text-olak-dark mb-1">5</p>
+      <p class="text-sm text-gray-600">Confirmées</p>
+    </div>
+    <div class="card-olak text-center">
+      <svg class="w-12 h-12 mx-auto mb-3 text-olak-warning" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+      </svg>
+      <p class="font-bold text-2xl text-olak-dark mb-1">3</p>
+      <p class="text-sm text-gray-600">En attente</p>
+    </div>
+    <div class="card-olak text-center">
+      <svg class="w-12 h-12 mx-auto mb-3 text-olak-primary-dark" fill="currentColor" viewBox="0 0 20 20">
+        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+      </svg>
+      <p class="font-bold text-2xl text-olak-dark mb-1">12</p>
+      <p class="text-sm text-gray-600">Propriétés actives</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,351 @@
+<% content_for :title, "CV Locatif - OLAK" %>
+
+<div class="min-h-screen bg-olak-gray py-8">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Header Section -->
+    <div class="bg-white rounded-xl shadow-md p-8 mb-6 text-center">
+      <%= image_tag 'logo_olak.png', alt: 'OLAK', class: 'h-12 mx-auto mb-4' %>
+      <h1 class="text-5xl font-bold text-olak-primary-dark mb-2">CV Locatif</h1>
+      <p class="text-lg text-gray-600 mb-4">Dossier de candidature locative</p>
+      <div class="inline-flex items-center gap-2 px-4 py-2 bg-olak-gray rounded-full">
+        <svg class="w-4 h-4 text-olak-primary" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/>
+        </svg>
+        <span class="text-xs text-gray-600 font-medium">Lien sécurisé • Token: <%= @token %></span>
+      </div>
+    </div>
+
+    <!-- Personal Information Card -->
+    <div class="card-olak mb-6">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-3xl font-bold text-olak-primary-dark">Informations personnelles</h2>
+        <span class="badge badge-success">Profil vérifié</span>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <div class="mb-4">
+            <h3 class="text-2xl font-bold text-olak-dark mb-1">Sophie Dubois</h3>
+            <p class="text-sm text-gray-600">31 ans • Née le 15 mars 1992</p>
+          </div>
+          
+          <div class="space-y-3">
+            <div class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-olak-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+              </svg>
+              <div>
+                <p class="text-sm font-semibold text-olak-dark">sophie.dubois@example.fr</p>
+                <p class="text-xs text-gray-500">Email</p>
+              </div>
+            </div>
+            
+            <div class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-olak-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+              </svg>
+              <div>
+                <p class="text-sm font-semibold text-olak-dark">06 45 67 89 12</p>
+                <p class="text-xs text-gray-500">Téléphone</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div>
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-olak-primary flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+            </svg>
+            <div>
+              <p class="text-sm font-semibold text-olak-dark mb-1">Adresse actuelle</p>
+              <p class="text-sm text-gray-600">12 Rue Victor Hugo</p>
+              <p class="text-sm text-gray-600">75016 Paris</p>
+              <p class="text-xs text-gray-500 mt-2">Locataire depuis 2 ans</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Employment Details Card -->
+    <div class="card-olak mb-6">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-3xl font-bold text-olak-primary-dark">Situation professionnelle</h2>
+        <span class="badge badge-success">CDI</span>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="space-y-4">
+          <div>
+            <p class="text-sm font-semibold text-gray-600 mb-1">Employeur</p>
+            <p class="text-lg font-bold text-olak-dark">Tech Solutions SAS</p>
+          </div>
+          
+          <div>
+            <p class="text-sm font-semibold text-gray-600 mb-1">Poste</p>
+            <p class="text-lg font-semibold text-olak-dark">Développeuse Full Stack</p>
+          </div>
+          
+          <div>
+            <p class="text-sm font-semibold text-gray-600 mb-1">Type de contrat</p>
+            <p class="text-base text-olak-dark">CDI - Temps plein</p>
+          </div>
+        </div>
+        
+        <div class="space-y-4">
+          <div>
+            <p class="text-sm font-semibold text-gray-600 mb-1">Salaire net mensuel</p>
+            <p class="text-2xl font-bold text-olak-primary">3 200 €</p>
+            <p class="text-xs text-gray-500">Hors primes et avantages</p>
+          </div>
+          
+          <div>
+            <p class="text-sm font-semibold text-gray-600 mb-1">Ancienneté</p>
+            <p class="text-base text-olak-dark">Depuis juin 2020 (4 ans)</p>
+          </div>
+          
+          <div class="bg-green-50 border-l-4 border-green-500 p-3 rounded-r">
+            <div class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <p class="text-sm font-semibold text-green-800">Stabilité professionnelle excellente</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Guarantor Information Card -->
+    <div class="card-olak mb-6">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-3xl font-bold text-olak-primary-dark">Garant</h2>
+        <span class="badge badge-furnished">Personne physique</span>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="space-y-4">
+          <div>
+            <p class="text-sm font-semibold text-gray-600 mb-1">Nom du garant</p>
+            <p class="text-lg font-bold text-olak-dark">Marie Dubois</p>
+          </div>
+          
+          <div>
+            <p class="text-sm font-semibold text-gray-600 mb-1">Lien de parenté</p>
+            <p class="text-base text-olak-dark">Mère</p>
+          </div>
+          
+          <div>
+            <p class="text-sm font-semibold text-gray-600 mb-1">Situation professionnelle</p>
+            <p class="text-base text-olak-dark">Retraitée de la fonction publique</p>
+          </div>
+        </div>
+        
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <svg class="w-5 h-5 text-olak-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+              <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+            </svg>
+            <div>
+              <p class="text-sm font-semibold text-olak-dark">marie.dubois@example.fr</p>
+              <p class="text-xs text-gray-500">Email</p>
+            </div>
+          </div>
+          
+          <div class="flex items-center gap-3">
+            <svg class="w-5 h-5 text-olak-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+            </svg>
+            <div>
+              <p class="text-sm font-semibold text-olak-dark">06 12 34 56 78</p>
+              <p class="text-xs text-gray-500">Téléphone</p>
+            </div>
+          </div>
+          
+          <div class="bg-blue-50 border-l-4 border-blue-500 p-3 rounded-r">
+            <p class="text-sm text-blue-800"><strong>Note:</strong> Documents du garant disponibles et vérifiés</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Document Verification Status Card -->
+    <div class="card-olak mb-6">
+      <h2 class="text-3xl font-bold text-olak-primary-dark mb-6">Documents fournis et vérifiés</h2>
+      
+      <div class="space-y-3">
+        <!-- Document Item: Identity Card -->
+        <div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+          <div class="flex items-center gap-4">
+            <svg class="w-8 h-8 text-olak-success" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <div>
+              <p class="font-semibold text-olak-dark">Pièce d'identité</p>
+              <p class="text-sm text-gray-600">Carte nationale d'identité</p>
+            </div>
+          </div>
+          <span class="badge badge-success">Vérifié</span>
+        </div>
+        
+        <!-- Document Item: Employment Contract -->
+        <div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+          <div class="flex items-center gap-4">
+            <svg class="w-8 h-8 text-olak-success" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <div>
+              <p class="font-semibold text-olak-dark">Contrat de travail</p>
+              <p class="text-sm text-gray-600">CDI à durée indéterminée</p>
+            </div>
+          </div>
+          <span class="badge badge-success">Vérifié</span>
+        </div>
+        
+        <!-- Document Item: Pay Slips -->
+        <div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+          <div class="flex items-center gap-4">
+            <svg class="w-8 h-8 text-olak-success" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <div>
+              <p class="font-semibold text-olak-dark">Bulletins de salaire</p>
+              <p class="text-sm text-gray-600">3 derniers mois (Sept, Oct, Nov 2024)</p>
+            </div>
+          </div>
+          <span class="badge badge-success">Vérifié</span>
+        </div>
+        
+        <!-- Document Item: Tax Notice -->
+        <div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+          <div class="flex items-center gap-4">
+            <svg class="w-8 h-8 text-olak-success" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <div>
+              <p class="font-semibold text-olak-dark">Avis d'imposition</p>
+              <p class="text-sm text-gray-600">Année 2023</p>
+            </div>
+          </div>
+          <span class="badge badge-success">Vérifié</span>
+        </div>
+        
+        <!-- Document Item: Bank Details -->
+        <div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+          <div class="flex items-center gap-4">
+            <svg class="w-8 h-8 text-olak-success" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <div>
+              <p class="font-semibold text-olak-dark">RIB (Relevé d'Identité Bancaire)</p>
+              <p class="text-sm text-gray-600">Compte bancaire principal</p>
+            </div>
+          </div>
+          <span class="badge badge-success">Vérifié</span>
+        </div>
+        
+        <!-- Document Item: Guarantor Documents -->
+        <div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+          <div class="flex items-center gap-4">
+            <svg class="w-8 h-8 text-olak-success" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <div>
+              <p class="font-semibold text-olak-dark">Documents du garant</p>
+              <p class="text-sm text-gray-600">Pièce d'identité, justificatif de revenus</p>
+            </div>
+          </div>
+          <span class="badge badge-success">Vérifié</span>
+        </div>
+      </div>
+      
+      <!-- Verification Summary -->
+      <div class="mt-6 bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg">
+        <div class="flex items-center">
+          <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          <div>
+            <p class="text-green-800 font-semibold">Dossier complet et vérifié</p>
+            <p class="text-green-700 text-sm mt-1">Tous les documents ont été vérifiés par l'équipe OLAK le 19 novembre 2024</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Additional Information Card -->
+    <div class="card-olak mb-6">
+      <h2 class="text-2xl font-bold text-olak-primary-dark mb-4">Informations complémentaires</h2>
+      
+      <div class="space-y-4">
+        <div class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-olak-primary flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+          </svg>
+          <div>
+            <p class="font-semibold text-olak-dark mb-1">Recherche de logement</p>
+            <p class="text-sm text-gray-600">2-3 pièces • Budget: 1 000 - 1 400 € charges comprises</p>
+            <p class="text-sm text-gray-600">Zones recherchées: Paris 15ème, 16ème, Boulogne-Billancourt</p>
+          </div>
+        </div>
+        
+        <div class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-olak-primary flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+            <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"/>
+          </svg>
+          <div>
+            <p class="font-semibold text-olak-dark mb-1">Disponibilité</p>
+            <p class="text-sm text-gray-600">Disponible à partir du 1er février 2025</p>
+            <p class="text-sm text-gray-600">Préavis de 3 mois en cours (fin: 31 janvier 2025)</p>
+          </div>
+        </div>
+        
+        <div class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-olak-primary flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M10 3.5a1.5 1.5 0 013 0V4a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-.5a1.5 1.5 0 000 3h.5a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-.5a1.5 1.5 0 00-3 0v.5a1 1 0 01-1 1H6a1 1 0 01-1-1v-3a1 1 0 00-1-1h-.5a1.5 1.5 0 010-3H4a1 1 0 001-1V6a1 1 0 011-1h3a1 1 0 001-1v-.5z"/>
+          </svg>
+          <div>
+            <p class="font-semibold text-olak-dark mb-1">Animaux de compagnie</p>
+            <p class="text-sm text-gray-600">Aucun animal</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="bg-white rounded-xl shadow-md p-6 text-center">
+      <div class="mb-4">
+        <p class="text-sm text-gray-600 mb-2">
+          <svg class="w-4 h-4 inline mr-1 text-olak-primary" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+          </svg>
+          CV généré le 19 novembre 2024 à 22:30
+        </p>
+        <p class="text-xs text-gray-500">Ce lien sécurisé est valable 30 jours</p>
+      </div>
+      
+      <div class="border-t border-gray-200 pt-4">
+        <p class="text-sm font-semibold text-olak-primary-dark mb-2">Plateforme OLAK</p>
+        <p class="text-xs text-gray-600 mb-3">Solution de gestion locative professionnelle</p>
+        
+        <div class="flex items-center justify-center gap-2 text-xs text-gray-500">
+          <svg class="w-4 h-4 text-olak-primary" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/>
+          </svg>
+          <span>Données confidentielles • Accès sécurisé</span>
+        </div>
+      </div>
+      
+      <div class="mt-4 text-xs text-gray-500">
+        <p>Les informations présentées dans ce CV locatif ont été vérifiées par OLAK.</p>
+        <p class="mt-1">Ce document est strictement confidentiel et réservé aux propriétaires inscrits.</p>
+      </div>
+    </div>
+    
+  </div>
+</div>

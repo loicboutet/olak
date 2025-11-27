@@ -1,0 +1,195 @@
+<% content_for :title, "Créer un propriétaire - OLAK Admin" %>
+
+<div class="space-y-6">
+  <!-- Breadcrumb -->
+  <nav class="flex mb-6" aria-label="Breadcrumb">
+    <ol class="flex items-center space-x-2 text-sm">
+      <li>
+        <%= link_to mockups_admin_dashboard_path, class: "text-gray-500 hover:text-purple-700" do %>
+          Tableau de bord
+        <% end %>
+      </li>
+      <li><span class="text-gray-400">/</span></li>
+      <li>
+        <%= link_to mockups_admin_owners_list_path, class: "text-gray-500 hover:text-purple-700" do %>
+          Propriétaires
+        <% end %>
+      </li>
+      <li><span class="text-gray-400">/</span></li>
+      <li><span class="text-purple-700 font-semibold">Créer</span></li>
+    </ol>
+  </nav>
+
+  <!-- Page Header -->
+  <div>
+    <h1 class="text-3xl font-bold text-olak-primary-dark">Créer un propriétaire</h1>
+    <p class="text-gray-600 mt-2">Créez manuellement un compte propriétaire avec toutes les informations nécessaires</p>
+  </div>
+
+  <!-- Info Alert -->
+  <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
+    <div class="flex items-center">
+      <svg class="w-6 h-6 text-blue-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+      </svg>
+      <p class="text-blue-800 font-semibold">Les champs marqués d'un astérisque (*) sont obligatoires</p>
+    </div>
+  </div>
+
+  <form class="space-y-6">
+    <!-- Personal Information Section -->
+    <div class="bg-white rounded-xl p-6 shadow-md">
+      <h2 class="text-xl font-bold text-olak-primary-dark mb-6 pb-4 border-b-2 border-purple-100">
+        <svg class="w-6 h-6 inline-block mr-2 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
+        </svg>
+        Informations Personnelles
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label class="block text-sm font-semibold mb-2 text-olak-dark">
+            Prénom <span class="text-red-600">*</span>
+          </label>
+          <input type="text" name="first_name" required class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg text-base transition-all duration-300 focus:outline-none focus:border-purple-600 focus:ring-4 focus:ring-purple-600/10" placeholder="Jean">
+        </div>
+
+        <div>
+          <label class="block text-sm font-semibold mb-2 text-olak-dark">
+            Nom <span class="text-red-600">*</span>
+          </label>
+          <input type="text" name="last_name" required class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg text-base transition-all duration-300 focus:outline-none focus:border-purple-600 focus:ring-4 focus:ring-purple-600/10" placeholder="Dupont">
+        </div>
+
+        <div>
+          <label class="block text-sm font-semibold mb-2 text-olak-dark">
+            Email <span class="text-red-600">*</span>
+          </label>
+          <input type="email" name="email" required class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg text-base transition-all duration-300 focus:outline-none focus:border-purple-600 focus:ring-4 focus:ring-purple-600/10" placeholder="jean.dupont@example.fr">
+        </div>
+
+        <div>
+          <label class="block text-sm font-semibold mb-2 text-olak-dark">
+            Téléphone <span class="text-red-600">*</span>
+          </label>
+          <input type="tel" name="phone" required class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg text-base transition-all duration-300 focus:outline-none focus:border-purple-600 focus:ring-4 focus:ring-purple-600/10" placeholder="06 12 34 56 78">
+        </div>
+
+        <div class="md:col-span-2">
+          <label class="block text-sm font-semibold mb-2 text-olak-dark">
+            Adresse <span class="text-red-600">*</span>
+          </label>
+          <input type="text" name="address" required class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg text-base transition-all duration-300 focus:outline-none focus:border-purple-600 focus:ring-4 focus:ring-purple-600/10" placeholder="123 Rue de la Paix">
+        </div>
+
+        <div>
+          <label class="block text-sm font-semibold mb-2 text-olak-dark">
+            Code postal <span class="text-red-600">*</span>
+          </label>
+          <input type="text" name="postal_code" required class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg text-base transition-all duration-300 focus:outline-none focus:border-purple-600 focus:ring-4 focus:ring-purple-600/10" placeholder="75002">
+        </div>
+
+        <div>
+          <label class="block text-sm font-semibold mb-2 text-olak-dark">
+            Ville <span class="text-red-600">*</span>
+          </label>
+          <input type="text" name="city" required class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg text-base transition-all duration-300 focus:outline-none focus:border-purple-600 focus:ring-4 focus:ring-purple-600/10" placeholder="Paris">
+        </div>
+      </div>
+    </div>
+
+    <!-- Company Information Section (Optional) -->
+    <div class="bg-white rounded-xl p-6 shadow-md">
+      <h2 class="text-xl font-bold text-olak-primary-dark mb-6 pb-4 border-b-2 border-purple-100">
+        <svg class="w-6 h-6 inline-block mr-2 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-2a1 1 0 00-1-1H9a1 1 0 00-1 1v2a1 1 0 01-1 1H4a1 1 0 110-2V4zm3 1h2v2H7V5zm2 4H7v2h2V9zm2-4h2v2h-2V5zm2 4h-2v2h2V9z" clip-rule="evenodd"/>
+        </svg>
+        Informations Société (Optionnel)
+      </h2>
+
+      <div class="mb-6">
+        <label class="flex items-center cursor-pointer">
+          <input type="checkbox" id="has_company" class="w-5 h-5 mr-3 accent-purple-600 rounded cursor-pointer">
+          <span class="text-sm font-semibold text-olak-dark">Ce propriétaire représente une société</span>
+        </label>
+      </div>
+
+      <div id="company_fields" class="grid grid-cols-1 md:grid-cols-2 gap-6 opacity-50">
+        <div>
+          <label class="block text-sm font-semibold mb-2 text-olak-dark">
+            Nom de la société
+          </label>
+          <input type="text" name="company_name" class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg text-base transition-all duration-300 focus:outline-none focus:border-purple-600 focus:ring-4 focus:ring-purple-600/10" placeholder="ABC Immobilier SARL" disabled>
+        </div>
+
+        <div>
+          <label class="block text-sm font-semibold mb-2 text-olak-dark">
+            SIRET
+          </label>
+          <input type="text" name="siret" class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg text-base transition-all duration-300 focus:outline-none focus:border-purple-600 focus:ring-4 focus:ring-purple-600/10" placeholder="123 456 789 00012" disabled>
+        </div>
+
+        <div class="md:col-span-2">
+          <label class="block text-sm font-semibold mb-2 text-olak-dark">
+            Adresse du siège social
+          </label>
+          <input type="text" name="company_address" class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg text-base transition-all duration-300 focus:outline-none focus:border-purple-600 focus:ring-4 focus:ring-purple-600/10" placeholder="45 Avenue de l'Opéra, 75002 Paris" disabled>
+        </div>
+      </div>
+    </div>
+
+    <!-- Document Upload Section -->
+    <div class="bg-white rounded-xl p-6 shadow-md">
+      <h2 class="text-xl font-bold text-olak-primary-dark mb-6 pb-4 border-b-2 border-purple-100">
+        <svg class="w-6 h-6 inline-block mr-2 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" clip-rule="evenodd"/>
+        </svg>
+        Documents
+      </h2>
+
+      <div class="space-y-4">
+        <div>
+          <label class="block text-sm font-semibold mb-2 text-olak-dark">
+            Pièce d'identité <span class="text-red-600">*</span>
+          </label>
+          <div class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-purple-600 transition-all duration-300 cursor-pointer">
+            <svg class="mx-auto mb-3 w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+            </svg>
+            <p class="text-sm text-gray-600 mb-2">Glissez votre fichier ici ou cliquez pour sélectionner</p>
+            <p class="text-xs text-gray-500">PDF, JPG, PNG - Max 10MB</p>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-sm font-semibold mb-2 text-olak-dark">
+            Justificatif de domicile <span class="text-red-600">*</span>
+          </label>
+          <div class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-purple-600 transition-all duration-300 cursor-pointer">
+            <svg class="mx-auto mb-3 w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+            </svg>
+            <p class="text-sm text-gray-600 mb-2">Glissez votre fichier ici ou cliquez pour sélectionner</p>
+            <p class="text-xs text-gray-500">PDF, JPG, PNG - Max 10MB</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="flex justify-between items-center">
+      <%= link_to mockups_admin_owners_list_path, class: "bg-gray-100 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition-colors" do %>
+        Annuler
+      <% end %>
+      
+      <div class="flex gap-3">
+        <button type="button" class="bg-white text-purple-700 px-6 py-3 rounded-lg font-semibold border-2 border-purple-700 transition-all duration-300 hover:bg-purple-50">
+          Enregistrer comme brouillon
+        </button>
+        <button type="submit" class="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-purple-700 hover:-translate-y-0.5 hover:shadow-lg">
+          Créer le propriétaire
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

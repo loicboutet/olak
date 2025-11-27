@@ -1,0 +1,333 @@
+<% content_for :title, "Modifier une Visite - Admin OLAK" %>
+
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+  <!-- Page Header -->
+  <div class="mb-8">
+    <div class="flex items-center gap-4 mb-4">
+      <%= link_to mockups_admin_visits_calendar_path, class: "text-olak-primary hover:text-olak-primary-dark" do %>
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+      <% end %>
+      <div>
+        <h1 class="text-4xl font-bold text-olak-primary-dark">Modifier la Visite</h1>
+        <p class="text-gray-600 mt-1">Modifiez les détails de la visite planifiée</p>
+      </div>
+    </div>
+    
+    <!-- Visit Status Badge -->
+    <div class="flex items-center gap-3">
+      <span class="badge badge-success">Confirmée</span>
+      <span class="text-sm text-gray-600">Créée le 15 novembre 2024</span>
+    </div>
+  </div>
+
+  <!-- Form Card -->
+  <div class="bg-white rounded-xl shadow-md p-8">
+    <%= form_with url: "#", method: :patch, class: "space-y-6" do |form| %>
+      
+      <!-- Property Selection -->
+      <div>
+        <h2 class="text-2xl font-semibold text-olak-dark mb-4 pb-2 border-b border-olak-primary-light">
+          1. Propriété
+        </h2>
+        <div>
+          <label class="block text-sm font-semibold mb-2 text-olak-dark">
+            Propriété <span class="text-olak-error">*</span>
+          </label>
+          <select class="input-olak" required>
+            <option value="">Sélectionnez une propriété...</option>
+            <option value="1" selected>Appartement T3 - 45 Avenue des Champs-Élysées, 75008 Paris (Jean Dupont)</option>
+            <option value="2">Maison T5 - 78 Rue de la République, 69006 Lyon (Marie Martin)</option>
+            <option value="3">Chambre Meublée - 12 Boulevard Longchamp, 13001 Marseille (Pierre Bernard)</option>
+            <option value="4">Appartement T2 - 33 Rue de Rivoli, 75001 Paris (Sophie Dubois)</option>
+          </select>
+          <p class="text-xs text-gray-500 mt-1">Sélectionnez le bien à faire visiter</p>
+        </div>
+
+        <!-- Property Details Preview -->
+        <div class="mt-4 bg-olak-gray p-4 rounded-lg">
+          <h3 class="font-semibold text-olak-dark mb-2">Détails de la propriété</h3>
+          <div class="grid grid-cols-2 gap-4 text-sm">
+            <div>
+              <span class="text-gray-600">Type:</span>
+              <span class="font-semibold ml-2">Appartement T3</span>
+            </div>
+            <div>
+              <span class="text-gray-600">Surface:</span>
+              <span class="font-semibold ml-2">65 m²</span>
+            </div>
+            <div>
+              <span class="text-gray-600">Loyer:</span>
+              <span class="font-semibold ml-2">1 500 €/mois</span>
+            </div>
+            <div>
+              <span class="text-gray-600">Propriétaire:</span>
+              <span class="font-semibold ml-2">Jean Dupont</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tenant Selection -->
+      <div>
+        <h2 class="text-2xl font-semibold text-olak-dark mb-4 pb-2 border-b border-olak-primary-light">
+          2. Candidat
+        </h2>
+        <div>
+          <label class="block text-sm font-semibold mb-2 text-olak-dark">
+            Candidat <span class="text-olak-error">*</span>
+          </label>
+          <select class="input-olak" required>
+            <option value="">Sélectionnez un candidat...</option>
+            <option value="1" selected>Marie Martin - marie.martin@example.olak.fr - 06 98 76 54 32</option>
+            <option value="2">Sophie Dubois - sophie.dubois@example.olak.fr - 06 12 34 56 78</option>
+            <option value="3">Thomas Petit - thomas.petit@example.olak.fr - 07 45 67 89 01</option>
+            <option value="4">Lucas Bernard - lucas.bernard@example.olak.fr - 06 23 45 67 89</option>
+          </select>
+          <p class="text-xs text-gray-500 mt-1">Sélectionnez le locataire potentiel pour la visite</p>
+        </div>
+
+        <!-- Tenant Details Preview -->
+        <div class="mt-4 bg-olak-gray p-4 rounded-lg">
+          <h3 class="font-semibold text-olak-dark mb-2">Profil du candidat</h3>
+          <div class="grid grid-cols-2 gap-4 text-sm">
+            <div>
+              <span class="text-gray-600">Situation:</span>
+              <span class="font-semibold ml-2">CDI</span>
+            </div>
+            <div>
+              <span class="text-gray-600">Salaire:</span>
+              <span class="font-semibold ml-2">2 500 €/mois</span>
+            </div>
+            <div>
+              <span class="text-gray-600">Garantie:</span>
+              <span class="font-semibold ml-2">Visale</span>
+            </div>
+            <div>
+              <span class="text-gray-600">Documents:</span>
+              <span class="badge badge-success text-xs">Validés</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Date & Time -->
+      <div>
+        <h2 class="text-2xl font-semibold text-olak-dark mb-4 pb-2 border-b border-olak-primary-light">
+          3. Date et Heure de la Visite
+        </h2>
+        
+        <!-- Warning if rescheduling -->
+        <div class="bg-orange-50 border-l-4 border-orange-500 p-4 rounded-r-lg mb-4">
+          <div class="flex items-center">
+            <svg class="w-6 h-6 text-orange-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+            </svg>
+            <div>
+              <p class="text-orange-800 font-semibold">Attention</p>
+              <p class="text-orange-700 text-sm mt-1">
+                Si vous modifiez la date ou l'heure, un email de notification sera envoyé automatiquement au candidat et au propriétaire.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-sm font-semibold mb-2 text-olak-dark">
+              Date <span class="text-olak-error">*</span>
+            </label>
+            <input type="date" class="input-olak" required value="2024-11-20">
+            <p class="text-xs text-gray-500 mt-1">Choisissez la date de la visite</p>
+          </div>
+
+          <div>
+            <label class="block text-sm font-semibold mb-2 text-olak-dark">
+              Heure <span class="text-olak-error">*</span>
+            </label>
+            <input type="time" class="input-olak" required value="10:00">
+            <p class="text-xs text-gray-500 mt-1">Heure de début de la visite</p>
+          </div>
+        </div>
+
+        <div class="mt-4">
+          <label class="block text-sm font-semibold mb-2 text-olak-dark">
+            Durée estimée
+          </label>
+          <select class="input-olak">
+            <option value="30">30 minutes</option>
+            <option value="45" selected>45 minutes</option>
+            <option value="60">1 heure</option>
+            <option value="90">1 heure 30</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Location Details -->
+      <div>
+        <h2 class="text-2xl font-semibold text-olak-dark mb-4 pb-2 border-b border-olak-primary-light">
+          4. Détails du Rendez-vous
+        </h2>
+        <div class="space-y-4">
+          <div>
+            <label class="block text-sm font-semibold mb-2 text-olak-dark">
+              Lieu de rendez-vous
+            </label>
+            <input type="text" class="input-olak" 
+                   placeholder="Devant le bâtiment, hall d'entrée, etc." 
+                   value="Devant l'entrée principale du bâtiment">
+            <p class="text-xs text-gray-500 mt-1">Précisez où vous donnerez rendez-vous au candidat</p>
+          </div>
+
+          <div>
+            <label class="block text-sm font-semibold mb-2 text-olak-dark">
+              Code d'accès / Détails d'accès
+            </label>
+            <input type="text" class="input-olak" placeholder="Code porte, interphone, étage..." value="Code porte: 4567A">
+            <p class="text-xs text-gray-500 mt-1">Instructions pour accéder au bien (optionnel)</p>
+          </div>
+
+          <div>
+            <label class="block text-sm font-semibold mb-2 text-olak-dark">
+              Notes internes
+            </label>
+            <textarea class="input-olak" rows="4" 
+                      placeholder="Informations complémentaires, points à présenter, questions à poser...">Candidat très intéressé, a déjà visité 2 autres biens. Insister sur la luminosité et l'emplacement.</textarea>
+            <p class="text-xs text-gray-500 mt-1">Ces notes sont visibles uniquement par l'équipe OLAK</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Visit Status -->
+      <div>
+        <h2 class="text-2xl font-semibold text-olak-dark mb-4 pb-2 border-b border-olak-primary-light">
+          5. Statut de la Visite
+        </h2>
+        <div>
+          <label class="block text-sm font-semibold mb-2 text-olak-dark">
+            Statut
+          </label>
+          <select class="input-olak">
+            <option value="scheduled">Planifiée</option>
+            <option value="confirmed" selected>Confirmée</option>
+            <option value="completed">Complétée</option>
+            <option value="cancelled">Annulée</option>
+            <option value="no_show">Candidat absent</option>
+          </select>
+          <p class="text-xs text-gray-500 mt-1">Mettez à jour le statut selon l'état de la visite</p>
+        </div>
+
+        <!-- Completion Notes (shown if status is completed) -->
+        <div class="mt-4">
+          <label class="block text-sm font-semibold mb-2 text-olak-dark">
+            Compte-rendu de visite <span class="text-gray-400">(optionnel)</span>
+          </label>
+          <textarea class="input-olak" rows="4" 
+                    placeholder="Impression générale, réactions du candidat, points discutés..."></textarea>
+          <p class="text-xs text-gray-500 mt-1">Ajoutez vos observations après la visite</p>
+        </div>
+      </div>
+
+      <!-- Notifications -->
+      <div>
+        <h2 class="text-2xl font-semibold text-olak-dark mb-4 pb-2 border-b border-olak-primary-light">
+          6. Notifications
+        </h2>
+        <div class="space-y-3">
+          <label class="flex items-center cursor-pointer">
+            <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer" checked>
+            <div>
+              <span class="text-sm font-semibold text-olak-dark">Envoyer une notification de modification au candidat</span>
+              <p class="text-xs text-gray-500">Le candidat sera informé des changements par email</p>
+            </div>
+          </label>
+
+          <label class="flex items-center cursor-pointer">
+            <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer" checked>
+            <div>
+              <span class="text-sm font-semibold text-olak-dark">Notifier le propriétaire</span>
+              <p class="text-xs text-gray-500">Le propriétaire sera informé des modifications</p>
+            </div>
+          </label>
+
+          <label class="flex items-center cursor-pointer">
+            <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer" checked>
+            <div>
+              <span class="text-sm font-semibold text-olak-dark">Maintenir le rappel 24h avant</span>
+              <p class="text-xs text-gray-500">Un email de rappel sera envoyé automatiquement</p>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <!-- Form Actions -->
+      <div class="flex gap-3 items-center justify-between pt-6 border-t border-gray-200">
+        <div class="flex gap-3">
+          <%= link_to mockups_admin_visits_calendar_path, class: "btn-secondary" do %>
+            Annuler
+          <% end %>
+          
+          <button type="button" class="px-6 py-3 border-2 border-red-500 text-red-600 rounded-lg font-semibold hover:bg-red-50 transition-all">
+            Supprimer la visite
+          </button>
+        </div>
+        
+        <button type="submit" class="btn-primary flex items-center gap-2">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M7.707 10.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V6h5a2 2 0 012 2v7a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2h5v5.586l-1.293-1.293zM9 4a1 1 0 012 0v2H9V4z"/>
+          </svg>
+          Enregistrer les modifications
+        </button>
+      </div>
+    <% end %>
+  </div>
+
+  <!-- Visit History -->
+  <div class="mt-6 bg-white rounded-xl shadow-md p-6">
+    <h3 class="font-bold text-olak-primary-dark mb-4 flex items-center gap-2">
+      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+      </svg>
+      Historique des modifications
+    </h3>
+    <div class="space-y-3 text-sm">
+      <div class="flex items-start gap-3 pb-3 border-b border-gray-200">
+        <div class="w-2 h-2 bg-olak-primary rounded-full mt-2"></div>
+        <div class="flex-1">
+          <div class="flex justify-between items-start">
+            <div>
+              <p class="font-semibold text-olak-dark">Visite créée</p>
+              <p class="text-gray-600 mt-1">Par Admin OLAK</p>
+            </div>
+            <span class="text-gray-500">15 nov 2024, 14:30</span>
+          </div>
+        </div>
+      </div>
+      <div class="flex items-start gap-3 pb-3 border-b border-gray-200">
+        <div class="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
+        <div class="flex-1">
+          <div class="flex justify-between items-start">
+            <div>
+              <p class="font-semibold text-olak-dark">Confirmation par email envoyée</p>
+              <p class="text-gray-600 mt-1">Email envoyé au candidat et au propriétaire</p>
+            </div>
+            <span class="text-gray-500">15 nov 2024, 14:31</span>
+          </div>
+        </div>
+      </div>
+      <div class="flex items-start gap-3">
+        <div class="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
+        <div class="flex-1">
+          <div class="flex justify-between items-start">
+            <div>
+              <p class="font-semibold text-olak-dark">Statut mis à jour</p>
+              <p class="text-gray-600 mt-1">Planifiée → Confirmée</p>
+            </div>
+            <span class="text-gray-500">16 nov 2024, 09:15</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

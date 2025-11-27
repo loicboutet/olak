@@ -1,0 +1,326 @@
+<% content_for :title, "Ajouter un bien - Étape 3/3" %>
+
+<div class="min-h-screen bg-olak-gray py-8">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Progress Indicator -->
+    <div class="mb-8">
+      <div class="flex items-center justify-center">
+        <div class="flex items-center">
+          <!-- Step 1 - Completed -->
+          <div class="flex items-center">
+            <div class="w-10 h-10 bg-olak-primary rounded-full flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+            <span class="ml-2 text-sm font-medium text-olak-primary">Type de bien</span>
+          </div>
+          
+          <div class="w-16 h-1 bg-olak-primary mx-2"></div>
+          
+          <!-- Step 2 - Completed -->
+          <div class="flex items-center">
+            <div class="w-10 h-10 bg-olak-primary rounded-full flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+            <span class="ml-2 text-sm font-medium text-olak-primary">Détails de la chambre</span>
+          </div>
+          
+          <div class="w-16 h-1 bg-olak-primary mx-2"></div>
+          
+          <!-- Step 3 - Current -->
+          <div class="flex items-center">
+            <div class="w-10 h-10 bg-olak-primary rounded-full flex items-center justify-center">
+              <span class="text-white font-bold">3</span>
+            </div>
+            <span class="ml-2 text-sm font-medium text-olak-primary">Immeuble</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Form Card -->
+    <div class="bg-white rounded-xl shadow-md p-8">
+      <div class="flex items-center gap-3 mb-4">
+        <svg class="w-10 h-10 text-olak-primary" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+        </svg>
+        <div>
+          <h1 class="text-4xl font-bold text-olak-primary-dark">Informations sur le logement</h1>
+          <p class="text-gray-600">Dernière étape : détails du bâtiment/maison contenant la chambre</p>
+        </div>
+      </div>
+
+      <form class="space-y-6 mt-8">
+        
+        <!-- Building/House Type Reminder -->
+        <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
+          <div class="flex items-center">
+            <svg class="w-6 h-6 text-blue-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+            </svg>
+            <div>
+              <p class="text-blue-800 font-semibold">Chambre située dans un appartement</p>
+              <p class="text-blue-700 text-sm mt-1">Renseignez les informations de l'immeuble collectif</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Building Type Section -->
+        <div class="border-b border-gray-200 pb-6">
+          <h2 class="text-2xl font-semibold text-olak-dark mb-4">Type de bâtiment</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <label class="flex items-center cursor-pointer p-4 border-2 border-olak-primary bg-olak-primary-light rounded-lg">
+              <input type="radio" name="building_type" value="collective" class="w-5 h-5 mr-3 accent-olak-primary cursor-pointer" checked>
+              <div>
+                <span class="text-base font-semibold text-olak-dark">Immeuble collectif</span>
+                <p class="text-sm text-gray-600">Copropriété ou monopropriété</p>
+              </div>
+            </label>
+            
+            <label class="flex items-center cursor-pointer p-4 border-2 border-gray-300 rounded-lg hover:border-olak-primary transition-colors">
+              <input type="radio" name="building_type" value="individual" class="w-5 h-5 mr-3 accent-olak-primary cursor-pointer">
+              <div>
+                <span class="text-base font-semibold text-olak-dark">Maison individuelle</span>
+                <p class="text-sm text-gray-600">Bâtiment indépendant</p>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- Building Details Section -->
+        <div class="border-b border-gray-200 pb-6">
+          <h2 class="text-2xl font-semibold text-olak-dark mb-4">Caractéristiques du bâtiment</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Régime juridique <span class="text-olak-error">*</span>
+              </label>
+              <select class="input-olak">
+                <option value="">Sélectionnez...</option>
+                <option value="copropriete" selected>Copropriété</option>
+                <option value="monopropriete">Monopropriété</option>
+              </select>
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Année de construction
+              </label>
+              <input type="number" class="input-olak" placeholder="1985" value="1995">
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Nombre d'étages de l'immeuble
+              </label>
+              <input type="number" class="input-olak" placeholder="5" value="6">
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Classe énergétique du logement <span class="text-olak-error">*</span>
+              </label>
+              <select class="input-olak">
+                <option value="">Sélectionnez...</option>
+                <option value="A">A - Très performant</option>
+                <option value="B">B - Performant</option>
+                <option value="C" selected>C - Assez performant</option>
+                <option value="D">D - Moyen</option>
+                <option value="E">E - Peu performant</option>
+                <option value="F">F - Très peu performant</option>
+                <option value="G">G - Extrêmement peu performant</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Building Amenities Section -->
+        <div class="border-b border-gray-200 pb-6">
+          <h2 class="text-2xl font-semibold text-olak-dark mb-4">Équipements de l'immeuble</h2>
+          <p class="text-sm text-gray-600 mb-4">Équipements et accessoires à usage commun</p>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <label class="flex items-center cursor-pointer">
+              <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer" checked>
+              <span class="text-sm text-olak-dark">Ascenseur</span>
+            </label>
+            
+            <label class="flex items-center cursor-pointer">
+              <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer" checked>
+              <span class="text-sm text-olak-dark">Interphone</span>
+            </label>
+            
+            <label class="flex items-center cursor-pointer">
+              <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer" checked>
+              <span class="text-sm text-olak-dark">Digicode</span>
+            </label>
+            
+            <label class="flex items-center cursor-pointer">
+              <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer">
+              <span class="text-sm text-olak-dark">Gardien</span>
+            </label>
+            
+            <label class="flex items-center cursor-pointer">
+              <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer">
+              <span class="text-sm text-olak-dark">Garage à vélos</span>
+            </label>
+            
+            <label class="flex items-center cursor-pointer">
+              <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer">
+              <span class="text-sm text-olak-dark">Local poubelles</span>
+            </label>
+            
+            <label class="flex items-center cursor-pointer">
+              <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer">
+              <span class="text-sm text-olak-dark">Espaces verts</span>
+            </label>
+            
+            <label class="flex items-center cursor-pointer">
+              <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer">
+              <span class="text-sm text-olak-dark">Aires de jeux</span>
+            </label>
+
+            <label class="flex items-center cursor-pointer">
+              <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer">
+              <span class="text-sm text-olak-dark">Laverie</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Access Information Section -->
+        <div class="border-b border-gray-200 pb-6">
+          <h2 class="text-2xl font-semibold text-olak-dark mb-4">Informations d'accès</h2>
+          
+          <div class="space-y-4">
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Code d'accès à l'immeuble
+              </label>
+              <input type="text" class="input-olak" placeholder="A1234B" value="C5678D">
+              <p class="text-xs text-gray-500 mt-1">Pour les visites de la chambre</p>
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Instructions d'accès à l'appartement
+              </label>
+              <textarea class="input-olak" rows="3" placeholder="Ex: 3ème étage, porte gauche après l'ascenseur"></textarea>
+              <p class="text-xs text-gray-500 mt-1">Ces informations seront partagées avec les candidats pour les visites</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Communication Technologies Section -->
+        <div class="border-b border-gray-200 pb-6">
+          <h2 class="text-2xl font-semibold text-olak-dark mb-4">Technologies de communication</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <label class="flex items-center cursor-pointer">
+              <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer" checked>
+              <span class="text-sm text-olak-dark">Réception de la télévision</span>
+            </label>
+            
+            <label class="flex items-center cursor-pointer">
+              <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer" checked>
+              <span class="text-sm text-olak-dark">Raccordement internet</span>
+            </label>
+            
+            <label class="flex items-center cursor-pointer">
+              <input type="checkbox" class="w-5 h-5 mr-3 accent-olak-primary rounded cursor-pointer" checked>
+              <span class="text-sm text-olak-dark">Raccordement à la fibre</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Documents Copropriété -->
+        <div class="border-b border-gray-200 pb-6">
+          <h2 class="text-2xl font-semibold text-olak-dark mb-4">Documents</h2>
+          <p class="text-sm text-gray-600 mb-4">Documents requis pour la copropriété</p>
+          
+          <div class="space-y-4">
+            <div>
+              <label class="block text-sm font-semibold mb-2 text-olak-dark">
+                Règlement de copropriété
+              </label>
+              <div class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-olak-primary transition-all duration-300 cursor-pointer">
+                <svg class="mx-auto mb-3 w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+                </svg>
+                <p class="text-sm text-gray-600 mb-1">Glissez votre fichier ici ou cliquez pour sélectionner</p>
+                <p class="text-xs text-gray-500">PDF - Max 10MB</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional Notes Section -->
+        <div class="pb-6">
+          <h2 class="text-2xl font-semibold text-olak-dark mb-4">Informations complémentaires</h2>
+          
+          <div>
+            <label class="block text-sm font-semibold mb-2 text-olak-dark">
+              Notes additionnelles
+            </label>
+            <textarea class="input-olak" rows="4" placeholder="Ajoutez toute information utile concernant la chambre, le logement ou l'immeuble..."></textarea>
+            <p class="text-xs text-gray-500 mt-1">Règles de vie en colocation, horaires de visite, etc.</p>
+          </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="flex gap-3 items-center justify-between pt-6">
+          <button type="button" class="btn-secondary flex items-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+            </svg>
+            Retour
+          </button>
+          
+          <div class="flex gap-3">
+            <button type="button" class="btn-secondary">
+              Enregistrer comme brouillon
+            </button>
+            <button type="submit" class="btn-primary flex items-center gap-2">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              Publier la chambre
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- Success Preview -->
+    <div class="mt-6 bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg">
+      <div class="flex items-start">
+        <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+        </svg>
+        <div>
+          <p class="text-green-800 font-semibold">Dernière étape !</p>
+          <p class="text-green-700 text-sm mt-1">Une fois publiée, votre chambre sera visible par l'équipe OLAK. Assurez-vous que le loyer total de toutes les chambres respecte le plafond de la zone tendue.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Zone Tendue Warning for Rooms -->
+    <div class="mt-6 bg-orange-50 border-l-4 border-orange-500 p-4 rounded-r-lg">
+      <div class="flex items-start">
+        <svg class="w-6 h-6 text-orange-500 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+        </svg>
+        <div>
+          <p class="text-orange-800 font-semibold">Rappel zone tendue</p>
+          <p class="text-orange-700 text-sm mt-1"><strong>Loyer total maximum du logement : 1 800 €</strong> | Loyer de cette chambre : 450 € | <strong>Loyer restant à répartir : 1 350 €</strong></p>
+          <p class="text-orange-700 text-xs mt-1">La somme des loyers de toutes les chambres ne doit pas dépasser le loyer total maximum autorisé.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

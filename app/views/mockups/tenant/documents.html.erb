@@ -1,0 +1,305 @@
+<% content_for :title, "Mes Documents" %>
+
+<!-- Page Header -->
+<div class="mb-8">
+  <div class="flex justify-between items-center">
+    <div>
+      <h1 class="text-4xl font-bold text-olak-primary-dark mb-2">Mes Documents</h1>
+      <p class="text-gray-600">Téléchargez les documents requis pour compléter votre dossier</p>
+    </div>
+    <%= link_to mockups_tenant_profile_show_path, class: "btn-secondary" do %>
+      Retour au profil
+    <% end %>
+  </div>
+</div>
+
+<!-- Progress Status Card -->
+<div class="card-olak mb-8">
+  <div class="flex justify-between items-center mb-4">
+    <h2 class="text-2xl font-semibold text-olak-primary-dark">Progression du dossier</h2>
+    <span class="text-sm font-semibold text-green-600">67% complété</span>
+  </div>
+  
+  <div class="w-full bg-gray-200 rounded-full h-3 mb-4">
+    <div class="bg-green-600 h-3 rounded-full transition-all" style="width: 67%"></div>
+  </div>
+  
+  <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
+    <div class="flex items-center">
+      <svg class="w-6 h-6 text-blue-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+      </svg>
+      <div>
+        <p class="text-blue-800 font-semibold">Il vous manque 2 documents</p>
+        <p class="text-blue-700 text-sm mt-1">Complétez votre dossier pour pouvoir postuler aux biens</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Required Documents Section -->
+<div class="mb-8">
+  <h2 class="text-2xl font-semibold text-olak-primary-dark mb-6">Documents obligatoires</h2>
+  
+  <div class="space-y-6">
+    <!-- Identity Card - Validated -->
+    <div class="card-olak">
+      <div class="flex items-start justify-between mb-4">
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <div class="flex-1">
+            <div class="flex items-center gap-2 mb-1">
+              <h3 class="font-bold text-lg text-olak-dark">Carte d'identité</h3>
+              <span class="badge badge-success">Validé</span>
+            </div>
+            <p class="text-sm text-gray-600 mb-3">Carte nationale d'identité ou passeport en cours de validité (recto-verso)</p>
+            
+            <!-- Uploaded File -->
+            <div class="flex items-center gap-4 p-3 bg-green-50 rounded-lg">
+              <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" clip-rule="evenodd"/>
+              </svg>
+              <div class="flex-1">
+                <p class="font-semibold text-sm text-green-900">CNI-Marie-Martin.pdf</p>
+                <p class="text-xs text-green-700">2.1 MB • Téléchargé le 10/11/2024</p>
+              </div>
+              <button class="text-green-600 hover:text-green-700 text-sm font-semibold">
+                <svg class="w-5 h-5 inline-block" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                  <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+                </svg>
+              </button>
+            </div>
+            <p class="text-xs text-green-600 mt-2">✓ Validé par l'administration le 12/11/2024</p>
+          </div>
+        </div>
+      </div>
+      <button class="btn-secondary w-full text-sm">Remplacer le document</button>
+    </div>
+
+    <!-- Employment Contract - Validated -->
+    <div class="card-olak">
+      <div class="flex items-start justify-between mb-4">
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <div class="flex-1">
+            <div class="flex items-center gap-2 mb-1">
+              <h3 class="font-bold text-lg text-olak-dark">Contrat de travail</h3>
+              <span class="badge badge-success">Validé</span>
+            </div>
+            <p class="text-sm text-gray-600 mb-3">Contrat de travail en cours (CDI, CDD, etc.)</p>
+            
+            <div class="flex items-center gap-4 p-3 bg-green-50 rounded-lg">
+              <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" clip-rule="evenodd"/>
+              </svg>
+              <div class="flex-1">
+                <p class="font-semibold text-sm text-green-900">Contrat-CDI-TechCorp.pdf</p>
+                <p class="text-xs text-green-700">1.8 MB • Téléchargé le 10/11/2024</p>
+              </div>
+              <button class="text-green-600 hover:text-green-700 text-sm font-semibold">
+                <svg class="w-5 h-5 inline-block" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                  <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+                </svg>
+              </button>
+            </div>
+            <p class="text-xs text-green-600 mt-2">✓ Validé par l'administration le 12/11/2024</p>
+          </div>
+        </div>
+      </div>
+      <button class="btn-secondary w-full text-sm">Remplacer le document</button>
+    </div>
+
+    <!-- Pay Slips - Validated -->
+    <div class="card-olak">
+      <div class="flex items-start justify-between mb-4">
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <div class="flex-1">
+            <div class="flex items-center gap-2 mb-1">
+              <h3 class="font-bold text-lg text-olak-dark">3 dernières fiches de paie</h3>
+              <span class="badge badge-success">Validé</span>
+            </div>
+            <p class="text-sm text-gray-600 mb-3">Les 3 derniers bulletins de salaire consécutifs</p>
+            
+            <div class="space-y-2">
+              <div class="flex items-center gap-4 p-3 bg-green-50 rounded-lg">
+                <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" clip-rule="evenodd"/>
+                </svg>
+                <div class="flex-1">
+                  <p class="font-semibold text-sm text-green-900">Fiche-paie-Octobre-2024.pdf</p>
+                  <p class="text-xs text-green-700">0.8 MB</p>
+                </div>
+                <button class="text-green-600 hover:text-green-700 text-sm font-semibold">
+                  <svg class="w-5 h-5 inline-block" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                    <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+                  </svg>
+                </button>
+              </div>
+              <div class="flex items-center gap-4 p-3 bg-green-50 rounded-lg">
+                <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" clip-rule="evenodd"/>
+                </svg>
+                <div class="flex-1">
+                  <p class="font-semibold text-sm text-green-900">Fiche-paie-Septembre-2024.pdf</p>
+                  <p class="text-xs text-green-700">0.8 MB</p>
+                </div>
+                <button class="text-green-600 hover:text-green-700 text-sm font-semibold">
+                  <svg class="w-5 h-5 inline-block" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                    <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+                  </svg>
+                </button>
+              </div>
+              <div class="flex items-center gap-4 p-3 bg-green-50 rounded-lg">
+                <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" clip-rule="evenodd"/>
+                </svg>
+                <div class="flex-1">
+                  <p class="font-semibold text-sm text-green-900">Fiche-paie-Aout-2024.pdf</p>
+                  <p class="text-xs text-green-700">0.8 MB</p>
+                </div>
+                <button class="text-green-600 hover:text-green-700 text-sm font-semibold">
+                  <svg class="w-5 h-5 inline-block" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                    <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <p class="text-xs text-green-600 mt-2">✓ Validé par l'administration le 12/11/2024</p>
+          </div>
+        </div>
+      </div>
+      <button class="btn-secondary w-full text-sm">Remplacer les documents</button>
+    </div>
+
+    <!-- Tax Notice - Validated -->
+    <div class="card-olak">
+      <div class="flex items-start justify-between mb-4">
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <div class="flex-1">
+            <div class="flex items-center gap-2 mb-1">
+              <h3 class="font-bold text-lg text-olak-dark">Avis d'imposition</h3>
+              <span class="badge badge-success">Validé</span>
+            </div>
+            <p class="text-sm text-gray-600 mb-3">Dernier avis d'imposition sur le revenu</p>
+            
+            <div class="flex items-center gap-4 p-3 bg-green-50 rounded-lg">
+              <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" clip-rule="evenodd"/>
+              </svg>
+              <div class="flex-1">
+                <p class="font-semibold text-sm text-green-900">Avis-imposition-2023.pdf</p>
+                <p class="text-xs text-green-700">1.2 MB • Téléchargé le 10/11/2024</p>
+              </div>
+              <button class="text-green-600 hover:text-green-700 text-sm font-semibold">
+                <svg class="w-5 h-5 inline-block" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                  <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+                </svg>
+              </button>
+            </div>
+            <p class="text-xs text-green-600 mt-2">✓ Validé par l'administration le 12/11/2024</p>
+          </div>
+        </div>
+      </div>
+      <button class="btn-secondary w-full text-sm">Remplacer le document</button>
+    </div>
+
+    <!-- Address Proof - Missing -->
+    <div class="card-olak border-2 border-orange-200">
+      <div class="flex items-start gap-4 mb-4">
+        <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
+          <svg class="w-6 h-6 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+          </svg>
+        </div>
+        <div class="flex-1">
+          <div class="flex items-center gap-2 mb-1">
+            <h3 class="font-bold text-lg text-olak-dark">Justificatif de domicile</h3>
+            <span class="badge badge-pending">Manquant</span>
+          </div>
+          <p class="text-sm text-gray-600 mb-4">Facture (eau, électricité, gaz, internet) ou quittance de loyer de moins de 3 mois</p>
+          
+          <div class="border-2 border-dashed border-orange-300 rounded-lg p-6 text-center bg-orange-50 hover:border-orange-500 transition-all duration-300 cursor-pointer">
+            <svg class="mx-auto mb-3 w-12 h-12 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+            </svg>
+            <p class="text-sm font-semibold text-orange-800 mb-1">Cliquez pour télécharger votre justificatif</p>
+            <p class="text-xs text-orange-600">PDF, JPG, PNG - Max 10MB</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bank Details (RIB) - Missing -->
+    <div class="card-olak border-2 border-orange-200">
+      <div class="flex items-start gap-4 mb-4">
+        <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
+          <svg class="w-6 h-6 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+          </svg>
+        </div>
+        <div class="flex-1">
+          <div class="flex items-center gap-2 mb-1">
+            <h3 class="font-bold text-lg text-olak-dark">Relevé d'identité bancaire (RIB)</h3>
+            <span class="badge badge-pending">Manquant</span>
+          </div>
+          <p class="text-sm text-gray-600 mb-4">RIB à votre nom pour le prélèvement du loyer</p>
+          
+          <div class="border-2 border-dashed border-orange-300 rounded-lg p-6 text-center bg-orange-50 hover:border-orange-500 transition-all duration-300 cursor-pointer">
+            <svg class="mx-auto mb-3 w-12 h-12 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+            </svg>
+            <p class="text-sm font-semibold text-orange-800 mb-1">Cliquez pour télécharger votre RIB</p>
+            <p class="text-xs text-orange-600">PDF, JPG, PNG - Max 10MB</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Help Section -->
+<div class="card-olak bg-blue-50 border border-blue-200">
+  <div class="flex items-start gap-4">
+    <svg class="w-8 h-8 text-blue-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+      <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+    </svg>
+    <div>
+      <h3 class="font-bold text-lg text-blue-900 mb-2">Besoin d'aide ?</h3>
+      <p class="text-sm text-blue-800 mb-3">Les documents doivent être :</p>
+      <ul class="list-disc list-inside text-sm text-blue-700 space-y-1 mb-4">
+        <li>Lisibles et complets (toutes les pages)</li>
+        <li>En cours de validité</li>
+        <li>Au format PDF, JPG ou PNG</li>
+        <li>Inférieurs à 10 MB chacun</li>
+      </ul>
+      <p class="text-sm text-blue-800">
+        En cas de difficulté, contactez-nous à 
+        <a href="mailto:support@olak.fr" class="font-semibold text-blue-600 hover:text-blue-700 underline">support@olak.fr</a>
+      </p>
+    </div>
+  </div>
+</div>

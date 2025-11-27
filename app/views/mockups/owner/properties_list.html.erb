@@ -1,0 +1,270 @@
+<% content_for :title, "Mes biens" %>
+
+<div class="min-h-screen bg-olak-gray py-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Header -->
+    <div class="mb-8 flex items-center justify-between">
+      <div>
+        <h1 class="text-4xl font-bold text-olak-primary-dark mb-2">Mes biens</h1>
+        <p class="text-gray-600">Gérez vos propriétés et suivez leurs candidatures</p>
+      </div>
+      
+      <%= link_to mockups_owner_property_step1_path, class: "btn-primary flex items-center gap-2" do %>
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/>
+        </svg>
+        Ajouter un bien
+      <% end %>
+    </div>
+
+    <!-- Filter Tabs -->
+    <div class="mb-6 border-b border-gray-200">
+      <nav class="flex space-x-8">
+        <button class="border-b-2 border-olak-primary py-4 px-1 text-sm font-medium text-olak-primary">
+          Tous (5)
+        </button>
+        <button class="border-b-2 border-transparent py-4 px-1 text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
+          Actifs (3)
+        </button>
+        <button class="border-b-2 border-transparent py-4 px-1 text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
+          Brouillons (1)
+        </button>
+        <button class="border-b-2 border-transparent py-4 px-1 text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
+          Loués (1)
+        </button>
+        <button class="border-b-2 border-transparent py-4 px-1 text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
+          Archivés (0)
+        </button>
+      </nav>
+    </div>
+
+    <!-- Property Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      <!-- Property Card 1 - Active -->
+      <div class="card-olak hover:shadow-lg transition-shadow">
+        <div class="flex justify-between items-start mb-4">
+          <div>
+            <h3 class="font-bold text-xl text-olak-primary-dark">Appartement T3</h3>
+            <p class="text-sm text-gray-600">Paris 15ème</p>
+          </div>
+          <span class="badge badge-success">Actif</span>
+        </div>
+        
+        <div class="mb-4 space-y-2">
+          <div class="flex items-center text-sm text-gray-600">
+            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+            </svg>
+            65 m² • 2 chambres
+          </div>
+          <div class="flex items-center text-sm text-gray-600">
+            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"/>
+            </svg>
+            1 500 €/mois
+          </div>
+          <div class="flex items-center text-sm text-gray-600">
+            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
+            </svg>
+            3 candidatures
+          </div>
+        </div>
+        
+        <div class="flex gap-2">
+          <%= link_to mockups_owner_property_show_path, class: "btn-secondary px-4 py-2 text-sm flex-1 text-center" do %>
+            Voir
+          <% end %>
+          <%= link_to mockups_owner_property_edit_path, class: "btn-primary px-4 py-2 text-sm flex-1 text-center" do %>
+            Modifier
+          <% end %>
+        </div>
+      </div>
+
+      <!-- Property Card 2 - Active with applications -->
+      <div class="card-olak hover:shadow-lg transition-shadow">
+        <div class="flex justify-between items-start mb-4">
+          <div>
+            <h3 class="font-bold text-xl text-olak-primary-dark">Maison T5</h3>
+            <p class="text-sm text-gray-600">Lyon 6ème</p>
+          </div>
+          <span class="badge badge-success">Actif</span>
+        </div>
+        
+        <div class="mb-4 space-y-2">
+          <div class="flex items-center text-sm text-gray-600">
+            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+            </svg>
+            120 m² • 4 chambres
+          </div>
+          <div class="flex items-center text-sm text-gray-600">
+            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"/>
+            </svg>
+            2 200 €/mois
+          </div>
+          <div class="flex items-center text-sm text-olak-warning font-semibold">
+            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
+            </svg>
+            5 nouvelles candidatures
+          </div>
+        </div>
+        
+        <div class="flex gap-2">
+          <%= link_to mockups_owner_property_show_path, class: "btn-secondary px-4 py-2 text-sm flex-1 text-center" do %>
+            Voir
+          <% end %>
+          <%= link_to mockups_owner_property_edit_path, class: "btn-primary px-4 py-2 text-sm flex-1 text-center" do %>
+            Modifier
+          <% end %>
+        </div>
+      </div>
+
+      <!-- Property Card 3 - Rented -->
+      <div class="card-olak hover:shadow-lg transition-shadow opacity-75">
+        <div class="flex justify-between items-start mb-4">
+          <div>
+            <h3 class="font-bold text-xl text-olak-primary-dark">Studio meublé</h3>
+            <p class="text-sm text-gray-600">Paris 11ème</p>
+          </div>
+          <span class="badge badge-error">Loué</span>
+        </div>
+        
+        <div class="mb-4 space-y-2">
+          <div class="flex items-center text-sm text-gray-600">
+            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+            </svg>
+            28 m² • Studio
+          </div>
+          <div class="flex items-center text-sm text-gray-600">
+            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"/>
+            </svg>
+            850 €/mois
+          </div>
+          <div class="flex items-center text-sm text-gray-600">
+            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
+            </svg>
+            Marie Dupont
+          </div>
+        </div>
+        
+        <div class="flex gap-2">
+          <%= link_to mockups_owner_property_show_path, class: "btn-secondary px-4 py-2 text-sm flex-1 text-center" do %>
+            Voir
+          <% end %>
+        </div>
+      </div>
+
+      <!-- Property Card 4 - Draft -->
+      <div class="card-olak hover:shadow-lg transition-shadow border-2 border-dashed border-olak-accent">
+        <div class="flex justify-between items-start mb-4">
+          <div>
+            <h3 class="font-bold text-xl text-olak-primary-dark">Appartement T2</h3>
+            <p class="text-sm text-gray-600">Marseille</p>
+          </div>
+          <span class="badge badge-pending">Brouillon</span>
+        </div>
+        
+        <div class="mb-4 space-y-2">
+          <div class="flex items-center text-sm text-gray-600">
+            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+            </svg>
+            45 m² • 1 chambre
+          </div>
+          <div class="flex items-center text-sm text-gray-600">
+            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"/>
+            </svg>
+            900 €/mois
+          </div>
+          <p class="text-sm text-olak-warning">
+            <svg class="w-4 h-4 inline mr-1" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+            </svg>
+            Informations incomplètes
+          </p>
+        </div>
+        
+        <div class="flex gap-2">
+          <%= link_to mockups_owner_property_step2_apartment_path, class: "btn-primary px-4 py-2 text-sm flex-1 text-center" do %>
+            Continuer
+          <% end %>
+        </div>
+      </div>
+
+      <!-- Property Card 5 - Active -->
+      <div class="card-olak hover:shadow-lg transition-shadow">
+        <div class="flex justify-between items-start mb-4">
+          <div>
+            <h3 class="font-bold text-xl text-olak-primary-dark">Chambre meublée</h3>
+            <p class="text-sm text-gray-600">Paris 18ème</p>
+          </div>
+          <span class="badge badge-success">Actif</span>
+        </div>
+        
+        <div class="mb-4 space-y-2">
+          <div class="flex items-center text-sm text-gray-600">
+            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+            </svg>
+            15 m² • Chambre
+          </div>
+          <div class="flex items-center text-sm text-gray-600">
+            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"/>
+            </svg>
+            550 €/mois
+          </div>
+          <div class="flex items-center text-sm text-gray-600">
+            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
+            </svg>
+            1 candidature
+          </div>
+        </div>
+        
+        <div class="flex gap-2">
+          <%= link_to mockups_owner_property_show_path, class: "btn-secondary px-4 py-2 text-sm flex-1 text-center" do %>
+            Voir
+          <% end %>
+          <%= link_to mockups_owner_property_edit_path, class: "btn-primary px-4 py-2 text-sm flex-1 text-center" do %>
+            Modifier
+          <% end %>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Empty State (hidden when properties exist) -->
+    <!-- Uncomment when no properties -->
+    <!--
+    <div class="card-olak text-center max-w-md mx-auto mt-12">
+      <svg class="w-24 h-24 mx-auto mb-6 text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+      </svg>
+      <h3 class="text-2xl font-bold text-olak-dark mb-4">Aucun bien pour le moment</h3>
+      <p class="text-gray-600 mb-8">Commencez par ajouter votre première propriété à louer</p>
+      <%= link_to mockups_owner_property_step1_path, class: "btn-primary inline-flex items-center gap-2" do %>
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/>
+        </svg>
+        Ajouter mon premier bien
+      <% end %>
+    </div>
+    -->
+
+  </div>
+</div>
