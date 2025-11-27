@@ -22,21 +22,21 @@
         <%= link_to mockups_admin_owners_list_path, class: "nav-link-admin px-4 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-purple-50 hover:text-purple-700 transition-colors" do %>
           Propriétaires
         <% end %>
-        <a href="#" class="nav-link-admin px-4 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-purple-50 hover:text-purple-700 transition-colors">
+        <%= link_to mockups_admin_tenants_list_path, class: "nav-link-admin px-4 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-purple-50 hover:text-purple-700 transition-colors" do %>
           Locataires
-        </a>
-        <a href="#" class="nav-link-admin px-4 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-purple-50 hover:text-purple-700 transition-colors">
+        <% end %>
+        <%= link_to mockups_admin_properties_list_path, class: "nav-link-admin px-4 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-purple-50 hover:text-purple-700 transition-colors" do %>
           Biens
-        </a>
-        <a href="#" class="nav-link-admin px-4 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-purple-50 hover:text-purple-700 transition-colors">
+        <% end %>
+        <%= link_to mockups_admin_applications_list_path, class: "nav-link-admin px-4 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-purple-50 hover:text-purple-700 transition-colors" do %>
           Candidatures
-        </a>
-        <a href="#" class="nav-link-admin px-4 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-purple-50 hover:text-purple-700 transition-colors">
+        <% end %>
+        <%= link_to mockups_admin_visits_calendar_path, class: "nav-link-admin px-4 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-purple-50 hover:text-purple-700 transition-colors" do %>
           Visites
-        </a>
-        <a href="#" class="nav-link-admin px-4 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-purple-50 hover:text-purple-700 transition-colors">
+        <% end %>
+        <%= link_to mockups_admin_payments_list_path, class: "nav-link-admin px-4 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-purple-50 hover:text-purple-700 transition-colors" do %>
           Paiements
-        </a>
+        <% end %>
       </div>
 
       <!-- Mobile Menu Button -->
@@ -88,10 +88,10 @@
     data-navbar-target="menu">
     <%= link_to mockups_admin_dashboard_path, class: "block px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-purple-50 hover:text-purple-700" do %>Tableau de bord<% end %>
     <%= link_to mockups_admin_owners_list_path, class: "block px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-purple-50 hover:text-purple-700" do %>Propriétaires<% end %>
-    <a href="#" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-purple-50 hover:text-purple-700">Locataires</a>
-    <a href="#" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-purple-50 hover:text-purple-700">Biens</a>
-    <a href="#" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-purple-50 hover:text-purple-700">Candidatures</a>
-    <a href="#" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-purple-50 hover:text-purple-700">Visites</a>
-    <a href="#" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-purple-50 hover:text-purple-700">Paiements</a>
+    <%= link_to mockups_admin_tenants_list_path, class: "block px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-purple-50 hover:text-purple-700" do %>Locataires<% end %>
+    <%= link_to mockups_admin_properties_list_path, class: "block px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-purple-50 hover:text-purple-700" do %>Biens<% end %>
+    <%= link_to mockups_admin_applications_list_path, class: "block px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-purple-50 hover:text-purple-700" do %>Candidatures<% end %>
+    <%= link_to mockups_admin_visits_calendar_path, class: "block px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-purple-50 hover:text-purple-700" do %>Visites<% end %>
+    <%= link_to mockups_admin_payments_list_path, class: "block px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-purple-50 hover:text-purple-700" do %>Paiements<% end %>
   </div>
 </nav>
